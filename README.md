@@ -30,7 +30,7 @@ This course emphasises the collection and analysis of social science data (parti
 
 **Course Materials:** The course syllabus, lecture slides, activities, and some data sets can be found on the course Github site:
 
-> [https://github.com/christophergandrud/Introduction\_to\_Statistics\_and\_Data\_Analysis\_Yonsei](https://github.com/christophergandrud/Introduction\_to\_Statistics\_and\_Data\_Analysis\_Yonsei)). 
+> [https://github.com/christophergandrud/Introduction\_to\_Statistics\_and\_Data\_Analysis\_Yonsei](https://github.com/christophergandrud/Introduction\_to\_Statistics\_and\_Data\_Analysis\_Yonsei). 
 
 You are reading the course syllabus now. It has the file name `README.md` on GitHub.
 
@@ -67,9 +67,9 @@ I also assign a few chapters from (and recommend for **R** reference):
 
 For more reference on using **R** you might find these resources useful:
 
-- *Overall **R** reference:* Johnson, Paul, E. 2012. "Rtips. Revivial 2012". [http://pj.freefaculty.org/R/Rtips.html](http://pj.freefaculty.org/R/Rtips.html).
+- *Overall R reference:* Johnson, Paul, E. 2012. "Rtips. Revivial 2012". [http://pj.freefaculty.org/R/Rtips.html](http://pj.freefaculty.org/R/Rtips.html).
 
-- *Generally cutting-edge posts on how to use **R**:* [R-Bloggers](http://www.r-bloggers.com/)
+- *Generally cutting-edge posts on how to use R:* R-Bloggers. [http://www.r-bloggers.com/](http://www.r-bloggers.com/)
 
 **Assessment:**
 
