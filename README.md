@@ -7,8 +7,8 @@ ___________________________________________________________
 
 **Instructor:** Dr. Christopher Gandrud 
 
-- Email: [gandrud@yonsei.ac.kr](gandrud@yonsei.ac.kr)
-- Website: [www.christopher.gandrud.blogspot.com](www.christopher.gandrud.blogspot.com)
+- Email: <a href = "mailto:gandrud@yonsei.ac.kr">gandrud@yonsei.ac.kr</a>
+- Website: [http://christophergandrud.blogspot.com/](http://christophergandrud.blogspot.com/)
 
 **Office Hours:** TBD (정208)
 
@@ -28,7 +28,11 @@ This course emphasises the collection and analysis of social science data (parti
 
 **Prerequisites:** If you have taken high school algebra, can use Microsoft Excel, and have an interest in experimenting and learning new things then you are qualified to take this course.
 
-**Course Materials:** The course syllabus, lecture slides, activities, and some data sets can be found on the course Github site ([http://githubGetRest](http://githubGetRest)). You are reading the course syllabus now. It has the file name `README.md` on GitHub.
+**Course Materials:** The course syllabus, lecture slides, activities, and some data sets can be found on the course Github site:
+
+> [https://github.com/christophergandrud/Introduction\_to\_Statistics\_and\_Data\_Analysis\_Yonsei](https://github.com/christophergandrud/Introduction\_to\_Statistics\_and\_Data\_Analysis\_Yonsei)). 
+
+You are reading the course syllabus now. It has the file name `README.md` on GitHub.
 
 **Software:** We use four software programs in this course:
 
@@ -74,7 +78,6 @@ For more reference on using **R** you might find these resources useful:
 - 50% Research project (paper and presentation): Due Week 16 
 
 I will give more details about each of these assignments in class.
-_______________________________
 
 ## Part I: Introduction to Data Gathering and Management in R
 
@@ -97,8 +100,6 @@ How to document your work so that others can reproduce it. Why reproducibility i
 
 > King, Gary. 1995. “Replication, Replication.” PS: Political Science and Politics 28(3): 444–452. 
 
-___
-
 ## Part II: Basic Data Analysis and Visualization
 
 ### Week 5: Descriptive Statistics
@@ -120,7 +121,6 @@ How confident are we that our findings in our samples are actually present in th
 What basic tools can we use to make inferences when we have large data samples?
 
 > **Chapter 5:** *OpenIntro Statistics*
-___
 
 ## Part III: Introduction to Linear Regression
 
@@ -144,7 +144,6 @@ How can we most effectively present the results from our regression analyses usi
 *Extras:*
 
 > King, Gary, Michael Tomz, and Jason Wittenberg. 2000. “Making the Most of Statistical Analyses: Improving Interpretation and Presentation.” American Journal of Political Science 44(2): 347–361.
-___
 
 ## Part IV: Applied Data Analysis: Research Projects
 In the final part of the course class time is dedicated to applying what we have learned so far to actually gather, analyse, and present data.
