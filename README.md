@@ -28,11 +28,11 @@ This course emphasises the collection and analysis of social science data (parti
 
 **Prerequisites:** If you have taken high school algebra, can use Microsoft Excel, and have an interest in experimenting and learning new things then you are qualified to take this course.
 
-**Course Materials:** The course syllabus, lecture slides, activities, and some data sets can be found on the course Github site:
+**Course Materials:** The course syllabus, lecture slides, activities, and some data sets can be found on the course **github** site:
 
 > [https://github.com/christophergandrud/Introduction\_to\_Statistics\_and\_Data\_Analysis\_Yonsei](https://github.com/christophergandrud/Introduction\_to\_Statistics\_and\_Data\_Analysis\_Yonsei). 
 
-You are reading the course syllabus now. It has the file name `README.md` on GitHub.
+You are reading the course syllabus now. It has the file name `README.md` on **github**.
 
 **Software:** We use four software programs in this course:
 
@@ -47,9 +47,9 @@ All of the classroom computers have these programs installed. Please feel free t
 
 2. Install **RStudio**: [http://rstudio.org/](http://rstudio.org/)
 
-**Dropbox** is an easy to use cloud storage system. You will be able to store and access from almost any computer all of your files for this course in **Dropbox**. You can also submit many of your assignments to me through it. You can download **Dropbox** from [www.dropbox.com](www.dropbox.com). You will also need to sign up for a (free) account.
+**Dropbox** is an easy to use cloud storage system. You will be able to store and access from almost any computer all of your files for this course in **Dropbox**. You can also submit many of your assignments to me through it. You can download **Dropbox** from [https://www.dropbox.com/](https://www.dropbox.com/). You will also need to sign up for a (free) account.
 
-Microsoft Excel is not free, but you probably already have it. If you don't, you can use any other spreadsheet program like Hancell, Numbers, or Open Office. Open Office is open source and can be downloaded for free from [www.openoffice.org](www.openoffice.org).
+Microsoft Excel is not free, but you probably already have it. If you don't, you can use any other spreadsheet program like Hancell, Numbers, or Open Office. Open Office is open source and can be downloaded for free from [http://www.openoffice.org/](http://www.openoffice.org/).
 
 **Readings:** This is an applied course, so I want you to *do* more than you *consume* (read, listen to lectures). However, completing the course readings before each class is an important part of (a) being prepared to do the work in class, (b) obtaining a solid foundation in the methods and theory behind what we do in class, and (c) pointing you to useful reference material.
 
