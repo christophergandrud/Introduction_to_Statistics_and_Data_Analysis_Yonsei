@@ -96,7 +96,7 @@ I cover the course objectives, give you some examples of the type of data analys
 Where can we find quality social science data? How do we get this into **R** so we can start analysing it?
 
 ### Week 4: Replication!
-How to document your work so that others can reproduce it. Why reproducibility is so important in social science.
+How to document your work so that others can reproduce it. Why reproducibility is so important in general and in the social sciences in particular.
 
 > King, Gary. 1995. “Replication, Replication.” PS: Political Science and Politics 28(3): 444–452. 
 
