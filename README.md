@@ -1,8 +1,8 @@
-<center>
+
 # Introduction to Applied Statistics and Data Analysis for Social Science
 ## Yonsei University, Wonju
 ### Fall 2012 (*Early and Incomplete Draft Version*)
-</center>
+
 ___________________________________________________________
 
 **Instructor:** Dr. Christopher Gandrud 
@@ -16,13 +16,17 @@ ___________________________________________________________
 
 **Time:** TBD
 
+<<<<<<< HEAD
 **Objectives:** This course's main objective is to: *learn how to take raw data, explore it, and present the results in a useful way*. In this course you will learn all of the basic skills needed to do each of these steps with the statistical language **R**. *Part I* of the course introduces you to both basic data structures and **RStudio** (a program that makes using **R** easier). *Part II* introduces basic data analysis and visualizations techniques. *Part III* covers slightly more advanced statistical tools, primarily linear regression. Finally, in *Part IV* we will apply all of these skills in a research project. 
+=======
+**Objectives:** This course's main objective is to: *learn how to take raw data, explore it, and present the results in a useful way*. In this course you will learn all of the basic skills needed to do each of these steps with the statistical language **R**. *Part I* of the course introduces you to both basic data structures and **RStudio** (a program that makes using **R** easier). *Part II* introduces basic data analysis and visualizations techniques. *Part III* covers slightly more advanced statistical tools, primarily linear regression. Finally, in *Part IV* we will apply all of these skills in a pair research project. 
+>>>>>>> minor typo corrections 3/5
 
 As part of achieving this straightforward objective, the course is intended to also do the following:
 
-The course is intended to be *useful*. I hope that the course will be one of the more useful courses you take in university. It is intended to be useful for students who want to go on to do graduate-level research. It is also intended to be useful for students who want to go directly into the non-academic public or private sectors and be able to effectively analyse and present data. I hope it is also useful for you as a citizen in that you will be better able to critically read the data that informs many of our daily decisions.
+The course is intended to be *useful*. I hope that the course will be one of the more useful courses you take in university. It is intended to be useful for students who want to go on to do graduate-level *academic research*. It is also intended to be useful for students who want to go directly into the *non-academic public or private sectors* and be able to effectively analyse and present data. I hope it is also useful for you as a *citizen* in that you will be better able to critically read the data that informs many of our daily decisions.
 
-This course will introduce you to a vibrant and growing community of open source data analysts that are pushing the state of the art. (Another benefit to you as students is that open source software is free.)
+This course will introduce you to a vibrant and growing community of open source data analysts that is pushing the state of the art in data analysis and presentation. (Another benefit to you as students is that open source software is free.)
 
 This course emphasises the collection and analysis of social science data (particularly political science and economic data at the country-level). However, almost all of the skills you learn in this course can be applied to data in most other areas of study. **R** is widely used not only in the social sciences but also in medicine, biology, physics, and business.
 
@@ -47,7 +51,9 @@ All of the classroom computers have these programs installed. Please feel free t
 
 2. Install **RStudio**: [http://rstudio.org/](http://rstudio.org/)
 
-**Dropbox** is an easy to use cloud storage system. You will be able to store and access from almost any computer all of your files for this course in **Dropbox**. You can also submit many of your assignments to me through it. You can download **Dropbox** from [https://www.dropbox.com/](https://www.dropbox.com/). You will also need to sign up for a (free) account.
+*I actually recommend using your own laptop computer.*
+
+**Dropbox** is an easy to use cloud storage system. You will be able to use it to access all of your files for the course on almost any computer. You can also submit your assignments to me through **Dropbox**. You can download **Dropbox** from [https://www.dropbox.com/](https://www.dropbox.com/). You will also need to sign up for a (free) account.
 
 Microsoft Excel is not free, but you probably already have it. If you don't, you can use any other spreadsheet program like Hancell, Numbers, or Open Office. Open Office is open source and can be downloaded for free from [http://www.openoffice.org/](http://www.openoffice.org/).
 
@@ -75,7 +81,7 @@ For more reference on using **R** you might find these resources useful:
 
 - 10% Class attendance and participation
 - 40% 7 Short assignments: Due weeks 2, 4, 6, 8, 9, 10, 11 
-- 50% Research project (paper and presentation): Due Week 16 
+- 50% Pair Research project (paper and presentation): Due Week 16 
 
 I will give more details about each of these assignments in class.
 
@@ -145,7 +151,7 @@ How can we most effectively present the results from our regression analyses usi
 
 > King, Gary, Michael Tomz, and Jason Wittenberg. 2000. “Making the Most of Statistical Analyses: Improving Interpretation and Presentation.” American Journal of Political Science 44(2): 347–361.
 
-## Part IV: Applied Data Analysis: Research Projects
+## Part IV: Applied Data Analysis: Pair Research Projects
 In the final part of the course class time is dedicated to applying what we have learned so far to actually gather, analyse, and present data.
 
 ### Week 12: Research Question Design and Data Download
