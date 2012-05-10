@@ -46,7 +46,7 @@ All of the classroom computers have these programs installed. Please feel free t
 
 2. Install **RStudio**: [http://rstudio.org/](http://rstudio.org/)
 
-*I actually recommend using your own laptop computer.*
+*I recommend using your own laptop computer.*
 
 **Dropbox** is an easy to use cloud storage system. You will be able to use it to access all of your files for the course on almost any computer. You can also submit your assignments to me through **Dropbox**. You can download **Dropbox** from [https://www.dropbox.com/](https://www.dropbox.com/). You will also need to sign up for a (free) account.
 
@@ -72,13 +72,19 @@ For more reference on using **R** you might find these resources useful:
 
 - *Generally cutting-edge posts on how to use R:* R-Bloggers. [http://www.r-bloggers.com/](http://www.r-bloggers.com/)
 
+- *Interesting blog on how someone at the New York TImes creates graphs:* [http://chartsnthings.tumblr.com/](http://chartsnthings.tumblr.com/)
+
 **Assessment:**
 
-- 10% Class attendance and participation
-- 40% 7 Short assignments: Due weeks 2, 4, 6, 8, 9, 10, 11 
+- 10% Class Attendance and Participation
+- 40% 7 Short Assignments: Due weeks 2, 4, 6, 8, 9, 10, 11 
 - 50% Pair Research project (paper and presentation): Due Week 16 
 
-I will give more details about each of these assignments in class.
+How we communicate recently has been changing rapidly. Inaddition to articles and presentations, people have been using new formats such as **Twitter** and blogs to share their work and ideas. To help develop your skills using these formats you will post your work for some of the short assignments and pair research project on the class blog. You should post both the output of your work and the code you used to create it. The blog is at:
+
+> [http://yonseiappliedstats.tumblr.com/](http://yonseiappliedstats.tumblr.com/)
+
+ I'll give you more details about how post on the blog in class. Other details about the assignments will also be given in class.
 
 ## Part I: Introduction to Data Gathering and Management in R
 
