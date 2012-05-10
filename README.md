@@ -64,6 +64,8 @@ Most of the other readings for the course will be academic articles or blogposts
 
 I also assign a few chapters from (and recommend for **R** reference):
 
+> Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. Chichester: John Wiley & Sons. Ltd. 
+
 > Matloff, Norman. 2011. *The Art of R Programming: A Tour of Statistical Design Software*. San Francisco: No Starch Press.  
 
 For more reference on using **R** you might find these resources useful:
