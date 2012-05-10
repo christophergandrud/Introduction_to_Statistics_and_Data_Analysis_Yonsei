@@ -1,4 +1,4 @@
-# Introduction to Applied Statistics and Data Analysis for Social Science
+# Introduction to Social Science Data Analysis
 ## Yonsei University, Wonju
 ### Fall 2012 (*Early and Incomplete Draft Version*)
 
