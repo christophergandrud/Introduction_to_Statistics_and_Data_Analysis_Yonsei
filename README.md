@@ -134,11 +134,13 @@ What basic tools can we use to make inferences when we have large data samples?
 ## Part III: Introduction to Linear Regression
 
 ### Week 10: Simple Linear Regression
-What is simple linear regression? Why is it so useful for social scientists?
+What is simple linear regression? Why is it so useful for social scientists? How can we use `Zelig` to for regression analysis?
 
 > **Chapter 7:** *OpenIntro Statistics*
 
 *Extras*
+
+> **p. 108-113:** Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. Chichester: John Wiley & Sons. Ltd. 
 
 > **p. 305-311:** Imai, Kosuke, Gary King, and Olivia Lau. 2012. *Zelig: Everyone's Favorite Statistical Software.* [http://r.iq.harvard.edu/docs/zelig.pdf](http://r.iq.harvard.edu/docs/zelig.pdf)
 
