@@ -150,7 +150,7 @@ What if we have more than one independent variable?
 > **Chapter 8:** *OpenIntro Statistics*
 
 ### Week 12: Presenting Regression results
-How can we most effectively present the results from our regression analyses using simulations and graphs? How can we use `Zelig` to estimate regression results?
+How can we most effectively present the results from our regression analyses using simulations and graphs? How can we use `Zelig` for regression analysis?
 
 *Extras:*
 
