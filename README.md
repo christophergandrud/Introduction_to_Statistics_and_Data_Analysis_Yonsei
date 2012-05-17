@@ -6,7 +6,7 @@ ___________________________________________________________
 
 **Instructor:** Dr. Christopher Gandrud 
 
-- Email: <a href = "mailto:gandrud@yonsei.ac.kr">gandrud@yonsei.ac.kr</a>
+- Email: <gandrud@yonsei.ac.kr>
 - Website: [http://christophergandrud.blogspot.com/](http://christophergandrud.blogspot.com/)
 
 **Office Hours:** TBD (정208)
@@ -29,7 +29,7 @@ This course emphasises the collection and analysis of social science data (parti
 
 **Course Materials:** The course syllabus, lecture slides, activities, and some data sets can be found on the course **github** site:
 
-> [https://github.com/christophergandrud/Introduction\_to\_Statistics\_and\_Data\_Analysis\_Yonsei](https://github.com/christophergandrud/Introduction\_to\_Statistics\_and\_Data\_Analysis\_Yonsei). 
+> [https://github.com/christophergandrud/Introduction_to_Statistics_and_Data_Analysis_Yonsei](https://github.com/christophergandrud/Introduction_to_Statistics_and_Data_Analysis_Yonsei). 
 
 You are reading the course syllabus now. It has the file name `README.md` on **github**.
 
