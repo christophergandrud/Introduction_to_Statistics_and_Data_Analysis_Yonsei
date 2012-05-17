@@ -27,7 +27,7 @@ This course emphasises the collection and analysis of social science data (parti
 
 **Prerequisites:** If you have taken high school algebra, can use Microsoft Excel, and have an interest in experimenting and learning new things then you are qualified to take this course.
 
-**Course Materials:** The course syllabus, lecture slides, activities, and some data sets can be found on the course **github** site:
+**Course Materials:** The course syllabus, lecture slides, activities, the course [wiki](https://github.com/christophergandrud/Introduction_to_Statistics_and_Data_Analysis_Yonsei/wiki) and some data sets can be found on the course **github** site:
 
 > [https://github.com/christophergandrud/Introduction_to_Statistics_and_Data_Analysis_Yonsei](https://github.com/christophergandrud/Introduction_to_Statistics_and_Data_Analysis_Yonsei). 
 
