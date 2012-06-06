@@ -79,7 +79,7 @@ For more reference on using **R** you might find these resources useful:
 **Assessment:**
 
 - 10% Class Attendance and Participation
-- 40% 7 Short Assignments: Due weeks 2, 4, 6, 8, 9, 10, 11 
+- 40% 5 Short Assignments: Due weeks 3, 5, 7, 9, 11 
 - 50% Pair Research project (paper and presentation): Due Week 16 
 
 How we communicate recently has been changing rapidly. Inaddition to articles and presentations, people have been using new formats such as **Twitter** and blogs to share their work and ideas. To help develop your skills using these formats you will post your work for some of the short assignments and pair research project on the class blog. You should post both the output of your work and the code you used to create it. The blog is at:
@@ -151,8 +151,6 @@ What if we have more than one independent variable?
 
 ### Week 12: Presenting Regression results
 How can we most effectively present the results from our regression analyses using simulations and graphs? How can we use `Zelig` for regression analysis?
-
-*Extras:*
 
 > King, Gary, Michael Tomz, and Jason Wittenberg. 2000. “Making the Most of Statistical Analyses: Improving Interpretation and Presentation.” American Journal of Political Science 44(2): 347–361.
 
