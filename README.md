@@ -7,7 +7,7 @@ ___________________________________________________________
 **Instructor:** Dr. Christopher Gandrud 
 
 - Email: <gandrud@yonsei.ac.kr>
-- Website: [http://christophergandrud.blogspot.com/](http://christophergandrud.blogspot.com/)
+- Website: [http://christophergandrud.github.com/](http://christophergandrud.github.com/)
 
 **Office Hours:** TBD (정208)
 
