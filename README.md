@@ -137,6 +137,10 @@ How can we use **R** to create visual summaries of our data? What is `ggplot2`? 
 
 > **Chapter 1, Graphical Excellence:** Tufte, Edward R. 2001. *The Visual Display of Quantitative Information*. Cheshire, Connecticut: Graphics Press.
 
+> **Chapter 4, Data-Ink and Graphical Redesign:** Tufte, Edward R. 2001. *The Visual Display of Quantitative Information*. Cheshire, Connecticut: Graphics Press.
+
+> **Chapter 9, Aesthetics and Technique in Data Graphical Design:** Tufte, Edward R. 2001. *The Visual Display of Quantitative Information*. 2nd Edition. Cheshire, Connecticut: Graphics Press.
+
 ### Week 7: Overview of Statistical Inference
 How confident are we that our findings in our samples are actually present in the real world?
 
@@ -162,6 +166,8 @@ What is simple linear regression? Why is it so useful for social scientists? How
 
 > **Chapter 7:** *OpenIntro Statistics*
 
+> **Chapter 8, Regression:** Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. Chichester: John Wiley & Sons. Ltd. 
+
 *Extras*
 
 > **Chapter 7, Statistical Modelling:** Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. Chichester: John Wiley & Sons. Ltd. 
@@ -175,7 +181,8 @@ What if we have more than one independent variable?
 
 *Extra:* 
 
-> **Chapter 8, Regression:** Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. Chichester: John Wiley & Sons. Ltd. 
+> **Chapter 11, Multiple Regression:** Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. Chichester: John Wiley & Sons. Ltd. 
+
 
 ### Week 12: Presenting Regression results
 How can we most effectively present the results from our regression analyses using simulations and graphs? How can we use `Zelig` for regression analysis?
