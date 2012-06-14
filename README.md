@@ -46,6 +46,8 @@ All of the classroom computers have these programs installed. Please feel free t
 
 2. Install **RStudio**: [http://rstudio.org/](http://rstudio.org/)
 
+The course wiki has slightly more detailed [installation instructions](https://github.com/christophergandrud/Introduction_to_Statistics_and_Data_Analysis_Yonsei/wiki/Installing-R-and-RStudio).
+
 *I recommend using your own laptop computer.*
 
 **Dropbox** is an easy to use cloud storage system. You will be able to use it to access all of your files for the course on almost any computer. You can also submit your assignments to me through **Dropbox**. You can download **Dropbox** from [https://www.dropbox.com/](https://www.dropbox.com/). You will also need to sign up for a (free) account.
@@ -96,16 +98,22 @@ I cover the course objectives, give you some examples of the type of data analys
 *Extra:*
 
 > **Introduction:** Matloff, Norman. 2011. *The Art of R Programming: A Tour of Statistical Design Software*. San Francisco: No Starch Press.
+
+> **Appendix 1: Fundamentals of the R Language:** Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. Chichester: John Wiley & Sons. Ltd. 
     
 ### Week 2: Types of Data
 
 > **p. 1-8, 26-36:** *OpenIntro Statistics*
 
-### Week 3: Data Input
+> **Chapter 2, Dataframes:** Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. Chichester: John Wiley & Sons. Ltd. 
+
+### Week 3: Gathering Data
 Where can we find quality social science data? How do we get this into **R** so we can start analysing it?
 
+> "Data APIs/Feeds Available as Packages in R". 2011. Cross Validated. <http://stats.stackexchange.com/questions/12670/data-apis-feeds-available-as-packages-in-r>.
+
 ### Week 4: Replication!
-How to document your work so that others can reproduce it. Why reproducibility is so important in general and in the social sciences in particular.
+How to document your work so that others can reproduce it. Why reproducibility is so important in general and in the social sciences in particular. We will also learn the basics of creating dynamic reports with `knitr` and **Markdown**.
 
 > King, Gary. 1995. “Replication, Replication.” PS: Political Science and Politics 28(3): 444–452. 
 
@@ -116,20 +124,36 @@ What kinds of simple statistical summaries can we use to understand and present 
 
 > **p. 9-26:** *OpenIntro Statistics*
 
-### Week 6: Basic Graphs in R
+*Extra:*
+
+> **Chapter 3, Central Tendency:** Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. Chichester: John Wiley & Sons. Ltd. 
+
+> **Chapter 4: Variance:** Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. Chichester: John Wiley & Sons. Ltd. 
+
+### Week 6: Data Visualisation in R
 How can we use **R** to create visual summaries of our data? What is `ggplot2`? What is `googleVis`?
 
 > Chen, Edwin. 2012. "Quick Introduction to ggplot2" [http://blog.echen.me/2012/01/17/quick-introduction-to-ggplot2/](http://blog.echen.me/2012/01/17/quick-introduction-to-ggplot2/)
+
+> **Chapter 1, Graphical Excellence:** Tufte, Edward R. 2001. *The Visual Display of Quantitative Information*. Cheshire, Connecticut: Graphics Press.
 
 ### Week 7: Overview of Statistical Inference
 How confident are we that our findings in our samples are actually present in the real world?
 
 > **Chapter 4:** *OpenIntro Statistics*
 
+> **Chapter 1, Fundamentals:** Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. Chichester: John Wiley & Sons. Ltd. 
+
 ### Week 8: Statistical Inference with Large Samples
 What basic tools can we use to make inferences when we have large data samples?
 
 > **Chapter 5:** *OpenIntro Statistics*
+
+*Extra:*
+
+> **Chapter 5, Single Samples:** Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. Chichester: John Wiley & Sons. Ltd. 
+
+> **Chapter 6, Two Samples:** Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. Chichester: John Wiley & Sons. Ltd. 
 
 ## Part III: Introduction to Linear Regression
 
@@ -140,7 +164,7 @@ What is simple linear regression? Why is it so useful for social scientists? How
 
 *Extras*
 
-> **p. 108-113:** Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. Chichester: John Wiley & Sons. Ltd. 
+> **Chapter 7, Statistical Modelling:** Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. Chichester: John Wiley & Sons. Ltd. 
 
 > **p. 305-311:** Imai, Kosuke, Gary King, and Olivia Lau. 2012. *Zelig: Everyone's Favorite Statistical Software.* [http://r.iq.harvard.edu/docs/zelig.pdf](http://r.iq.harvard.edu/docs/zelig.pdf)
 
@@ -148,6 +172,10 @@ What is simple linear regression? Why is it so useful for social scientists? How
 What if we have more than one independent variable?
 
 > **Chapter 8:** *OpenIntro Statistics*
+
+*Extra:* 
+
+> **Chapter 8, Regression:** Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. Chichester: John Wiley & Sons. Ltd. 
 
 ### Week 12: Presenting Regression results
 How can we most effectively present the results from our regression analyses using simulations and graphs? How can we use `Zelig` for regression analysis?
