@@ -141,6 +141,10 @@ How can we use **R** to create visual summaries of our data? What is `ggplot2`? 
 
 > **Chapter 9, Aesthetics and Technique in Data Graphical Design:** Tufte, Edward R. 2001. *The Visual Display of Quantitative Information*. 2nd Edition. Cheshire, Connecticut: Graphics Press.
 
+*Extra:*
+
+> Donahue, Rafe M. J. 2011. *Fundamental Statistical Concepts in Presenting Data: Principles for Constructing Better Graphics.* Version 2.11. <http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf>.
+
 ### Week 7: Overview of Statistical Inference
 How confident are we that our findings in our samples are actually present in the real world?
 
