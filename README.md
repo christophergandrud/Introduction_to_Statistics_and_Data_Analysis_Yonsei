@@ -145,6 +145,8 @@ How can we use **R** to create visual summaries of our data? What is `ggplot2`? 
 
 > Donahue, Rafe M. J. 2011. *Fundamental Statistical Concepts in Presenting Data: Principles for Constructing Better Graphics.* Version 2.11. <http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf>.
 
+> *If you have access to Adobe Illustrator and want to make commercial journal quality graphics with **R** see:* Sigal, Mathew. 2011. *Make it Pretty:* An Introduction to Graphical Post-Processing with Adobe Illustrator. Presentation to York University Department of Psychology Quantitative Methods Brownbag.  <http://www.psych.yorku.ca/quantmethods/BrownBag/Sigal-2011-Post-Processing-Handouts.pdf>
+
 ### Week 7: Overview of Statistical Inference
 How confident are we that our findings in our samples are actually present in the real world?
 
