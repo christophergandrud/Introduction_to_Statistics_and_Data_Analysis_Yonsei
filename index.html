@@ -1,0 +1,319 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Introduction to Social Science Data Analysis by christophergandrud</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Introduction to Social Science Data Analysis</h1>
+        <p></p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/christophergandrud/Introduction_to_Statistics_and_Data_Analysis_Yonsei" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/christophergandrud/Introduction_to_Statistics_and_Data_Analysis_Yonsei/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/christophergandrud/Introduction_to_Statistics_and_Data_Analysis_Yonsei/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h3>Yonsei University, Wonju</h3>
+
+<h3>Fall 2012</h3>
+
+<h3>Version: 23 July 2012</h3>
+
+<hr><p><strong>Instructor:</strong> Dr. Christopher Gandrud </p>
+
+<ul>
+<li>Email: <a href="mailto:gandrud@yonsei.ac.kr">gandrud@yonsei.ac.kr</a>
+</li>
+<li>Website: <a href="http://christophergandrud.github.com/">http://christophergandrud.github.com/</a>
+</li>
+</ul><p><strong>Office Hours:</strong> 15:00-17:00 Wednesday (정208)</p>
+
+<ul>
+<li>You can also send me an email or come to my office whenever you need to.</li>
+</ul><p><strong>Time:</strong> TBD</p>
+
+<p><strong>Objectives:</strong> This course's main objective is to: <em>learn how to take raw social science data, explore it, and present the results in a useful way</em>. In this course you will learn all of the basic skills needed to do each of these steps with the statistical language <strong>R</strong>. <em>Part I</em> of the course introduces you to both basic data structures and <strong>RStudio</strong> (a program that makes using <strong>R</strong> easier). <em>Part II</em> introduces basic data analysis and visualizations techniques. <em>Part III</em> covers slightly more advanced statistical tools, primarily linear regression. Finally, in <em>Part IV</em> we will apply all of these skills in a pair research project. </p>
+
+<p>As part of achieving this straightforward objective, the course is intended to also do the following:</p>
+
+<p>The course is intended to be <em>useful</em>. I hope that the course will be one of the more useful courses you take in university. It is intended to be useful for students who want to go on to do graduate-level <em>academic research</em>. It is also intended to be useful for students who want to go directly into the <em>non-academic public or private sectors</em> and be able to effectively analyse and present data. I hope it is also useful for you as a <em>citizen</em> in that you will be better able to critically read the data that informs many of our daily decisions.</p>
+
+<p>This course will introduce you to a vibrant and growing community of open source data analysts that is pushing the state of the art in data analysis and presentation. (Another benefit to you as students is that open source software is free.)</p>
+
+<p>This course emphasises the collection and analysis of social science data (particularly political science and economic data at the country-level). However, almost all of the skills you learn in this course can be applied to data in most other areas of study. <strong>R</strong> is widely used not only in the social sciences but also in medicine, biology, physics, and business.</p>
+
+<p><strong>Prerequisites:</strong> If you have taken high school algebra, can use Microsoft Excel, and have an interest in experimenting and learning new things then you are qualified to take this course.</p>
+
+<p><strong>Course Materials:</strong> The course <a href="https://github.com/christophergandrud/Introduction_to_Statistics_and_Data_Analysis_Yonsei/blob/master/README.md">syllabus</a>, lecture slides, <a href="https://github.com/christophergandrud/Introduction_to_Statistics_and_Data_Analysis_Yonsei/tree/master/Activities">activities</a>, the course <a href="https://github.com/christophergandrud/Introduction_to_Statistics_and_Data_Analysis_Yonsei/wiki">wiki</a> and some data sets can be found on the course's main <strong>github</strong> site:</p>
+
+<blockquote>
+<p><a href="https://github.com/christophergandrud/Introduction_to_Statistics_and_Data_Analysis_Yonsei">https://github.com/christophergandrud/Introduction_to_Statistics_and_Data_Analysis_Yonsei</a>. </p>
+</blockquote>
+
+<p>You are reading the course syllabus now. It has the file name <code>README.md</code> on <strong>github</strong>.</p>
+
+<p><strong>Software:</strong> We use four software programs in this course:</p>
+
+<ul>
+<li>Microsoft Excel</li>
+<li>Dropbox</li>
+<li>R (version 2.15)</li>
+<li>RStudio (version 0.96)</li>
+</ul><p>All of the classroom computers have these programs installed. Please feel free to use your own computer. You can install both <strong>R</strong> and <strong>RStudio</strong> for free (they are open source!) on Windows, Mac, or Linux computers. Just take two steps:</p>
+
+<ol>
+<li><p>Install <strong>R</strong>: <a href="http://www.r-project.org/">http://www.r-project.org/</a></p></li>
+<li><p>Install <strong>RStudio</strong>: <a href="http://rstudio.org/">http://rstudio.org/</a></p></li>
+</ol><p>The course wiki has slightly more detailed <a href="https://github.com/christophergandrud/Introduction_to_Statistics_and_Data_Analysis_Yonsei/wiki/Installing-R-and-RStudio">installation instructions</a>.</p>
+
+<p><em>I recommend using your own laptop computer.</em></p>
+
+<p><strong>Dropbox</strong> is an easy to use cloud storage system. You will be able to use it to access all of your files for the course on almost any computer. You can also submit your assignments to me through <strong>Dropbox</strong>. You can download <strong>Dropbox</strong> from <a href="https://www.dropbox.com/">https://www.dropbox.com/</a>. You will also need to sign up for a (free) account.</p>
+
+<p>Microsoft Excel is not free, but you probably already have it. If you don't, you can use any other spreadsheet program like Hancell, Numbers, or Open Office. Open Office is open source and can be downloaded for free from <a href="http://www.openoffice.org/">http://www.openoffice.org/</a>.</p>
+
+<p><strong>Readings:</strong> This is an applied course, so I want you to <em>do</em> more than you <em>consume</em> (read, listen to lectures). However, completing the course readings before each class is an important part of (a) being prepared to do the work in class, (b) obtaining a solid foundation in the methods and theory behind what we do in class, and (c) pointing you to useful reference material.</p>
+
+<p>The main textbook for this class is <em>OpenIntro Statistics (first edition)</em>. You can find the PDF at: </p>
+
+<blockquote>
+<p><a href="http://www.openintro.org/stat/downloads.php">http://www.openintro.org/stat/downloads.php</a>. </p>
+</blockquote>
+
+<p><em>OpenIntro Statistics</em> is an open source introductory statistics textbook written mostly by David M. Diez, Christopher D. Barr, and Mine Çetinkaya-Rundel. </p>
+
+<p>Most of the other readings for the course will be academic articles or blogposts by academic bloggers. I hope these will introduce you to the very active social science blogging community who are advancing the state of the art in data management and analysis.</p>
+
+<p>I also assign a few chapters from (and recommend for <strong>R</strong> reference):</p>
+
+<blockquote>
+<p>Crawley, Michael J. 2005. <em>Statistics: An Introduction Using R</em>. Chichester: John Wiley &amp; Sons. Ltd. </p>
+
+<p>Matloff, Norman. 2011. <em>The Art of R Programming: A Tour of Statistical Design Software</em>. San Francisco: No Starch Press.  </p>
+</blockquote>
+
+<p>For more reference on using <strong>R</strong> you might find these resources useful:</p>
+
+<ul>
+<li><p><em>Overall R reference:</em> Johnson, Paul, E. 2012. "Rtips. Revivial 2012". <a href="http://pj.freefaculty.org/R/Rtips.html">http://pj.freefaculty.org/R/Rtips.html</a>.</p></li>
+<li><p><em>Generally cutting-edge posts on how to use R:</em> R-Bloggers. <a href="http://www.r-bloggers.com/">http://www.r-bloggers.com/</a></p></li>
+<li><p><em>Interesting blog on how someone at the New York TImes creates graphs:</em> <a href="http://chartsnthings.tumblr.com/">http://chartsnthings.tumblr.com/</a></p></li>
+</ul><p><strong>Assessment:</strong></p>
+
+<ul>
+<li>10% Class Attendance and Participation</li>
+<li>40% 5 Short Assignments: Due weeks 3, 5, 7, 9, 11 </li>
+<li>50% Pair Research project (paper and presentation): Due Week 16 </li>
+</ul><p>How we communicate recently has been changing rapidly. Inaddition to articles and presentations, people have been using new formats such as <strong>Twitter</strong> and blogs to share their work and ideas. To help develop your skills using these formats you will post your work for some of the short assignments and pair research project on the class blog. You should post both the output of your work and the code you used to create it. The blog is at:</p>
+
+<blockquote>
+<p><a href="http://yonseiappliedstats.tumblr.com/">http://yonseiappliedstats.tumblr.com/</a></p>
+</blockquote>
+
+<p>I'll give you more details about how post on the blog in class. Other details about the assignments will also be given in class.</p>
+
+<h2>Part I: Introduction to Data Gathering and Management in R</h2>
+
+<h3>Week 1: Course Introduction and R Introduction</h3>
+
+<p>I cover the course objectives, give you some examples of the type of data analysis and visualizations you will learn how to do in the course, and start working with <strong>RStudio</strong>.</p>
+
+<p><em>Extra:</em></p>
+
+<blockquote>
+<p><strong>Introduction:</strong> Matloff, Norman. 2011. <em>The Art of R Programming: A Tour of Statistical Design Software</em>. San Francisco: No Starch Press.</p>
+
+<p><strong>Appendix 1: Fundamentals of the R Language:</strong> Crawley, Michael J. 2005. <em>Statistics: An Introduction Using R</em>. Chichester: John Wiley &amp; Sons. Ltd. </p>
+</blockquote>
+
+<h3>Week 2: Types of Data</h3>
+
+<blockquote>
+<p><strong>p. 1-8, 26-36:</strong> <em>OpenIntro Statistics</em></p>
+
+<p><strong>Chapter 2, Dataframes:</strong> Crawley, Michael J. 2005. <em>Statistics: An Introduction Using R</em>. Chichester: John Wiley &amp; Sons. Ltd. </p>
+</blockquote>
+
+<h3>Week 3: Gathering Data</h3>
+
+<p>Where can we find quality social science data? How do we get this into <strong>R</strong> so we can start analysing it?</p>
+
+<blockquote>
+<p>"Data APIs/Feeds Available as Packages in R". 2011. Cross Validated. <a href="http://stats.stackexchange.com/questions/12670/data-apis-feeds-available-as-packages-in-r">http://stats.stackexchange.com/questions/12670/data-apis-feeds-available-as-packages-in-r</a>.</p>
+</blockquote>
+
+<h3>Week 4: Replication!</h3>
+
+<p>How to document your work so that others can reproduce it. Why reproducibility is so important in general and in the social sciences in particular. We will also learn the basics of creating dynamic reports with <code>knitr</code> and <strong>Markdown</strong>.</p>
+
+<blockquote>
+<p>King, Gary. 1995. “Replication, Replication.” PS: Political Science and Politics 28(3): 444–452. </p>
+</blockquote>
+
+<h2>Part II: Basic Data Analysis and Visualization</h2>
+
+<h3>Week 5: Descriptive Statistics</h3>
+
+<p>What kinds of simple statistical summaries can we use to understand and present our data?</p>
+
+<blockquote>
+<p><strong>p. 9-26:</strong> <em>OpenIntro Statistics</em></p>
+</blockquote>
+
+<p><em>Extra:</em></p>
+
+<blockquote>
+<p><strong>Chapter 3, Central Tendency:</strong> Crawley, Michael J. 2005. <em>Statistics: An Introduction Using R</em>. Chichester: John Wiley &amp; Sons. Ltd. </p>
+
+<p><strong>Chapter 4: Variance:</strong> Crawley, Michael J. 2005. <em>Statistics: An Introduction Using R</em>. Chichester: John Wiley &amp; Sons. Ltd. </p>
+</blockquote>
+
+<h3>Week 6: Data Visualisation in R</h3>
+
+<p>How can we use <strong>R</strong> to create visual summaries of our data? What is <code>ggplot2</code>? What is <code>googleVis</code>?</p>
+
+<blockquote>
+<p>Chen, Edwin. 2012. "Quick Introduction to ggplot2" <a href="http://blog.echen.me/2012/01/17/quick-introduction-to-ggplot2/">http://blog.echen.me/2012/01/17/quick-introduction-to-ggplot2/</a></p>
+
+<p><strong>Chapter 1, Graphical Excellence:</strong> Tufte, Edward R. 2001. <em>The Visual Display of Quantitative Information</em>. Cheshire, Connecticut: Graphics Press.</p>
+
+<p><strong>Chapter 4, Data-Ink and Graphical Redesign:</strong> Tufte, Edward R. 2001. <em>The Visual Display of Quantitative Information</em>. Cheshire, Connecticut: Graphics Press.</p>
+
+<p><strong>Chapter 9, Aesthetics and Technique in Data Graphical Design:</strong> Tufte, Edward R. 2001. <em>The Visual Display of Quantitative Information</em>. 2nd Edition. Cheshire, Connecticut: Graphics Press.</p>
+</blockquote>
+
+<p><em>Extra:</em></p>
+
+<blockquote>
+<p>Donahue, Rafe M. J. 2011. <em>Fundamental Statistical Concepts in Presenting Data: Principles for Constructing Better Graphics.</em> Version 2.11. <a href="http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf">http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf</a>.</p>
+
+<p><em>If you have access to Adobe Illustrator and want to make commercial journal quality graphics with **R</em>* see:* Sigal, Mathew. 2011. <em>Make it Pretty:</em> An Introduction to Graphical Post-Processing with Adobe Illustrator. Presentation to York University Department of Psychology Quantitative Methods Brownbag.  <a href="http://www.psych.yorku.ca/quantmethods/BrownBag/Sigal-2011-Post-Processing-Handouts.pdf">http://www.psych.yorku.ca/quantmethods/BrownBag/Sigal-2011-Post-Processing-Handouts.pdf</a></p>
+</blockquote>
+
+<h3>Week 7: Overview of Statistical Inference</h3>
+
+<p>How confident are we that our findings in our samples are actually present in the real world?</p>
+
+<blockquote>
+<p><strong>Chapter 4:</strong> <em>OpenIntro Statistics</em></p>
+
+<p><strong>Chapter 1, Fundamentals:</strong> Crawley, Michael J. 2005. <em>Statistics: An Introduction Using R</em>. Chichester: John Wiley &amp; Sons. Ltd. </p>
+</blockquote>
+
+<h3>Week 8: Statistical Inference with Large Samples</h3>
+
+<p>What basic tools can we use to make inferences when we have large data samples?</p>
+
+<blockquote>
+<p><strong>Chapter 5:</strong> <em>OpenIntro Statistics</em></p>
+</blockquote>
+
+<p><em>Extra:</em></p>
+
+<blockquote>
+<p><strong>Chapter 5, Single Samples:</strong> Crawley, Michael J. 2005. <em>Statistics: An Introduction Using R</em>. Chichester: John Wiley &amp; Sons. Ltd. </p>
+
+<p><strong>Chapter 6, Two Samples:</strong> Crawley, Michael J. 2005. <em>Statistics: An Introduction Using R</em>. Chichester: John Wiley &amp; Sons. Ltd. </p>
+</blockquote>
+
+<h2>Part III: Introduction to Linear Regression</h2>
+
+<h3>Week 10: Simple Linear Regression</h3>
+
+<p>What is simple linear regression? Why is it so useful for social scientists? How can we use <code>Zelig</code> to for regression analysis?</p>
+
+<blockquote>
+<p><strong>Chapter 7:</strong> <em>OpenIntro Statistics</em></p>
+
+<p><strong>Chapter 8, Regression:</strong> Crawley, Michael J. 2005. <em>Statistics: An Introduction Using R</em>. Chichester: John Wiley &amp; Sons. Ltd. </p>
+</blockquote>
+
+<p><em>Extras</em></p>
+
+<blockquote>
+<p><strong>Chapter 7, Statistical Modelling:</strong> Crawley, Michael J. 2005. <em>Statistics: An Introduction Using R</em>. Chichester: John Wiley &amp; Sons. Ltd. </p>
+
+<p><strong>p. 305-311:</strong> Imai, Kosuke, Gary King, and Olivia Lau. 2012. <em>Zelig: Everyone's Favorite Statistical Software.</em> <a href="http://r.iq.harvard.edu/docs/zelig.pdf">http://r.iq.harvard.edu/docs/zelig.pdf</a></p>
+</blockquote>
+
+<h3>Week 11: Multiple Linear Regression</h3>
+
+<p>What if we have more than one independent variable?</p>
+
+<blockquote>
+<p><strong>Chapter 8:</strong> <em>OpenIntro Statistics</em></p>
+</blockquote>
+
+<p><em>Extra:</em> </p>
+
+<blockquote>
+<p><strong>Chapter 11, Multiple Regression:</strong> Crawley, Michael J. 2005. <em>Statistics: An Introduction Using R</em>. Chichester: John Wiley &amp; Sons. Ltd. </p>
+</blockquote>
+
+<h3>Week 12: Presenting Regression results</h3>
+
+<p>How can we most effectively present the results from our regression analyses using simulations and graphs? How can we use <code>Zelig</code> for regression analysis?</p>
+
+<blockquote>
+<p>King, Gary, Michael Tomz, and Jason Wittenberg. 2000. “Making the Most of Statistical Analyses: Improving Interpretation and Presentation.” American Journal of Political Science 44(2): 347–361.</p>
+</blockquote>
+
+<h2>Part IV: Applied Data Analysis: Pair Research Projects</h2>
+
+<p>In the final part of the course class time is dedicated to applying what we have learned so far to actually gather, analyse, and present data.</p>
+
+<h3>Week 12: Research Question Design and Data Download</h3>
+
+<h3>Week 13: Data Clean Up and Exploratory Analysis</h3>
+
+<h3>Week 14: Statistical Analysis and Visualize Results</h3>
+
+<h3>Week 15: Write Up Results and Prepare Presentations</h3>
+
+<h3>Week 16: Research Project Presentations</h3>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/christophergandrud">christophergandrud</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-985930-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
