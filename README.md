@@ -8,7 +8,7 @@ ___________________________________________________________
 **Instructor:** Dr. Christopher Gandrud 
 
 - Email: <gandrud@yonsei.ac.kr>
-- Website: [http://christophergandrud.github.com/](http://christophergandrud.github.com/)
+- Website: <http://christophergandrud.blogspot.com/>
 
 **Office Hours:** 15:00-17:00 Wednesday (정208)
 
@@ -63,7 +63,7 @@ The main textbook for this class is *OpenIntro Statistics (first edition)*. You 
 
 *OpenIntro Statistics* is an open source introductory statistics textbook written mostly by David M. Diez, Christopher D. Barr, and Mine Çetinkaya-Rundel. 
 
-Most of the other readings for the course will be academic articles or blogposts by academic bloggers. I hope these will introduce you to the very active social science blogging community who are advancing the state of the art in data management and analysis.
+Most of the other readings for the course will be academic articles or blog posts by academic bloggers. I hope these will introduce you to the very active social science blogging community who are advancing the state of the art in data management and analysis.
 
 I also assign a few chapters from (and recommend for **R** reference):
 
@@ -87,9 +87,11 @@ For more reference on using **R** you might find these resources useful:
 
 How we communicate recently has been changing rapidly. Inaddition to articles and presentations, people have been using new formats such as **Twitter** and blogs to share their work and ideas. To help develop your skills using these formats you will post your work for some of the short assignments and pair research project on the class blog. You should post both the output of your work and the code you used to create it. The blog is at:
 
-> [http://yonseiappliedstats.tumblr.com/](http://yonseiappliedstats.tumblr.com/)
+> <http://yonseidataanalysis.tumblr.com/>
 
- I'll give you more details about how post on the blog in class. Other details about the assignments will also be given in class.
+It is password protected. I will give you the password in class. More details about how to post on the blog will be given in class. 
+
+Other details about the assignments will also be given in class.
 
 ## Part I: Introduction to Data Gathering and Management in R
 

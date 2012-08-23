@@ -22,7 +22,7 @@ Week 1 Lecture: Course & R Introduction
 
 # Contact
 
-Christopher Gandrud
+**Christopher Gandrud**
 
 - **Email**: gandrud@yonsei.ac.kr
 
