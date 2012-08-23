@@ -1,0 +1,179 @@
+<!-- GeoMap generated in R 2.14.0 by googleVis 0.2.13 package -->
+<!-- Mon Jan  9 16:50:43 2012 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript" src="http://www.google.com/jsapi">
+</script>
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataGeoMapID36c61717 ()
+{
+  var data = new google.visualization.DataTable();
+  var datajson =
+[
+ [
+ "Afghanistan",
+          1 
+],
+[
+ "Bolivia ",
+          1 
+],
+[
+ "Bulgaria",
+          1 
+],
+[
+ "Croatia",
+          1 
+],
+[
+ "Ecuador",
+          1 
+],
+[
+ "Georgia",
+          2 
+],
+[
+ "Ghana",
+          1 
+],
+[
+ "Haiti",
+          2 
+],
+[
+ "India",
+          3 
+],
+[
+ "Indonesia",
+          2 
+],
+[
+ "Iraq",
+          1 
+],
+[
+ "Israel",
+          1 
+],
+[
+ "Italy",
+          6 
+],
+[
+ "Japan",
+          3 
+],
+[
+ "Kenya",
+          2 
+],
+[
+ "South Korea",
+          8 
+],
+[
+ "Macedonia",
+          1 
+],
+[
+ "Mexico",
+          5 
+],
+[
+ "Moldova",
+          1 
+],
+[
+ "Nepal",
+          4 
+],
+[
+ "Nigeria",
+          2 
+],
+[
+ "Pakistan",
+          2 
+],
+[
+ "Russia",
+          7 
+],
+[
+ "Sri Lanka",
+          2 
+],
+[
+ "Taiwan",
+         12 
+],
+[
+ "Thailand",
+          1 
+],
+[
+ "Turkey",
+          4 
+],
+[
+ "Ukraine",
+          8 
+],
+[
+ "Venezuela",
+          2 
+],
+[
+ "Yugoslavia",
+          1 
+] 
+];
+data.addColumn('string','Country');
+data.addColumn('number','Leg.Brawl');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartGeoMapID36c61717() {
+  var data = gvisDataGeoMapID36c61717();
+  var options = {};
+options["dataMode"] = "regions";
+options["width"] =    750;
+options["height"] =    500;
+options["colors"] = [0xEDDD00, 0xED6700, 0xA04400];
+
+     var chart = new google.visualization.GeoMap(
+       document.getElementById('GeoMapID36c61717')
+     );
+     chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart 
+function displayChartGeoMapID36c61717()
+{
+  google.load("visualization", "1", { packages:["geomap"] }); 
+  google.setOnLoadCallback(drawChartGeoMapID36c61717);
+}
+ 
+// jsChart 
+displayChartGeoMapID36c61717()
+ 
+<!-- jsFooter -->  
+//-->
+</script>
+ 
+<!-- divChart -->
+  
+<div id="GeoMapID36c61717"
+  style="width: 750px; height: 500px;">
+</div>

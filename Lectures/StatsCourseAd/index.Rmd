@@ -1,0 +1,191 @@
+---
+
+# An Advertisement for Intro to Social Science Data Analysis 
+
+Christopher Gandrud
+
+Fall 2012
+
+---
+
+# What are your career goals?
+
+---
+
+# Do you want to go into government?
+
+---
+
+### You need data analysis
+
+-----
+
+![](images/worldbank_snap.png)
+
+---
+
+# Do you want to go into business?
+
+---
+
+### You need data analysis
+
+-----
+
+![](images/bloomberg_snap.png)
+
+---
+
+# Do you want to go into journalism?
+
+---
+
+### You need data analysis
+
+-----
+
+![](images/nytimes_snap.png)
+
+---
+
+# Do you want to go into academics?
+
+---
+
+### You need data analysis
+
+---
+
+![](images/violence_snap.jpeg)
+
+---
+
+# This course is useful.
+
+---
+
+# You will learn how to:
+
+---
+
+# Gather data from sources like the World Bank and US Federal Reserve,
+
+---
+
+# Analyse the data with basic statistics,
+
+---
+
+# Dynamically present your results with . . .
+
+---
+
+### Basic graphics
+
+<img border = 0 src="images/qplot-swiss-smooth.png" alt = "Scatter" width = 600 height = 500>
+
+---
+
+### Motion Charts
+
+-----
+
+<iframe src="http://dl.dropbox.com/u/12581470/Graphs/external.debt.html"></iframe>
+
+---
+
+### Maps
+
+-----
+
+<iframe src = "images/leg.violence.map.html"></iframe>
+
+---
+
+# And More
+
+- For example: In the optional advanced course, we will create websites to present our analyses.
+
+---
+
+# This is a new type of course.
+
+---
+
+### You will share your work on the course blog
+
+-----
+
+<iframe src = "http://yonseiappliedstats.tumblr.com/"></iframe>
+
+---
+
+### We will build a course Wiki.
+
+-----
+
+![](images/wiki.png)
+
+---
+
+# Interested?
+
+---
+
+# Excellent!
+
+---
+
+# Worried?
+
+---
+
+# Worried that there will be math?
+
+---
+
+# There will be some math.
+
+$$ y = \alpha + \beta x $$
+
+---
+
+# Worried that there will be computer programming?
+
+---
+
+# There will be a lot of programming.
+
+    # Plot
+    Model.demAge.p <- ggplot(Model.demAge.e, aes(variable, value)) +
+              geom_point(shape = 21, color = "gray30", alpha = I(0.05)) +
+              stat_smooth() +
+              scale_x_continuous(breaks = c(0, 21, 51, 85))) +
+              scale_y_continuous(breaks = c(0, 0.02, 0.05, 0.1, 0.15)) +
+              xlab("\nAge of Democracy") + ylab("") +
+              opts(axis.title.x = theme_text(size = 12, vjust = 0)) +
+              theme_bw()
+              
+---
+
+# But remember
+
+The course isn't about math or programming, it is about using these tools to:
+
+- find answers and 
+
+- share what we learn with others.
+
+---
+
+# For more information: 
+
+---
+
+### See the main [course site](http://christophergandrud.github.com/Introduction_to_Statistics_and_Data_Analysis_Yonsei/):
+
+--- full
+
+<iframe src = "http://christophergandrud.github.com/Introduction_to_Statistics_and_Data_Analysis_Yonsei/" />
+
+---
