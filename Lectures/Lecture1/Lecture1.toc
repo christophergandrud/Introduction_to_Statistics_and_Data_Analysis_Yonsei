@@ -1,0 +1,7 @@
+\beamer@endinputifotherversion {3.10pt}
+\beamer@sectionintoc {2}{Contact}{3}{0}{1}
+\beamer@sectionintoc {3}{Course Aims}{7}{0}{2}
+\beamer@sectionintoc {4}{Prerequisites}{19}{0}{3}
+\beamer@sectionintoc {5}{Course Outline}{22}{0}{4}
+\beamer@sectionintoc {6}{Course Materials}{34}{0}{5}
+\beamer@sectionintoc {7}{Assessment}{37}{0}{6}

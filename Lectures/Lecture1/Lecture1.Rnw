@@ -1,0 +1,228 @@
+%% Lecture 1
+
+\documentclass{beamer}
+\usetheme{Stats}
+\setbeamercovered{transparent}
+\usepackage{color}
+\usepackage{hyperref}
+  \hypersetup{
+		colorlinks=true
+		linkcolor=black
+		}
+\usepackage{url}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{CJKutf8}
+
+\newenvironment{Korean}{%
+  \CJKfamily{mj}}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title Slide %%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[Lecture 1:]{Intro to Social Science Data Analysis \\[1cm] Lecture 1: \\[0.25cm] Introduction to the Course \& R}
+\author[]{
+    \href{mailto:gandrud@yonsei.ac.kr}{Christopher Gandrud}
+}
+\date{\today}
+
+
+\begin{document}
+
+\begin{CJK}{UTF8}{}
+
+
+\frame{\titlepage}
+
+\section[Outline]{}
+\frame{\tableofcontents}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Contact %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Contact}
+\frame{
+    \frametitle{Contact}
+    {\LARGE{Christopher Gandrud}} \\[0.5cm]
+        \begin{itemize}
+            \item<1-> {\bf{Email:}} \href{mailto:gandrud@yonsei.ac.kr}{gandrud@yonsei.ac.kr}
+            \item<2-> {\bf{Office Hours:}} 15:00-17:00 Wednesday \begin{Korean} (정208) \end{Korean}
+            \item<3-> {\bf{Open Door:}} You can always come to my office or email me.
+        \end{itemize}
+}
+
+\frame{
+  \frametitle{What should you call me?}
+    \begin{center}
+      {\LARGE{Please call me Chris or Christopher \\[0.5cm]
+      
+      In this course we respect {\bf{knowledge}} \& {\bf{evidence}}, not titles.      
+      }}
+    \end{center}
+}
+
+\section{Course Aims}
+
+\frame{
+  \frametitle{Course Aims (1)}
+    {\LARGE{Why take this course?}} \\[0.5cm]
+      \begin{itemize}
+        \item<1-> Learn how to take {\bf{raw data}}, {\bf{explore it}}, and {\bf{present what you find}}.
+        \item<2-> This course {\bf{is hands on}} and {\bf{practical}}. (If you want a mathmatical introduction to statistics, I recommend taking a coure in the Statistics department.)
+        \item<3-> The skills taught in this course are important for many {\bf{real-world}} situations: \vspace{0.5cm}
+          \begin{enumerate}
+            \item<4-> Academics
+            \item<5-> Government
+            \item<6-> Buisiness
+            \item<7-> Journalism
+          \end{enumerate}
+      \end{itemize}
+}
+
+\frame{
+  \frametitle{Course Aims (2)}
+  {\LARGE{Specifics}} \\[0.5cm]
+    \begin{itemize}
+      \item<1-> We will learn how do these things with the {\bf{R}} statistical language in the program RStudio.
+        \begin{itemize}
+      \item<2-> R is difficult when you start to use it, but it is very {\bf{powerfull}} and being able to use it is a very {\bf{marketable skill}}.
+        \end{itemize}
+      \item<3-> Finally, the course is {\bf{not}} about memorisation. 
+      \item<4-> It is about developing tools to {\bf{solve new and unexpected problems}}. 
+    \end{itemize}
+}
+
+\frame{
+  \frametitle{Course Aims (3)}
+  \begin{center}
+    {\LARGE{This course is useful.}}
+  \end{center}
+}
+
+\section{Prerequisites}
+\frame{
+  \frametitle{Prerequisites}
+  {\LARGE{This course is intended for beginners.}} \\[0.5cm]
+    \begin{itemize}
+      \item<1-> You should have good {\bf{basic computer skills}} (Have used Microsoft Excel, for example.)
+      \item<2-> You need to be {\bf{curious}}: Why did that happen? How can I solve this problem?
+      \item<3-> You need to be {\bf{patient}}: Can't give up why you don't succeed the first time.
+    \end{itemize}
+}
+
+\section{Course Outline}
+\frame{
+  \frametitle{Course Outline (1)}
+  {\LARGE{Part I: Introduction to Data Gathering \& Management}} \\[0.5cm]
+    \begin{itemize}
+      \item<1-> R Basics: installing, objects, assignment, functions
+      \item<2-> Data structures
+      \item<3-> Gathering data
+      \item<4-> Replication!
+    \end{itemize}
+}
+
+\frame{
+  \frametitle{Course Outline (2)}
+  {\LARGE{Part II: Basic Data Analysis \& Visualisation}} \\[0.5cm]
+    \begin{itemize}
+      \item<1-> Descriptive statistics
+      \item<2-> Data visualisation
+      \item<3-> Overview of statistical inference
+      \item<4-> Statistical inference with large samples
+    \end{itemize}
+}
+
+\frame{
+  \frametitle{Course Outline (3)}
+  {\LARGE{Part III: Introduction to Linear Regression}} \\[0.5cm]
+    \begin{itemize}
+      \item<1-> Simple linear regression
+      \item<2-> Multiple linear regression
+      \item<3-> Presenting regression results
+    \end{itemize}
+}
+
+\frame{
+  \frametitle{Course Outline (4)}
+  {\LARGE{Part IV: Introduction to Linear Regression}} \\[0.5cm]
+    \begin{center}
+      {\LARGE{Research Projects: \\[0.5cm] Use all of these skills.}}
+    \end{center}
+}
+
+\section{Course Materials}
+
+\frame{
+  \frametitle{Course Materials (1)}
+  {\LARGE{Blog}}: \url{http://yonsei-data-analysis.tumblr.com/} \\[0.25cm]
+  {\bf{Password Protected:}} YonseiData \\[0.5cm]
+  
+  {\LARGE{Syllabus}}: \url{http://bit.ly/QwE4UM}
+}
+
+\frame{
+  \frametitle{Course Materials (2)}
+  
+  {\LARGE{Reading}} \\[0.5cm]
+  
+  The main {\bf{text}} is: {\emph{OpenIntro Statistics (first edition)}} \\
+  It is {\bf{free}} and can be downloaded here: \url{http://www.openintro.org/stat/downloads.php}. \\[0.5cm]
+  
+  You might also want to get: Crawley, Michael J. 2005. {\emph{Statistics: An Introduction Using R}}. Chichester: John Wiley & Sons. Ltd.
+}
+
+\frame{
+  \frametitle{Course Materials (3)}
+  However, the course is more about {\bf{doing}} than {\bf{consuming}}. \\
+  
+  So the focus is on {\bf{completing tasks}}, not reading. \\[0.5cm]
+  
+  To help you complete tasks, we are building a course {\bf{Wiki}}: \url{http://bit.ly/NkdgfW}.
+}
+
+\section{Assessment}
+\frame{
+  \frametitle{Assessment (1)}
+    \begin{itemize}
+      \item<1-> 10\% Class Attendance and Participation
+      \item<2-> 40\% 5 Short Assignments: Due weeks 3, 5, 7, 9, 11
+      \item<3-> 50\% Pair Research project (paper and presentation): Due Week 16
+    \end{itemize}
+}
+
+\frame{
+  \frametitle{Assessment (2)}
+    {\LARGE{Attendance and Participation}} \\[0.5cm]
+    
+    You must {\bf{attend}} all lectures and seminars.\\[0.25cm]
+    
+    You must {\bf{participate}} in class discussions and activities.
+    
+    \begin{itemize}
+      \item<2-> Each $1 + N$ absence = $-5$ participation points.
+    \end{itemize}    
+}
+
+\frame{
+  \frametitle{Assessment (3)}
+  \begin{center}
+    {\LARGE{More details will be given in future classes about the Short Assignments \& Research Project}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Now}
+    \begin{itemize}
+      \item<1-> {\LARGE{1. Look at the course blog}} (\url{http://yonsei-data-analysis.tumblr.com/})\\[0.25cm]
+        \begin{center}
+          {\bf{Please post!}} \\[0.5cm]
+        \end{center}
+  
+      \item<2-> {\LARGE{2. Install R if you want to use your own computer. (RECOMMENDED)}} \\[0.25cm]
+      You can find instructions on the course wiki page: \url{http://bit.ly/PBjDdw}\\[0.5cm]
+  
+      \item <3->{\LARGE{3. Open and play around with RStudio}}
+    \end{itemize}
+}
+
+
+\end{CJK}
+\end{document}

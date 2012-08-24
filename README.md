@@ -87,7 +87,7 @@ For more reference on using **R** you might find these resources useful:
 
 How we communicate recently has been changing rapidly. Inaddition to articles and presentations, people have been using new formats such as **Twitter** and blogs to share their work and ideas. To help develop your skills using these formats you will post your work for some of the short assignments and pair research project on the class blog. You should post both the output of your work and the code you used to create it. The blog is at:
 
-> <http://yonseidataanalysis.tumblr.com/>
+> <http://yonsei-data-analysis.tumblr.com/>
 
 It is password protected. I will give you the password in class. More details about how to post on the blog will be given in class. 
 
@@ -105,6 +105,7 @@ I cover the course objectives, give you some examples of the type of data analys
 > **Appendix 1: Fundamentals of the R Language:** Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. Chichester: John Wiley & Sons. Ltd. 
     
 ### Week 2: Types of Data
+How do we load data into **R**. How can we manipulate our data in **R**. 
 
 > **p. 1-8, 26-36:** *OpenIntro Statistics*
 
@@ -193,7 +194,7 @@ What if we have more than one independent variable?
 > **Chapter 11, Multiple Regression:** Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. Chichester: John Wiley & Sons. Ltd. 
 
 
-### Week 12: Presenting Regression results
+### Week 12: Presenting Regression Results
 How can we most effectively present the results from our regression analyses using simulations and graphs? How can we use `Zelig` for regression analysis?
 
 > King, Gary, Michael Tomz, and Jason Wittenberg. 2000. “Making the Most of Statistical Analyses: Improving Interpretation and Presentation.” American Journal of Political Science 44(2): 347–361.
