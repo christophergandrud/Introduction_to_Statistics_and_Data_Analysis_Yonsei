@@ -1,0 +1,4 @@
+\beamer@endinputifotherversion {3.10pt}
+\beamer@sectionintoc {2}{What is the seminar for?}{3}{0}{1}
+\beamer@sectionintoc {3}{Getting Started with RStudio}{11}{0}{2}
+\beamer@sectionintoc {4}{Getting Started with R}{23}{0}{3}

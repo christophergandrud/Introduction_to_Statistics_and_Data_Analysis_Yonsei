@@ -1,0 +1,287 @@
+\documentclass{beamer}\usepackage{graphicx, color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\definecolor{fgcolor}{rgb}{0.2, 0.2, 0.2}
+\newcommand{\hlnumber}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlfunctioncall}[1]{\textcolor[rgb]{0.501960784313725,0,0.329411764705882}{\textbf{#1}}}%
+\newcommand{\hlstring}[1]{\textcolor[rgb]{0.6,0.6,1}{#1}}%
+\newcommand{\hlkeyword}[1]{\textcolor[rgb]{0,0,0}{\textbf{#1}}}%
+\newcommand{\hlargument}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
+\newcommand{\hlcomment}[1]{\textcolor[rgb]{0.180392156862745,0.6,0.341176470588235}{#1}}%
+\newcommand{\hlroxygencomment}[1]{\textcolor[rgb]{0.43921568627451,0.47843137254902,0.701960784313725}{#1}}%
+\newcommand{\hlformalargs}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
+\newcommand{\hleqformalargs}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
+\newcommand{\hlassignement}[1]{\textcolor[rgb]{0,0,0}{\textbf{#1}}}%
+\newcommand{\hlpackage}[1]{\textcolor[rgb]{0.588235294117647,0.709803921568627,0.145098039215686}{#1}}%
+\newcommand{\hlslot}[1]{\textit{#1}}%
+\newcommand{\hlsymbol}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlprompt}[1]{\textcolor[rgb]{0.2,0.2,0.2}{#1}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usetheme{Stats}
+\setbeamercovered{transparent}
+\usepackage{color}
+\usepackage{hyperref}
+  \hypersetup{
+  	colorlinks=true
+		linkcolor=black
+		}
+\usepackage{url}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{booktabs}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title Slide %%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[Seminar 1]{Intro to Social Science Data Analysis \\[1cm] Seminar 1: Introduction to R and RStudio \\[0.25cm]}
+\author[]{
+    \href{mailto:gandrud@yonsei.ac.kr}{Christopher Gandrud}
+}
+\date{\today}
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section[Outline]{}
+\frame{\tableofcontents}
+
+\section{What is the seminar for?}
+\frame{
+  \frametitle{Seminar Purpose (1)}
+  \begin{itemize}
+    \item<1->  This course is about learning skills that will help you {\bf{gather}}, {\bf{analyse}}, and {\bf{present}} social science data.
+    \item<2-> The best way to develop these skills is by {\bf{using}} them.
+    \item<3-> The seminar is an opportunity for you to {\bf{practice}} using these tools where you can:
+      \begin{itemize}
+        \item<4-> Ask me questions,
+        \item<5-> Collaborate with your fellow students.
+      \end{itemize}
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{Format (1)}
+    \begin{itemize}
+      \item<1-> In the lecture \& seminar I will give you {\bf{general tools}}.
+      \item<2-> In the seminar I will give you a {\bf{goal}} to complete with these tools (and others).
+    \end{itemize}
+}
+
+\frame{
+  \frametitle{Format (2)}
+    {\LARGE{Note: There is {\bf{rarely only one correct answer}}.}} \\[0.5cm]
+    
+    {\LARGE{I want you to {\bf{creatively}} use the tools and resources available to you.}} \\[0.5cm]
+    
+    {\LARGE{I do not want you to just copy a list of instructions.}}
+}
+
+\section{Getting Started with RStudio}
+\frame{
+  \frametitle{Getting Started with RStudio}
+    \begin{center}
+      {\LARGE{Open Rstudio}} \\[0.5cm]
+      \includegraphics{images/RStudioIcon.png}
+    \end{center}
+}
+
+\frame{
+  \frametitle{Looking Around}
+  {\LARGE{Look around the main Panel.}} \\[0.5cm]
+    \begin{itemize}
+      \item {\bf{Console}}: Where you can enter R code.
+      \item {\bf{Workspace/History}}: Where you can see your objects and the history of commands.
+      \item {\bf{Files/Plots/Packages/Help}}: Navigate files, see the graphs you make and your packages, read help files.
+    \end{itemize}
+}
+
+\frame{
+  \frametitle{Source Files}
+  {\LARGE{Create a new {\bf{source code}} file:}} \\[0.5cm]
+    \begin{itemize}
+      \item<1-> Click: {\tt{File}} \rightarrow {\tt{New}} \rightarrow {\tt{R Script}}
+      \item<2-> Usually write your R code here and {\bf{save your source files}}.
+      \item<3-> This will make your life a {\bf{lot easier}}.
+    \end{itemize}
+}
+
+\frame{
+  \frametitle{Source Files}
+  {\LARGE{Create a new {\bf{notebook}}:}} \\[0.5cm]
+    \begin{itemize}
+      \item<1-> Notebooks allow you to record {\bf{what}} you do and {\bf{how}} you do it.
+      \item<2-> When you have you source code file open, click: {\tt{File}} \rightarrow {\tt{Compile Notebook \ldots}} 
+      \item<3-> Compile a notebook when you are finished.
+      \item<4-> We will do more of this in Week 4.
+    \end{itemize}
+}
+
+\frame{
+  \frametitle{Commenting}
+  {\bf{Hint:}} You can make your code easier to read by {\bf{regularly commenting}} on it. \\[0.5cm]
+      Use the {\tt{\#}} (hash). For example,
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{## This is a comment}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+}
+
+\section{Getting Started with R}
+\frame{
+  \frametitle{The Basics: Objects (1)}
+  {\LARGE{Objects}} \\[0.5cm]
+  \begin{itemize}
+    \item<1-> R is an {\emph{object-oriented language}}.
+    \item<2-> {\bf{Objects}} are like R's nouns: they are {\bf{things}}.
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{The Basics: Objects (2)}
+  {\LARGE{For example:}}
+
+\begin{kframe}
+\begin{alltt}
+\hlcomment{# Add 2 + 2}
+
+2 + 2
+\end{alltt}
+\end{kframe}
+[1] 4
+
+\begin{kframe}\begin{alltt}
+
+\hlcomment{# Put the answer of 2 + 2 in an object called Answer}
+
+Answer <- 2 + 2
+\end{alltt}
+\end{kframe}
+
+}
+
+\frame{
+  \frametitle{Assignemt}
+  The {\tt{<-}} is the {\bf{assignment operator}} it assigns something to an object.
+}
+
+\frame{
+  \frametitle{Tasks 1}
+  Create {\bf{5}} different objects. Explore their properties. \\[0.5cm]
+  
+  What can you put into an object? \\[0.5cm]
+  
+  What could you not put into an object?
+}
+
+\frame{
+  \frametitle{Commands, Functions, Arguments (1)}
+  {\LARGE{Commands \& Functions}} \\[0.5cm]
+  Commands and Functionstell R to {\bf{do something}}. \\
+  Usually they do something to an object.
+}
+
+\frame{
+  \frametitle{Commands, Functions, Arguments (2)}
+  {\LARGE{For example:}} \\[0.5cm]
+  Lets create a set of 5 numbers: 1, 2, 3, 4, 5, 6:
+
+\begin{kframe}
+\begin{alltt}
+Numbers <- \hlfunctioncall{c}(1, 2, 3, 4, 5, 5)
+\end{alltt}
+\end{kframe}
+
+
+Now lets take the mean (average) of these 5 numbers with the {\tt{mean}} command
+
+\begin{kframe}
+\begin{alltt}
+\hlfunctioncall{mean}(Numbers)
+\end{alltt}
+\end{kframe}
+[1] 3.333
+
+
+
+
+}
+
+\frame{
+  \frametitle{Commands, Functions, Arguments (1)}
+  {\LARGE{Arguments}} \\[0.5cm]
+  Arguments modify the command.
+}
+
+\frame{
+  \frametitle{Commands, Functions, Arguments (2)}
+  {\LARGE{For example:}} \\[0.5cm]
+  Find what arguments the {\tt{mean}} command can take by typing a {\tt{?}} before {\tt{mean}}.
+
+  This gives us the {\bf{help file}} for the {\tt{mean}} command. \\[0.25cm]
+
+  We can see that one argument is {\tt{trim}} which rounds the answer. \\ [0.25cm]
+
+  To add the {\tt{trim}} argument just use the {\tt{=}} like this:
+
+\begin{kframe}
+\begin{alltt}
+\hlfunctioncall{mean}(Numbers, trim = 1)
+\end{alltt}
+\end{kframe}
+[1] 3.5
+
+
+
+
+}
+
+\frame{
+  \frametitle{Tasks 1}
+  Find and use {\bf{2}} other commands. Explore their properties. \\[0.5cm]
+  
+  Assign the output of these commands to new objects?
+}
+
+\end{document}

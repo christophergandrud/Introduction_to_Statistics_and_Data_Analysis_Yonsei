@@ -1,0 +1,205 @@
+\documentclass{beamer}
+\usetheme{Stats}
+\setbeamercovered{transparent}
+\usepackage{color}
+\usepackage{hyperref}
+  \hypersetup{
+  	colorlinks=true
+		linkcolor=black
+		}
+\usepackage{url}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{booktabs}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title Slide %%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[Seminar 1]{Intro to Social Science Data Analysis \\[1cm] Seminar 1: Introduction to R and RStudio \\[0.25cm]}
+\author[]{
+    \href{mailto:gandrud@yonsei.ac.kr}{Christopher Gandrud}
+}
+\date{\today}
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section[Outline]{}
+\frame{\tableofcontents}
+
+\section{What is the seminar for?}
+\frame{
+  \frametitle{Seminar Purpose (1)}
+  \begin{itemize}
+    \item<1->  This course is about learning skills that will help you {\bf{gather}}, {\bf{analyse}}, and {\bf{present}} social science data.
+    \item<2-> The best way to develop these skills is by {\bf{using}} them.
+    \item<3-> The seminar is an opportunity for you to {\bf{practice}} using these tools where you can:
+      \begin{itemize}
+        \item<4-> Ask me questions,
+        \item<5-> Collaborate with your fellow students.
+      \end{itemize}
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{Format (1)}
+    \begin{itemize}
+      \item<1-> In the lecture \& seminar I will give you {\bf{general tools}}.
+      \item<2-> In the seminar I will give you a {\bf{goal}} to complete with these tools (and others).
+    \end{itemize}
+}
+
+\frame{
+  \frametitle{Format (2)}
+    {\LARGE{Note: There is {\bf{rarely only one correct answer}}.}} \\[0.5cm]
+    
+    {\LARGE{I want you to {\bf{creatively}} use the tools and resources available to you.}} \\[0.5cm]
+    
+    {\LARGE{I do not want you to just copy a list of instructions.}}
+}
+
+\section{Getting Started with RStudio}
+\frame{
+  \frametitle{Getting Started with RStudio}
+    \begin{center}
+      {\LARGE{Open Rstudio}} \\[0.5cm]
+      \includegraphics{images/RStudioIcon.png}
+    \end{center}
+}
+
+\frame{
+  \frametitle{Looking Around}
+  {\LARGE{Look around the main Panel.}} \\[0.5cm]
+    \begin{itemize}
+      \item {\bf{Console}}: Where you can enter R code.
+      \item {\bf{Workspace/History}}: Where you can see your objects and the history of commands.
+      \item {\bf{Files/Plots/Packages/Help}}: Navigate files, see the graphs you make and your packages, read help files.
+    \end{itemize}
+}
+
+\frame{
+  \frametitle{Source Files}
+  {\LARGE{Create a new {\bf{source code}} file:}} \\[0.5cm]
+    \begin{itemize}
+      \item<1-> Click: {\tt{File}} \rightarrow {\tt{New}} \rightarrow {\tt{R Script}}
+      \item<2-> Usually write your R code here and {\bf{save your source files}}.
+      \item<3-> This will make your life a {\bf{lot easier}}.
+    \end{itemize}
+}
+
+\frame{
+  \frametitle{Source Files}
+  {\LARGE{Create a new {\bf{notebook}}:}} \\[0.5cm]
+    \begin{itemize}
+      \item<1-> Notebooks allow you to record {\bf{what}} you do and {\bf{how}} you do it.
+      \item<2-> When you have you source code file open, click: {\tt{File}} \rightarrow {\tt{Compile Notebook \ldots}} 
+      \item<3-> Compile a notebook when you are finished.
+      \item<4-> We will do more of this in Week 4.
+    \end{itemize}
+}
+
+\frame{
+  \frametitle{Commenting}
+  {\bf{Hint:}} You can make your code easier to read by {\bf{regularly commenting}} on it. \\[0.5cm]
+      Use the {\tt{\#}} (hash). For example,
+<<CommentExample>>=
+## This is a comment
+@
+}
+
+\section{Getting Started with R}
+\frame{
+  \frametitle{The Basics: Objects (1)}
+  {\LARGE{Objects}} \\[0.5cm]
+  \begin{itemize}
+    \item<1-> R is an {\emph{object-oriented language}}.
+    \item<2-> {\bf{Objects}} are like R's nouns: they are {\bf{things}}.
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{The Basics: Objects (2)}
+  {\LARGE{For example:}}
+
+<<ObjectEx, results='asis'>>=
+# Add 2 + 2
+
+2 + 2
+
+# Put the answer of 2 + 2 in an object
+# called Answer
+
+Answer <- 2 + 2
+@
+}
+
+\frame{
+  \frametitle{Assignemt}
+  The {\tt{<-}} is the {\bf{assignment operator}} it assigns something to an object.
+}
+
+\frame{
+  \frametitle{Tasks 1}
+  Create {\bf{5}} different objects. Explore their properties. \\[0.5cm]
+  
+  What can you put into an object? \\[0.5cm]
+  
+  What could you not put into an object?
+}
+
+\frame{
+  \frametitle{Commands, Functions, Arguments (1)}
+  {\LARGE{Commands \& Functions}} \\[0.5cm]
+  Commands and Functionstell R to {\bf{do something}}. \\
+  Usually they do something to an object.
+}
+
+\frame{
+  \frametitle{Commands, Functions, Arguments (2)}
+  {\LARGE{For example:}} \\[0.5cm]
+  Lets create a set of 5 numbers: 1, 2, 3, 4, 5, 6:
+
+<<FiveNumbers, results='asis'>>=
+  Numbers <- c(1, 2, 3, 4, 5, 5)
+@
+
+Now lets take the mean (average) of these 5 numbers with the {\tt{mean}} command
+
+<<FiveMean, results='asis'>>=
+mean(Numbers)
+@
+
+}
+
+\frame{
+  \frametitle{Commands, Functions, Arguments (1)}
+  {\LARGE{Arguments}} \\[0.5cm]
+  Arguments modify the command.
+}
+
+\frame{
+  \frametitle{Commands, Functions, Arguments (2)}
+  {\LARGE{For example:}} \\[0.5cm]
+  Find what arguments the {\tt{mean}} command can take by typing a {\tt{?}} before {\tt{mean}}.
+
+  This gives us the {\bf{help file}} for the {\tt{mean}} command. \\[0.25cm]
+
+  We can see that one argument is {\tt{trim}} which rounds the answer. \\ [0.25cm]
+
+  To add the {\tt{trim}} argument just use the {\tt{=}} like this:
+
+<<MeanTrim, results='asis'>>=
+mean(Numbers, trim = 1)
+@
+
+}
+
+\frame{
+  \frametitle{Tasks 1}
+  Find and use {\bf{2}} other commands. Explore their properties. \\[0.5cm]
+  
+  Assign the output of these commands to new objects?
+}
+
+\end{document}
