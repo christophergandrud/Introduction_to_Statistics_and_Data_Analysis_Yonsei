@@ -1,7 +1,7 @@
 # INT3042: Introduction to Social Science Data Analysis
 ## Yonsei University, Wonju
 ### Fall 2012 
-### Version: 23 August 2012
+### Version: 3 September 2012
 
 ___________________________________________________________
 
@@ -14,7 +14,7 @@ ___________________________________________________________
 
 - You can also send me an email or come to my office whenever you need to.
 
-**Time:** 11:00-12:15 Tuesday & Thursday (정346)
+**Time:** 11:00-12:15 Tuesday & Thursday (정215)
 
 **Objectives:** This course's main objective is to: *learn how to take raw social science data, explore it, and present the results in a useful way*. In this course you will learn all of the basic skills needed to do each of these steps with the statistical language **R**. *Part I* of the course introduces you to both basic data structures and **RStudio** (a program that makes using **R** easier). *Part II* introduces basic data analysis and visualizations techniques. *Part III* covers slightly more advanced statistical tools, primarily linear regression. Finally, in *Part IV* we will apply all of these skills in a pair research project. 
 
