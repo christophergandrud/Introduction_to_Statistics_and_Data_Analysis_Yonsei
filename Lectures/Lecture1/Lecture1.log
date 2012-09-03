@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  3 SEP 2012 08:47
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  3 SEP 2012 09:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1847,6 +1847,13 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [45
 
 ]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[46
+
+]
 \tf@nav=\write6
 \openout6 = `Lecture1.nav'.
 
@@ -1856,11 +1863,11 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `Lecture1.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 283.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 283.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
  (./Lecture1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 283.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 283.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 284.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 284.
 Package rerunfilecheck Info: File `Lecture1.out' has not changed.
 (rerunfilecheck)             Checksum: BBA161AF0E375F368FEAADD64E12B073;281.
 
@@ -1868,34 +1875,36 @@ Package rerunfilecheck Info: File `Lecture1.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 283.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
  ) 
 Here is how much of TeX's memory you used:
- 19852 strings out of 493633
- 364168 string characters out of 3143377
+ 19873 strings out of 493633
+ 364557 string characters out of 3143377
  435120 words of memory out of 3000000
- 22515 multiletter control sequences out of 15000+200000
- 16640 words of font info for 61 fonts, out of 3000000 for 9000
+ 22531 multiletter control sequences out of 15000+200000
+ 18354 words of font info for 68 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 49i,16n,60p,447b,1390s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 49i,16n,60p,447b,1397s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 ></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
 /usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></
-usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></u
-sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr
-/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/l
-ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/
-local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/
-local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
-ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/lo
-cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></us
-r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb><
-/usr/local/texlive/2011/texmf-dist/fonts/type1/uhc/umj/umj12.pfb></usr/local/te
-xlive/2011/texmf-dist/fonts/type1/uhc/umj/umj13.pfb>
-Output written on Lecture1.pdf (45 pages, 177342 bytes).
+usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></u
+sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></us
+r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/
+local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/lo
+cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/l
+ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/l
+ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
+cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/loc
+al/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/loca
+l/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/
+local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></u
+sr/local/texlive/2011/texmf-dist/fonts/type1/uhc/umj/umj12.pfb></usr/local/texl
+ive/2011/texmf-dist/fonts/type1/uhc/umj/umj13.pfb>
+Output written on Lecture1.pdf (46 pages, 194161 bytes).
 PDF statistics:
- 469 PDF objects out of 1000 (max. 8388607)
- 397 compressed objects within 4 object streams
- 98 named destinations out of 1000 (max. 500000)
+ 491 PDF objects out of 1000 (max. 8388607)
+ 415 compressed objects within 5 object streams
+ 100 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
