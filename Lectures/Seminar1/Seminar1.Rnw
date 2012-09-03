@@ -153,10 +153,10 @@ Answer <- 2 + 2
 }
 
 \begin{frame}[fragile]
-  \frametitle{Object Classes}
-      {\LARGE{Object Classes}} \\[0.5cm]
-      All objects have a {\bf{class}}. \\[0.5cm]
-      Some are {\bf{numeric}}, some are {\bf{characters}}, some are {\bf{logical}} (TRUE or FALSE) \\[0.25cm]
+  \frametitle{Basic Object Modes}
+      {\LARGE{Basic Object Modes}} \\[0.5cm]
+      All objects have a {\bf{mode}} (sometimes called data type or class). \\[0.5cm]
+      Very basic object types are {\bf{numeric}}, {\bf{character strings}}, and {\bf{logical}} (TRUE or FALSE). \\[0.25cm]
       Use the \texttt{class} command to find out what an object's class is. For example:
 
 <<ClassExample>>=
@@ -175,7 +175,6 @@ class(Answer)
         \begin{itemize}
           \item<3-> Vectors
           \item<4-> Matrices
-          \item<5-> Lists
         \end{itemize}
     \end{itemize}
 }
@@ -183,7 +182,8 @@ class(Answer)
 \frame{
   \frametitle{Vectors}
   {\LARGE{Vectors}} \\[0.5cm]
-  Vectors are objects with multiple numbers {\emph{or}} character strings in a particular order.
+  Vectors are objects with multiple numbers {\emph{or}} character strings in a particular order. \\[0.5cm]
+  They are the ``workhorse" of R (Matloff 2011).
 }
 
 \begin{frame}[fragile,plain]
@@ -204,10 +204,52 @@ CharVector
 \end{frame}
 
 \frame{
+  \frametitle{Matrices 1}
+  {\LARGE{Matrices}} \\[0.5cm]
+  Matrices are like vectors, except they have {\bf{multiple rows}}. \\[0.5cm]
+  You may remember matrices from math class:
+  \[
+ \begin{bmatrix}
+  a & b & c \\
+  d & e & f \\
+  g & h & i
+ \end{bmatrix}
+\]
+  {\bf{Don't worry}}, we never need to do matrix math in this class. R does it for us!
+}
+
+\frame{
+  \frametitle{Matrices 2}
+  We can use the \texttt{cbind} function (Column Bind) to combine two of the vectors we created before. 
+}
+
+\begin{frame}[fragile,plain]
+<<Cbind>>=
+# Bind the CarVector and NonSeq objects
+NewMatrix <- cbind(CharVector, NonSeq)
+
+# Display contents of NewMatrix
+NewMatrix
+@
+\end{frame}
+
+\frame{
+  \frametitle{Tasks 3}
+  Create a:
+    \begin{itemize}
+      \item Numeric vector
+      \item Character vector
+      \item Character matrix
+      \item Numeric matrix
+    \end{itemize}
+}
+
+\frame{
   \frametitle{Commands, Functions, Arguments (1)}
   {\LARGE{Commands \& Functions}} \\[0.5cm]
-  Commands and Functionstell R to {\bf{do something}}. \\
+  Commands and Functions tell R to {\bf{do something}}. \\
   Usually they do something to an object.
+  They are like R's {\bf{verbs}}.
 }
 
 \begin{frame}[fragile]
@@ -249,10 +291,23 @@ mean(Numbers, trim = 1)
 \end{frame}
 
 \frame{
-  \frametitle{Tasks 1}
+  \frametitle{Tasks 3}
   Find and use {\bf{2}} other commands. Explore their properties. \\[0.5cm]
   
   Assign the output of these commands to new objects?
+}
+
+\frame{
+  \frametitle{Installing New Functions}
+  {\LARGE{Installing New Functions}} \\[0.5cm]
+  One of R's great strengths is that there are thousands of free, open source add-on packages that let you greatly expand what you can do in R. \\[0.25cm]
+  To {\bf{install}} these packages use the \texttt{install.packages} command. \\[0.25cm]
+  Once the package is installed you can {\bf{load it}} in your R session with the \texttt{library} function.
+}
+
+\frame{
+  \frametitle{Tasks 4}
+  Install and load the {\emph{WDI}} package.
 }
 
 \end{document}

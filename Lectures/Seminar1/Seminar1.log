@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  3 SEP 2012 12:26
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  3 SEP 2012 16:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1471,16 +1471,16 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [34
 
 ]
+\openout4 = `Seminar1.vrb'.
+
+ (./Seminar1.vrb) [35
+
+]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[35
-
-]
-\openout4 = `Seminar1.vrb'.
-
- (./Seminar1.vrb) [36
+[36
 
 ]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
@@ -1492,12 +1492,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 ]
 \openout4 = `Seminar1.vrb'.
 
- (./Seminar1.vrb)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[38
+ (./Seminar1.vrb) [38
 
 ]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
@@ -1507,9 +1502,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [39
 
 ]
-\openout4 = `Seminar1.vrb'.
-
- (./Seminar1.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1524,6 +1516,68 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [41
 
 ]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[42
+
+]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[43
+
+]
+\openout4 = `Seminar1.vrb'.
+
+ (./Seminar1.vrb)
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[44
+
+]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[45
+
+]
+\openout4 = `Seminar1.vrb'.
+
+ (./Seminar1.vrb)
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[46
+
+]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[47
+
+]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[48
+
+]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[49
+
+]
 \tf@nav=\write6
 \openout6 = `Seminar1.nav'.
 
@@ -1533,11 +1587,11 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `Seminar1.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 364.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 364.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 430.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 430.
  (./Seminar1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 364.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 364.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 430.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 430.
 Package rerunfilecheck Info: File `Seminar1.out' has not changed.
 (rerunfilecheck)             Checksum: 003DC110782B4B7B91ABE73A8F723E8B;179.
 
@@ -1545,32 +1599,33 @@ Package rerunfilecheck Info: File `Seminar1.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 364.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 430.
  ) 
 Here is how much of TeX's memory you used:
- 18343 strings out of 493633
- 348777 string characters out of 3143377
+ 18377 strings out of 493633
+ 349199 string characters out of 3143377
  412235 words of memory out of 3000000
- 21094 multiletter control sequences out of 15000+200000
+ 21111 multiletter control sequences out of 15000+200000
  14167 words of font info for 54 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  49i,16n,60p,447b,589s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb>
-</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb><
-/usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></u
-sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr
-/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></us
-r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></us
-r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/
-local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></
-usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb
->
-Output written on Seminar1.pdf (41 pages, 165797 bytes).
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><
+/usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></
+usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></us
+r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/
+local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr
+/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr
+/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/l
+ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></u
+sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
+
+Output written on Seminar1.pdf (49 pages, 184176 bytes).
 PDF statistics:
- 397 PDF objects out of 1000 (max. 8388607)
- 331 compressed objects within 4 object streams
- 86 named destinations out of 1000 (max. 500000)
+ 458 PDF objects out of 1000 (max. 8388607)
+ 383 compressed objects within 4 object streams
+ 101 named destinations out of 1000 (max. 500000)
  68 words of extra memory for PDF output out of 10000 (max. 10000000)
 
