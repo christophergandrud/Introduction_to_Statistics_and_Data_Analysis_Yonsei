@@ -34,7 +34,7 @@
   \begin{itemize}
     \item<1->  This course is about learning skills that will help you {\bf{gather}}, {\bf{analyse}}, and {\bf{present}} social science data.
     \item<2-> The best way to develop these skills is by {\bf{using}} them.
-    \item<3-> The seminar is an opportunity for you to {\bf{practice}} using these tools where you can:
+    \item<3-> The seminar is an opportunity for you to {\bf{practice}} using these tools. Here you can:
       \begin{itemize}
         \item<4-> Ask me questions,
         \item<5-> Collaborate with your fellow students.
@@ -82,8 +82,8 @@
   \frametitle{Source Files}
   {\LARGE{Create a new {\bf{source code}} file:}} \\[0.5cm]
     \begin{itemize}
-      \item<1-> Click: {\tt{File}} \rightarrow {\tt{New}} \rightarrow {\tt{R Script}}
-      \item<2-> Usually write your R code here and {\bf{save your source files}}.
+      \item<1-> Click: {\tt{File}} \rightarrow {\tt{New}} \rightarrow {\tt{R\: Script}}
+      \item<2-> Usually write your R code here and {\bf{save your source files} to Dropbox}.
       \item<3-> This will make your life a {\bf{lot easier}}.
     \end{itemize}
 }
@@ -93,32 +93,36 @@
   {\LARGE{Create a new {\bf{notebook}}:}} \\[0.5cm]
     \begin{itemize}
       \item<1-> Notebooks allow you to record {\bf{what}} you do and {\bf{how}} you do it.
-      \item<2-> When you have you source code file open, click: {\tt{File}} \rightarrow {\tt{Compile Notebook \ldots}} 
+      \item<2-> When you have you source code file open, click: {\tt{File}} \rightarrow {\tt{Compile\: Notebook \ldots}} 
       \item<3-> Compile a notebook when you are finished.
       \item<4-> We will do more of this in Week 4.
     \end{itemize}
 }
 
-\frame{
+\begin{frame}[fragile]
   \frametitle{Commenting}
   {\bf{Hint:}} You can make your code easier to read by {\bf{regularly commenting}} on it. \\[0.5cm]
       Use the {\tt{\#}} (hash). For example,
-<<CommentExample>>=
-## This is a comment
+<<CommentExample, results='asis'>>=
+# This is a comment
 @
-}
+\end{frame}
 
 \section{Getting Started with R}
 \frame{
   \frametitle{The Basics: Objects (1)}
   {\LARGE{Objects}} \\[0.5cm]
   \begin{itemize}
-    \item<1-> R is an {\emph{object-oriented language}}.
-    \item<2-> {\bf{Objects}} are like R's nouns: they are {\bf{things}}.
+    \item<1-> R is a computer {\bf{language}}, mostly used for statistical analysis.
+      \begin{itemize}
+        \item<1-> The rules for writing the R language is called its {\bf{syntax}}.
+      \end{itemize}
+    \item<2-> R is an {\emph{object-oriented language}}.
+    \item<3-> {\bf{Objects}} are like R's nouns: they are {\bf{things}}.
   \end{itemize}
 }
 
-\frame{
+\begin{frame}[fragile]
   \frametitle{The Basics: Objects (2)}
   {\LARGE{For example:}}
 
@@ -132,7 +136,7 @@
 
 Answer <- 2 + 2
 @
-}
+\end{frame}
 
 \frame{
   \frametitle{Assignemt}
@@ -148,6 +152,57 @@ Answer <- 2 + 2
   What could you not put into an object?
 }
 
+\begin{frame}[fragile]
+  \frametitle{Object Classes}
+      {\LARGE{Object Classes}} \\[0.5cm]
+      All objects have a {\bf{class}}. \\[0.5cm]
+      Some are {\bf{numeric}}, some are {\bf{characters}}, some are {\bf{logical}} (TRUE or FALSE) \\[0.25cm]
+      Use the \texttt{class} command to find out what an object's class is. For example:
+
+<<ClassExample>>=
+class(Answer)          
+@
+\end{frame}
+
+\frame{
+  \frametitle{Basic Object Types}
+  \begin{itemize}
+    \item<1-> The main type of object we will use in this class is called a {\bf{dataframe}}.
+        \begin{itemize}
+          \item<1-> We will cover dataframes in detail next class. \\[0.5cm]
+        \end{itemize}
+      \item<2-> Today, lets look at some more basic R objects:
+        \begin{itemize}
+          \item<3-> Vectors
+          \item<4-> Matrices
+          \item<5-> Lists
+        \end{itemize}
+    \end{itemize}
+}
+
+\frame{
+  \frametitle{Vectors}
+  {\LARGE{Vectors}} \\[0.5cm]
+  Vectors are objects with multiple numbers {\emph{or}} character strings in a particular order.
+}
+
+\begin{frame}[fragile,plain]
+
+<<VectorsExamples>>=
+# A vector of a sequence of numbers
+Sequence <- 1:10
+Sequence
+
+# Non-sequntial numbers
+NonSeq <- c(1, 30, 53)
+NonSeq
+
+# A character string vector
+CharVector <- c("Christopher", "John", "Gandrud")
+CharVector
+@
+\end{frame}
+
 \frame{
   \frametitle{Commands, Functions, Arguments (1)}
   {\LARGE{Commands \& Functions}} \\[0.5cm]
@@ -155,7 +210,7 @@ Answer <- 2 + 2
   Usually they do something to an object.
 }
 
-\frame{
+\begin{frame}[fragile]
   \frametitle{Commands, Functions, Arguments (2)}
   {\LARGE{For example:}} \\[0.5cm]
   Lets create a set of 5 numbers: 1, 2, 3, 4, 5, 6:
@@ -169,8 +224,7 @@ Now lets take the mean (average) of these 5 numbers with the {\tt{mean}} command
 <<FiveMean, results='asis'>>=
 mean(Numbers)
 @
-
-}
+\end{frame}
 
 \frame{
   \frametitle{Commands, Functions, Arguments (1)}
@@ -178,7 +232,7 @@ mean(Numbers)
   Arguments modify the command.
 }
 
-\frame{
+\begin{frame}[fragile]
   \frametitle{Commands, Functions, Arguments (2)}
   {\LARGE{For example:}} \\[0.5cm]
   Find what arguments the {\tt{mean}} command can take by typing a {\tt{?}} before {\tt{mean}}.
@@ -192,8 +246,7 @@ mean(Numbers)
 <<MeanTrim, results='asis'>>=
 mean(Numbers, trim = 1)
 @
-
-}
+\end{frame}
 
 \frame{
   \frametitle{Tasks 1}

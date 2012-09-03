@@ -58,6 +58,14 @@
     \end{center}
 }
 
+\frame{
+  \frametitle{Question}
+    \begin{center}
+      {\LARGE{What experience do you have reading and using data analysis? \\[0.75cm]
+      What do you want to be able to do?}}
+    \end{center}
+}
+
 \section{Course Aims}
 
 \frame{

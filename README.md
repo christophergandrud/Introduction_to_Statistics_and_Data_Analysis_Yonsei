@@ -100,7 +100,7 @@ I cover the course objectives, give you some examples of the type of data analys
 
 *Extra:*
 
-> **Introduction:** Matloff, Norman. 2011. *The Art of R Programming: A Tour of Statistical Design Software*. San Francisco: No Starch Press.
+> **Introduction & Chapter 1:** Matloff, Norman. 2011. *The Art of R Programming: A Tour of Statistical Design Software*. San Francisco: No Starch Press.
 
 > **Appendix 1: Fundamentals of the R Language:** Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. Chichester: John Wiley & Sons. Ltd. 
     
