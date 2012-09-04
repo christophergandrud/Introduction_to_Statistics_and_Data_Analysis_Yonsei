@@ -107,12 +107,14 @@ I cover the course objectives, give you some examples of the type of data analys
 ### Week 2: Types of Data
 How do we load data into **R**. How can we manipulate our data in **R**. 
 
-> **p. 1-8, 26-36:** *OpenIntro Statistics*
+> **p. 1-8:** *OpenIntro Statistics*
 
 > **Chapter 2, Dataframes:** Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. Chichester: John Wiley & Sons. Ltd. 
 
 ### Week 3: Gathering Data
 Where can we find quality social science data? How do we get this into **R** so we can start analysing it?
+
+> 26-36:** *OpenIntro Statistics*
 
 > "Data APIs/Feeds Available as Packages in R". 2011. Cross Validated. <http://stats.stackexchange.com/questions/12670/data-apis-feeds-available-as-packages-in-r>.
 

@@ -68,8 +68,11 @@
 \usepackage{booktabs}
 
 
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title Slide %%%%%%%%%%%%%%%%%%%%%%%%%%
-\title[Lecture 2]{Intro to Social Science Data Analysis \\[1cm] Lecture 2:  \\[0.25cm] Types of Data}
+\title[Lecture 2]{Intro to Social Science Data Analysis \\[1cm] Lecture 2: Types of Data}
 \author[]{
     \href{mailto:gandrud@yonsei.ac.kr}{Christopher Gandrud}
 }
@@ -77,6 +80,8 @@
 
 
 \begin{document}
+
+
 
 \frame{\titlepage}
 
@@ -102,12 +107,12 @@
 
 \begin{frame}[fragile]
   \frametitle{Quick Quiz}
-  {\large{Describe the following code/output in as much detail as possible.}}
+  {\large{With a partner: describe the following code/output in as much detail as possible.}}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hlcomment{# A quick quiz}
-Population <- \hlfunctioncall{c}(2.5, 17, 6)
+Population <- \hlfunctioncall{c}(14.3, 6.3, 66.7)
 
 Countries <- \hlfunctioncall{c}(\hlstring{"Cambodia"}, \hlstring{"Laos"}, \hlstring{"Thailand"})
 
@@ -116,7 +121,7 @@ NewData <- \hlfunctioncall{cbind}(Countries, Population)
 \hlfunctioncall{sum}(Population)
 \end{alltt}
 \begin{verbatim}
-## [1] 25.5
+## [1] 87.3
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -125,9 +130,469 @@ NewData <- \hlfunctioncall{cbind}(Countries, Population)
 
 \frame{
   \begin{center}
-    {\LARGE{Today: How do we get data into R and make it useable?}}
+    {\LARGE{Today: how do we handle data in R?}}
   \end{center}
 }
+
+
+
+\section{Why do we care about data?}
+\frame{
+  \frametitle{Step Back}
+  {\LARGE{Why do we care about data?}}
+}
+
+
+\frame{
+  \frametitle{Step Back}
+  {\LARGE{Why do we care about data?}} \\[1cm]
+  \begin{center}
+    {\LARGE{We want to answer questions.}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Process of Investigation}
+  {\large{We seek to answer questions with a {\bf{process of investigation}} (Diez et al. 2011, 1):}} \\[0.5cm]
+  \begin{enumerate}
+    \item<1-> Identify a question or problem.
+    \item<2-> {\emph{Think of possible answers (hypotheses).}}
+    \item<3-> Collect relevant data on the topic.
+    \item<4-> Analyse the data.
+    \item<5-> Form a conclusion.    
+  \end{enumerate}
+}
+
+\frame{
+  \frametitle{For Example}
+  {\bf{Research question:}} Are some authoritarian regimes more likely to go to war than others? \\[0.5cm]
+  {\bf{Hypothesis:}} Weeks (2012) hypothesised that military regimes are more likely to start wars than civilian authoritarian regimes and democracies. \\[0.5cm]
+  {\bf{Data Gathering:}} What data does she need to investigate this hypothesis? 
+}
+
+\frame{
+  \frametitle{For Example}
+  {\bf{Research question:}} Are some authoritarian regimes more likely to go to war than others? \\[0.5cm]
+  {\bf{Hypothesis:}} Weeks (2012) hypothesised that military regimes are more likely to start wars than civilian authoritarian regimes and democracies. \\[0.5cm]
+  {\bf{Data Gathering:}} Country-year data on regime type (military regime, civilian authoritarian regime, democracy),  whether a war was started, \& other factors (military power, level of economic development, etc.) 
+}
+
+\frame{
+  \frametitle{For Example}
+  {\bf{Research question:}} Are some authoritarian regimes more likely to go to war than others? \\[0.5cm]
+  {\bf{Hypothesis:}} Weeks (2012) hypothesised that military regimes are more likely to start wars than civilian authoritarian regimes and democracies. \\[0.5cm]
+  {\bf{Data Gathering:}} Country-year data on regime type (military regime, civilian authoritarian regime, democracy),  whether a war was started, \& other factors (military power, level of economic development, etc.) \\[0.5cm]
+  {\bf{Analyse Data \& Form Conclusions:}} We'll talk about this more in parts 2 \& 3 of the course.
+}
+
+\section{General Types of Data}
+\frame{
+  \frametitle{Variables}
+  {\LARGE{Variables}} \\[0.5cm]
+  Regime type, conflict, economic development etc. are {\bf{concepts}}. \\[0.5cm]
+  Concepts can be operationalised as {\bf{variables}}. \\[0.5cm]
+  For example, economic development is often operationalised as the variable Gross Domestic Product per Capita (GDP/Capita). \\[0.5cm]
+  In a data set {\bf{variables}} are usually the {\bf{columns}}.
+}
+
+\frame[plain]{
+  \begin{center}
+    \includegraphics[scale=0.45]{ExampleDataFrameFin.png}
+  \end{center}
+}
+
+\section{General Types of Data}
+\frame{
+  \frametitle{Observations}
+  {\LARGE{Observations}} \\[0.5cm]
+  Each time we measure our variables we create an {\bf{observation}}, \\[0.5cm]
+  {\bf{Observations}} are usually the {\bf{rows}} of the data set. 
+}
+
+\frame[plain]{
+  \begin{center}
+    \includegraphics[scale=0.45]{ExampleDataFrameFin.png}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Levels of Measurement}
+  Variables can be at different {\bf{levels of measurement}}. \\[0.5cm]
+  \begin{center}
+    \includegraphics[scale=0.5]{LevelsOfMeasurement.png} \\[0.5cm]
+    Source: Diaz et al. (2011, 5)
+  \end{center}
+}
+
+\frame{
+  \frametitle{Levels of Measurment Examples}
+  \begin{small}
+  \begin{table}
+    \begin{tabular}{l l p{2cm} p{2cm}}
+    \hline
+    & & Also Known As & Example \\ 
+    \hline \hline
+    Numerical & Continuous & & GDP/Capita \\[0.25cm]
+     & Discrete & & People in a city \\[0.25cm]
+    \hline
+    Categorical & Ordinal & & Satisfaction with democracy (5-point scale)\\[0.25cm]
+     & Binary & Dummy (0/1) & Gender \\[0.25cm]
+     & Nominal & Regular Categorical & Country names 
+    \end{tabular}
+  \end{table}
+  \end{small}
+}
+
+\frame{
+  \frametitle{Levels of Measurement}
+  Levels of measurement are important because they {\bf{determine}} what kinds of {\bf{statistical analyses}} we can do. \\[0.25cm]
+  We'll talk more about this beginning Week 5. \\[0.5cm]
+  {\bf{Now:}} We need to keep in mind what level of measurement our data is in. \\[0.5cm]
+  {\bf{Tip:}} Try to have your data as close to {\bf{Continuous}} as possible.
+}
+
+\section{Data Frames in R}
+\begin{frame}[fragile]
+  \frametitle{Data Frames 1}
+  The main type of object we will use in R to store data are called {\bf{data frames}}. \\[0.25cm]
+  So far we have worked with matrices.\\[0.25cm]
+  Matrices have rows and columns.
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# A quick matrix example}
+Population <- \hlfunctioncall{c}(14.3, 6.3, 66.7)
+
+Countries <- \hlfunctioncall{c}(\hlstring{"Cambodia"}, \hlstring{"Laos"}, \hlstring{"Thailand"})
+
+NewData <- \hlfunctioncall{cbind}(Countries, Population)
+
+NewData
+\end{alltt}
+\begin{verbatim}
+##      Countries  Population
+## [1,] "Cambodia" "14.3"    
+## [2,] "Laos"     "6.3"     
+## [3,] "Thailand" "66.7"
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Matrices vs. Data Frames}
+  Matrices can only have data with {\bf{one mode}}. \\[0.5cm]
+  Data frames can have {\bf{multiple modes}}.\\[0.5cm]
+  To create a data frame from multiple vectors use the \texttt{data.frame} command.
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# A quick data.frame example}
+
+NewData <- \hlfunctioncall{data.frame}(Countries, Population)
+
+NewData
+\end{alltt}
+\begin{verbatim}
+##   Countries Population
+## 1  Cambodia       14.3
+## 2      Laos        6.3
+## 3  Thailand       66.7
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Multi-mode data frames}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Check variables' class}
+\hlfunctioncall{class}(NewData$Countries)
+\end{alltt}
+\begin{verbatim}
+## [1] "factor"
+\end{verbatim}
+\begin{alltt}
+
+\hlfunctioncall{class}(NewData$Population)
+\end{alltt}
+\begin{verbatim}
+## [1] "numeric"
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\frame{
+  \frametitle{New Things}
+  \begin{itemize}
+    \item<1-> What is the dollar sign (\texttt{\$})?
+    \item<2-> What is a \texttt{factor}?
+  \end{itemize}
+}
+
+\frame{
+  {\LARGE{Factors 1}} \\[1cm]
+  Factors are an R term for {\bf{categorical}} variables.
+}
+
+\begin{frame}[fragile]
+  \frametitle{Component selector}
+  In R the \texttt{\$} is called the {\bf{component selector}}. \\[0.5cm]
+  It allows us to {\bf{select a specific column}} of a data set.\\[0.5cm]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Select the Countries variable from NewData}
+NewData$Countries
+\end{alltt}
+\begin{verbatim}
+## [1] Cambodia Laos     Thailand
+## Levels: Cambodia Laos Thailand
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Factors 2}
+  We now have the \texttt{Countries} variable and can see its \texttt{Levels} \\[1cm]
+  Giving this variable \texttt{Levels} doesn't really make sense. \\[0.5cm]
+  One solustion is to use the \texttt{stringsAsFactors = FALSE} option with \texttt{data.frame}.
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Create data.frame with no factors}
+NewData <- \hlfunctioncall{data.frame}(Countries, 
+                      Population, 
+                      \hlfunctioncall{options}(
+                        stringsAsFactors = FALSE))
+
+NewData$Countries
+\end{alltt}
+\begin{verbatim}
+## [1] "Cambodia" "Laos"     "Thailand"
+\end{verbatim}
+\begin{alltt}
+
+\hlcomment{# Show NewData variable names}
+\hlfunctioncall{names}(NewData)
+\end{alltt}
+\begin{verbatim}
+## [1] "Countries"        "Population"      
+## [3] "stringsAsFactors"
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Subsetting 1}
+  How do we get rid of the \texttt{StringsAsFactors} variable? \\[0.5cm]
+  Use subscripts to {\bf{subset}} the data! \\[0.25cm]
+  These are the square braces: \texttt{[]}. \\[0.5cm]
+  All cells in an object have an {\bf{address}}: \texttt{[row, column]}. \\
+  \hline \\[0.25cm]
+  We want to keep the first and second columns:
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Subset NewData, columns 1 & 2}
+NewData <- NewData[, 1:2]
+
+\hlcomment{# Show variable names}
+\hlfunctioncall{names}(NewData)
+\end{alltt}
+\begin{verbatim}
+## [1] "Countries"  "Population"
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  We'll play around with subscripts a lot more in the seminar. \\[0.25cm]
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Subsetting Preview}
+  {\bf{Preview:}} We can subset not just by location but also by {\bf{observation value}}.\\[0.25cm]
+  For example, to subset the data to include only countries with populations greater than 7 million:
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Create new object for countries with > 7m pop.}
+MoreThan7 <- NewData[NewData$Population > 7, ]
+
+\hlcomment{# Show contents of MoreThan7}
+MoreThan7
+\end{alltt}
+\begin{verbatim}
+##   Countries Population
+## 1  Cambodia       14.3
+## 3  Thailand       66.7
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  Before the seminar it might be a good idea to look at the help file for the \texttt{subset} command.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+?subset
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Factor Level Assignment 1}
+  What if we have a variable without factor levels, but want to assign them?
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Factor Level Assignment 2}
+  \begin{small}
+  \begin{table}
+    \begin{tabular}{l c}
+    \hline
+    Level & Code \\
+    \hline \hline
+    Coastal & 1 \\ \hline
+    Not Coastal & 0
+    \end{tabular}
+  \end{table}
+  \end{small}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Create variable}
+Coastal <- \hlfunctioncall{c}(1, 0, 1)
+
+\hlcomment{# Combine with Countries}
+CoastalDF <- \hlfunctioncall{data.frame}(Countries,
+                        Coastal,
+                        \hlfunctioncall{options}(
+                          stringsAsFactors = FALSE))
+
+\hlcomment{# Remove stringsAsFactors variable}
+CoastalDF <- CoastalDF[, 1:2]
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Merge with NewData}
+MergedData <- \hlfunctioncall{merge}(x = NewData, 
+                    y = CoastalDF, 
+                    by = \hlstring{"Countries"})
+
+\hlcomment{# Show variable names}
+\hlfunctioncall{names}(MergedData)
+\end{alltt}
+\begin{verbatim}
+## [1] "Countries"  "Population" "Coastal"
+\end{verbatim}
+\begin{alltt}
+
+\hlcomment{# Show the Coastal variables class}
+\hlfunctioncall{class}(MergedData$Coastal)
+\end{alltt}
+\begin{verbatim}
+## [1] "numeric"
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Factor Level Assignment 3}
+  Use the \texttt{factor} command to add the factor levels
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Turn Coastal into a factor & specify levels}
+MergedData$Coastal <- \hlfunctioncall{factor}(MergedData$Coastal,
+                                labels = \hlfunctioncall{c}(
+                                  \hlstring{"Not Coastal"},
+                                  \hlstring{"Coastal"}))
+
+\hlcomment{# Show levels}
+MergedData$Coastal
+\end{alltt}
+\begin{verbatim}
+## [1] Coastal     Not Coastal Coastal    
+## Levels: Not Coastal Coastal
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+  
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Merging 1}
+  What was this?
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Merge with NewData}
+MergedData <- \hlfunctioncall{merge}(x = NewData, 
+                    y = CoastalDF, 
+                    by = \hlstring{"Countries"})
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Merging 2}
+  We saw how you can use the \texttt{cbind} command to attach columns together. \\[0.5cm]
+  This is usually {\bf{not}} a good way to two data sets together. \\[0.5cm]
+  For \texttt{cbind} the observations have to be in the {\bf{same order}} in both objects. \\[0.5cm]
+  This is {\bf{very uncommon}}.
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Merging 2}
+  The \texttt{merge} command matches each observation.\\[0.5cm]
+  You tell it what the {\bf{observation ID variable}} is with the \texttt{by} argument.\\[0.25cm]
+  For example \texttt{by = "Countries"} \\[0.5cm]
+  We'll see more of this next week.
+\end{frame}
+
 
 \section{First Assignment}
 \frame{
@@ -138,6 +603,11 @@ NewData <- \hlfunctioncall{cbind}(Countries, Population)
   Also, include a text file describing the variables and their sources.
 }
 
-
+\begin{frame}[allowframebreaks]
+  \frametitle{References}
+  Diaz, David M., Christopher D. Barr, and Mine \c{C}etinkaya-Rundel. OpenIntro Statistics. 1st ed. \url{http://www.openintro.org/stat/downloads.php}. \\[0.25cm] 
+  
+  Weeks, Jessica L. 2012. “Strongmen and Straw Men: Authoritarian Regimes and the Initiation of International Conflict.” American Political Science Review 106(2): 326–347.
+\end{frame}
 
 \end{document}

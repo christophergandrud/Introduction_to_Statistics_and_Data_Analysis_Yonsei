@@ -1,20 +1,5 @@
-\frametitle {Quick Quiz}
-  {\large{Describe the following code/output in as much detail as possible.}}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlcomment{# A quick quiz}
-Population <- \hlfunctioncall{c}(2.5, 17, 6)
-
-Countries <- \hlfunctioncall{c}(\hlstring{"Cambodia"}, \hlstring{"Laos"}, \hlstring{"Thailand"})
-
-NewData <- \hlfunctioncall{cbind}(Countries, Population)
-
-\hlfunctioncall{sum}(Population)
-\end{alltt}
-\begin{verbatim}
-## [1] 25.5
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-
+\frametitle {Merging 2}
+  The \texttt{merge} command matches each observation.\\[0.5cm]
+  You tell it what the {\bf{observation ID variable}} is with the \texttt{by} argument.\\[0.25cm]
+  For example \texttt{by = "Countries"} \\[0.5cm]
+  We'll see more of this next week.

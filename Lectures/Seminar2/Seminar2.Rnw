@@ -1,0 +1,92 @@
+\documentclass{beamer}
+\usetheme{Stats}
+\setbeamercovered{transparent}
+\usepackage{color}
+\usepackage{hyperref}
+  \hypersetup{
+  	colorlinks=true
+		linkcolor=black
+		}
+\usepackage{url}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{booktabs}
+
+<<ParentGlobalOpts, echo=FALSE>>=
+  options(width=50)
+  opts_chunk$set(fig.align='center')
+@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title Slide %%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[]{Intro to Social Science Data Analysis \\[1cm]  Seminar 2: Types of Data}
+\author[]{
+    \href{mailto:gandrud@yonsei.ac.kr}{Christopher Gandrud}
+}
+\date{\today}
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+\frame{
+	\frametitle{Research Questions 1}
+  \begin{center}
+  With a partner: think of a {\bf{research question}} you might want to answer.
+  \end{center}
+}
+
+\frame{
+  \frametitle{Research Questions 2}
+  \begin{center}
+  With a partner: What is your best guess ({\bf{hypothesis}}) answer to this question?
+  \end{center}
+}
+
+\frame{
+  \frametitle{Research Questions 3}
+  \begin{center}
+  With a partner: What data could you use to operationalize this hypothesis? \\[0.5cm]
+  What {\bf{measurement level}} is this data probably at?
+  \end{center}
+}
+
+\frame{
+  \frametitle{New Data Frames}
+    Create a {\bf{new data frame}} with at least 3 variables. \\[0.5cm]
+    You should include a:
+    \begin{itemize}
+      \item<1-> character string variable,
+      \item<1-> numeric variable,
+      \item<1-> factor variable with at least 3 levels.
+    \end{itemize}
+}
+
+\begin{frame}[fragile]
+  \frametitle{Data Sets}
+  Look at the example data sets included in R:
+<<DataSets, eval=FALSE>>=
+library(help = "datasets")
+@
+
+  For two of these data sets:
+  \begin{itemize}
+    \item<1-> Pick one variable,
+    \item<1-> Find the minimum and maximum value of the variable,
+    \item<1-> Find its mean.
+  \end{itemize}
+\end{frame}
+
+\frame{
+  \frametitle{Subsetting}
+  With these two data sets: 
+    \begin{itemize}
+      \item<1-> Create a new object that only has the first {\bf{two variables}} \& {\bf{observations 14 through 28}}.
+      \item<1-> Create a new object that only has observations where the value of the second variable is {\bf{not greater than the variable's mean}}.
+    \end{itemize}
+}
+
+
+
+\end{document}

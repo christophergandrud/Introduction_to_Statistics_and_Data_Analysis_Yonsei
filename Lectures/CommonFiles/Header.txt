@@ -12,9 +12,14 @@
 \usepackage{tikz}
 \usepackage{booktabs}
 
+<<ParentGlobalOpts, echo=FALSE>>=
+  options(width=50)
+  opts_chunk$set(fig.align='center')
+@
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title Slide %%%%%%%%%%%%%%%%%%%%%%%%%%
-\title[]{Intro to Social Science Data Analysis \\[1cm]  \\[0.25cm]}
+\title[]{Intro to Social Science Data Analysis \\[1cm] }
 \author[]{
     \href{mailto:gandrud@yonsei.ac.kr}{Christopher Gandrud}
 }

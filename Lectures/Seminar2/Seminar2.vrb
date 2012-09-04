@@ -1,0 +1,17 @@
+\frametitle {Data Sets}
+  Look at the example data sets included in R:
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlfunctioncall{library}(help = \hlstring{"datasets"})
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+
+  For two of these data sets:
+  \begin{itemize}
+    \item<1-> Pick one variable,
+    \item<1-> Find the minimum and maximum value of the variable,
+    \item<1-> Find its mean.
+  \end{itemize}
