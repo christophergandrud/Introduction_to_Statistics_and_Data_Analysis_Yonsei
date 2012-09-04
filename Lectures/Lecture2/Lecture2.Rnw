@@ -425,7 +425,7 @@ MergedData <- merge(x = NewData,
   \frametitle{First Assignment}
   {\large{{\bf{Due:}} Monday 24 September}} \\[0.5cm]
   Create a new data frame with country-level data from at least {\bf{three}} different sources. \\[0.5cm]
-  Save it as a \texttt{.csv} file and email me the link. \\[0.25cm]
+  Save it as a \texttt{.csv} file in your Dropbox's \texttt{Public} folder and email me the link. \\[0.25cm]
   Also, include a text file describing the variables and their sources.
 }
 

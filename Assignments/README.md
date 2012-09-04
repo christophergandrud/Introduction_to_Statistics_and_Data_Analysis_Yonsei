@@ -1,14 +1,10 @@
-# Activities Overview #
+# Assignments Overview #
 
-The in-class activities in this course have two purposes:
+The purpose of the assignments in this course have two purposes
 
-1. Give you practice *using* and *exploring* **R**/**RStudio**.
+> Give you practice *using* and *exploring* **R**/**RStudio** with new and largely unstructured tasks.
 
-2. Give you opportunities to *ask me questions* about how we can use these programs to *analyse* data and *present results*. 
-
-Not only will asking me question be useful for you, but it will also allow me to determine if I need to explain certain topics in more detail to the whole class.
-
-For each activity I will give you an *objective*, some goal that you will try to accomplish. To achieve this goal I *will not* give you step-by-step instructions. Instead you will need to *rely on the recourses* I've made available to you, including:
+For each assignment I will give you an *objective*, some goal that you will try to accomplish. To achieve this goal I *will not* give you step-by-step instructions. Instead you will need to *rely on the resources* I've made available to you, including:
 
 - lecture material,
 
