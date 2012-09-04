@@ -1,0 +1,20 @@
+\frametitle {Quick Quiz}
+  {\large{Describe the following code/output in as much detail as possible.}}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# A quick quiz}
+Population <- \hlfunctioncall{c}(2.5, 17, 6)
+
+Countries <- \hlfunctioncall{c}(\hlstring{"Cambodia"}, \hlstring{"Laos"}, \hlstring{"Thailand"})
+
+NewData <- \hlfunctioncall{cbind}(Countries, Population)
+
+\hlfunctioncall{sum}(Population)
+\end{alltt}
+\begin{verbatim}
+## [1] 25.5
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+

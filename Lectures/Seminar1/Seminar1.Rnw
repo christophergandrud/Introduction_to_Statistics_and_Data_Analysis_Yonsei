@@ -166,6 +166,7 @@ class(Answer)
 
 \frame{
   \frametitle{Basic Object Types}
+  {\LARGE{Basic Object Types}} \\[0.5cm]
   \begin{itemize}
     \item<1-> The main type of object we will use in this class is called a {\bf{dataframe}}.
         \begin{itemize}
@@ -292,7 +293,8 @@ mean(Numbers, trim = 1)
 
 \frame{
   \frametitle{Tasks 3}
-  Find and use {\bf{2}} other commands. Explore their properties. \\[0.5cm]
+  Find and use {\bf{2}} other commands. (Hint: \texttt{library(help = "base")} or \texttt{library(help = "graphics")}) \\[0.25cm]
+  Explore their properties. \\[0.5cm]
   
   Assign the output of these commands to new objects?
 }

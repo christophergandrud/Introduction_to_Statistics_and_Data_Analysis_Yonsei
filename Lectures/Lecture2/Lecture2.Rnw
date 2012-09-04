@@ -28,12 +28,51 @@
 \section[Outline]{}
 \frame{\tableofcontents}
 
-\section{}
+\section{Review}
 \frame{
 	\frametitle{Recap}
-  Last week we:
-  
+  Last week we: \\[0.5cm]
+  \begin{itemize}
+    \item<1-> {\bf{Installed}} R, RStudio, \& Dropbox
+    \item<2-> Learned how to {\bf{Compile Notebooks}}
+    \item<3-> Discussed how R is an {\bf{object-oriented}} programming language.
+      \begin{itemize}
+          \item<4-> Basic object modes
+          \item<5-> Basic object types
+          \item<6-> Commands, Functions, \& Arguments
+      \end{itemize}
+    \item<7-> How to {\bf{install add-on packages}}
+  \end{itemize}
+}
 
+\begin{frame}[fragile]
+  \frametitle{Quick Quiz}
+  {\large{Describe the following code/output in as much detail as possible.}}
+<<QuickQuiz>>=
+# A quick quiz
+Population <- c(2.5, 17, 6)
+
+Countries <- c("Cambodia", "Laos", "Thailand")
+
+NewData <- cbind(Countries, Population)
+
+sum(Population)
+@
+\end{frame}
+
+\frame{
+  \begin{center}
+    {\LARGE{Today: How do we get data into R and make it useable?}}
+  \end{center}
+}
+
+\section{First Assignment}
+\frame{
+  \frametitle{First Assignment}
+  {\large{{\bf{Due:}} Monday 24 September}} \\[0.5cm]
+  Create a new data frame with country-level data from at least {\bf{three}} different sources. \\[0.5cm]
+  Save it as a \texttt{.csv} file and email me the link. \\[0.25cm]
+  Also, include a text file describing the variables and their sources.
 }
 
 
