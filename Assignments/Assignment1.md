@@ -6,6 +6,12 @@
 
 Create a new data frame with country-level data from at least **three** different sources.
 
-Save it as a `.csv` file in your Dropbox `Public` folder and **email me the link**.
+Create a folder in your Dropbox `Public` folder and **email me the link**.
 
-Also, include a text file **describing the variables and their sources**.
+The folder needs to include:
+
+1. The new data frame saved as a `.csv` file.
+
+2. A text file **describing the variables and their sources**.
+
+3. A notebook `.html` file detailing how you created the data frame and saved it as a `.csv`.

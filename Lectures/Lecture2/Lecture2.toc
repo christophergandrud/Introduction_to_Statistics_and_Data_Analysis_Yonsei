@@ -2,6 +2,5 @@
 \beamer@sectionintoc {2}{Review}{3}{0}{1}
 \beamer@sectionintoc {3}{Why do we care about data?}{12}{0}{2}
 \beamer@sectionintoc {4}{General Types of Data}{22}{0}{3}
-\beamer@sectionintoc {5}{General Types of Data}{24}{0}{4}
-\beamer@sectionintoc {6}{Data Frames in R}{29}{0}{5}
-\beamer@sectionintoc {7}{First Assignment}{52}{0}{6}
+\beamer@sectionintoc {5}{Data Frames in R}{29}{0}{4}
+\beamer@sectionintoc {6}{First Assignment}{52}{0}{5}
