@@ -1,27 +1,15 @@
-\frametitle {Commands, Functions, Arguments (2)}
-  {\LARGE{For example:}} \\[0.5cm]
-  Find what arguments the {\tt{mean}} command can take by typing:
+\frametitle {Nesting Commands}
+  You can {\bf{nest}} commands inside of one another \\[0.5cm]
+  This can sometimes make your code shorter.
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-?mean
+\hlcomment{# Find Numbers' mean and round it to one decimal place}
+\hlfunctioncall{round}(\hlfunctioncall{mean}(Numbers), digits = 1)
 \end{alltt}
+\begin{verbatim}
+## [1] 4.1
+\end{verbatim}
 \end{kframe}
 \end{knitrout}
-
-
-  This gives us the {\bf{help file}} for the {\tt{mean}} command. \\[0.25cm]
-
-  We can see that one argument is {\tt{trim}} which rounds the answer. \\ [0.25cm]
-
-  To add the {\tt{trim}} argument just use the {\tt{=}} like this:
-
-\begin{kframe}
-\begin{alltt}
-\hlfunctioncall{mean}(Numbers, trim = 1)
-\end{alltt}
-\end{kframe}
-[1] 3.5
-
-
 
