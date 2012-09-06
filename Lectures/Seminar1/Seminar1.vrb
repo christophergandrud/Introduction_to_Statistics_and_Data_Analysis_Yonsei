@@ -1,6 +1,14 @@
 \frametitle {Commands, Functions, Arguments (2)}
   {\LARGE{For example:}} \\[0.5cm]
-  Find what arguments the {\tt{mean}} command can take by typing a {\tt{?}} before {\tt{mean}}.
+  Find what arguments the {\tt{mean}} command can take by typing:
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+?mean
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
 
   This gives us the {\bf{help file}} for the {\tt{mean}} command. \\[0.25cm]
 

@@ -168,9 +168,9 @@ class(Answer)
   \frametitle{Basic Object Types}
   {\LARGE{Basic Object Types}} \\[0.5cm]
   \begin{itemize}
-    \item<1-> The main type of object we will use in this class is called a {\bf{dataframe}}.
+    \item<1-> The main type of object we will use in this class is called a {\bf{data frame}}.
         \begin{itemize}
-          \item<1-> We will cover dataframes in detail next class. \\[0.5cm]
+          \item<1-> We will cover data frames in detail next class. \\[0.5cm]
         \end{itemize}
       \item<2-> Today, lets look at some more basic R objects:
         \begin{itemize}
@@ -203,6 +203,12 @@ CharVector <- c("Christopher", "John", "Gandrud")
 CharVector
 @
 \end{frame}
+
+\frame{
+  \frametitle{Combine Values Into a Vector}
+    {\LARGE{\texttt{c}}} \\[0.5cm]
+    The \texttt{c} command combines values into a vector.
+}
 
 \frame{
   \frametitle{Matrices 1}
@@ -278,7 +284,10 @@ mean(Numbers)
 \begin{frame}[fragile]
   \frametitle{Commands, Functions, Arguments (2)}
   {\LARGE{For example:}} \\[0.5cm]
-  Find what arguments the {\tt{mean}} command can take by typing a {\tt{?}} before {\tt{mean}}.
+  Find what arguments the {\tt{mean}} command can take by typing:
+<<HelpMean, eval=FALSE, tidy=FALSE>>=
+?mean
+@
 
   This gives us the {\bf{help file}} for the {\tt{mean}} command. \\[0.25cm]
 

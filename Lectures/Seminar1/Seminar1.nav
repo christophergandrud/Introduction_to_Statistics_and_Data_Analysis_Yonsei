@@ -53,10 +53,10 @@
 \headcommand {\beamer@framepages {37}{37}}
 \headcommand {\slideentry {4}{0}{21}{38/38}{}{0}}
 \headcommand {\beamer@framepages {38}{38}}
-\headcommand {\slideentry {4}{0}{22}{39/42}{}{0}}
-\headcommand {\beamer@framepages {39}{42}}
-\headcommand {\slideentry {4}{0}{23}{43/43}{}{0}}
-\headcommand {\beamer@framepages {43}{43}}
+\headcommand {\slideentry {4}{0}{22}{39/39}{}{0}}
+\headcommand {\beamer@framepages {39}{39}}
+\headcommand {\slideentry {4}{0}{23}{40/43}{}{0}}
+\headcommand {\beamer@framepages {40}{43}}
 \headcommand {\slideentry {4}{0}{24}{44/44}{}{0}}
 \headcommand {\beamer@framepages {44}{44}}
 \headcommand {\slideentry {4}{0}{25}{45/45}{}{0}}
@@ -69,8 +69,10 @@
 \headcommand {\beamer@framepages {48}{48}}
 \headcommand {\slideentry {4}{0}{29}{49/49}{}{0}}
 \headcommand {\beamer@framepages {49}{49}}
-\headcommand {\beamer@partpages {1}{49}}
-\headcommand {\beamer@subsectionpages {23}{49}}
-\headcommand {\beamer@sectionpages {23}{49}}
-\headcommand {\beamer@documentpages {49}}
-\headcommand {\def \inserttotalframenumber {29}}
+\headcommand {\slideentry {4}{0}{30}{50/50}{}{0}}
+\headcommand {\beamer@framepages {50}{50}}
+\headcommand {\beamer@partpages {1}{50}}
+\headcommand {\beamer@subsectionpages {23}{50}}
+\headcommand {\beamer@sectionpages {23}{50}}
+\headcommand {\beamer@documentpages {50}}
+\headcommand {\def \inserttotalframenumber {30}}

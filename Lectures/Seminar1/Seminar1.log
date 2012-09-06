@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  4 SEP 2012 12:47
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  6 SEP 2012 10:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1490,16 +1490,16 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [37
 
 ]
-\openout4 = `Seminar1.vrb'.
-
- (./Seminar1.vrb) [38
-
-]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[39
+[38
+
+]
+\openout4 = `Seminar1.vrb'.
+
+ (./Seminar1.vrb) [39
 
 ]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
@@ -1530,9 +1530,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [43
 
 ]
-\openout4 = `Seminar1.vrb'.
-
- (./Seminar1.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1540,13 +1537,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [44
 
 ]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[45
-
-]
 \openout4 = `Seminar1.vrb'.
 
  (./Seminar1.vrb)
@@ -1554,9 +1544,19 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
+[45
+
+]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
 [46
 
 ]
+\openout4 = `Seminar1.vrb'.
+
+ (./Seminar1.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1578,6 +1578,13 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [49
 
 ]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[50
+
+]
 \tf@nav=\write6
 \openout6 = `Seminar1.nav'.
 
@@ -1587,11 +1594,11 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `Seminar1.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 432.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 432.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 446.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 446.
  (./Seminar1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 432.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 432.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 446.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 446.
 Package rerunfilecheck Info: File `Seminar1.out' has not changed.
 (rerunfilecheck)             Checksum: 003DC110782B4B7B91ABE73A8F723E8B;179.
 
@@ -1599,14 +1606,14 @@ Package rerunfilecheck Info: File `Seminar1.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 432.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 446.
  ) 
 Here is how much of TeX's memory you used:
- 18377 strings out of 493633
- 349199 string characters out of 3143377
+ 18383 strings out of 493633
+ 349258 string characters out of 3143377
  412235 words of memory out of 3000000
- 21111 multiletter control sequences out of 15000+200000
- 14167 words of font info for 54 fonts, out of 3000000 for 9000
+ 21114 multiletter control sequences out of 15000+200000
+ 14336 words of font info for 55 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  49i,16n,60p,447b,589s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
@@ -1619,13 +1626,13 @@ local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr
 /local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr
 /local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
 local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/l
-ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></u
-sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-
-Output written on Seminar1.pdf (49 pages, 184378 bytes).
+ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/lo
+cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></us
+r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
+Output written on Seminar1.pdf (50 pages, 187510 bytes).
 PDF statistics:
- 458 PDF objects out of 1000 (max. 8388607)
- 383 compressed objects within 4 object streams
- 101 named destinations out of 1000 (max. 500000)
+ 470 PDF objects out of 1000 (max. 8388607)
+ 393 compressed objects within 4 object streams
+ 103 named destinations out of 1000 (max. 500000)
  68 words of extra memory for PDF output out of 10000 (max. 10000000)
 
