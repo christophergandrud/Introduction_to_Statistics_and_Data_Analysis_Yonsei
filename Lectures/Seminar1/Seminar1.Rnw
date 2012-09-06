@@ -213,7 +213,7 @@ CharVector
 \frame{
   \frametitle{Matrices 1}
   {\LARGE{Matrices}} \\[0.5cm]
-  Matrices are like vectors, except they have {\bf{multiple rows}}. \\[0.5cm]
+  Matrices are like vectors, except they have {\bf{multiple columns}}. \\[0.5cm]
   You may remember matrices from math class:
   \[
  \begin{bmatrix}
