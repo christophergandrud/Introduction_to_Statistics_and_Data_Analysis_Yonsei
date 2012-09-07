@@ -4,7 +4,7 @@
 
 **Due:** Monday 24 September
 
-Create a new data frame with country-level data from at least **three** different sources.
+Create a new data frame with country-level data from at least **two** different sources.
 
 Create a folder in your Dropbox `Public` folder and **email me the link**.
 
