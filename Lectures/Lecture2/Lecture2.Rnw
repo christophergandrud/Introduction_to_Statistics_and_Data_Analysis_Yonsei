@@ -37,6 +37,12 @@
 
 \section{Review}
 \frame{
+  \frametitle{Open Intro Textbook}
+  They recently released a second edition of the Open Intro book. \\[0.5cm]
+  For now, {\bf{continue to use the first edition}}.
+}
+
+\frame{
 	\frametitle{Recap}
   Last week we: \\[0.5cm]
   \begin{itemize}
@@ -288,9 +294,12 @@ names(NewData)
   How do we get rid of the \texttt{StringsAsFactors} variable? \\[0.5cm]
   Use subscripts to {\bf{subset}} the data! \\[0.25cm]
   These are the square braces: \texttt{[]}. \\[0.5cm]
-  All cells in an object have an {\bf{address}}: \texttt{[row, column]}. \\
-  \hline \\[0.25cm]
-  We want to keep the first and second columns:
+  All cells in an object have an {\bf{address}}: \texttt{[row, column]}. 
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Subsetting 2}
+  We want to keep the first and second columns of the \texttt{StringsAsFactors} variable:
 <<SubscriptsEx1>>=
 # Subset NewData, columns 1 & 2
 NewData <- NewData[, 1:2]

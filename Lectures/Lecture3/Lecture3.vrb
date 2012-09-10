@@ -1,0 +1,11 @@
+\frametitle {Saving your Data}
+  To save your data to a plain-text file use \texttt{write.table}.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+write.table\{LifeExpect,
+            file = \hlstring{"LifeExpectacyData.csv"}, sep = \hlstring{","}\}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+

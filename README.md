@@ -114,7 +114,7 @@ How do we load data into **R**. How can we manipulate our data in **R**.
 ### Week 3: Gathering Data
 Where can we find quality social science data? How do we get this into **R** so we can start analysing it?
 
-> 26-36:** *OpenIntro Statistics*
+> **26-36:** *OpenIntro Statistics*
 
 > "Data APIs/Feeds Available as Packages in R". 2011. Cross Validated. <http://stats.stackexchange.com/questions/12670/data-apis-feeds-available-as-packages-in-r>.
 

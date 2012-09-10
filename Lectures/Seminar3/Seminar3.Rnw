@@ -1,0 +1,65 @@
+\documentclass{beamer}
+\usetheme{Stats}
+\setbeamercovered{transparent}
+\usepackage{color}
+\usepackage{hyperref}
+  \hypersetup{
+  	colorlinks=true
+		linkcolor=black
+		}
+\usepackage{url}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{booktabs}
+
+<<ParentGlobalOpts, echo=FALSE>>=
+  options(width=50)
+  opts_chunk$set(fig.align='center')
+@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title Slide %%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[]{Intro to Social Science Data Analysis \\[1cm]  Seminar 3: Gathering Data}
+\author[]{
+    \href{mailto:gandrud@yonsei.ac.kr}{Christopher Gandrud}
+}
+\date{\today}
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+\frame{
+  \frametitle{First Assignment}
+  {\large{{\bf{Due:}} Monday 24 September}} \\[0.5cm]
+  Create a new data frame with country-level data from at least {\bf{two}} different sources. \\[0.5cm]
+  Create a folder in your Dropbox \texttt{Public} folder and {\bf{email me the link}}. \\[0.5cm]
+  The folder needs to include:
+  \begin{enumerate}
+    \item<1-> The new data frame saved as a \texttt{.csv} file.
+    \item<1-> A text file {\bf{describing the variables and their sources}}.
+    \item<1-> A notebook \texttt{.html} file detailing how you created the data frame and saved it as a\texttt{.csv}.
+  \end{enumerate}
+}
+
+\frame{
+	\frametitle{Sampling}
+  Create a plan for sampling Yonsei University, Wonju students. 
+}
+
+\frame{
+  \frametitle{World Bank Data}
+  \begin{enumerate}
+    \item Download data from the World Development Indicators on {\bf{Access to electricity (\% of population)}}.
+    \item Rename the variable {\bf{AccessElectric}}.
+    \item Create a new country ID variable,
+  \end{enumerate}
+}
+
+\frame{
+  \frametitle{Assignment}
+  Work on Assignment 1.
+}
+
+\end{document}

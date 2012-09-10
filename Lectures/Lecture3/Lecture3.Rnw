@@ -1,0 +1,510 @@
+\documentclass{beamer}
+\usetheme{Stats}
+\setbeamercovered{transparent}
+\usepackage{color}
+\usepackage{hyperref}
+  \hypersetup{
+  	colorlinks=true
+		linkcolor=black
+		}
+\usepackage{url}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{booktabs}
+
+<<ParentGlobalOpts, echo=FALSE>>=
+  options(width=50)
+  opts_chunk$set(fig.align='center')
+@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title Slide %%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[]{Intro to Social Science Data Analysis \\[1cm] Lecture 3:  Gathering Data}
+\author[]{
+    \href{mailto:gandrud@yonsei.ac.kr}{Christopher Gandrud}
+}
+\date{\today}
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section[Outline]{}
+\frame{\tableofcontents}
+
+\section{Recap}
+\frame{
+	\frametitle{Review}
+  Last week we:
+  \begin{itemize}
+    \item Discussed why we care about data.
+    \item Variables, observations, levels of measurement.
+    \item Compared matrices to data frames.
+    \item Learned basic data frame manipulation techniques.
+  \end{itemize}
+}
+
+\begin{frame}[fragile]
+  \frametitle{Quick Quiz 1}
+  What {\bf{level of measurement}} are these variables at:
+  \begin{enumerate}
+    \item The number of people living in poverty in a city.
+    \item Whether or not a country is at war.
+    \item The names of a continent's major rivers.
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Quick Quiz 2}
+  Comment this code:
+<<QuickQuiz>>=
+Subject <- c("A", "B", "C")
+Height <- c(3.2, 4.5, 3.1)
+
+Data <-data.frame(Subject, Height)
+
+DataB <- Data[2, ]
+@
+\end{frame}
+
+
+\section{Reminder: First Assignment}
+\frame{
+  \frametitle{First Assignment}
+  {\large{{\bf{Due:}} Monday 24 September}} \\[0.5cm]
+  Create a new data frame with country-level data from at least {\bf{two}} different sources. \\[0.5cm]
+  Create a folder in your Dropbox \texttt{Public} folder and {\bf{email me the link}}. \\[0.5cm]
+  The folder needs to include:
+  \begin{enumerate}
+    \item<1-> The new data frame saved as a \texttt{.csv} file.
+    \item<1-> A text file {\bf{describing the variables and their sources}}.
+    \item<1-> A notebook \texttt{.html} file detailing how you created the data frame and saved it as a\texttt{.csv}.
+  \end{enumerate}
+}
+
+\frame{
+  \frametitle{Using Dropbox}
+  
+}
+
+\frame{
+  \frametitle{This Week}
+  {\LARGE{Last week we learned basic data frame handling skills. \\[0.5cm]
+  But how do we usually {\bf{get data into R}} and make it useable for data analysis?}}
+}
+
+\section{Data Gathering Principles}
+\frame{
+  \frametitle{Data Gathering Principles 1}
+  {\LARGE{Populations}} \\[0.5cm]
+  Your {\bf{research question}} should usually {\bf{guide your data gathering}}. \\[0.5cm]
+  Your research question can indicate what the relevant {\bf{population}} is.
+  \begin{itemize}
+    \item<2-> Does income-level explain voting behaviour in Korea?
+    \item<3-> What do Southern European countries have higher deficits than Northern European ones?
+    \item<4-> Why do civil wars happen?
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{Data Gathering Principles 2}
+  {\LARGE{Samples}} \\[0.5cm]
+  It may {\bf{not be possible}} to gather data on the entire population of interest. \\[0.5cm]
+  So we gather data on a subset of the population--a {\bf{sample}}.
+}
+
+\frame{
+  \frametitle{Data Gathering Principles 3}
+  {\LARGE{Anecdotal Evidence}} \\[0.5cm]
+  If we want to answer questions about populations we should generally {\bf{avoid anecdotal evidence}}. For example: 
+  \begin{itemize}
+    \item<2-> The rich people I know vote for Party A not Party B.
+  \end{itemize} \\[0.25cm]
+  Anecdotal evidence is gathered in a {\bf{haphazard way}}. It is {\bf{not representative}} of the population and usually includes {\bf{extreme cases}}. \\[0.5cm]
+  Anecdotal evidence is not representative of the population of interest and {\bf{should not}} be used to make {\bf{generalizable}} conclusions.
+}
+
+\frame{
+  \frametitle{Data Gathering Principles 3}
+  {\LARGE{Random Sample}} \\[0.5cm]
+  To avoid selecting extreme cases \& biasing our sample in other ways we should try to use {\bf{random sampling}}. \\[0.5cm]
+  A sample is random if every member of a population has an {\bf{equal probability}} of being selected.
+}
+
+\frame{
+  \frametitle{This Course}
+  {\LARGE{Sampling in this Course}} \\[0.25cm]
+  In this course we will mostly be using {\bf{observational data}}. \\[0.25cm]
+  We will also usually use {\bf{convenience samples}} where we try to gather data on as much of the population as possible (attempt {\bf{exhaustability}}. \\[0.5cm]
+  For example, if we want to research how democracy may effect economic development, we would try to gather data on
+    \begin{itemize}
+      \item<1-> level of democracy
+      \item<1-> level of development
+    \end{itemize}
+  for {\bf{as many}} countries and years as we can.
+}
+
+\frame{
+  \frametitle{Observational Data 1}
+  {\LARGE{Sampling in this Course}} \\[0.25cm]
+  When we use convenience samples we {\bf{must always look out for factors that might bias our results}}. \\[0.5cm]
+  We must be he honest. {\bf{Clearly state any potential biases in our presentation of results.}} \\[0.5cm]
+  For example: \\[0.25cm]
+  We wanted to study all countries, but usually found data only for wealthy countries.\\
+  We need to clearly state that our findings might only be generalizable to wealthy countries, not all countries.
+}
+
+\frame{
+  \frametitle{Observational Data 2}
+  When we use observational data it is especially important to gather data not only on {\bf{what we want to explain}} and {\bf{what we think explains it}}, but also {\bf{other factors}} that may affect any relationship between these things that we might observe.
+}
+
+\section{Response \& Explanatory Variables}
+\frame{
+  \frametitle{Response Variables}
+  The phenomenon we are interested in explaining is operationalized by the {\bf{response variable}}. \\[0.5cm]
+  The response variable is also sometimes called the {\bf{dependent variable}} or denoted by $Y$.
+  
+}
+
+\frame{
+  \frametitle{Explanatory Variables}
+  The factor we believe may explain our phenomenon of interest is operationalized by the {\bf{explanatory variable}}. \\[0.5cm]
+  The explanatory variable is also sometimes called the {\bf{independent variable}} or denoted by $X$.
+  
+}
+
+\frame{
+  \frametitle{Response \& Explanatory Variables}
+  \begin{figure}
+    \includegraphics[scale = 0.6]{ExplainResponse.png}
+    \begin{center}
+      {\small{Source: Diaz et al. (2011, 29)}}
+    \end{center}
+  \end{figure}
+}
+
+\frame{
+  \frametitle{Control Variables}
+  However, {\bf{correlation does not equal causation}}. \\[0.5cm]
+  In particular, we need to look out for {\bf{confounding factors}}. \\[0.25cm]
+  Confounding factors are {\bf{associated with both}} the response and explanatory variables.
+  \frametitle{Response \& Explanatory Variables}
+  \begin{figure}
+    \includegraphics[scale = 0.6]{Confounder.png}
+    \begin{center}
+      {\small{Source: Diaz et al. (2011, 31)}}
+    \end{center}
+  \end{figure}
+}
+
+\frame{
+  \frametitle{Control Variables \& Data Gathering 1}
+  In parts II \& III of the course we look at ways to ``{\bf{control}}" for confounding factors. \\[0.5cm]
+  At this point, when we gather data we need to consider not just the main response and explanatory variables, but also confounding factors. \\[0.5cm]
+}
+  
+\frame{
+  \frametitle{Control Variables \& Data Gathering 2}
+  {\bf{Note:}} We want to control for as many confounders as possible, but there is a data gathering {\bf{trade off}}: \\[0.25cm]
+  The more variables we gather, the more likely it is that we will have {\bf{missing data}}. \\[0.25cm]
+  If data is {\bf{not missing at random}}, we will add sampling bias.
+}
+
+\section{Importing Data Into R}
+\frame{
+  \begin{center}
+    {\LARGE{Ok, let's get some data into R.}}
+  \end{center}
+}
+
+\frame{
+  {\LARGE{Practical Tips}}
+  \begin{itemize}
+    \item Save your data as simple columns and rows (no fancy colours, etc.).
+    \item Save it in a text format.
+    \item Document:
+      \begin{itemize}
+        \item Where the data is from,
+        \item What the variables mean,
+        \item How you have changed it.
+      \end{itemize}
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{Simple Data Set}
+  Data sets should be {\bf{simple}}. \\[0.25cm]
+  If you open the data in Microsoft Excel:
+    \begin{itemize}
+      \item<2-> The {\bf{first row}} should have the variables names 
+      \item<3-> The variable names should be simple and use the same rules as R object names.
+      \item<4-> There should be no extra information or styling.
+      \item<5-> If you have missing data cells should be empty or have NA.
+    \end{itemize}
+}
+
+\frame{
+  \frametitle{A Good Data Set}
+  \includegraphics[scale = 0.5]{IdealData.png}
+}
+
+\frame{
+  \frametitle{A Bad Data Set}
+  \includegraphics[scale = 0.5]{BadData.png}
+}
+
+\frame{
+  \frametitle{Data in Text Files}
+  You should save your data in a {\bf{plain text file format}}. \\[0.5cm]
+  Plain-text file formats:
+  \begin{itemize}
+    \item Are simple,
+    \item Can easily be loaded into R.
+  \end{itemize}
+  My favourite is {\bf{comma seperated values (.csv)}}. 
+}
+
+\frame{
+  \frametitle{Raw Plain-Text Data File}
+  \includegraphics[scale = 0.5]{TextComma.png}
+}
+
+\frame{
+  \begin{center}
+    {\LARGE{Import Plain-Text Data}}
+  \end{center}
+}
+
+\begin{frame}[fragile]
+  \frametitle{Importing Plain-Text Data 1}
+  Use the \texttt{read.table} command. \\[0.5cm]
+  For example, if you have a file on your Desktop called MyFile.csv, load it like this:
+<<ReadTableExample, eval=FALSE>>=
+# Import plain-text data into R
+NewData <- read.table(file = "~/Desktop/Myfile.csv", sep = ",")
+@
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Importing Plain-Text Data 2}
+<<ReadTableExampleReiterate, eval=FALSE>>=
+# Import plain-text data into R
+NewData <- read.table(file = "~/Desktop/Myfile.csv", sep = ",")
+@
+
+  {\bf{Note:}}
+  \begin{itemize}
+    \item<1-> \texttt{"\textasciitilde{}/Desktop/Myfile.csv"} is the {\bf{directory}} $+$ {\bf{file name}}. This will be different depending on what operating system you have and where the file is.
+    \item<2-> \texttt{sep = ","} tells R that the values in a row are seperated by commas
+  \end{itemize}
+\end{frame}
+
+\frame{
+  \begin{center}
+    {\LARGE{Data from Other Statistics Programs}}
+  \end{center}
+}
+
+\begin{frame}[fragile]
+  \frametitle{Foreign Package}
+  If you are importing data from another statistics program, such as SPSS or Stata, \texttt{foreign} packages. \\[0.5cm]
+  For example, to load a Stata file with the {\bf{file extension}} \texttt{.dta}:
+<<ForeignExample, eval=FALSE, tidy=FALSE>>=
+# Load foreign package library
+library(foreign)
+
+# Load Stata data file MyFile.dta
+NewData <- read.dta(file = "~/Desktop/Myfile.dta")
+@
+\end{frame}
+
+\frame{
+  \begin{center}
+    {\LARGE{Data from Microsoft Excel}}
+  \end{center}
+}
+
+
+\frame{
+  \begin{center}
+    {\LARGE{Data from Microsoft Excel}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Data from Excel, Practical Tips}
+  If your data is in Excel format (i.e. \texttt{.xls})
+  \begin{itemize}
+    \item In Excel, simplify the data set (columns and rows, take out styling),
+    \item Save it as a text file.
+    \item Load using \texttt{read.table}
+  \end{itemize}
+}
+
+\frame{
+  \begin{center}
+    {\LARGE{Downloading Data from the Internet}}
+  \end{center}
+}
+
+
+\begin{frame}[fragile]
+  \frametitle{Downloading Data from the Internet}
+  You can sometimes download data directly from the internet. \\[0.5cm]
+  If the data is in a plain-text format on a webpage by itself, use the \texttt{getURL} command from the RCurl package.
+  
+<<URLCollect, eval=FALSE>>=
+# Load required packages 
+library(RCurl)
+library(foreign)
+
+# Create an object for the URL.
+url <- "http://myFile.csv"
+
+# Use getURL from RCurl to download the file.
+myData <- getURL(url)
+
+# Create a data frame
+MyData <- read.csv(myData) 
+@
+\end{frame}
+
+\frame{
+  \frametitle{More Details}
+  For more details see the Wiki: \url{http://bit.ly/QemXsI}.
+}
+
+\frame{
+  \frametitle{Data APIs}
+  Some packagages use data APIs (application programming interface) to download data from particular sources. \\[0.5cm]
+  You can download World Bank Development Indicator data directly into R using the WDI package.
+  \begin{itemize}
+    \item World Bank Development Indicators Website: \url{http://data.worldbank.org/indicator}
+  \end{itemize}
+}
+
+\begin{frame}[fragile]
+  For example to download data on life expectency at birth.
+<<WDIExample, message=FALSE>>=
+# Load package
+library(WDI)
+
+# Download data
+LifeExpect <- WDI(indicator = "SP.DYN.LE00.FE.IN")
+
+# Show variable names
+names(LifeExpect)
+@
+\end{frame}
+
+\frame{
+  \frametitle{More data sources}
+  You can find {\bf{other data API packages}} at: \url{http://bit.ly/Qw16RY}. \\[0.5cm]
+  The {\bf{MacroData Guide}} is a good source of social science data.
+  \begin{itemize}
+    \item \url{http://www.nsd.uib.no/macrodataguide/topic.html}
+  \end{itemize} \\[0.5cm]
+  The Federal Reserve Bank of St. Louis {\bf{FRED}} database.
+  \begin{itemize}
+    \item \url{http://research.stlouisfed.org/fred2/}
+  \end{itemize} \\[0.5cm]
+  Remember: Google is always your friend.   
+}
+
+\section{Merging \& ID Variables}
+
+\frame{
+  \frametitle{Merging \& ID Variables 1}
+  When you want to merge two data sets you should create a {\bf{standardised ID variable}}. \\[0.5cm]
+  The ID variable {\bf{matches observations}} in the two data sets.
+}
+
+\begin{frame}[fragile]
+  \frametitle{Merging \& ID Variables 2}
+  ID variables names should be the same. If they are not the same, you can rename them using the \texttt{rename} command in the Reshape package. \\[0.5cm]
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Merging \& ID Variables 3}
+  For example, to rename the variable "SP.DYN.LE00.FE.IN" from our previous example:
+<<RenameWDI, message=FALSE, tidy=FALSE>>=
+# Load package
+library(reshape)
+
+# Rename SP.DYN.LE00.FE.IN LifeExpectFemale
+LifeExpect <- rename(LifeExpect, c(
+  SP.DYN.LE00.FE.IN = "LifeExpectFemale"))
+
+# Show rename results
+names(LifeExpect)
+@
+\end{frame}
+
+\frame{
+  \frametitle{Merging \& ID Variables 4}
+  Before you merge your data, the {\bf{same ID variables}} need to have the {\bf{same values}}. \\[0.5cm]
+  For example, country names need to be spelled the same.
+}
+
+\begin{frame}[fragile]
+  \frametitle{Merging \& ID Variables 5}
+  To recode a variable use subscripts. For example:
+<<RenameKorea, eval=FALSE, tidy=FALSE>>=
+# Recode Korea, Rep -> SouthKorea
+LifeExpect$country[LifeExpect$country 
+                   == "Korea, Rep."] <- "SouthKorea"
+@
+\end{frame}
+
+\frame{
+  A useful package for creating country ID variables is countrycode. \\[0.5cm]
+  This will turn country names into country codes. \\[0.5cm]
+  You can use the country codes to merge the data.
+}
+
+\begin{frame}[fragile]
+  \frametitle{countrycode Example}
+  To create IMF country codes with our LifeExpect data:
+<<countrycode>>=
+# Load package
+library(countrycode)
+
+# Create IMF codes
+LifeExpect$IMFCode <- countrycode(LifeExpect$country,
+                                  origin = "country.name",
+                                  destination = "imf")
+# Show end of data set
+tail(LifeExpect)
+@
+\end{frame}
+
+\section{Saving Data}
+\begin{frame}[fragile]
+  \frametitle{Saving your Data}
+  To save your data to a plain-text file use \texttt{write.table}.
+<<WriteTable, eval=FALSE>>=
+write.table{LifeExpect, 
+            file = "LifeExpectacyData.csv", sep = ","}
+@
+\end{frame}
+
+\frame{
+  \frametitle{Finally}
+  {\LARGE{Remember:}}
+  \begin{itemize}
+    \item Document all of your work!
+    \item Decribe your sources \& the variables.
+    \item Always look at your data after merging it. Does it make sense?
+  \end{itemize}
+}
+
+\begin{frame}[allowframebreaks]
+  \frametitle{References}
+  Diaz, David M., Christopher D. Barr, and Mine \c{C}etinkaya-Rundel. OpenIntro Statistics. 1st ed. \url{http://www.openintro.org/stat/downloads.php}. \\[0.25cm] 
+  
+
+\end{frame}
+
+\end{document}
