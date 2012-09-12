@@ -127,7 +127,7 @@ sum(Population)
   {\bf{Research question:}} Are some authoritarian regimes more likely to go to war than others? \\[0.5cm]
   {\bf{Hypothesis:}} Weeks (2012) hypothesised that military regimes are more likely to start wars than civilian authoritarian regimes and democracies. \\[0.5cm]
   {\bf{Data Gathering:}} Country-year data on regime type (military regime, civilian authoritarian regime, democracy),  whether a war was started, \& other factors (military power, level of economic development, etc.) \\[0.5cm]
-  {\bf{Analyse Data \& Form Conclusions:}} We'll talk about this more in parts 2 \& 3 of the course.
+  {\bf{Analysing Data \& Forming Conclusions:}} We'll talk about this more in parts 2 \& 3 of the course.
 }
 
 \section{General Types of Data}
@@ -164,7 +164,7 @@ sum(Population)
   Variables can be at different {\bf{levels of measurement}}. \\[0.5cm]
   \begin{center}
     \includegraphics[scale=0.5]{LevelsOfMeasurement.png} \\[0.5cm]
-    Source: Diaz et al. (2011, 5)
+    Source: Diez et al. (2011, 5)
   \end{center}
 }
 
@@ -299,7 +299,7 @@ names(NewData)
 
 \begin{frame}[fragile]
   \frametitle{Subsetting 2}
-  We want to keep the first and second columns of the \texttt{StringsAsFactors} variable:
+  We want to keep the first and second columns and remove the \texttt{StringsAsFactors} variable:
 <<SubscriptsEx1>>=
 # Subset NewData, columns 1 & 2
 NewData <- NewData[, 1:2]
@@ -414,7 +414,7 @@ MergedData <- merge(x = NewData,
 \begin{frame}[fragile]
   \frametitle{Merging 2}
   We saw how you can use the \texttt{cbind} command to attach columns together. \\[0.5cm]
-  This is usually {\bf{not}} a good way to two data sets together. \\[0.5cm]
+  This is usually {\bf{not}} a good way to merge two data sets together. \\[0.5cm]
   For \texttt{cbind} the observations have to be in the {\bf{same order}} in both objects. \\[0.5cm]
   This is {\bf{very uncommon}}.
 \end{frame}
@@ -444,7 +444,7 @@ MergedData <- merge(x = NewData,
 
 \begin{frame}[allowframebreaks]
   \frametitle{References}
-  Diaz, David M., Christopher D. Barr, and Mine \c{C}etinkaya-Rundel. OpenIntro Statistics. 1st ed. \url{http://www.openintro.org/stat/downloads.php}. \\[0.25cm] 
+  Diez, David M., Christopher D. Barr, and Mine \c{C}etinkaya-Rundel. OpenIntro Statistics. 1st ed. \url{http://www.openintro.org/stat/downloads.php}. \\[0.25cm] 
   
   Weeks, Jessica L. 2012. “Strongmen and Straw Men: Authoritarian Regimes and the Initiation of International Conflict.” American Political Science Review 106(2): 326–347.
 \end{frame}

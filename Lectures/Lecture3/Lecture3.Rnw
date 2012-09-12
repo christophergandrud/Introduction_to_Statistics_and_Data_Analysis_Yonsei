@@ -483,10 +483,11 @@ tail(LifeExpect)
 \section{Saving Data}
 \begin{frame}[fragile]
   \frametitle{Saving your Data}
-  To save your data to a plain-text file use \texttt{write.table}.
-<<WriteTable, eval=FALSE>>=
-write.table{LifeExpect, 
-            file = "LifeExpectacyData.csv", sep = ","}
+  To save your data to a plain-text \texttt{.csv} file use \texttt{write.csv}.
+<<WriteTable, eval=FALSE, tidy=FALSE>>=
+write.csv(LifeExpect, 
+            file = "LifeExpectacyData.csv", 
+            row.names = FALSE)
 @
 \end{frame}
 

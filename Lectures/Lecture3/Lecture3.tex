@@ -595,12 +595,13 @@ LifeExpect$IMFCode <- \hlfunctioncall{countrycode}(LifeExpect$country,
 \section{Saving Data}
 \begin{frame}[fragile]
   \frametitle{Saving your Data}
-  To save your data to a plain-text file use \texttt{write.table}.
+  To save your data to a plain-text \texttt{.csv} file use \texttt{write.csv}.
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-write.table\{LifeExpect, 
-            file = \hlstring{"LifeExpectacyData.csv"}, sep = \hlstring{","}\}
+\hlfunctioncall{write.csv}(LifeExpect, 
+            file = \hlstring{"LifeExpectacyData.csv"}, 
+            row.names = FALSE)
 \end{alltt}
 \end{kframe}
 \end{knitrout}
