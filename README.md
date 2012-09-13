@@ -123,6 +123,12 @@ How to document your work so that others can reproduce it. Why reproducibility i
 
 > King, Gary. 1995. “Replication, Replication.” PS: Political Science and Politics 28(3): 444–452. 
 
+> Peng, Roger D. 2011. “Reproducible Research in Computational Science.” Science 334:1226-1227.
+
+*Extra:*
+
+> Ball, Richard, and Norm Medeiros. 2011. “Teaching Integrity in Empirical Research: A Protcol for Documenting Data Management and Analysis.” The Journal of Economic Education 43(2): 182–189.
+
 ## Part II: Basic Data Analysis and Visualization
 
 ### Week 5: Descriptive Statistics
