@@ -25,4 +25,4 @@ The assignment will be marked based on two criteria:
 
 1. How well you gathered and merged the data so that the new data set can be *used for statistical analysis* with *minimal data loss*.
 
-2. How well documented you data gathering process is. I should be able to understand your code and all steps you took.
+2. How well you *describe the data* and *document your data gathering process*. I should be able to understand your data, code, and all steps you took.

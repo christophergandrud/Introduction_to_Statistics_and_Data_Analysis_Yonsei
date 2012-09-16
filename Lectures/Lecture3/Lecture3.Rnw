@@ -119,10 +119,10 @@ DataB <- Data[2, ]
   {\LARGE{Anecdotal Evidence}} \\[0.5cm]
   If we want to answer questions about populations we should generally {\bf{avoid anecdotal evidence}}. For example: 
   \begin{itemize}
-    \item<2-> The rich people I know vote for Party A not Party B.
-  \end{itemize} \\[0.25cm]
+    \item<1-> The rich people I know vote for Party A not Party B.
+  \end{itemize} \\[0.5cm]
   Anecdotal evidence is gathered in a {\bf{haphazard way}}. It is {\bf{not representative}} of the population and usually includes {\bf{extreme cases}}. \\[0.5cm]
-  Anecdotal evidence is not representative of the population of interest and {\bf{should not}} be used to make {\bf{generalizable}} conclusions.
+  Because anecdotal evidence is not representative of the population of interest and {\bf{should not}} be used to make {\bf{generalizable}} conclusions.
 }
 
 \frame{
@@ -136,8 +136,8 @@ DataB <- Data[2, ]
   \frametitle{This Course}
   {\LARGE{Sampling in this Course}} \\[0.25cm]
   In this course we will mostly be using {\bf{observational data}}. \\[0.25cm]
-  We will also usually use {\bf{convenience samples}} where we try to gather data on as much of the population as possible (attempt {\bf{exhaustability}}. \\[0.5cm]
-  For example, if we want to research how democracy may effect economic development, we would try to gather data on
+  We will also usually use {\bf{convenience samples}} where we try to gather data on as much of the population as possible (attempt {\bf{exhaustability}}). \\[0.5cm]
+  For example, if we want to research how democracy may affect economic development, we would try to gather data on
     \begin{itemize}
       \item<1-> level of democracy
       \item<1-> level of development
@@ -148,7 +148,7 @@ DataB <- Data[2, ]
 \frame{
   \frametitle{Observational Data 1}
   {\LARGE{Sampling in this Course}} \\[0.25cm]
-  When we use convenience samples we {\bf{must always look out for factors that might bias our results}}. \\[0.5cm]
+  Especially when we use convenience samples we {\bf{must always look out for factors that might bias our results}}. \\[0.5cm]
   We must be he honest. {\bf{Clearly state any potential biases in our presentation of results.}} \\[0.5cm]
   For example: \\[0.25cm]
   We wanted to study all countries, but usually found data only for wealthy countries.\\
@@ -164,14 +164,14 @@ DataB <- Data[2, ]
 \frame{
   \frametitle{Response Variables}
   The phenomenon we are interested in explaining is operationalized by the {\bf{response variable}}. \\[0.5cm]
-  The response variable is also sometimes called the {\bf{dependent variable}} or denoted by $Y$.
+  The response variable is also sometimes called the {\bf{dependent variable}} and denoted by $Y$.
   
 }
 
 \frame{
   \frametitle{Explanatory Variables}
   The factor we believe may explain our phenomenon of interest is operationalized by the {\bf{explanatory variable}}. \\[0.5cm]
-  The explanatory variable is also sometimes called the {\bf{independent variable}} or denoted by $X$.
+  The explanatory variable is also sometimes called the {\bf{independent variable}} and denoted by $X$.
   
 }
 
@@ -260,9 +260,9 @@ DataB <- Data[2, ]
   You should save your data in a {\bf{plain text file format}}. \\[0.5cm]
   Plain-text file formats:
   \begin{itemize}
-    \item Are simple,
-    \item Can easily be loaded into R.
-  \end{itemize}
+    \item<1-> Are simple,
+    \item<1-> Can easily be loaded into R.
+  \end{itemize} \\[0.5cm]
   My favourite is {\bf{comma seperated values (.csv)}}. 
 }
 
@@ -401,14 +401,17 @@ names(LifeExpect)
 
 \frame{
   \frametitle{More data sources}
-  You can find {\bf{other data API packages}} at: \url{http://bit.ly/Qw16RY}. \\[0.5cm]
+  You can find {\bf{other data API packages}}
+    \begin{itemize}
+      \item<1-> \url{http://bit.ly/Qw16RY}
+    \end{itemize} \\[0.5cm]
   The {\bf{MacroData Guide}} is a good source of social science data.
   \begin{itemize}
-    \item \url{http://www.nsd.uib.no/macrodataguide/topic.html}
+    \item<1-> \url{http://www.nsd.uib.no/macrodataguide/topic.html}
   \end{itemize} \\[0.5cm]
   The Federal Reserve Bank of St. Louis {\bf{FRED}} database.
   \begin{itemize}
-    \item \url{http://research.stlouisfed.org/fred2/}
+    \item<1-> \url{http://research.stlouisfed.org/fred2/}
   \end{itemize} \\[0.5cm]
   Remember: Google is always your friend.   
 }
@@ -423,7 +426,7 @@ names(LifeExpect)
 
 \begin{frame}[fragile]
   \frametitle{Merging \& ID Variables 2}
-  ID variables names should be the same. If they are not the same, you can rename them using the \texttt{rename} command in the Reshape package. \\[0.5cm]
+  ID variable names should be the same. If they are not the same, you can rename them using the \texttt{rename} command in the Reshape package. \\[0.5cm]
 \end{frame}
 
 \begin{frame}[fragile]
@@ -504,8 +507,6 @@ write.csv(LifeExpect,
 \begin{frame}[allowframebreaks]
   \frametitle{References}
   Diaz, David M., Christopher D. Barr, and Mine \c{C}etinkaya-Rundel. OpenIntro Statistics. 1st ed. \url{http://www.openintro.org/stat/downloads.php}. \\[0.25cm] 
-  
-
 \end{frame}
 
 \end{document}

@@ -1,0 +1,78 @@
+\documentclass{beamer}
+\usetheme{Stats}
+\setbeamercovered{transparent}
+\usepackage{color}
+\usepackage{hyperref}
+  \hypersetup{
+  	colorlinks=true
+		linkcolor=black
+		}
+\usepackage{url}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{booktabs}
+
+<<ParentGlobalOpts, echo=FALSE>>=
+  options(width=50)
+  opts_chunk$set(fig.align='center')
+@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title Slide %%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[]{Intro to Social Science Data Analysis \\[1cm] Lecture 4: Replication! }
+\author[]{
+    \href{mailto:gandrud@yonsei.ac.kr}{Christopher Gandrud}
+}
+\date{\today}
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section[Outline]{}
+\frame{\tableofcontents}
+
+\section{Recap}
+\frame{
+	\frametitle{Recap}
+  {\LARGE{Last class we discussed:}}
+  \begin{itemize}
+    \item populations \& samples,
+    \item random samples \& convenience samples,
+    \item response, explanatory, and control variables,
+    \item importing data into R,
+    \item merging data sets.
+  \end{itemize}
+}
+
+\section{Reminder: First Assignment}
+\frame{
+  \frametitle{First Assignment}
+  {\large{{\bf{Due:}} Monday 24 September}} \\[0.5cm]
+  Create a new data frame with country-level data from at least {\bf{two}} different sources. \\[0.5cm]
+  Create a folder in your Dropbox and {\bf{email me the link}}. \\[0.5cm]
+  The folder needs to include:
+  \begin{enumerate}
+    \item<1-> The new data frame saved as a \texttt{.csv} file.
+    \item<1-> A text file {\bf{describing the variables and their sources}}.
+    \item<1-> A notebook \texttt{.html} file detailing how you created the data frame and saved it as a\texttt{.csv}.
+  \end{enumerate}
+}
+
+\frame{
+  \frametitle{Marking Criteria}
+  The assigment will be marked based on two criteria:
+  \begin{enumerate}
+    \item How well you gathered and merged the data so that the new data set can be used for {\emph{statistical analysis with minimal data loss}}.
+    \item How well you {\emph{describe the data}} and {\emph{document your data gathering process}}. I should be able to understand your data, code, and all steps you took.
+  \end{enumerate}
+}
+
+\begin{frame}[allowframebreaks]
+  \frametitle{References}
+  Diaz, David M., Christopher D. Barr, and Mine \c{C}etinkaya-Rundel. OpenIntro Statistics. 1st ed. \url{http://www.openintro.org/stat/downloads.php}. \\[0.25cm] 
+\end{frame}
+
+
+\end{document}
