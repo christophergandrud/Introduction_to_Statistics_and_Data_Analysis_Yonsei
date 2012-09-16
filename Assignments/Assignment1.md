@@ -15,3 +15,14 @@ The folder needs to include:
 2. A text file **describing the variables and their sources**.
 
 3. A notebook `.html` file detailing how you created the data frame and saved it as a `.csv`.
+
+
+--- 
+
+## Marking Criteria 
+
+The assignment will be marked based on two criteria:
+
+1. How well you gathered and merged the data so that the new data set can be *used for statistical analysis* with *minimal data loss*.
+
+2. How well documented you data gathering process is. I should be able to understand your code and all steps you took.

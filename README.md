@@ -82,7 +82,7 @@ For more reference on using **R** you might find these resources useful:
 **Assessment:**
 
 - 10% Class Attendance and Participation
-- 40% 5 Short Assignments: Due weeks 3, 5, 7, 9, 11 
+- 40% 5 Short Assignments: Due weeks 4, 6, 7, 9, 11 
 - 50% Pair Research project (paper and presentation): Due Week 16 
 
 How we communicate recently has been changing rapidly. Inaddition to articles and presentations, people have been using new formats such as **Twitter** and blogs to share their work and ideas. To help develop your skills using these formats you will post your work for some of the short assignments and pair research project on the class blog. You should post both the output of your work and the code you used to create it. The blog is at:
