@@ -1,7 +1,7 @@
 ##########
-# Shell script to Lectures or seminars
+# Shell script to create lectures or seminars
 # Christopher Gandrud
-# Updated 24 August 2012
+# Updated 15 September 2012
 # Helpful information found in "The Linux Command Line: A Complete Introduction" (Shotts 2012)
 ##########
 

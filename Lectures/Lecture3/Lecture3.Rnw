@@ -74,7 +74,7 @@ DataB <- Data[2, ]
   \frametitle{First Assignment}
   {\large{{\bf{Due:}} Monday 24 September}} \\[0.5cm]
   Create a new data frame with country-level data from at least {\bf{two}} different sources. \\[0.5cm]
-  Create a folder in your Dropbox \texttt{Public} folder and {\bf{email me the link}}. \\[0.5cm]
+  Create a folder in your Dropbox and {\bf{email me the link}}. \\[0.5cm]
   The folder needs to include:
   \begin{enumerate}
     \item<1-> The new data frame saved as a \texttt{.csv} file.

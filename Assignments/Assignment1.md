@@ -6,7 +6,7 @@
 
 Create a new data frame with country-level data from at least **two** different sources.
 
-Create a folder in your Dropbox `Public` folder and **email me the link**.
+Create a folder in your Dropbox and **email me the link**.
 
 The folder needs to include:
 
