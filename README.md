@@ -1,7 +1,7 @@
 # INT3042: Introduction to Social Science Data Analysis
 ## Yonsei University, Wonju
 ### Fall 2012 
-### Version: 13 September 2012
+### Version: 17 September 2012
 
 ___________________________________________________________
 
