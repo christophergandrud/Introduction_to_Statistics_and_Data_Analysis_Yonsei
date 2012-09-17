@@ -30,13 +30,32 @@
 
 \frame{\titlepage}
 
-\section[Outline]{}
-\frame{\tableofcontents}
-
-\section{}
 \frame{
-	\frametitle{}
+	\frametitle{Not Replicated}
+  \begin{center}
+    What does it mean if an independent researcher is not able to replicate a study's findings?
+  \end{center}
+}
 
+\frame{
+  \frametitle{Knitting}
+  \begin{center}
+    Briefly explain what the knitting process is. \\[0.5cm]
+    Why does it make research more reproducible?
+  \end{center}
+}
+
+\frame{
+  Create a {\bf{website}} hosted on Dropbox. \\[0.5cm]
+  The website should be created using R Markdown. \\[0.5cm]
+  It should include:
+  \begin{itemize}
+    \item 3 headers
+    \item An evaluated code chunk
+    \item A non-evaluated code chunk
+    \item A right-aligned plot
+    \item A URL link
+  \end{itemize}
 }
 
 
