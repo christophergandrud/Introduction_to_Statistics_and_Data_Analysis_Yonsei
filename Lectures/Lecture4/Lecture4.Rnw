@@ -46,32 +46,373 @@
   \end{itemize}
 }
 
-\section{Reminder: First Assignment}
 \frame{
-  \frametitle{First Assignment}
-  {\large{{\bf{Due:}} Monday 24 September}} \\[0.5cm]
-  Create a new data frame with country-level data from at least {\bf{two}} different sources. \\[0.5cm]
-  Create a folder in your Dropbox and {\bf{email me the link}}. \\[0.5cm]
-  The folder needs to include:
+  \frametitle{Review Quiz (1)}
   \begin{enumerate}
-    \item<1-> The new data frame saved as a \texttt{.csv} file.
-    \item<1-> A text file {\bf{describing the variables and their sources}}.
-    \item<1-> A notebook \texttt{.html} file detailing how you created the data frame and saved it as a\texttt{.csv}.
+    \item What is the difference between a population and a sample?
+    \item What do you need to be honest about when using convenience samples?
   \end{enumerate}
 }
 
+\begin{frame}[fragile]
+  \frametitle{Review Quiz (2)}
+  Comment the code:
+  
+<<QuickQuiz, error=FALSE, message=FALSE, tidy=FALSE>>=
+#
+library(reshape) 
+
+#
+Data <- rename(Data, c(country_name = "Country"))
+
+#
+Data$Country[Data$Country 
+             == "Dem. Rep. Congo"] <- "DRC"
+@
+
+\end{frame}
+
 \frame{
-  \frametitle{Marking Criteria}
-  The assigment will be marked based on two criteria:
-  \begin{enumerate}
-    \item How well you gathered and merged the data so that the new data set can be used for {\emph{statistical analysis with minimal data loss}}.
-    \item How well you {\emph{describe the data}} and {\emph{document your data gathering process}}. I should be able to understand your data, code, and all steps you took.
-  \end{enumerate}
+  Now we know how to get data into R in a format we can use for statistical analysis. \\[0.5cm]
+  Before we start analysing the data, it is important to learn an important computational research skill \ldots
 }
+
+\frame{
+  \begin{center}
+    {\LARGE{Reproducible Research}}
+  \end{center}
+}
+
+%%%%%%%%%%%%% What is reproducible research?
+\section{What is reproducible research?}
+\frame{
+  \frametitle{What is replicable research?}
+  {\LARGE{Replicable Research}} \\[0.5cm]
+  Research is replicable if {\emph{there is sufficient information for independent researchers to make the same findings using the same procedures}} (King 1995, 444).
+}
+
+\frame{
+  {\LARGE{For example,}}
+  A team of scientists clone a sheep. \\[0.5cm]
+  The team documents the prodedures they use to clone the sheep and make these procedures available on their website. \\[0.5cm]
+  Another team of scientists is able to use the information on the website to clone another sheep.
+}
+
+\frame{
+  \frametitle{What is reproducible research?}
+  {\LARGE{Reproducible Research}} \\[0.5cm]
+  Reproducible reasearch is when an {\emph{athe data and code used to make a finding are available and they are sufficient for an independent researcher to make the same findings (see Peng 2011).}} \\[0.5cm]
+}
+
+\frame{
+  \frametitle{Why reproducible, not replicable?}
+  Sometimes with observational data it may require too many resources to gather a new set of data or, especially in the case of cross-country data it may not be possible to gather other data. \\[0.5cm]
+  So, reproducibility can be a {\bf{second-best}} if replicability is difficult.
+}
+
+
+%%%%%%%%%%%%% Why do reproducible research?
+\section{Why do reproducible research?}
+\frame{
+  \begin{center}
+    {\LARGE{Why do reproducible research?}}
+  \end{center}
+}
+
+\frame{
+  \begin{center}
+    {\LARGE{In this class I require you to.}}
+  \end{center}
+}
+
+\frame{
+  \begin{center}
+    {\LARGE{Reproducible research is a key part of science.}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Reproducible research \& science}
+  Braude (1979, 2) has even called replication the ``demarcation between science and non-science."
+}
+
+\frame{
+  \frametitle{What is science?}
+  {\LARGE{Science}} \\[0.5cm]
+  The ``systematic enterprise of gathering knowledge about the universe and organizing and condensing that knowledge into {\bf{testable}} laws and theories`` \\[0.5cm]
+  {\small{(see APA \url{http://www.aps.org/policy/statements/99_6.cfm})}}
+}
+
+\frame{
+  \frametitle{Replication \& Science}
+  Scientists need to ``{\bf{expose}} their ideas and results to independent testing and replication by others. \\[0.25cm]
+  This requires the {\bf{open exchange of data, procedures and materials}}."\\[0.5cm]
+  {\small{(Emphasis added, see APA \url{http://www.aps.org/policy/statements/99_6.cfm})}}
+}
+
+\frame{
+  \frametitle{Avoiding effort duplication}
+  Making your data and procedures available also helps avoid {\bf{effort dublication}}. 
+    \begin{itemize}
+      \item Others don't have to gather the same data or figure out the same analysis that you have already done.
+    \end{itemize} \\[0.5cm]
+  This helps build {\bf{cumulative scientific knowledge}}.
+}
+
+\frame{
+  \begin{center}
+    {\LARGE{Reproducible research is good for you.}}
+  \end{center}
+}
+
+\frame{
+  As you will see, making your research reproducible requires extra an {\bf{upfront}} investment. \\[0.5cm]
+  Beyond the benefits for science, why should you make your research more reproducible?  
+}
+
+\frame{
+  \frametitle{Why reproducible research benefits you.}
+  {\LARGE{Reproducible research benefits for you:}}
+  \begin{itemize}
+    \item Better work habits.
+    \item Better teamwork.
+    \item Making changes is easier.
+    \item Higher research impact.
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{What is research?}
+  A book, an article, or a research paper is {\bf{not research}}. \\[0.5cm]
+  It is an {\bf{advertisment}} for the research. \\[0.5cm]
+  The research is ``the {\bf{full software environment, code, and data}} that produced the results" (Buckheit and Donoho, 1995; Donoho, 2010, 385)
+}
+
+\frame{
+  \frametitle{Doing reproducible computational research.}
+  \begin{center}
+    \includegraphics[scale = 0.35]{RepSpectrum.png} \\[0.75cm]
+    {\small{Peng (2011, 1226)}}
+  \end{center}
+}
+
+\begin{frame}[fragile]
+  We have {\emph{already started}} doing reproducible research. 
+  \begin{itemize}
+  \item<1-> You have already been making your code human readable with comments after the \texttt{\#}.
+  \item<2-> You have been compiling notebooks of your code and output.
+  \end{itemize}
+\end{frame}
+
+\frame{
+  So far we have mostly focused on the source code. \\[0.5cm]
+  Today we will learn how to {\bf{weave}} the source code and presentation documents together.
+}
+
+\frame{
+  First, we will learn the basics of the {\bf{Markdown}} markup language. \\[0.5cm]
+  Second, then we will learn how to use the {\emph{knitr}} package to weave our {\emph{source code}} and {\emph{Markdown presentation documents}}.
+}
+
+\frame{
+  \frametitle{Doing reproducible computational research.}
+  To be ``really reproducible" we need a way to {\bf{{\emph{link}} the data, code, and presentation}} documents. \\[1cm]
+  The {\emph{knitr}} package for R is this link. \\[0.5cm]
+  \begin{itemize}
+    Source Code $\Longleftrightarrow$ knitr package $\Longleftrightarrow$ Markdown  
+  \end{itemize}
+}
+
+%%%%%%%%%%%%% Doing Reproducible Research: Markup languages 
+\section{Doing reproducible research: markup languages}
+\frame{
+  \begin{center}
+    {\LARGE{The Markdown Markup Language.}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{What is a markup language?}
+  {\LARGE{Markup Language}} \\[0.5cm]
+  Instructions for how to format a presentation document. \\[0.5cm]
+  You are probably familiar with the HTML markup language used to create websites.
+}
+
+\frame{
+  \frametitle{HTML is a Pain!}
+  \begin{center}
+    \includegraphics[scale = 0.5]{htmlExample.png}
+  \end{center}
+}
+
+\frame{
+  \frametitle{What is the Markdown markup language?}
+  {\LARGE{Markdown}} \\[0.5cm]
+  The Markdown markup language {\emph{simplifies}} the process of creating HTML markup files. \\[0.5cm]
+  Markdown files have the file extension: \texttt{.md} or \texttt{.markdown}.
+}
+
+\frame{
+  \frametitle{Markdown \textrightarrow\: HTML}
+  \begin{center}
+    \includegraphics[scale = 0.3]{markdownTohtml.png}
+  \end{center}  
+}
+
+\frame{
+  \frametitle{Final}
+  \begin{center}
+    \includegraphics[scale = 0.3]{SyllabusSnap.png}
+  \end{center}  
+}
+
+\frame{
+  \frametitle{Basic Markdown Syntax}
+  You can find a guide to basic Markdown Syntax at:
+    \begin{itemize}
+      \item {\small{\url{http://daringfireball.net/projects/markdown/basics}}}      
+    \end{itemize} \\[0.5cm]
+    Also, {\bf{anything}} you can do in HTML you can do in Markdown.
+}
+
+\frame{
+  \frametitle{Programs for editing markdown documents}
+  {\LARGE{Free programs for editing markdown documents}} \\[0.5cm]
+  \begin{itemize}
+    \item {\bf{Mac:}} Mou (\url{http://mouapp.com/}).
+    \item {\bf{Windows:}} MarkdownPad (\url{http://markdownpad.com/}).
+  \end{itemize} \\[0.5cm]
+  These programs allow you to create webpages \& PDFs. \\[0.5cm]
+  You can host HTML pages from your Dropbox Public Folder
+}
+
+\frame{
+  \frametitle{R Markdown}
+  If we want to combine R code and Markdown we can use RStudio. \\[0.5cm]
+  To create a new R Markdown document: \\[0.5cm]
+  \begin{center}
+    \texttt{File} \textrightarrow\: \texttt{New}\textrightarrow\: \texttt{R Markdown}
+  \end{center} \\[0.5cm]
+  R Markdown documents have the file extension \texttt{.Rmd}. 
+}
+
+\frame{
+  \frametitle{The RStudio Markdown Top Bar, Left Side}
+  {\LARGE{Open a new R Markdown document \& play with these buttons in RStudio.}} \\[1cm]
+  \begin{center}
+    \includegraphics[scale = 0.5]{MarkdownTopBarLeft.png}
+  \end{center} \\[1cm]
+  {\large{What do they do?}}
+}
+
+%%%%%%%%%%%%% Doing Reproducible Research: knitr 
+\section{Doing reproducible research: knitr}
+\frame{
+  Now that we understand the basics of the Markdown markup language, lets start ``{\bf{knitting}}" R code into our presentation documents.
+}
+
+\frame{
+  \frametitle{The ``Knit HTML" Button}
+  CLicking on the ``Knit HTML" button (\raisebox{-2mm}{\includegraphics[scale=0.75]{KnitHTMLButton.png}}):
+  \begin{itemize}
+    \item Runs the R {\bf{code chunks}},
+    \item Puts the output into a new plain Markdown file (\texttt{.md}),
+    \item Converts the Markdown file to HTML.
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{What is a code chunk?}
+  {\LARGE{Code Chunks}} \\[0.5cm]
+  We place R code inside of code chunks, this seperates them from the markup and text. \\[0.5cm]
+  Knitr looks for code chunks and runs the code in them. 
+}
+
+\begin{frame}[fragile]
+  \frametitle{Code Chunk Syntax}
+  {\LARGE{Knitr/Markdown Code Chunk Syntax}}
+<<CodeChunkSyntaxStart, eval=FALSE>>=
+# A Knitr/Markdown code chunk starts like this
+```{r}
+@
+
+<<CodeChunkSyntaxEnd, eval=FALSE>>=
+# A Knitr/Markdown code chunk ends like this
+```
+
+@
+\end{frame}
+
+\frame{
+  \frametitle{Chunk Options}
+  {\LARGE{Chunk Options}} \\[0.5cm]
+  You can add options to your chunks to change how they behave.
+}
+
+\frame{
+  \frametitle{Chunk Options}
+  \begin{center}
+    \includegraphics[scale = 0.65]{ChunkRStudioExamples.png}
+  \end{center}
+}
+
+\begin{frame}[fragile]
+  \frametitle{Chunk Options}
+  The options:
+<<FigOptions, eval=FALSE>>=
+```{r fig.width=7, fig.height=6}
+@
+  Set how wide and tall the output figure is. 
+\end{frame}
+
+\frame{
+  \frametitle{R Markdown Final}
+  \begin{center}
+    \includegraphics[scale = 0.3]{CarsMarkdown.png}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Useful Chunk Options}
+  \begin{table}
+  \begin{tabular}{l p{5cm}}
+    \hline  
+    Chunk Option & Description \\ \hline\hline
+    \texttt{eval=FALSE} & Does not run the code \\
+    \texttt{echo=FALSE} & Does not include the code \\
+    \texttt{error=FALSE} & Does not include error messages \\
+    \texttt{warning=FALSE} & Does not include warning messages \\
+    \texttt{message=FALSE} & Does not include message messages \\
+    \texttt{fig.align='center'} & Centers a figure \\
+    \hline
+  \end{tabular}
+  \end{table}
+}
+
+\frame{
+  \frametitle{More Chunk Options}
+  All chunk options can be found at: \\[0.5cm]
+  \begin{itemize}
+    \url{http://yihui.name/knitr/options}.
+  \end{itemize}
+}
+
+\frame{
+  If you want well formatted PDF files and slide shows (like this one), especially if you plan to go to graduate school. \\[0.5cm]
+  You can learn how to use knitr and \LaTeX. \\[0.5cm]
+  See me for more details. \\[0.5cm]
+  {\bf{Note:}} \LaTeX markup syntax is more complicated than Markdown. \\ 
+  You also do not need to know \LaTeX for this course.
+}
+
 
 \begin{frame}[allowframebreaks]
   \frametitle{References}
-  Diaz, David M., Christopher D. Barr, and Mine \c{C}etinkaya-Rundel. OpenIntro Statistics. 1st ed. \url{http://www.openintro.org/stat/downloads.php}. \\[0.25cm] 
+  Braude, S.E. ESP and Psychokinesis. A philosophical examination. Temple University Press, Philadelphia, PA, 1979. \\[0.25cm]
+  Buckheit, J. B. and Donoho, D. L. (1995). Wavelab and Reproducible Research, pages 55–81. Springer, New York. \\[0.25cm]
+  Donoho, D. L. (2010). An Invitation to Reproducible Computational Research. Biostatistics, 11(3):385–388. \\[0.25cm]
+  King, Gary. 1995. “Replication, Replication.” PS: Political Science and Politics 28(3): 444–452. \\[0.25cm] 
+  Peng, Roger D. 2011. “Reproducible Research in Computational Science.” Science 334:1226-1227.
 \end{frame}
 
 

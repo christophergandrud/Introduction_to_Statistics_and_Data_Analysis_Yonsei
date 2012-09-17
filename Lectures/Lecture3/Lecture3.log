@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  17 SEP 2012 08:39
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  17 SEP 2012 09:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1183,20 +1183,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [16
 
 ]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.184 }
-       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1211,6 +1197,20 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [18
 
 ]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.193 }
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1245,47 +1245,47 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 [23
 
-] <ExplainResponse.png, id=229, 317.185pt x 41.15375pt>
-File: ExplainResponse.png Graphic file (type png)
-
-<use ExplainResponse.png>
-Package pdftex.def Info: ExplainResponse.png used on input line 244.
-(pdftex.def)             Requested size: 190.31245pt x 24.69243pt.
-
+]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
 [24
 
- <./ExplainResponse.png>] <Confounder.png, id=239, 325.215pt x 128.48pt>
-File: Confounder.png Graphic file (type png)
-
-<use Confounder.png>
-Package pdftex.def Info: Confounder.png used on input line 258.
-(pdftex.def)             Requested size: 195.1305pt x 77.08858pt.
-
+]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
 [25
 
- <./Confounder.png>]
+] <ExplainResponse.png, id=245, 317.185pt x 41.15375pt>
+File: ExplainResponse.png Graphic file (type png)
+
+<use ExplainResponse.png>
+Package pdftex.def Info: ExplainResponse.png used on input line 253.
+(pdftex.def)             Requested size: 190.31245pt x 24.69243pt.
+
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
 [26
 
-]
+ <./ExplainResponse.png>] <Confounder.png, id=255, 325.215pt x 128.48pt>
+File: Confounder.png Graphic file (type png)
+
+<use Confounder.png>
+Package pdftex.def Info: Confounder.png used on input line 267.
+(pdftex.def)             Requested size: 195.1305pt x 77.08858pt.
+
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
 [27
 
-]
+ <./Confounder.png>]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1369,36 +1369,28 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 [39
 
-] <IdealData.png, id=350, 961.5925pt x 298.11375pt>
-File: IdealData.png Graphic file (type png)
- <use IdealData.png>
-Package pdftex.def Info: IdealData.png used on input line 309.
-(pdftex.def)             Requested size: 480.79507pt x 149.0565pt.
-
-Overfull \hbox (173.5052pt too wide) in paragraph at lines 309--309
-[][]  
- []
-
-
+]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
 [40
 
- <./IdealData.png>] <BadData.png, id=359, 901.3675pt x 612.2875pt>
-File: BadData.png Graphic file (type png)
-
-<use BadData.png>
-Package pdftex.def Info: BadData.png used on input line 314.
-(pdftex.def)             Requested size: 450.68263pt x 306.143pt.
-
-Overfull \hbox (143.39276pt too wide) in paragraph at lines 314--314
-[][]  
+]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
  []
 
+[41
 
-Overfull \vbox (72.22795pt too high) detected at line 314
+] <IdealData.png, id=365, 961.5925pt x 298.11375pt>
+File: IdealData.png Graphic file (type png)
+ <use IdealData.png>
+Package pdftex.def Info: IdealData.png used on input line 318.
+(pdftex.def)             Requested size: 480.79507pt x 149.0565pt.
+
+Overfull \hbox (173.5052pt too wide) in paragraph at lines 318--318
+[][]  
  []
 
 
@@ -1406,7 +1398,29 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[41
+[42
+
+ <./IdealData.png>] <BadData.png, id=374, 901.3675pt x 612.2875pt>
+File: BadData.png Graphic file (type png)
+
+<use BadData.png>
+Package pdftex.def Info: BadData.png used on input line 323.
+(pdftex.def)             Requested size: 450.68263pt x 306.143pt.
+
+Overfull \hbox (143.39276pt too wide) in paragraph at lines 323--323
+[][]  
+ []
+
+
+Overfull \vbox (72.22795pt too high) detected at line 323
+ []
+
+
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[43
 
  <./BadData.png>]
 
@@ -1416,7 +1430,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.325 }
+l.334 }
        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1427,15 +1441,15 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[42
+[44
 
-] <TextComma.png, id=375, 987.69pt x 396.48125pt>
+] <TextComma.png, id=391, 987.69pt x 396.48125pt>
 File: TextComma.png Graphic file (type png)
  <use TextComma.png>
-Package pdftex.def Info: TextComma.png used on input line 330.
+Package pdftex.def Info: TextComma.png used on input line 339.
 (pdftex.def)             Requested size: 493.8438pt x 198.24013pt.
 
-Overfull \hbox (186.55392pt too wide) in paragraph at lines 330--330
+Overfull \hbox (186.55392pt too wide) in paragraph at lines 339--339
 [][]  
  []
 
@@ -1444,36 +1458,19 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[43
+[45
 
  <./TextComma.png>]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[44
-
-]
-\openout4 = `Lecture3.vrb'.
-
- (./Lecture3.vrb)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[45
-
-]
-\openout4 = `Lecture3.vrb'.
-
- (./Lecture3.vrb)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
 [46
 
-] (./Lecture3.vrb)
+]
+\openout4 = `Lecture3.vrb'.
+
+ (./Lecture3.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1481,16 +1478,16 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [47
 
 ]
+\openout4 = `Lecture3.vrb'.
+
+ (./Lecture3.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
 [48
 
-]
-\openout4 = `Lecture3.vrb'.
-
- (./Lecture3.vrb)
+] (./Lecture3.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1505,6 +1502,9 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [50
 
 ]
+\openout4 = `Lecture3.vrb'.
+
+ (./Lecture3.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1540,9 +1540,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [55
 
 ]
-\openout4 = `Lecture3.vrb'.
-
- (./Lecture3.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1557,6 +1554,9 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [57
 
 ]
+\openout4 = `Lecture3.vrb'.
+
+ (./Lecture3.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1564,9 +1564,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [58
 
 ]
-\openout4 = `Lecture3.vrb'.
-
- (./Lecture3.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1574,46 +1571,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [59
 
 ]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.502 }
-       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.502 }
-       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.502 }
-       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1621,6 +1578,9 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [60
 
 ]
+\openout4 = `Lecture3.vrb'.
+
+ (./Lecture3.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1628,9 +1588,46 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [61
 
 ]
-\openout4 = `Lecture3.vrb'.
 
- (./Lecture3.vrb)
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.511 }
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.511 }
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.511 }
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1638,9 +1635,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [62
 
 ]
-\openout4 = `Lecture3.vrb'.
-
- (./Lecture3.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1648,6 +1642,9 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [63
 
 ]
+\openout4 = `Lecture3.vrb'.
+
+ (./Lecture3.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1675,10 +1672,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \openout4 = `Lecture3.vrb'.
 
  (./Lecture3.vrb)
-Overfull \vbox (9.37671pt too high) detected at line 596
- []
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1686,9 +1679,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [67
 
 ]
-\openout4 = `Lecture3.vrb'.
-
- (./Lecture3.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1696,6 +1686,13 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [68
 
 ]
+\openout4 = `Lecture3.vrb'.
+
+ (./Lecture3.vrb)
+Overfull \vbox (9.37671pt too high) detected at line 605
+ []
+
+
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1703,6 +1700,9 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [69
 
 ]
+\openout4 = `Lecture3.vrb'.
+
+ (./Lecture3.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1724,6 +1724,20 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [72
 
 ]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[73
+
+]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[74
+
+]
 \tf@nav=\write6
 \openout6 = `Lecture3.nav'.
 
@@ -1733,11 +1747,11 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `Lecture3.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 629.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 629.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 638.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 638.
  (./Lecture3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 629.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 629.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 638.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 638.
 Package rerunfilecheck Info: File `Lecture3.out' has not changed.
 (rerunfilecheck)             Checksum: 0086CFD3AC533FD27F631E578FE5DB0C;393.
 
@@ -1745,14 +1759,14 @@ Package rerunfilecheck Info: File `Lecture3.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 629.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 638.
  ) 
 Here is how much of TeX's memory you used:
- 18530 strings out of 493633
- 351135 string characters out of 3143377
+ 18538 strings out of 493633
+ 351217 string characters out of 3143377
  416145 words of memory out of 3000000
- 21199 multiletter control sequences out of 15000+200000
- 13013 words of font info for 49 fonts, out of 3000000 for 9000
+ 21202 multiletter control sequences out of 15000+200000
+ 13369 words of font info for 50 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  49i,16n,60p,447b,589s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
@@ -1763,13 +1777,14 @@ sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></us
 r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/
 local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/lo
 cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/l
+ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/l
 ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/lo
 cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></us
 r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on Lecture3.pdf (72 pages, 404814 bytes).
+Output written on Lecture3.pdf (74 pages, 416687 bytes).
 PDF statistics:
- 671 PDF objects out of 1000 (max. 8388607)
- 564 compressed objects within 6 object streams
- 153 named destinations out of 1000 (max. 500000)
+ 692 PDF objects out of 1000 (max. 8388607)
+ 582 compressed objects within 6 object streams
+ 157 named destinations out of 1000 (max. 500000)
  120 words of extra memory for PDF output out of 10000 (max. 10000000)
 

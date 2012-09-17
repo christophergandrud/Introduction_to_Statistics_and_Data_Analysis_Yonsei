@@ -1,0 +1,11 @@
+\frametitle {Chunk Options}
+  The options:
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+```\{r fig.width=7, fig.height=6\}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+  Set how wide and tall the output figure is.

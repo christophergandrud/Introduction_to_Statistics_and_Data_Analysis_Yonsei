@@ -125,6 +125,8 @@ How to document your work so that others can reproduce it. Why reproducibility i
 
 > Peng, Roger D. 2011. “Reproducible Research in Computational Science.” Science 334:1226-1227.
 
+> Markdown Basics <http://daringfireball.net/projects/markdown/basics>.
+
 *Extra:*
 
 > Ball, Richard, and Norm Medeiros. 2011. “Teaching Integrity in Empirical Research: A Protcol for Documenting Data Management and Analysis.” The Journal of Economic Education 43(2): 182–189.
