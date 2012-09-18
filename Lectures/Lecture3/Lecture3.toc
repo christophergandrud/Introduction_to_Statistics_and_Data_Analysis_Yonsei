@@ -4,5 +4,5 @@
 \beamer@sectionintoc {4}{Data Gathering Principles}{14}{0}{3}
 \beamer@sectionintoc {5}{Response \& Explanatory Variables}{24}{0}{4}
 \beamer@sectionintoc {6}{Importing Data Into R}{30}{0}{5}
-\beamer@sectionintoc {7}{Merging \& ID Variables}{63}{0}{6}
-\beamer@sectionintoc {8}{Saving Data}{70}{0}{7}
+\beamer@sectionintoc {7}{Merging \& ID Variables}{62}{0}{6}
+\beamer@sectionintoc {8}{Saving Data}{69}{0}{7}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  17 SEP 2012 09:32
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  18 SEP 2012 10:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1547,6 +1547,9 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [56
 
 ]
+\openout4 = `Lecture3.vrb'.
+
+ (./Lecture3.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1554,9 +1557,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [57
 
 ]
-\openout4 = `Lecture3.vrb'.
-
- (./Lecture3.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1571,13 +1571,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [59
 
 ]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[60
-
-]
 \openout4 = `Lecture3.vrb'.
 
  (./Lecture3.vrb)
@@ -1585,7 +1578,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[61
+[60
 
 ]
 
@@ -1595,7 +1588,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.511 }
+l.504 }
        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1608,7 +1601,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.511 }
+l.504 }
        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1621,7 +1614,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.511 }
+l.504 }
        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1632,9 +1625,19 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
+[61
+
+]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
 [62
 
 ]
+\openout4 = `Lecture3.vrb'.
+
+ (./Lecture3.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1652,9 +1655,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [64
 
 ]
-\openout4 = `Lecture3.vrb'.
-
- (./Lecture3.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1662,13 +1662,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [65
 
 ]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[66
-
-]
 \openout4 = `Lecture3.vrb'.
 
  (./Lecture3.vrb)
@@ -1676,9 +1669,23 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
+[66
+
+]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
 [67
 
 ]
+\openout4 = `Lecture3.vrb'.
+
+ (./Lecture3.vrb)
+Overfull \vbox (9.37671pt too high) detected at line 598
+ []
+
+
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1689,10 +1696,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \openout4 = `Lecture3.vrb'.
 
  (./Lecture3.vrb)
-Overfull \vbox (9.37671pt too high) detected at line 605
- []
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1700,9 +1703,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [69
 
 ]
-\openout4 = `Lecture3.vrb'.
-
- (./Lecture3.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1731,13 +1731,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [73
 
 ]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[74
-
-]
 \tf@nav=\write6
 \openout6 = `Lecture3.nav'.
 
@@ -1747,11 +1740,11 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `Lecture3.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 638.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 638.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 631.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 631.
  (./Lecture3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 638.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 638.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 631.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 631.
 Package rerunfilecheck Info: File `Lecture3.out' has not changed.
 (rerunfilecheck)             Checksum: 0086CFD3AC533FD27F631E578FE5DB0C;393.
 
@@ -1759,13 +1752,13 @@ Package rerunfilecheck Info: File `Lecture3.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 638.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 631.
  ) 
 Here is how much of TeX's memory you used:
- 18538 strings out of 493633
- 351217 string characters out of 3143377
+ 18534 strings out of 493633
+ 351180 string characters out of 3143377
  416145 words of memory out of 3000000
- 21202 multiletter control sequences out of 15000+200000
+ 21200 multiletter control sequences out of 15000+200000
  13369 words of font info for 50 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  49i,16n,60p,447b,589s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1781,10 +1774,10 @@ ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/l
 ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/lo
 cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></us
 r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on Lecture3.pdf (74 pages, 416687 bytes).
+Output written on Lecture3.pdf (73 pages, 416364 bytes).
 PDF statistics:
- 692 PDF objects out of 1000 (max. 8388607)
- 582 compressed objects within 6 object streams
- 157 named destinations out of 1000 (max. 500000)
+ 684 PDF objects out of 1000 (max. 8388607)
+ 575 compressed objects within 6 object streams
+ 155 named destinations out of 1000 (max. 500000)
  120 words of extra memory for PDF output out of 10000 (max. 10000000)
 
