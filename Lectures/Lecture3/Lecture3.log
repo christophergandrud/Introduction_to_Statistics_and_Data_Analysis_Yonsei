@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  18 SEP 2012 10:39
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  20 SEP 2012 10:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1682,7 +1682,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \openout4 = `Lecture3.vrb'.
 
  (./Lecture3.vrb)
-Overfull \vbox (9.37671pt too high) detected at line 598
+Overfull \vbox (9.37671pt too high) detected at line 609
  []
 
 
@@ -1740,11 +1740,11 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `Lecture3.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 631.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 631.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 642.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 642.
  (./Lecture3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 631.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 631.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 642.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 642.
 Package rerunfilecheck Info: File `Lecture3.out' has not changed.
 (rerunfilecheck)             Checksum: 0086CFD3AC533FD27F631E578FE5DB0C;393.
 
@@ -1752,7 +1752,7 @@ Package rerunfilecheck Info: File `Lecture3.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 631.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 642.
  ) 
 Here is how much of TeX's memory you used:
  18534 strings out of 493633
@@ -1774,7 +1774,7 @@ ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/l
 ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/lo
 cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></us
 r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on Lecture3.pdf (73 pages, 416364 bytes).
+Output written on Lecture3.pdf (73 pages, 416803 bytes).
 PDF statistics:
  684 PDF objects out of 1000 (max. 8388607)
  575 compressed objects within 6 object streams

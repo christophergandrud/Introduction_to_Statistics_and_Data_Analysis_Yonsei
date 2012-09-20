@@ -549,7 +549,7 @@ LifeExpect <- \hlfunctioncall{rename}(LifeExpect, \hlfunctioncall{c}(
 
 \begin{frame}[fragile]
   \frametitle{Merging \& ID Variables 5}
-  To recode a variable use subscripts. For example:
+  To {\bf{recode}} a variable use subscripts. For example:
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
@@ -559,6 +559,17 @@ LifeExpect$country[LifeExpect$country
 \end{alltt}
 \end{kframe}
 \end{knitrout}
+
+\vspace{1cm}
+{\bf{Tip:}} To see a list of all of the country names in the {\emph{LifeExpect}} data set use the \texttt{unique} command:
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlfunctioncall{unique}(LifeExpect$country)
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
 
 \end{frame}
 

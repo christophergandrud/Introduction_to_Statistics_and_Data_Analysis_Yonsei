@@ -455,12 +455,18 @@ names(LifeExpect)
 
 \begin{frame}[fragile]
   \frametitle{Merging \& ID Variables 5}
-  To recode a variable use subscripts. For example:
+  To {\bf{recode}} a variable use subscripts. For example:
 <<RenameKorea, eval=FALSE, tidy=FALSE>>=
 # Recode Korea, Rep -> SouthKorea
 LifeExpect$country[LifeExpect$country 
                    == "Korea, Rep."] <- "SouthKorea"
 @
+\vspace{1cm}
+{\bf{Tip:}} To see a list of all of the country names in the {\emph{LifeExpect}} data set use the \texttt{unique} command:
+<<Uniqe, eval=FALSE>>=
+unique(LifeExpect$country)
+@
+
 \end{frame}
 
 \frame{
