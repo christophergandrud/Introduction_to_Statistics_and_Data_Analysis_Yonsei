@@ -59,8 +59,8 @@
   \end{itemize}
 }
 
-%%%%%%%%%%%%%%%%%% Central Tendency %%%%%%%%%%%%%%%%%%
-\section{Central Tendency}
+%%%%%%%%%%%%%%%%%% Describing Data Overall %%%%%%%%%%%%%%%%%%
+\section{Describing Data Overall}
 \frame{
   \begin{center}
     {\LARGE{So far we have learned how to gather data and get it into R.}}
@@ -69,10 +69,38 @@
 
 \frame{
   \begin{center}
-    {\LARGE{Today we will start to learn how to {\bf{describe}} our data.}}
+    {\LARGE{Today we will start to learn tools for {\bf{describing}} our data.}}
   \end{center}
 }
 
+\frame{
+  \begin{center}
+    {\LARGE{Why do we need tools for describing our data?}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Why do we need tools for describing our data?}
+  \begin{itemize}
+    \item To find the {\bf{patterns}} we are interested but too difficult to find by just looking at the raw data.
+    \item Find potential {\bf{data biases}}.
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{Key Principles}
+  {\LARGE{When describing data, {\bf{ALWAYS}} look at {\bf{BOTH}}}} \\[0.5cm]
+  \begin{itemize}
+    \item The Central Tendency,
+    \item The Variance (dispersion).
+  \end{itemize}
+}
+
+%%%%%%%%%%%%%%%%%%%%% Describing Numerical Data %%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%% Describing Categorical Data %%%%%%%%%%%%%%%%%%
 \begin{frame}[allowframebreaks]
   \frametitle{References}
   Diaz, David M., Christopher D. Barr, and Mine \c{C}etinkaya-Rundel. OpenIntro Statistics. 1st ed. \url{http://www.openintro.org/stat/downloads.php}. \\[0.25cm] 

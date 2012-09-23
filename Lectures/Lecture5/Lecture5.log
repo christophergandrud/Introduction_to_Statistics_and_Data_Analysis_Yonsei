@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  24 SEP 2012 07:53
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  24 SEP 2012 08:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1132,6 +1132,48 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [10
 
 ]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[11
+
+]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[12
+
+]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[13
+
+]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[14
+
+]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[15
+
+]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[16
+
+]
 \tf@nav=\write6
 \openout6 = `Lecture5.nav'.
 
@@ -1141,26 +1183,26 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `Lecture5.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 129.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 129.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 162.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 162.
  (./Lecture5.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 129.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 129.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 162.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 162.
 Package rerunfilecheck Info: File `Lecture5.out' has not changed.
-(rerunfilecheck)             Checksum: 98F4126A549F9F8990420AE3CEC3737F;91.
+(rerunfilecheck)             Checksum: E4E9A91A2D78F060810F906E02377799;98.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 129.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 162.
  ) 
 Here is how much of TeX's memory you used:
- 18167 strings out of 493633
- 346143 string characters out of 3143377
- 410167 words of memory out of 3000000
- 20998 multiletter control sequences out of 15000+200000
- 11648 words of font info for 43 fonts, out of 3000000 for 9000
+ 18214 strings out of 493633
+ 347090 string characters out of 3143377
+ 410168 words of memory out of 3000000
+ 21032 multiletter control sequences out of 15000+200000
+ 13064 words of font info for 49 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  49i,16n,60p,447b,589s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
@@ -1169,12 +1211,13 @@ Here is how much of TeX's memory you used:
 usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></us
 r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></u
 sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></u
-sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
->
-Output written on Lecture5.pdf (10 pages, 75512 bytes).
+sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></us
+r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+
+Output written on Lecture5.pdf (16 pages, 96799 bytes).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
- 109 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 500000)
+ 186 PDF objects out of 1000 (max. 8388607)
+ 152 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
  55 words of extra memory for PDF output out of 10000 (max. 10000000)
 
