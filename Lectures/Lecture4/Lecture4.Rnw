@@ -48,6 +48,12 @@
 
 \frame{
   \frametitle{Review Quiz (1)}
+  Imagine you have a data set in a \texttt{.csv} file on your desktop. \\[0.5cm]
+  Describe the steps you would take to import the data set into R.
+}
+
+\frame{
+  \frametitle{Review Quiz (2)}
   \begin{enumerate}
     \item What is the difference between a population and a sample?
     \item What do you need to be honest about when using convenience samples?
@@ -55,7 +61,7 @@
 }
 
 \begin{frame}[fragile]
-  \frametitle{Review Quiz (2)}
+  \frametitle{Review Quiz (3)}
   Comment the code:
   
 <<QuickQuiz, error=FALSE, message=FALSE, tidy=FALSE>>=
@@ -101,13 +107,28 @@ Data$Country[Data$Country
 \frame{
   \frametitle{What is reproducible research?}
   {\LARGE{Reproducible Research}} \\[0.5cm]
-  Reproducible reasearch is when an {\emph{athe data and code used to make a finding are available and they are sufficient for an independent researcher to make the same findings (see Peng 2011).}} \\[0.5cm]
+  Reproducible reasearch is when {\emph{the data and code used to make a finding are available and they are sufficient for an independent researcher to make the same findings (see Peng 2011).}} \\[0.5cm]
 }
 
 \frame{
   \frametitle{Why reproducible, not replicable?}
   Sometimes with observational data it may require too many resources to gather a new set of data or, especially in the case of cross-country data it may not be possible to gather other data. \\[0.5cm]
   So, reproducibility can be a {\bf{second-best}} if replicability is difficult.
+}
+
+\frame{
+  \frametitle{What is research?}
+  A book, an article, or a research paper is {\bf{not research}}. \\[0.5cm]
+  It is an {\bf{advertisment}} for the research. \\[0.5cm]
+  The research is ``the {\bf{full software environment, code, and data}} that produced the results" (Buckheit and Donoho, 1995; Donoho, 2010, 385)
+}
+
+\frame{
+  \frametitle{Doing reproducible computational research.}
+  \begin{center}
+    \includegraphics[scale = 0.35]{RepSpectrum.png} \\[0.75cm]
+    {\small{Peng (2011, 1226)}}
+  \end{center}
 }
 
 
@@ -166,7 +187,7 @@ Data$Country[Data$Country
 }
 
 \frame{
-  As you will see, making your research reproducible requires extra an {\bf{upfront}} investment. \\[0.5cm]
+  As you will see, making your research reproducible requires an extra {\bf{upfront}} investment. \\[0.5cm]
   Beyond the benefits for science, why should you make your research more reproducible?  
 }
 
@@ -179,21 +200,6 @@ Data$Country[Data$Country
     \item Making changes is easier.
     \item Higher research impact.
   \end{itemize}
-}
-
-\frame{
-  \frametitle{What is research?}
-  A book, an article, or a research paper is {\bf{not research}}. \\[0.5cm]
-  It is an {\bf{advertisment}} for the research. \\[0.5cm]
-  The research is ``the {\bf{full software environment, code, and data}} that produced the results" (Buckheit and Donoho, 1995; Donoho, 2010, 385)
-}
-
-\frame{
-  \frametitle{Doing reproducible computational research.}
-  \begin{center}
-    \includegraphics[scale = 0.35]{RepSpectrum.png} \\[0.75cm]
-    {\small{Peng (2011, 1226)}}
-  \end{center}
 }
 
 \begin{frame}[fragile]
@@ -219,7 +225,7 @@ Data$Country[Data$Country
   To be ``really reproducible" we need a way to {\bf{{\emph{link}} the data, code, and presentation}} documents. \\[1cm]
   The {\emph{knitr}} package for R is this link. \\[0.5cm]
   \begin{itemize}
-    Source Code $\Longleftrightarrow$ knitr package $\Longleftrightarrow$ Markdown  
+    R Source Code $\Longleftrightarrow$ knitr package $\Longleftrightarrow$ Markdown  
   \end{itemize}
 }
 

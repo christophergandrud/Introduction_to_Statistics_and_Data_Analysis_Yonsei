@@ -1,0 +1,81 @@
+\documentclass{beamer}
+\usetheme{Stats}
+\setbeamercovered{transparent}
+\usepackage{color}
+\usepackage{hyperref}
+  \hypersetup{
+  	colorlinks=true
+		linkcolor=black
+		}
+\usepackage{url}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{booktabs}
+
+<<ParentGlobalOpts, echo=FALSE>>=
+  options(width=50)
+  opts_chunk$set(fig.align='center')
+@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title Slide %%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[]{Intro to Social Science Data Analysis \\[1cm] Lecture 5: Descriptive Statistics}
+\author[]{
+    \href{mailto:gandrud@yonsei.ac.kr}{Christopher Gandrud}
+}
+\date{\today}
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section[Outline]{}
+\frame{\tableofcontents}
+
+%%%%%%%%%%%%%%%%%% Recap %%%%%%%%%%%%%%%%%%
+\section{Recap}
+\frame{
+	\frametitle{Review Questions 1}
+  \begin{itemize}
+    \item What is reproducible research?
+    \item Why is it important?
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{Review Questions 2}
+  \begin{itemize}
+    \item What is the Markdown markup language?
+    \item What does the {\emph{knitr}} package do?
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{Review Questions 3}
+  \begin{itemize}
+    \item What is a code chunk?
+    \item How do you make a code chunk in a Markdown document?
+  \end{itemize}
+}
+
+%%%%%%%%%%%%%%%%%% Central Tendency %%%%%%%%%%%%%%%%%%
+\section{Central Tendency}
+\frame{
+  \begin{center}
+    {\LARGE{So far we have learned how to gather data and get it into R.}}
+  \end{center}
+}
+
+\frame{
+  \begin{center}
+    {\LARGE{Today we will start to learn how to {\bf{describe}} our data.}}
+  \end{center}
+}
+
+\begin{frame}[allowframebreaks]
+  \frametitle{References}
+  Diaz, David M., Christopher D. Barr, and Mine \c{C}etinkaya-Rundel. OpenIntro Statistics. 1st ed. \url{http://www.openintro.org/stat/downloads.php}. \\[0.25cm] 
+\end{frame}
+
+\end{document}
