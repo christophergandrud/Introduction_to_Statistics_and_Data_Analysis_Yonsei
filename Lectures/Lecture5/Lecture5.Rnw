@@ -143,6 +143,8 @@
   \begin{itemize}
     \item GDP per capita (current US\$)
     \item Mortality rate, infant (per 1,000 live births)
+    \item World Bank region classification
+    \item World Bank income level classification
   \end{itemize} \\[0.3cm]
   The sample includes 199 jurisdictions.
 \end{frame}

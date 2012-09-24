@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  24 SEP 2012 19:34
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  24 SEP 2012 19:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1224,7 +1224,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.6   \end{itemize} \\[
+l.8   \end{itemize} \\[
                        0.3cm]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1293,7 +1293,7 @@ Package pdftex.def Info: figure/InfantHist.pdf used on input line 8.
 <MultiModal.png, id=249, 842.14626pt x 372.39125pt>
 File: MultiModal.png Graphic file (type png)
  <use MultiModal.png>
-Package pdftex.def Info: MultiModal.png used on input line 285.
+Package pdftex.def Info: MultiModal.png used on input line 287.
 (pdftex.def)             Requested size: 294.7556pt x 130.33888pt.
 
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
@@ -1683,7 +1683,7 @@ Package pdftex.def Info: figure/MoasicPlot.pdf used on input line 10.
 ! Misplaced alignment tab character &.
 <inserted text> ...ing R. Chichester: John Wiley &
                                                    Sons. Ltd. \\[0.25cm] Dia...
-l.794 \end{frame}
+l.796 \end{frame}
                  
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1709,11 +1709,11 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `Lecture5.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 796.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 796.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 798.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 798.
  (./Lecture5.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 796.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 796.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 798.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 798.
 Package rerunfilecheck Info: File `Lecture5.out' has not changed.
 (rerunfilecheck)             Checksum: EFFB9A24A7D91CFB2D1B89B9F6226D54;220.
 
@@ -1721,7 +1721,7 @@ Package rerunfilecheck Info: File `Lecture5.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 796.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 798.
  ) 
 Here is how much of TeX's memory you used:
  18592 strings out of 493633
@@ -1749,7 +1749,7 @@ live/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texl
 ive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/
 texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/loc
 al/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb>
-Output written on Lecture5.pdf (69 pages, 362073 bytes).
+Output written on Lecture5.pdf (69 pages, 362104 bytes).
 PDF statistics:
  690 PDF objects out of 1000 (max. 8388607)
  567 compressed objects within 6 object streams

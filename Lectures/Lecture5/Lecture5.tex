@@ -196,6 +196,8 @@
   \begin{itemize}
     \item GDP per capita (current US\$)
     \item Mortality rate, infant (per 1,000 live births)
+    \item World Bank region classification
+    \item World Bank income level classification
   \end{itemize} \\[0.3cm]
   The sample includes 199 jurisdictions.
 \end{frame}
@@ -303,7 +305,7 @@ InfantNoMiss <- \hlfunctioncall{subset}(MortalityGDP,
 \hlfunctioncall{median}(InfantNoMiss$InfantMortality)
 \end{alltt}
 \begin{verbatim}
-## [1] 17.05
+## [1] 17.2
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -333,7 +335,7 @@ InfantNoMiss <- \hlfunctioncall{subset}(MortalityGDP,
 \hlfunctioncall{mean}(InfantNoMiss$InfantMortality)
 \end{alltt}
 \begin{verbatim}
-## [1] 30.1
+## [1] 30.23
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -345,8 +347,8 @@ InfantNoMiss <- \hlfunctioncall{subset}(MortalityGDP,
   {\Large{What is the Central Tendency of Infant Mortality?}} \\[0.5cm]
   \begin{itemize}
     \item {\bf{Mode:}} 0-10
-    \item {\bf{Median:}} 17.05
-    \item {\bf{Mean:}} 30.1
+    \item {\bf{Median:}} 17.2
+    \item {\bf{Mean:}} 30.2
   \end{itemize}
 \end{frame}
 
@@ -496,7 +498,7 @@ OrderMort <- OrderMort[, \hlfunctioncall{c}(\hlstring{"country"},
 \end{alltt}
 \begin{verbatim}
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##    1.80    7.18   17.00   30.10   48.90  123.00
+##     1.8     7.2    17.2    30.2    49.0   123.0
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -513,7 +515,7 @@ OrderMort <- OrderMort[, \hlfunctioncall{c}(\hlstring{"country"},
 \hlfunctioncall{IQR}(InfantNoMiss$InfantMortality)
 \end{alltt}
 \begin{verbatim}
-## [1] 41.75
+## [1] 41.85
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -597,7 +599,7 @@ OrderMort <- OrderMort[, \hlfunctioncall{c}(\hlstring{"country"},
 \hlfunctioncall{var}(InfantNoMiss$InfantMortality)
 \end{alltt}
 \begin{verbatim}
-## [1] 826.4
+## [1] 827.3
 \end{verbatim}
 \begin{alltt}
 
@@ -605,7 +607,7 @@ OrderMort <- OrderMort[, \hlfunctioncall{c}(\hlstring{"country"},
 \hlfunctioncall{sd}(InfantNoMiss$InfantMortality)
 \end{alltt}
 \begin{verbatim}
-## [1] 28.75
+## [1] 28.76
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -753,7 +755,7 @@ InfantNoMiss$DumMort[InfantNoMiss$InfantMortality
 \begin{verbatim}
 ##       
 ##        high low
-##   None    0   1
+##   None    0   0
 ##   EAP    16  12
 ##   EUR     8  41
 ##   LA     20  13
