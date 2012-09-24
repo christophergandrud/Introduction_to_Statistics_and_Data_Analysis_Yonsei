@@ -69,7 +69,8 @@
 
 \frame{
   \begin{center}
-    {\LARGE{Today we will start to learn tools for {\bf{describing}} our data.}}
+    {\LARGE{Today we will start to learn tools for {\bf{describing}} our data.}} \\[0.5cm]
+    We will learn {\bf{descriptive statistics}}.
   \end{center}
 }
 
@@ -88,21 +89,540 @@
 }
 
 \frame{
+  \begin{center}
+    {\LARGE{Always look at the descriptive statistics before starting your data analysis.}}
+  \end{center}
+}
+
+\frame{
   \frametitle{Key Principles}
   {\LARGE{When describing data, {\bf{ALWAYS}} look at {\bf{BOTH}}}} \\[0.5cm]
   \begin{itemize}
     \item The Central Tendency,
-    \item The Variance (dispersion).
+    \item The Variability (dispersion).
   \end{itemize}
 }
 
+\frame{
+  \frametitle{Central Tendency}
+  {\LARGE{Central Tendency}} \\[0.5cm]
+  The central value around which the data clusters. \\[0.5cm]
+  Examples of descriptive statistics for the central tendency include: the mode, median, and mean (average).
+}
+
+\frame{
+  \frametitle{Variability}
+  {\LARGE{Variability}}
+  How the values vary around the central tendency.\\[0.5cm]
+  Examples of descriptive statistics for the variability include: the range, interquartile range, standard deviation.
+}
+
 %%%%%%%%%%%%%%%%%%%%% Describing Numerical Data %%%%%%%%%%%%%%%%%%%
+\section{Describing Numerical Data}
+\frame{
+  \begin{center}
+    {\LARGE{Describing Numerical Data}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Measurement Level \& Describing Numerical Data}
+  Data that is at the {\bf{highest measurment level}} (numerical continuous) can be described using {\bf{all}} of the descriptive statistics.
+}
+
+\frame{
+  \frametitle{Populations, Samples, and Descriptive Statistics}
+  Remember that our data is a {\bf{sample}} of the {\bf{population}}. \\[0.5cm]
+  {\bf{Today}} we are going to be describing {\bf{samples}}. \\[0.5cm]
+  From week 7 we will start to use statisics that help us {\bf{infer}} things from our samples about the population.
+}
+
+\begin{frame}[fragile]
+  \frametitle{The Data}
+  Most of the examples for this section use World Bank data for 2009 on:
+  \begin{itemize}
+    \item GDP per capita (current US\$)
+    \item Mortality rate, infant (per 1,000 live births)
+  \end{itemize} \\[0.3cm]
+  The sample includes 199 jurisdictions.
+\end{frame}
+
+\begin{frame}[fragile]
+  You can get the data set using the source code file at: \url{http://bit.ly/OTWEGS} \\[0.5cm]
+  You can actually run this source code directly from R using the \texttt{source\_url} command in the {\emph{devtools}} package.
+\end{frame}
+
+\begin{frame}[fragile]
+<<SourceURL, message=FALSE>>=
+  # Load package
+  library(devtools)
+  
+  # Gather data using source code at: http://bit.ly/OTWEGS
+
+  # Data is stored in a data frame: MortalityGDP
+  source_url("http://bit.ly/OTWEGS")
+
+  # See contents of MortalityGDP
+  names(MortalityGDP)
+@
+\end{frame}
+
+\begin{frame}[fragile,plain]
+<<Scatter1, tidy=FALSE, fig.height=4, fig.width=6>>=
+# Create scatterplot of GDP/Capita & Infant Mortality
+plot(MortalityGDP$GDPperCapita,
+     MortalityGDP$InfantMortality)
+@
+\end{frame}
+
+\frame{
+  \frametitle{Central Tendency 1: Mode}
+  {\LARGE{Mode}} \\[0.5cm]
+  The most common value in a distribution. \\[0.5cm]
+  One way to find the mode of a numeric continuous variable is with a {\bf{histogram}}. \\[0.5cm]
+  In R you can use the \texttt{hist} command.
+}
+
+\begin{frame}[fragile,plain]
+<<InfantHist, fig.height=4, fig.width=5>>=
+hist(MortalityGDP$InfantMortality)
+@
+\end{frame}
+
+\frame{
+  \frametitle{Uni, Bi, and Multi Modal Distributions}
+  A distribution can have {\bf{multiple modes}}.
+  \begin{center}
+    \includegraphics[scale = 0.35]{MultiModal.png} \\[0.75cm]
+    {\small{Diez (2011, 12)}}
+  \end{center}
+}
+
+\begin{frame}[fragile]
+  \frametitle{Central Tendency 2: Median}
+  {\LARGE{Median}} \\[0.5cm]
+  The middle value of a distribution. \\[0.5cm]
+  You can find the median with the \texttt{median} command.
+\end{frame}  
+
+\begin{frame}[fragile]
+<<MedianInfant, tidy=FALSE>>=
+# Create data with no missing values of infant mortality
+InfantNoMiss <- subset(MortalityGDP, 
+                           !is.na(InfantMortality))
+
+# Find the median infant morality rate
+median(InfantNoMiss$InfantMortality)
+@
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Central Tendency 3: Mean}
+  {\LARGE{Mean (average)}} \\[0.5cm]
+  The sum of all data values ($x$) divided by the number of data valuse ($n)$. \\[0.25cm]
+  {\bf{Population Mean ($\mu_{x}$)}}
+  \[
+    \mu_{x} = \frac{\sum x}{n}
+  \]
+  {\bf{Sample Mean ($\bar{x}$)}}
+  \[
+    \bar{x} = \frac{\sum x}{n}
+  \]
+\end{frame}
+
+\begin{frame}[fragile]
+  You can find the mean with the \texttt{mean} command.
+<<MeanInfant>>=
+# Find the mean of InfantMortality
+mean(InfantNoMiss$InfantMortality)
+@
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{What is the Central Tendency of Infant Mortality?}
+  {\Large{What is the Central Tendency of Infant Mortality?}} \\[0.5cm]
+  \begin{itemize}
+    \item {\bf{Mode:}} 0-10
+    \item {\bf{Median:}} \Sexpr{round(median(InfantNoMiss$InfantMortality), digits = 2)}
+    \item {\bf{Mean:}} \Sexpr{round(mean(InfantNoMiss$InfantMortality), digits = 1)}
+  \end{itemize}
+\end{frame}
+
+\frame{
+  \frametitle{Skewed}
+  {\Large{The reason that these three measures of central tendency are {\bf{not the same}} is that the distribution of Infant Mortality in the sample is {\bf{highly skewed}}.}}
+}
+
+\frame{
+  \frametitle{Normally Distributed}
+  {\Large{Data that is {\bf{normally distributed}} has the same mode, median, and mean. \\[0.5cm]
+  Normally distributed data also is {\bf{not skewed}}. It has the same variance on the right and left of the central tendency.}}
+}
+
+\begin{frame}[fragile,plain]
+<<NormallyDistributed>>=
+# Simulate normally distributed data
+Normal <- rnorm(100000, mean = 50, sd = 10)
+@
+
+<<NormallyDistGraph, fig.height=4, echo=FALSE, message=FALSE>>=
+# Create histogram of data
+# Load package ggplot2
+library(ggplot2)
+
+# Convert Normal into a data frame
+Normal <- data.frame(Normal)
+
+# Create historgram
+ggplot(Normal, aes(x = Normal)) +
+        geom_density() +
+        geom_vline(xintercept = 50, colour = "red", linetype = "longdash") +
+        annotate("text", x = 57, y = 0.01, label = "Mode \n Median \n Mean", colour = "red") +
+        xlab("Simulated Data") + ylab("Density\n") +
+        theme_bw()
+@
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{}
+  {\Large{The Infant Mortality data is very right skewed.}}
+<<HistoAgain, echo=FALSE, fig.height=5>>=
+ggplot(InfantNoMiss, aes(x = InfantMortality)) +
+        geom_density() +
+        geom_vline(xintercept = 17.05, colour = "red", linetype = "longdash") + # Median
+        geom_vline(xintercept = 30.01, colour = "blue", linetype = "longdash") + # Mean
+        annotate("text", x = 9, y = 0.014, label = "Median", colour = "red") +
+        annotate("text", x = 40, y = 0.004, label = "Mean", colour = "blue") +
+        annotate("text", x = 100, y = 0.005, label = "Right Skew") +
+        xlab("\n Infant Mortality") + ylab("Density\n") +
+        theme_bw()
+@
+\end{frame}
+
+\frame{
+  \frametitle{Describing Skewness}
+  {\Large{A distribution can be:}}
+  \begin{itemize}
+    \item Right skewed (positively skewed)
+    \begin{itemize}
+      \item Right skewed data pulls the mean up.
+    \end{itemize}
+    \item Left skewed (negatively skewed)
+    \begin{itemize}
+      \item Left skewed data pulls the mean down.
+    \end{itemize}
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{Why Variability}
+  {\LARGE{So, the central tendency does not adequately describe distributions by itself. \\[0.5cm]
+  We also need descriptive statistics of the {\bf{variability}}}}
+}
+
+\begin{frame}[fragile]
+  \frametitle{Variability 1: Range}
+  {\LARGE{Range}} \\[0.5cm]
+  The range is the simplest way to describe variability. \\[0.5cm]
+  It is the lowest and highest value. \\[0.5cm]
+  We can find the range with the \texttt{range} command.
+<<Range>>=
+range(InfantNoMiss$InfantMortality)
+@
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Variability 1: Range}
+  {\LARGE{Problems with the Range}} \\[0.5cm]
+  The range is highly influenced by {\bf{outliers}}--extreme values. \\[0.5cm]
+  It also {\bf{ignores}} all of the data between the minimum and maximum values.
+\end{frame}
+
+\begin{frame}[fragile,plain]
+<<MortOutliers, tidy=FALSE>>=
+#### Find infant mortality outliers 
+# Reorder data based on infant mortality
+OrderMort <- InfantNoMiss[
+                      order(InfantNoMiss$InfantMortality,
+                            decreasing = TRUE), ]
+# Keep country & InfantMortality
+OrderMort <- OrderMort[, c("country",
+                          "InfantMortality")]
+
+# Show high values
+head(OrderMort)
+@
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Variability 1: Interquartile Range}
+  {\LARGE{Interquartile Range}} \\[0.5cm]
+  One way to deal with outliers is to look at the interquartile range. \\[0.25cm]
+  The interquartile range is the difference between the upper and lower quartiles. \\[0.25cm]
+  A quartile is 25\% of the data. \\[0.25cm]
+  The {\bf{lower quartile}} is the point up to the lower 25\% of the data.
+  The {\bf{upper quartile}} is the point up to the upper 75\% of the data.
+
+\end{frame}
+
+\begin{frame}[fragile]
+<<IQRPoints>>=
+# Find what the quartile points are
+summary(InfantNoMiss$InfantMortality)
+@
+
+\[
+  48.92 - 7.175 =  
+\]
+
+<<IQR>>=
+# Find the interquartile range of InfantMortality
+IQR(InfantNoMiss$InfantMortality)
+@
+\end{frame}
+
+\begin{frame}[fragile,plain]
+<<BoxPlot, fig.height=5, tidy=FALSE>>=
+# Boxplot showing interquartile range
+boxplot(InfantNoMiss$InfantMortality,
+        main = "Boxplot of Infant Mortality")
+@
+\end{frame}
+
+\frame{
+  \frametitle{More Information on Boxplots}
+  {\LARGE{See Diaz (2011, 16) for more boxplot details.}}
+}
+
+\frame{
+  \frametitle{}
+  {\LARGE{A bigger range means {\bf{more variablity}}. \\[0.5cm]
+  Note: big in terms of the variable's scale.}}
+}
+
+\frame{
+  \frametitle{Variability 3: Standard Deviation}
+  {\LARGE{Standard Deviation}}. \\[0.5cm]
+  The interquartile range describes variation in terms of the median. \\[0.5cm]
+  The standard deviation describes {\bf{variation in terms of the mean}}.
+}
+
+\frame{
+  \frametitle{What is the Sample Standard Deviation? (1)}
+  {\Large{The standard deviation is made of the following parts.}} \\[0.25cm]
+  {\bf{Deviation}}: the distance of an observation $x$ from the mean $\bar{x}$. 
+  \[
+    \mathrm{Deviation} = x - \bar{x}  
+  \]
+  {\bf{Sum of Squares}}: the sum of the squared deviations (they have to be squared or the sum will $= 0$)
+  \[
+    \mathrm{Sum\:of\:Squares} = \sum(x - \bar{x})
+  \]
+  {\bf{Degrees of Freedom}}: Sample size $n$ minus the number of parameters. Today the number of parameters $= 1$. {\small{(See Crawley 2005, 36-37 for a good explanation.)}}
+  \[
+    \mathrm{df} = n - 1
+  \]
+}
+
+
+\frame{
+  \frametitle{What is the Sample Standard Deviation? (2)}
+  {\Large{The standard deviation is made of the following parts.}} \\[0.25cm]
+  {\bf{Variance ($s^{2}$)}}: roughly the average deviation.
+  \[
+    s^{2} = \frac {\mathrm{Sum\:of\:Squares}}{\mathrm{Degrees\:of\:Freedom}} = \frac{\sum(x - \bar{x})}{n - 1}
+  \]
+
+  {\bf{Standard Deviation ($s$)}}: square root of the variance
+  \[
+    s = \sqrt{s^{2}}
+  \]
+}
+
+\begin{frame}[fragile,plain]
+<<VariabceSD, tidy=FALSE>>=
+# Find the varience of InfantMortality
+var(InfantNoMiss$InfantMortality)
+
+# Find the standard deviation of InfantMortality
+sd(InfantNoMiss$InfantMortality)
+@
+\end{frame}
+
+\begin{frame}[fragile]
+<<SDNormal, echo=FALSE, message=FALSE, fig.height=5>>=
+# Helpful information from StackExchange discussion
+# http://stackoverflow.com/questions/3494593/shading-a-kernel-density-plot-between-two-points?lq=1
+# Load zoo package
+library(zoo)
+
+# Find density for +/- 1 SD
+DensityLower <- density(Normal$Normal, from = 40, to = 50)
+DensityUpper <- density(Normal$Normal, from = 50, to = 60)
+
+# Extract density values (y values)
+YLower <- DensityLower$y
+YUpper <- DensityUpper$y
+
+# Extract x values
+XLower <- DensityLower$x
+XUpper <- DensityUpper$x
+
+# Merge vectors into data frames
+Lower <- data.frame(YLower, XLower)
+Upper <- data.frame(YUpper, XUpper)
+
+# Add zero variable so that the shaded area goes down to 0
+Lower$Zero <- 0
+Upper$Zero <- 0
+
+# Upper and Lower colours
+LowerC <- "#80B2CD"
+UpperC <- "#4F6F80"
+
+# Create density plot
+ggplot(Normal, aes(x = Normal)) +
+        geom_density() +
+        geom_ribbon(data = Lower, aes(x = XLower, ymax = YLower, ymin = Zero), fill = LowerC, alpha = 0.4) +
+        geom_ribbon(data = Upper, aes(x = XUpper, ymax = YUpper, ymin = Zero), fill = UpperC, alpha = 0.4) +
+        geom_vline(xintercept = 50, colour = "red", linetype = "longdash") +
+        annotate("text", x = 25, y = 0.01, label = "-1 SD", colour = LowerC) +
+        annotate("text", x = 75, y = 0.01, label = "+1 SD", colour = UpperC) +
+        xlab("\n Simulated Data") + ylab("Density\n") + ggtitle("Density Plot for Simulated Data\n") + 
+        theme_bw()
+@
+\end{frame}
+
+\begin{frame}[fragile]
+<<SDMort, echo=FALSE, message=FALSE, fig.height=5>>=
+# Helpful information from StackExchange discussion
+# http://stackoverflow.com/questions/3494593/shading-a-kernel-density-plot-between-two-points?lq=1
+# Load zoo package
+library(zoo)
+
+# Find mean infant mortality
+MeanIM <- mean(InfantNoMiss$InfantMortality)
+
+# Find standard deviation of infant mortality
+SDIM <- sd(InfantNoMiss$InfantMortality)
+
+# Find density for +/- 1 SD
+DensityLower <- density(InfantNoMiss$InfantMortality, from = (MeanIM - SDIM), to = MeanIM)
+DensityUpper <- density(InfantNoMiss$InfantMortality, from = MeanIM, to = (MeanIM + SDIM))
+
+# Extract density values (y values)
+YLower <- DensityLower$y
+YUpper <- DensityUpper$y
+
+# Extract x values
+XLower <- DensityLower$x
+XUpper <- DensityUpper$x
+
+# Merge vectors into data frames
+Lower <- data.frame(YLower, XLower)
+Upper <- data.frame(YUpper, XUpper)
+
+# Add zero variable so that the shaded area goes down to 0
+Lower$Zero <- 0
+Upper$Zero <- 0
+
+# Upper and Lower colours
+LowerC <- "#80B2CD"
+UpperC <- "#4F6F80"
+
+# Create density plot
+ggplot(InfantNoMiss, aes(x = InfantMortality)) +
+        geom_density() +
+        geom_ribbon(data = Lower, aes(x = XLower, ymax = YLower, ymin = Zero), fill = LowerC, alpha = 0.4) +
+        geom_ribbon(data = Upper, aes(x = XUpper, ymax = YUpper, ymin = Zero), fill = UpperC, alpha = 0.4) +
+        geom_vline(xintercept = 30.1, colour = "red", linetype = "longdash") +
+        annotate("text", x = 23, y = 0.021, label = "-1 SD", colour = LowerC) +
+        annotate("text", x = 43, y = 0.008, label = "+1 SD", colour = UpperC) +
+        xlab("\n Infant Mortality (per 1000 births)") + ylab("Density\n") + ggtitle("Density Plot for Infant Mortality\n") +
+        theme_bw()
+@
+\end{frame}
+
+\frame{
+  \frametitle{Transforming Data}
+  {\bf{Transforming Data}} \\[0.5cm]
+  Transforming data can make {\bf{highly skewed}} data easier to work with. \\[0.25cm]
+  Transforming data just means to {\bf{rescale}} the data using some function.\\[0.5cm]
+  For example, we can {\bf{log-transform}} our Infant Mortality data to see the relationship between the two variables better.
+}
+
+\begin{frame}[fragile,plain]
+<<LogTransform, tidy=FALSE>>=
+# Log Transform InfantMortality
+InfantNoMiss$logInf <- log(
+                        InfantNoMiss$InfantMortality)
+@
+
+<<LogTransformScatter, fig.height=5, tidy=FALSE, echo=FALSE>>=
+# Create Histogram of log(InfantMortality)
+hist(InfantNoMiss$logInf, main = "", xlab = "log(InfantMortality)")
+@
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Preview!}
+<<ScatterTransformed, echo=FALSE, fig.height=5, warning=FALSE, message=FALSE>>=
+# Log transform GDPperCapita
+InfantNoMiss$logGDP <- log(InfantNoMiss$GDPperCapita)
+
+# Plot
+qplot(x = logInf, y = logGDP, data = InfantNoMiss, geom = "point") +
+      stat_smooth() +
+      xlab("\nlog(Infant Mortality)") + ylab("log(GDP)\n") +
+      theme_bw(base_size=15)
+@
+\end{frame}
+
+
 
 
 
 %%%%%%%%%%%%%%%%%%%% Describing Categorical Data %%%%%%%%%%%%%%%%%%
+\section{Describing Categorical Data}
+\frame{
+  \begin{center}
+    {\LARGE{Describing Categorical Data}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Question}
+  {\LARGE{What descriptive statistics can you use for:}}
+  \begin{itemize}
+    \item Ordinal data
+    \item Categorical data
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{Descriptive Statistics Catergorical Data}
+  {\LARGE{You can use}}
+  \begin{itemize}
+    \item Ordinal data; mode, median, range, interquartile range
+    \item Categorical data: mode, frequency tables/barplots
+  \end{itemize}
+}
+
+\begin{frame}[fragile,plain]
+<<CarsBarPlot>>=
+# Use cars data, loaded in R by default
+# Create bar plot
+\end{frame}
+
+\frame{
+  \frametitle{Scatterplot-like}
+  You can use {\bf{contingency tables}} and {\bf{mosaic plots}} like scatter plots when you have categorical data.
+}
+
+%%%%%%%% References
 \begin{frame}[allowframebreaks]
   \frametitle{References}
+  Crawley, Michael J. 2005. Statistics: An Introduction Using R. Chichester: John Wiley & Sons. Ltd. \\[0.25cm]
   Diaz, David M., Christopher D. Barr, and Mine \c{C}etinkaya-Rundel. OpenIntro Statistics. 1st ed. \url{http://www.openintro.org/stat/downloads.php}. \\[0.25cm] 
 \end{frame}
 

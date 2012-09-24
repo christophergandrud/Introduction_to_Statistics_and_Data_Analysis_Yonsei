@@ -122,7 +122,8 @@
 
 \frame{
   \begin{center}
-    {\LARGE{Today we will start to learn tools for {\bf{describing}} our data.}}
+    {\LARGE{Today we will start to learn tools for {\bf{describing}} our data.}} \\[0.5cm]
+    We will learn {\bf{descriptive statistics}}.
   \end{center}
 }
 
@@ -141,21 +142,594 @@
 }
 
 \frame{
+  \begin{center}
+    {\LARGE{Always look at the descriptive statistics before starting your data analysis.}}
+  \end{center}
+}
+
+\frame{
   \frametitle{Key Principles}
   {\LARGE{When describing data, {\bf{ALWAYS}} look at {\bf{BOTH}}}} \\[0.5cm]
   \begin{itemize}
     \item The Central Tendency,
-    \item The Variance (dispersion).
+    \item The Variability (dispersion).
   \end{itemize}
 }
 
+\frame{
+  \frametitle{Central Tendency}
+  {\LARGE{Central Tendency}} \\[0.5cm]
+  The central value around which the data clusters. \\[0.5cm]
+  Examples of descriptive statistics for the central tendency include: the mode, median, and mean (average).
+}
+
+\frame{
+  \frametitle{Variability}
+  {\LARGE{Variability}}
+  How the values vary around the central tendency.\\[0.5cm]
+  Examples of descriptive statistics for the variability include: the range, interquartile range, standard deviation.
+}
+
 %%%%%%%%%%%%%%%%%%%%% Describing Numerical Data %%%%%%%%%%%%%%%%%%%
+\section{Describing Numerical Data}
+\frame{
+  \begin{center}
+    {\LARGE{Describing Numerical Data}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Measurement Level \& Describing Numerical Data}
+  Data that is at the {\bf{highest measurment level}} (numerical continuous) can be described using {\bf{all}} of the descriptive statistics.
+}
+
+\frame{
+  \frametitle{Populations, Samples, and Descriptive Statistics}
+  Remember that our data is a {\bf{sample}} of the {\bf{population}}. \\[0.5cm]
+  {\bf{Today}} we are going to be describing {\bf{samples}}. \\[0.5cm]
+  From week 7 we will start to use statisics that help us {\bf{infer}} things from our samples about the population.
+}
+
+\begin{frame}[fragile]
+  \frametitle{The Data}
+  Most of the examples for this section use World Bank data for 2009 on:
+  \begin{itemize}
+    \item GDP per capita (current US\$)
+    \item Mortality rate, infant (per 1,000 live births)
+  \end{itemize} \\[0.3cm]
+  The sample includes 199 jurisdictions.
+\end{frame}
+
+\begin{frame}[fragile]
+  You can get the data set using the source code file at: \url{http://bit.ly/OTWEGS} \\[0.5cm]
+  You can actually run this source code directly from R using the \texttt{source\_url} command in the {\emph{devtools}} package.
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Load package}
+\hlfunctioncall{library}(devtools)
+
+\hlcomment{# Gather data using source code at:}
+\hlcomment{# http://bit.ly/OTWEGS}
+
+\hlcomment{# Data is stored in a data frame: MortalityGDP}
+\hlfunctioncall{source_url}(\hlstring{"http://bit.ly/OTWEGS"})
+
+\hlcomment{# See contents of MortalityGDP}
+\hlfunctioncall{names}(MortalityGDP)
+\end{alltt}
+\begin{verbatim}
+## [1] "country"         "GDPperCapita"   
+## [3] "InfantMortality"
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile,plain]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Create scatterplot of GDP/Capita & Infant Mortality}
+\hlfunctioncall{plot}(MortalityGDP$GDPperCapita,
+     MortalityGDP$InfantMortality)
+\end{alltt}
+\end{kframe}
+
+{\centering \includegraphics[width=\maxwidth]{figure/Scatter1} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+\frame{
+  \frametitle{Central Tendency 1: Mode}
+  {\LARGE{Mode}} \\[0.5cm]
+  The most common value in a distribution. \\[0.5cm]
+  One way to find the mode of a numeric continuous variable is with a {\bf{histogram}}. \\[0.5cm]
+  In R you can use the \texttt{hist} command.
+}
+
+\begin{frame}[fragile,plain]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlfunctioncall{hist}(MortalityGDP$InfantMortality)
+\end{alltt}
+\end{kframe}
+
+{\centering \includegraphics[width=\maxwidth]{figure/InfantHist} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+\frame{
+  \frametitle{Uni, Bi, and Multi Modal Distributions}
+  A distribution can have {\bf{multiple modes}}.
+  \begin{center}
+    \includegraphics[scale = 0.35]{MultiModal.png} \\[0.75cm]
+    {\small{Diez (2011, 12)}}
+  \end{center}
+}
+
+\begin{frame}[fragile]
+  \frametitle{Central Tendency 2: Median}
+  {\LARGE{Median}} \\[0.5cm]
+  The middle value of a distribution. \\[0.5cm]
+  You can find the median with the \texttt{median} command.
+\end{frame}  
+
+\begin{frame}[fragile]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Create data with no missing values of infant mortality}
+InfantNoMiss <- \hlfunctioncall{subset}(MortalityGDP, 
+                           !\hlfunctioncall{is.na}(InfantMortality))
+
+\hlcomment{# Find the median infant morality rate}
+\hlfunctioncall{median}(InfantNoMiss$InfantMortality)
+\end{alltt}
+\begin{verbatim}
+## [1] 17.05
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Central Tendency 3: Mean}
+  {\LARGE{Mean (average)}} \\[0.5cm]
+  The sum of all data values ($x$) divided by the number of data valuse ($n)$. \\[0.25cm]
+  {\bf{Population Mean ($\mu_{x}$)}}
+  \[
+    \mu_{x} = \frac{\sum x}{n}
+  \]
+  {\bf{Sample Mean ($\bar{x}$)}}
+  \[
+    \bar{x} = \frac{\sum x}{n}
+  \]
+\end{frame}
+
+\begin{frame}[fragile]
+  You can find the mean with the \texttt{mean} command.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Find the mean of InfantMortality}
+\hlfunctioncall{mean}(InfantNoMiss$InfantMortality)
+\end{alltt}
+\begin{verbatim}
+## [1] 30.1
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{What is the Central Tendency of Infant Mortality?}
+  {\Large{What is the Central Tendency of Infant Mortality?}} \\[0.5cm]
+  \begin{itemize}
+    \item {\bf{Mode:}} 0-10
+    \item {\bf{Median:}} 17.05
+    \item {\bf{Mean:}} 30.1
+  \end{itemize}
+\end{frame}
+
+\frame{
+  \frametitle{Skewed}
+  {\Large{The reason that these three measures of central tendency are {\bf{not the same}} is that the distribution of Infant Mortality in the sample is {\bf{highly skewed}}.}}
+}
+
+\frame{
+  \frametitle{Normally Distributed}
+  {\Large{Data that is {\bf{normally distributed}} has the same mode, median, and mean. \\[0.5cm]
+  Normally distributed data also is {\bf{not skewed}}. It has the same variance on the right and left of the central tendency.}}
+}
+
+\begin{frame}[fragile,plain]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Simulate normally distributed data}
+Normal <- \hlfunctioncall{rnorm}(1e+05, mean = 50, sd = 10)
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=\maxwidth]{figure/NormallyDistGraph} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{}
+  {\Large{The Infant Mortality data is very right skewed.}}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=\maxwidth]{figure/HistoAgain} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+\frame{
+  \frametitle{Describing Skewness}
+  {\Large{A distribution can be:}}
+  \begin{itemize}
+    \item Right skewed (positively skewed)
+    \begin{itemize}
+      \item Right skewed data pulls the mean up.
+    \end{itemize}
+    \item Left skewed (negatively skewed)
+    \begin{itemize}
+      \item Left skewed data pulls the mean down.
+    \end{itemize}
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{Why Variability}
+  {\LARGE{So, the central tendency does not adequately describe distributions by itself. \\[0.5cm]
+  We also need descriptive statistics of the {\bf{variability}}}}
+}
+
+\begin{frame}[fragile]
+  \frametitle{Variability 1: Range}
+  {\LARGE{Range}} \\[0.5cm]
+  The range is the simplest way to describe variability. \\[0.5cm]
+  It is the lowest and highest value. \\[0.5cm]
+  We can find the range with the \texttt{range} command.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlfunctioncall{range}(InfantNoMiss$InfantMortality)
+\end{alltt}
+\begin{verbatim}
+## [1]   1.8 123.3
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Variability 1: Range}
+  {\LARGE{Problems with the Range}} \\[0.5cm]
+  The range is highly influenced by {\bf{outliers}}--extreme values. \\[0.5cm]
+  It also {\bf{ignores}} all of the data between the minimum and maximum values.
+\end{frame}
+
+\begin{frame}[fragile,plain]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{#### Find infant mortality outliers }
+\hlcomment{# Reorder data based on infant mortality}
+OrderMort <- InfantNoMiss[
+                      \hlfunctioncall{order}(InfantNoMiss$InfantMortality,
+                            decreasing = TRUE), ]
+\hlcomment{# Keep country & InfantMortality}
+OrderMort <- OrderMort[, \hlfunctioncall{c}(\hlstring{"country"},
+                          \hlstring{"InfantMortality"})]
+
+\hlcomment{# Show high values}
+\hlfunctioncall{head}(OrderMort)
+\end{alltt}
+\begin{verbatim}
+##                      country InfantMortality
+## 187             Sierra Leone           123.3
+## 38          Congo, Dem. Rep.           112.8
+## 39  Central African Republic           109.3
+## 190                  Somalia           108.3
+## 134                     Mali           100.8
+## 12                    Angola           100.1
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Variability 1: Interquartile Range}
+  {\LARGE{Interquartile Range}} \\[0.5cm]
+  One way to deal with outliers is to look at the interquartile range. \\[0.25cm]
+  The interquartile range is the difference between the upper and lower quartiles. \\[0.25cm]
+  A quartile is 25\% of the data. \\[0.25cm]
+  The {\bf{lower quartile}} is the point up to the lower 25\% of the data.
+  The {\bf{upper quartile}} is the point up to the upper 75\% of the data.
+
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Find what the quartile points are}
+\hlfunctioncall{summary}(InfantNoMiss$InfantMortality)
+\end{alltt}
+\begin{verbatim}
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    1.80    7.18   17.00   30.10   48.90  123.00
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+\[
+  48.92 - 7.175 =  
+\]
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Find the interquartile range of InfantMortality}
+\hlfunctioncall{IQR}(InfantNoMiss$InfantMortality)
+\end{alltt}
+\begin{verbatim}
+## [1] 41.75
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile,plain]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Boxplot showing interquartile range}
+\hlfunctioncall{boxplot}(InfantNoMiss$InfantMortality,
+        main = \hlstring{"Boxplot of Infant Mortality"})
+\end{alltt}
+\end{kframe}
+
+{\centering \includegraphics[width=\maxwidth]{figure/BoxPlot} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+\frame{
+  \frametitle{More Information on Boxplots}
+  {\LARGE{See Diaz (2011, 16) for more boxplot details.}}
+}
+
+\frame{
+  \frametitle{}
+  {\LARGE{A bigger range means {\bf{more variablity}}. \\[0.5cm]
+  Note: big in terms of the variable's scale.}}
+}
+
+\frame{
+  \frametitle{Variability 3: Standard Deviation}
+  {\LARGE{Standard Deviation}}. \\[0.5cm]
+  The interquartile range describes variation in terms of the median. \\[0.5cm]
+  The standard deviation describes {\bf{variation in terms of the mean}}.
+}
+
+\frame{
+  \frametitle{What is the Sample Standard Deviation? (1)}
+  {\Large{The standard deviation is made of the following parts.}} \\[0.25cm]
+  {\bf{Deviation}}: the distance of an observation $x$ from the mean $\bar{x}$. 
+  \[
+    \mathrm{Deviation} = x - \bar{x}  
+  \]
+  {\bf{Sum of Squares}}: the sum of the squared deviations (they have to be squared or the sum will $= 0$)
+  \[
+    \mathrm{Sum\:of\:Squares} = \sum(x - \bar{x})
+  \]
+  {\bf{Degrees of Freedom}}: Sample size $n$ minus the number of parameters. Today the number of parameters $= 1$. {\small{(See Crawley 2005, 36-37 for a good explanation.)}}
+  \[
+    \mathrm{df} = n - 1
+  \]
+}
+
+
+\frame{
+  \frametitle{What is the Sample Standard Deviation? (2)}
+  {\Large{The standard deviation is made of the following parts.}} \\[0.25cm]
+  {\bf{Variance ($s^{2}$)}}: roughly the average deviation.
+  \[
+    s^{2} = \frac {\mathrm{Sum\:of\:Squares}}{\mathrm{Degrees\:of\:Freedom}} = \frac{\sum(x - \bar{x})}{n - 1}
+  \]
+
+  {\bf{Standard Deviation ($s$)}}: square root of the variance
+  \[
+    s = \sqrt{s^{2}}
+  \]
+}
+
+\begin{frame}[fragile,plain]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Find the varience of InfantMortality}
+\hlfunctioncall{var}(InfantNoMiss$InfantMortality)
+\end{alltt}
+\begin{verbatim}
+## [1] 826.4
+\end{verbatim}
+\begin{alltt}
+
+\hlcomment{# Find the standard deviation of InfantMortality}
+\hlfunctioncall{sd}(InfantNoMiss$InfantMortality)
+\end{alltt}
+\begin{verbatim}
+## [1] 28.75
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=\maxwidth]{figure/SDNormal} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=\maxwidth]{figure/SDMort} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+\frame{
+  \frametitle{Transforming Data}
+  {\bf{Transforming Data}} \\[0.5cm]
+  Transforming data can make {\bf{highly skewed}} data easier to work with. \\[0.25cm]
+  Transforming data just means to {\bf{rescale}} the data using some function.\\[0.5cm]
+  For example, we can {\bf{log-transform}} our Infant Mortality data to see the relationship between the two variables better.
+}
+
+\begin{frame}[fragile,plain]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Log Transform InfantMortality}
+InfantNoMiss$logInf <- \hlfunctioncall{log}(
+                        InfantNoMiss$InfantMortality)
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=\maxwidth]{figure/LogTransformScatter} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Preview!}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=\maxwidth]{figure/ScatterTransformed} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+
 
 
 
 %%%%%%%%%%%%%%%%%%%% Describing Categorical Data %%%%%%%%%%%%%%%%%%
+\section{Describing Categorical Data}
+\frame{
+  \begin{center}
+    {\LARGE{Describing Categorical Data}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Question}
+  {\LARGE{What descriptive statistics can you use for:}}
+  \begin{itemize}
+    \item Ordinal data
+    \item Categorical data
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{Descriptive Statistics Catergorical Data}
+  {\LARGE{You can use}}
+  \begin{itemize}
+    \item Ordinal data; mode, median, range, interquartile range
+    \item Categorical data: mode, frequency tables/barplots
+  \end{itemize}
+}
+
+\begin{frame}[fragile]
+  \begin{center}
+    Car Types
+  \end{center}
+  \includegraphics[scale = 0.4.5]{BarChart.png} \\[0.5cm]
+  {\small{From Diaz et al. (2011, 22)}}
+\end{frame}
+
+\frame{
+  \frametitle{Scatterplot-like}
+  You can use {\bf{contingency tables}} and {\bf{mosaic plots}} like scatter plots when you have categorical data.
+}
+
+%%%%%%%% References
 \begin{frame}[allowframebreaks]
   \frametitle{References}
+  Crawley, Michael J. 2005. Statistics: An Introduction Using R. Chichester: John Wiley & Sons. Ltd. \\[0.25cm]
   Diaz, David M., Christopher D. Barr, and Mine \c{C}etinkaya-Rundel. OpenIntro Statistics. 1st ed. \url{http://www.openintro.org/stat/downloads.php}. \\[0.25cm] 
 \end{frame}
 
