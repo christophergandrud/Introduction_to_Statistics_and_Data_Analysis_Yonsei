@@ -609,9 +609,11 @@ qplot(x = logInf, y = logGDP, data = InfantNoMiss, geom = "point") +
 }
 
 \begin{frame}[fragile,plain]
-<<CarsBarPlot>>=
+<<CarsBarPlot, fig.height=5>>=
 # Use cars data, loaded in R by default
 # Create bar plot
+plot(MortalityGDP$region)
+@
 \end{frame}
 
 \frame{

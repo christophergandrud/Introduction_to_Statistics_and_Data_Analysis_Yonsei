@@ -1,5 +1,16 @@
-\begin {center}
-    Car Types
-  \end{center}
-  \includegraphics[scale = 0.4.5]{BarChart.png} \\[0.5cm]
-  {\small{From Diaz et al. (2011, 22)}}
+\begin {knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Use cars data, loaded in R by default Create}
+\hlcomment{# bar plot}
+\hlfunctioncall{plot}(MortalityGDP$region)
+\end{alltt}
+\end{kframe}
+
+{\centering \includegraphics[width=\maxwidth]{figure/CarsBarPlot}
+
+}
+
+
+\end{knitrout}
+

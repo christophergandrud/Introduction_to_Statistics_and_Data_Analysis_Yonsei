@@ -29,3 +29,7 @@ MortalityGDP <- rename(MortalityGDP, c(NY.GDP.PCAP.CD = "GDPperCapita"))
 
 # Keep country GDPperCapita and InfantMortality variables
 MortalityGDP <- MortalityGDP[, c("country", "GDPperCapita", "InfantMortality", "region", "income")]
+
+# Recode region
+MortalityGDP$region <- factor(MortalityGDP$region, labels = c("None", "EAP", "EUR", "LA", "ME", "NA", "SA", "SSA"))
+
