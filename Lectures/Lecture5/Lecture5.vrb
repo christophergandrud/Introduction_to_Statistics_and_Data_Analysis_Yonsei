@@ -5,8 +5,12 @@
             InfantNoMiss$DumMort),
             main = \hlstring{"MosaicPlot: Infant Mort. & Reg."})
 \end{alltt}
+\end{kframe}
+
+{\centering \includegraphics[width=\maxwidth]{figure/MoasicPlot}
+
+}
 
 
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}\end{kframe}
 \end{knitrout}
 
