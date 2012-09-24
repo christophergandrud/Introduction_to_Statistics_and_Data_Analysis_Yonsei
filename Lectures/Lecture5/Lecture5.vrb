@@ -1,13 +1,13 @@
 \begin {knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcomment{# Use cars data, loaded in R by default Create}
-\hlcomment{# bar plot}
-\hlfunctioncall{plot}(MortalityGDP$region)
+\hlfunctioncall{mosaicplot}(\hlfunctioncall{table}(InfantNoMiss$region,
+            InfantNoMiss$DumMort),
+            main = \hlstring{"MosaicPlot: Infant Mort. & Reg."})
 \end{alltt}
 \end{kframe}
 
-{\centering \includegraphics[width=\maxwidth]{figure/CarsBarPlot}
+{\centering \includegraphics[width=\maxwidth]{figure/MoasicPlot}
 
 }
 

@@ -33,3 +33,6 @@ MortalityGDP <- MortalityGDP[, c("country", "GDPperCapita", "InfantMortality", "
 # Recode region
 MortalityGDP$region <- factor(MortalityGDP$region, labels = c("None", "EAP", "EUR", "LA", "ME", "NA", "SA", "SSA"))
 
+# Remove EU
+MortalityGDP <- subset(MortalityGDP, region != "None")
+

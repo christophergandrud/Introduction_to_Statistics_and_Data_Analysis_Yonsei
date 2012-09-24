@@ -609,17 +609,37 @@ qplot(x = logInf, y = logGDP, data = InfantNoMiss, geom = "point") +
 }
 
 \begin{frame}[fragile,plain]
-<<CarsBarPlot, fig.height=5>>=
+<<CarsBarPlot, fig.height=5, tidy=FALSE>>=
 # Use cars data, loaded in R by default
 # Create bar plot
-plot(MortalityGDP$region)
+plot(MortalityGDP$region, xlab = "Region")
 @
 \end{frame}
 
-\frame{
-  \frametitle{Scatterplot-like}
-  You can use {\bf{contingency tables}} and {\bf{mosaic plots}} like scatter plots when you have categorical data.
-}
+\begin{frame}[fragile]
+  \frametitle{Scatterplot-like Options for Categorical Data}
+  {\Large{You can use {\bf{contingency tables}} and {\bf{mosaic plots}} like scatter plots when you have categorical data.}}
+\end{frame}  
+
+\begin{frame}[fragile,plain]
+<<ContingencyTable, tidy=FALSE>>=
+# Create High/Low Income Variable
+InfantNoMiss$DumMort[InfantNoMiss$InfantMortality
+                     >= 15] <- "high"
+InfantNoMiss$DumMort[InfantNoMiss$InfantMortality
+                     < 15] <- "low"
+# Create contingency table
+table(InfantNoMiss$region, InfantNoMiss$DumMort)
+@
+\end{frame}
+
+\begin{frame}[fragile,plain]
+<<MoasicPlot, tidy=FALSE, fig.height=5>>=
+mosaicplot(table(InfantNoMiss$region, 
+            InfantNoMiss$DumMort),
+            main = "MosaicPlot: Infant Mort. & Reg.")
+@
+\end{frame}
 
 %%%%%%%% References
 \begin{frame}[allowframebreaks]

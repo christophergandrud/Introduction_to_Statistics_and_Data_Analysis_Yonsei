@@ -718,9 +718,9 @@ InfantNoMiss$logInf <- \hlfunctioncall{log}(
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcomment{# Use cars data, loaded in R by default Create}
-\hlcomment{# bar plot}
-\hlfunctioncall{plot}(MortalityGDP$region)
+\hlcomment{# Use cars data, loaded in R by default}
+\hlcomment{# Create bar plot}
+\hlfunctioncall{plot}(MortalityGDP$region, xlab = \hlstring{"Region"})
 \end{alltt}
 \end{kframe}
 
@@ -733,10 +733,58 @@ InfantNoMiss$logInf <- \hlfunctioncall{log}(
 
 \end{frame}
 
-\frame{
-  \frametitle{Scatterplot-like}
-  You can use {\bf{contingency tables}} and {\bf{mosaic plots}} like scatter plots when you have categorical data.
+\begin{frame}[fragile]
+  \frametitle{Scatterplot-like Options for Categorical Data}
+  {\Large{You can use {\bf{contingency tables}} and {\bf{mosaic plots}} like scatter plots when you have categorical data.}}
+\end{frame}  
+
+\begin{frame}[fragile,plain]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Create High/Low Income Variable}
+InfantNoMiss$DumMort[InfantNoMiss$InfantMortality
+                     >= 15] <- \hlstring{"high"}
+InfantNoMiss$DumMort[InfantNoMiss$InfantMortality
+                     < 15] <- \hlstring{"low"}
+\hlcomment{# Create contingency table}
+\hlfunctioncall{table}(InfantNoMiss$region, InfantNoMiss$DumMort)
+\end{alltt}
+\begin{verbatim}
+##       
+##        high low
+##   None    0   1
+##   EAP    16  12
+##   EUR     8  41
+##   LA     20  13
+##   ME      9  11
+##   NA      0   2
+##   SA      6   2
+##   SSA    45   2
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile,plain]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlfunctioncall{mosaicplot}(\hlfunctioncall{table}(InfantNoMiss$region, 
+            InfantNoMiss$DumMort),
+            main = \hlstring{"MosaicPlot: Infant Mort. & Reg."})
+\end{alltt}
+\end{kframe}
+
+{\centering \includegraphics[width=\maxwidth]{figure/MoasicPlot} 
+
 }
+
+
+\end{knitrout}
+
+\end{frame}
 
 %%%%%%%% References
 \begin{frame}[allowframebreaks]
