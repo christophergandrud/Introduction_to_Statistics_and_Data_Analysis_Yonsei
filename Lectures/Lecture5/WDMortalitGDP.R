@@ -36,5 +36,5 @@ MortalityGDP$region <- factor(MortalityGDP$region, labels = c("None", "EAP", "EU
 # Remove EU
 MortalityGDP <- subset(MortalityGDP, region != "None")
 
-MortalityGDP <- factor(MortalityGDP$region)
+MortalityGDP$region <- factor(MortalityGDP$region)
 

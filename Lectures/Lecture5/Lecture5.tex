@@ -224,9 +224,7 @@
 \hlfunctioncall{names}(MortalityGDP)
 \end{alltt}
 \begin{verbatim}
-## [1] "country"         "GDPperCapita"   
-## [3] "InfantMortality" "region"         
-## [5] "income"
+## NULL
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -241,13 +239,9 @@
 \hlfunctioncall{plot}(MortalityGDP$GDPperCapita,
      MortalityGDP$InfantMortality)
 \end{alltt}
-\end{kframe}
-
-{\centering \includegraphics[width=\maxwidth]{figure/Scatter1} 
-
-}
 
 
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: \$ operator is invalid for atomic vectors}}\end{kframe}
 \end{knitrout}
 
 \end{frame}
@@ -266,13 +260,9 @@
 \begin{alltt}
 \hlfunctioncall{hist}(MortalityGDP$InfantMortality)
 \end{alltt}
-\end{kframe}
-
-{\centering \includegraphics[width=\maxwidth]{figure/InfantHist} 
-
-}
 
 
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: \$ operator is invalid for atomic vectors}}\end{kframe}
 \end{knitrout}
 
 \end{frame}
@@ -300,14 +290,17 @@
 \hlcomment{# Create data with no missing values of infant mortality}
 InfantNoMiss <- \hlfunctioncall{subset}(MortalityGDP, 
                            !\hlfunctioncall{is.na}(InfantMortality))
+\end{alltt}
+
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantMortality' not found}}\begin{alltt}
 
 \hlcomment{# Find the median infant morality rate}
 \hlfunctioncall{median}(InfantNoMiss$InfantMortality)
 \end{alltt}
-\begin{verbatim}
-## [1] 17.2
-\end{verbatim}
-\end{kframe}
+
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}\end{kframe}
 \end{knitrout}
 
 \end{frame}
@@ -334,10 +327,9 @@ InfantNoMiss <- \hlfunctioncall{subset}(MortalityGDP,
 \hlcomment{# Find the mean of InfantMortality}
 \hlfunctioncall{mean}(InfantNoMiss$InfantMortality)
 \end{alltt}
-\begin{verbatim}
-## [1] 30.23
-\end{verbatim}
-\end{kframe}
+
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}\end{kframe}
 \end{knitrout}
 
 \end{frame}
@@ -347,8 +339,12 @@ InfantNoMiss <- \hlfunctioncall{subset}(MortalityGDP,
   {\Large{What is the Central Tendency of Infant Mortality?}} \\[0.5cm]
   \begin{itemize}
     \item {\bf{Mode:}} 0-10
-    \item {\bf{Median:}} 17.2
-    \item {\bf{Mean:}} 30.2
+    \item {\bf{Median:}} 
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\\Error in median(InfantNoMiss\$InfantMortality) : \\  object 'InfantNoMiss' not found}}
+    \item {\bf{Mean:}} 
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\\Error in mean(InfantNoMiss\$InfantMortality) : \\  object 'InfantNoMiss' not found}}
   \end{itemize}
 \end{frame}
 
@@ -390,13 +386,10 @@ Normal <- \hlfunctioncall{rnorm}(1e+05, mean = 50, sd = 10)
   \frametitle{}
   {\Large{The Infant Mortality data is very right skewed.}}
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-
-{\centering \includegraphics[width=\maxwidth]{figure/HistoAgain} 
-
-}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
 
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}\end{kframe}
 \end{knitrout}
 
 \end{frame}
@@ -433,10 +426,9 @@ Normal <- \hlfunctioncall{rnorm}(1e+05, mean = 50, sd = 10)
 \begin{alltt}
 \hlfunctioncall{range}(InfantNoMiss$InfantMortality)
 \end{alltt}
-\begin{verbatim}
-## [1]   1.8 123.3
-\end{verbatim}
-\end{kframe}
+
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}\end{kframe}
 \end{knitrout}
 
 \end{frame}
@@ -457,23 +449,24 @@ Normal <- \hlfunctioncall{rnorm}(1e+05, mean = 50, sd = 10)
 OrderMort <- InfantNoMiss[
                       \hlfunctioncall{order}(InfantNoMiss$InfantMortality,
                             decreasing = TRUE), ]
+\end{alltt}
+
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}\begin{alltt}
 \hlcomment{# Keep country & InfantMortality}
 OrderMort <- OrderMort[, \hlfunctioncall{c}(\hlstring{"country"},
                           \hlstring{"InfantMortality"})]
+\end{alltt}
+
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'OrderMort' not found}}\begin{alltt}
 
 \hlcomment{# Show high values}
 \hlfunctioncall{head}(OrderMort)
 \end{alltt}
-\begin{verbatim}
-##                      country InfantMortality
-## 187             Sierra Leone           123.3
-## 38          Congo, Dem. Rep.           112.8
-## 39  Central African Republic           109.3
-## 190                  Somalia           108.3
-## 134                     Mali           100.8
-## 12                    Angola           100.1
-\end{verbatim}
-\end{kframe}
+
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'OrderMort' not found}}\end{kframe}
 \end{knitrout}
 
 \end{frame}
@@ -496,11 +489,9 @@ OrderMort <- OrderMort[, \hlfunctioncall{c}(\hlstring{"country"},
 \hlcomment{# Find what the quartile points are}
 \hlfunctioncall{summary}(InfantNoMiss$InfantMortality)
 \end{alltt}
-\begin{verbatim}
-##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##     1.8     7.2    17.2    30.2    49.0   123.0
-\end{verbatim}
-\end{kframe}
+
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}\end{kframe}
 \end{knitrout}
 
 
@@ -514,10 +505,9 @@ OrderMort <- OrderMort[, \hlfunctioncall{c}(\hlstring{"country"},
 \hlcomment{# Find the interquartile range of InfantMortality}
 \hlfunctioncall{IQR}(InfantNoMiss$InfantMortality)
 \end{alltt}
-\begin{verbatim}
-## [1] 41.85
-\end{verbatim}
-\end{kframe}
+
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}\end{kframe}
 \end{knitrout}
 
 \end{frame}
@@ -530,13 +520,9 @@ OrderMort <- OrderMort[, \hlfunctioncall{c}(\hlstring{"country"},
 \hlfunctioncall{boxplot}(InfantNoMiss$InfantMortality,
         main = \hlstring{"Boxplot of Infant Mortality"})
 \end{alltt}
-\end{kframe}
-
-{\centering \includegraphics[width=\maxwidth]{figure/BoxPlot} 
-
-}
 
 
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}\end{kframe}
 \end{knitrout}
 
 \end{frame}
@@ -598,18 +584,16 @@ OrderMort <- OrderMort[, \hlfunctioncall{c}(\hlstring{"country"},
 \hlcomment{# Find the varience of InfantMortality}
 \hlfunctioncall{var}(InfantNoMiss$InfantMortality)
 \end{alltt}
-\begin{verbatim}
-## [1] 827.3
-\end{verbatim}
-\begin{alltt}
+
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}\begin{alltt}
 
 \hlcomment{# Find the standard deviation of InfantMortality}
 \hlfunctioncall{sd}(InfantNoMiss$InfantMortality)
 \end{alltt}
-\begin{verbatim}
-## [1] 28.76
-\end{verbatim}
-\end{kframe}
+
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}\end{kframe}
 \end{knitrout}
 
 \end{frame}
@@ -629,13 +613,18 @@ OrderMort <- OrderMort[, \hlfunctioncall{c}(\hlstring{"country"},
 
 \begin{frame}[fragile]
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-
-{\centering \includegraphics[width=\maxwidth]{figure/SDMort} 
-
-}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
 
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}\end{kframe}
 \end{knitrout}
 
 \end{frame}
@@ -656,18 +645,17 @@ OrderMort <- OrderMort[, \hlfunctioncall{c}(\hlstring{"country"},
 InfantNoMiss$logInf <- \hlfunctioncall{log}(
                         InfantNoMiss$InfantMortality)
 \end{alltt}
-\end{kframe}
+
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}\end{kframe}
 \end{knitrout}
 
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-
-{\centering \includegraphics[width=\maxwidth]{figure/LogTransformScatter} 
-
-}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
 
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}\end{kframe}
 \end{knitrout}
 
 \end{frame}
@@ -675,13 +663,12 @@ InfantNoMiss$logInf <- \hlfunctioncall{log}(
 \begin{frame}[fragile]
   \frametitle{Preview!}
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-
-{\centering \includegraphics[width=\maxwidth]{figure/ScatterTransformed} 
-
-}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
 
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}\end{kframe}
 \end{knitrout}
 
 \end{frame}
@@ -724,13 +711,9 @@ InfantNoMiss$logInf <- \hlfunctioncall{log}(
 \hlcomment{# Create bar plot}
 \hlfunctioncall{plot}(MortalityGDP$region, xlab = \hlstring{"Region"})
 \end{alltt}
-\end{kframe}
-
-{\centering \includegraphics[width=\maxwidth]{figure/CarsBarPlot} 
-
-}
 
 
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: \$ operator is invalid for atomic vectors}}\end{kframe}
 \end{knitrout}
 
 \end{frame}
@@ -747,24 +730,22 @@ InfantNoMiss$logInf <- \hlfunctioncall{log}(
 \hlcomment{# Create High/Low Income Variable}
 InfantNoMiss$DumMort[InfantNoMiss$InfantMortality
                      >= 15] <- \hlstring{"high"}
+\end{alltt}
+
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}\begin{alltt}
 InfantNoMiss$DumMort[InfantNoMiss$InfantMortality
                      < 15] <- \hlstring{"low"}
+\end{alltt}
+
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}\begin{alltt}
 \hlcomment{# Create contingency table}
 \hlfunctioncall{table}(InfantNoMiss$region, InfantNoMiss$DumMort)
 \end{alltt}
-\begin{verbatim}
-##       
-##        high low
-##   None    0   0
-##   EAP    16  12
-##   EUR     8  41
-##   LA     20  13
-##   ME      9  11
-##   NA      0   2
-##   SA      6   2
-##   SSA    45   2
-\end{verbatim}
-\end{kframe}
+
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}\end{kframe}
 \end{knitrout}
 
 \end{frame}
@@ -777,13 +758,9 @@ InfantNoMiss$DumMort[InfantNoMiss$InfantMortality
             InfantNoMiss$DumMort),
             main = \hlstring{"MosaicPlot: Infant Mort. & Reg."})
 \end{alltt}
-\end{kframe}
-
-{\centering \includegraphics[width=\maxwidth]{figure/MoasicPlot} 
-
-}
 
 
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantNoMiss' not found}}\end{kframe}
 \end{knitrout}
 
 \end{frame}
