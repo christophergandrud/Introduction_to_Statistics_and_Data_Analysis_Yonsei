@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  24 SEP 2012 19:46
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  26 SEP 2012 11:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1209,6 +1209,13 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [21
 
 ]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[22
+
+]
 \openout4 = `Lecture5.vrb'.
 
  (./Lecture5.vrb
@@ -1235,7 +1242,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[22
+[23
 
 ]
 \openout4 = `Lecture5.vrb'.
@@ -1245,7 +1252,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[23
+[24
 
 ]
 \openout4 = `Lecture5.vrb'.
@@ -1258,49 +1265,49 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[24
+[25
 
 ]
 \openout4 = `Lecture5.vrb'.
 
- (./Lecture5.vrb <figure/Scatter1.pdf, id=220, 433.62pt x 289.08pt>
+ (./Lecture5.vrb <figure/Scatter1.pdf, id=233, 433.62pt x 289.08pt>
 File: figure/Scatter1.pdf Graphic file (type pdf)
 
 <use figure/Scatter1.pdf>
 Package pdftex.def Info: figure/Scatter1.pdf used on input line 10.
 (pdftex.def)             Requested size: 307.28987pt x 204.86888pt.
-) [25
+) [26
 
  <./figure/Scatter1.pdf>]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[26
+[27
 
 ]
 \openout4 = `Lecture5.vrb'.
 
- (./Lecture5.vrb <figure/InfantHist.pdf, id=238, 361.35pt x 289.08pt>
+ (./Lecture5.vrb <figure/InfantHist.pdf, id=250, 361.35pt x 289.08pt>
 File: figure/InfantHist.pdf Graphic file (type pdf)
 
 <use figure/InfantHist.pdf>
 Package pdftex.def Info: figure/InfantHist.pdf used on input line 8.
 (pdftex.def)             Requested size: 307.28987pt x 245.83383pt.
-) [27
+) [28
 
  <./figure/InfantHist.pdf>]
-<MultiModal.png, id=249, 842.14626pt x 372.39125pt>
+<MultiModal.png, id=261, 842.14626pt x 372.39125pt>
 File: MultiModal.png Graphic file (type png)
  <use MultiModal.png>
-Package pdftex.def Info: MultiModal.png used on input line 287.
+Package pdftex.def Info: MultiModal.png used on input line 314.
 (pdftex.def)             Requested size: 294.7556pt x 130.33888pt.
 
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[28
+[29
 
  <./MultiModal.png (PNG copy)>]
 \openout4 = `Lecture5.vrb'.
@@ -1310,7 +1317,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[29
+[30
 
 ]
 \openout4 = `Lecture5.vrb'.
@@ -1322,16 +1329,6 @@ y[][]
  []
 
 )
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[30
-
-]
-\openout4 = `Lecture5.vrb'.
-
- (./Lecture5.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1359,6 +1356,9 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [33
 
 ]
+\openout4 = `Lecture5.vrb'.
+
+ (./Lecture5.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1373,22 +1373,29 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [35
 
 ]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[36
+
+]
 \openout4 = `Lecture5.vrb'.
 
  (./Lecture5.vrb
-<figure/NormallyDistGraph.pdf, id=313, 505.89pt x 289.08pt>
+<figure/NormallyDistGraph.pdf, id=325, 505.89pt x 289.08pt>
 File: figure/NormallyDistGraph.pdf Graphic file (type pdf)
 
 <use figure/NormallyDistGraph.pdf>
 Package pdftex.def Info: figure/NormallyDistGraph.pdf used on input line 14.
 (pdftex.def)             Requested size: 307.28987pt x 175.59749pt.
-) [36
+) [37
 
  <./figure/NormallyDistGraph.pdf>]
 \openout4 = `Lecture5.vrb'.
 
 
-(./Lecture5.vrb <figure/HistoAgain.pdf, id=323, 505.89pt x 361.35pt>
+(./Lecture5.vrb <figure/HistoAgain.pdf, id=336, 505.89pt x 361.35pt>
 File: figure/HistoAgain.pdf Graphic file (type pdf)
 
 <use figure/HistoAgain.pdf>
@@ -1399,16 +1406,9 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[37
-
- <./figure/HistoAgain.pdf>]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
 [38
 
-]
+ <./figure/HistoAgain.pdf>]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1437,9 +1437,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [42
 
 ]
-\openout4 = `Lecture5.vrb'.
-
- (./Lecture5.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1459,23 +1456,23 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 ]
 \openout4 = `Lecture5.vrb'.
 
+ (./Lecture5.vrb)
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[45
+
+]
+\openout4 = `Lecture5.vrb'.
+
  (./Lecture5.vrb
 Overfull \hbox (20.38533pt too wide) in paragraph at lines 7--7
 []                      []\OT1/cmtt/m/n/10.95 order[](InfantNoMiss$InfantMortal
 ity,[] 
  []
 
-) [45
-
-]
-\openout4 = `Lecture5.vrb'.
-
- (./Lecture5.vrb)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[46
+) [46
 
 ]
 \openout4 = `Lecture5.vrb'.
@@ -1490,22 +1487,25 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 ]
 \openout4 = `Lecture5.vrb'.
 
- (./Lecture5.vrb <figure/BoxPlot.pdf, id=408, 505.89pt x 361.35pt>
+ (./Lecture5.vrb)
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[48
+
+]
+\openout4 = `Lecture5.vrb'.
+
+ (./Lecture5.vrb <figure/BoxPlot.pdf, id=420, 505.89pt x 361.35pt>
 File: figure/BoxPlot.pdf Graphic file (type pdf)
 
 <use figure/BoxPlot.pdf>
 Package pdftex.def Info: figure/BoxPlot.pdf used on input line 10.
 (pdftex.def)             Requested size: 307.28987pt x 219.49687pt.
-) [48
+) [49
 
  <./figure/BoxPlot.pdf>]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[49
-
-]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1534,15 +1534,22 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [53
 
 ]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[54
+
+]
 \openout4 = `Lecture5.vrb'.
 
- (./Lecture5.vrb) [54
+ (./Lecture5.vrb) [55
 
 ]
 \openout4 = `Lecture5.vrb'.
 
  (./Lecture5.vrb
-<figure/SDNormal.pdf, id=460, 505.89pt x 361.35pt>
+<figure/SDNormal.pdf, id=473, 505.89pt x 361.35pt>
 File: figure/SDNormal.pdf Graphic file (type pdf)
  <use figure/SDNormal.pdf>
 Package pdftex.def Info: figure/SDNormal.pdf used on input line 4.
@@ -1552,13 +1559,13 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[55
+[56
 
  <./figure/SDNormal.pdf>]
 \openout4 = `Lecture5.vrb'.
 
  (./Lecture5.vrb
-<figure/SDMort.pdf, id=477, 505.89pt x 361.35pt>
+<figure/SDMort.pdf, id=489, 505.89pt x 361.35pt>
 File: figure/SDMort.pdf Graphic file (type pdf)
  <use figure/SDMort.pdf>
 Package pdftex.def Info: figure/SDMort.pdf used on input line 4.
@@ -1568,32 +1575,32 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[56
+[57
 
  <./figure/SDMort.pdf>]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[57
+[58
 
 ]
 \openout4 = `Lecture5.vrb'.
 
  (./Lecture5.vrb
-<figure/LogTransformScatter.pdf, id=500, 505.89pt x 361.35pt>
+<figure/LogTransformScatter.pdf, id=512, 505.89pt x 361.35pt>
 File: figure/LogTransformScatter.pdf Graphic file (type pdf)
 
 <use figure/LogTransformScatter.pdf>
 Package pdftex.def Info: figure/LogTransformScatter.pdf used on input line 15.
 (pdftex.def)             Requested size: 307.28987pt x 219.49687pt.
-) [58
+) [59
 
  <./figure/LogTransformScatter.pdf>]
 \openout4 = `Lecture5.vrb'.
 
 
-(./Lecture5.vrb <figure/ScatterTransformed.pdf, id=510, 505.89pt x 361.35pt>
+(./Lecture5.vrb <figure/ScatterTransformed.pdf, id=522, 505.89pt x 361.35pt>
 File: figure/ScatterTransformed.pdf Graphic file (type pdf)
 
 <use figure/ScatterTransformed.pdf>
@@ -1604,16 +1611,9 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[59
-
- <./figure/ScatterTransformed.pdf>]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
 [60
 
-]
+ <./figure/ScatterTransformed.pdf>]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1642,15 +1642,22 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [64
 
 ]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[65
+
+]
 \openout4 = `Lecture5.vrb'.
 
- (./Lecture5.vrb <figure/CarsBarPlot.pdf, id=562, 505.89pt x 361.35pt>
+ (./Lecture5.vrb <figure/CarsBarPlot.pdf, id=574, 505.89pt x 361.35pt>
 File: figure/CarsBarPlot.pdf Graphic file (type pdf)
 
 <use figure/CarsBarPlot.pdf>
 Package pdftex.def Info: figure/CarsBarPlot.pdf used on input line 10.
 (pdftex.def)             Requested size: 307.28987pt x 219.49687pt.
-) [65
+) [66
 
  <./figure/CarsBarPlot.pdf>]
 \openout4 = `Lecture5.vrb'.
@@ -1660,30 +1667,30 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[66
+[67
 
 ]
 \openout4 = `Lecture5.vrb'.
 
- (./Lecture5.vrb) [67
+ (./Lecture5.vrb) [68
 
 ]
 \openout4 = `Lecture5.vrb'.
 
  (./Lecture5.vrb
-<figure/MoasicPlot.pdf, id=584, 505.89pt x 361.35pt>
+<figure/MoasicPlot.pdf, id=596, 505.89pt x 361.35pt>
 File: figure/MoasicPlot.pdf Graphic file (type pdf)
 
 <use figure/MoasicPlot.pdf>
 Package pdftex.def Info: figure/MoasicPlot.pdf used on input line 10.
 (pdftex.def)             Requested size: 307.28987pt x 219.49687pt.
-) [68
+) [69
 
  <./figure/MoasicPlot.pdf>]
 ! Misplaced alignment tab character &.
 <inserted text> ...ing R. Chichester: John Wiley &
                                                    Sons. Ltd. \\[0.25cm] Dia...
-l.795 \end{frame}
+l.822 \end{frame}
                  
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1697,7 +1704,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[69
+[70
 
 ]
 \tf@nav=\write6
@@ -1709,26 +1716,26 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `Lecture5.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 797.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 797.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 824.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 824.
  (./Lecture5.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 797.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 797.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 824.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 824.
 Package rerunfilecheck Info: File `Lecture5.out' has not changed.
-(rerunfilecheck)             Checksum: EFFB9A24A7D91CFB2D1B89B9F6226D54;220.
+(rerunfilecheck)             Checksum: B61FA8D77ACCEC00E5EF0C35D20961B5;267.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 797.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 824.
  ) 
 Here is how much of TeX's memory you used:
- 18592 strings out of 493633
- 352915 string characters out of 3143377
+ 18603 strings out of 493633
+ 353032 string characters out of 3143377
  416169 words of memory out of 3000000
- 21239 multiletter control sequences out of 15000+200000
- 13714 words of font info for 51 fonts, out of 3000000 for 9000
+ 21247 multiletter control sequences out of 15000+200000
+ 14176 words of font info for 53 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  49i,16n,60p,447b,589s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
@@ -1749,10 +1756,10 @@ live/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texl
 ive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/
 texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/loc
 al/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb>
-Output written on Lecture5.pdf (69 pages, 362078 bytes).
+Output written on Lecture5.pdf (70 pages, 363914 bytes).
 PDF statistics:
- 690 PDF objects out of 1000 (max. 8388607)
- 567 compressed objects within 6 object streams
- 134 named destinations out of 1000 (max. 500000)
- 131 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 702 PDF objects out of 1000 (max. 8388607)
+ 578 compressed objects within 6 object streams
+ 137 named destinations out of 1000 (max. 500000)
+ 139 words of extra memory for PDF output out of 10000 (max. 10000000)
 

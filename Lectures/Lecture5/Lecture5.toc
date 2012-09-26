@@ -1,5 +1,6 @@
 \beamer@endinputifotherversion {3.10pt}
 \beamer@sectionintoc {2}{Recap}{3}{0}{1}
-\beamer@sectionintoc {3}{Describing Data Overall}{9}{0}{2}
-\beamer@sectionintoc {4}{Describing Numerical Data}{19}{0}{3}
-\beamer@sectionintoc {5}{Describing Categorical Data}{60}{0}{4}
+\beamer@sectionintoc {3}{Assignment 2}{9}{0}{2}
+\beamer@sectionintoc {4}{Describing Data Overall}{10}{0}{3}
+\beamer@sectionintoc {5}{Describing Numerical Data}{20}{0}{4}
+\beamer@sectionintoc {6}{Describing Categorical Data}{61}{0}{5}
