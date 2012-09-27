@@ -89,7 +89,7 @@
 \frame{
   \frametitle{Automatically Include Tables with xtable}
   {\Large{We can use the {\emph{xtable}} package and the \texttt{print} command to {\bf{automatically include}} tables in our R Markdown documents. \\[0.5cm]
-  We create data frame tables and tables from many different other object types.
+  We can create tables from data frames and many other object types.
   }}
 }
 
@@ -128,7 +128,8 @@ print(xtable(NewData), type = "latex")
 
 \frame{
   \frametitle{Another Example}
-  {\LARGE{For another example see: }}
+  {\LARGE{For another example see: \\[0.5cm]
+  \url{http://bit.ly/SBGHLE}}.}
 }
 
 
