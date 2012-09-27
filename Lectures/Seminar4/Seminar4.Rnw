@@ -31,6 +31,32 @@
 \frame{\titlepage}
 
 \frame{
+  \frametitle{Assignment 2}
+  \textbf{Due:} Friday 19 October \\[0.25cm]
+  
+  \textbf{Describe} at least \textbf{3} variables in a data set.\\[0.25cm]
+  {\small{
+    You need to select a \textbf{range of descriptive statistical tools}. The tools should include both \textbf{numerical descriptive statistics} and \textbf{graphics}.\\[0.25cm]
+
+    These tools should describe the variables':
+    \begin{itemize}
+      \item<1-> central tendency,
+      \item<1-> variation,
+      \item<1-> their relationships with the other variables.
+    \end{itemize}
+
+    The descriptions need to be discussed \textbf{in paragraph form}. \\[0.25cm]
+
+    The description must be \textbf{reproducible}. So you should email me the link to a Dropbox folder with:
+    \begin{itemize}
+      \item<1-> the \texttt{.csv} data set,
+      \item<1-> the \texttt{.Rmd} R markdown file,
+      \item<1-> the final \texttt{.html} file.
+    \end{itemize}
+  }}
+}
+
+\frame{
 	\frametitle{Not Replicated}
   \begin{center}
     What does it mean if an independent researcher is not able to replicate a study's findings?
@@ -53,9 +79,56 @@
     \item 3 headers
     \item An evaluated code chunk
     \item A non-evaluated code chunk
-    \item A right-aligned plot
+    \item A right-aligned plot, where the source code is not show.
     \item A URL link
+    \item A table
+    \item {\bf{Bonus:}} an equation
   \end{itemize}
+}
+
+\frame{
+  \frametitle{Automatically Include Tables with xtable}
+  {\Large{We can use the {\emph{xtable}} package and the \texttt{print} command to {\bf{automatically include}} tables in our R Markdown documents. \\[0.5cm]
+  We create data frame tables and tables from many different other object types.
+  }}
+}
+
+\begin{frame}[fragile]
+
+<<Dataframe>>=
+# Load package
+library(xtable)
+
+# Create data frame object
+Population <- c(14.3, 6.3, 66.7)
+
+Countries <- c("Cambodia", "Laos", "Thailand")
+
+NewData <- data.frame(Countries, Population)
+@
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{}
+  {\Large{Use the option \texttt{results='asis'}}}:
+<<CodeChunk, eval=FALSE>>=
+```{r, results='asis'}
+@
+
+  {\Large{And this code}}:
+<<PrintChunk, eval=FALSE>>=
+print(xtable(NewData), type = "html")
+@
+  {\Large{To get this table}}:
+<<DataTable, results='asis', echo=FALSE>>=
+# Create data frame object
+print(xtable(NewData), type = "latex")
+@
+\end{frame}
+
+\frame{
+  \frametitle{Another Example}
+  {\LARGE{For another example see: }}
 }
 
 

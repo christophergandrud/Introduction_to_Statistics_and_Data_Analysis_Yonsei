@@ -1,0 +1,40 @@
+\frametitle {}
+  {\Large{Use the option \texttt{results='asis'}}}:
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+```\{r, results=\hlstring{'asis'}\}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+
+  {\Large{And this code}}:
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlfunctioncall{print}(\hlfunctioncall{xtable}(NewData), type = \hlstring{"html"})
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+  {\Large{To get this table}}:
+
+% latex table generated in R 2.15.1 by xtable 1.7-0 package
+% Thu Sep 27 10:34:09 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rlr}
+  \hline
+ & Countries & Population \\
+  \hline
+1 & Cambodia & 14.30 \\
+  2 & Laos & 6.30 \\
+  3 & Thailand & 66.70 \\
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+

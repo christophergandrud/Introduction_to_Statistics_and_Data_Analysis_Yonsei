@@ -1,0 +1,53 @@
+# Automatic Tables in R Markdown
+## Christopher Gandrud
+## Updated 27 September 2012
+
+---
+
+To automatically include a table in an R Markdown document use the `xtable` package with the `print` command.
+
+For example, let's gather some data from the internet:
+
+```{r DataGather, message=FALSE, warning=FALSE}
+# Load package
+library(devtools)
+
+# Gather data using source code at:
+# http://bit.ly/OTWEGS
+# Data is stored in a data frame: MortalityGDP
+source_url("http://bit.ly/OTWEGS")
+
+names(MortalityGDP)
+```
+
+Now lets summarise the variable `GDPperCapita` in the `MoralityGDP` data frame.
+
+To do this we use the `summary` command.
+
+```{r Sumarise}
+# Sumarise MortalityGDP$GDPperCapita
+Sum <- summary(MortalityGDP$GDPperCapita)
+
+# Show contents of Sum
+Sum
+```
+
+For `summaryDefault` objects we have to change them into a data frame, like this:
+
+```{r CoerceDataFrame}
+# First change to a matrix
+SummaryValues <- as.matrix(Sum)
+
+# Second change matrix to data frame
+SummaryValues <- data.frame(SummaryValues)
+```
+
+Now we can use `xtable` and `print` to create an HTML table from this summary, We set the `print` argument `type = "html"` We use *knitr* to insert the table into our presentation document. To do this we need to use the *knitr* option `results='asis':
+
+```{r CreateTable, results='asis'}
+# Load xtable
+library(xtable)
+
+# Create table
+print(xtable(SummaryValues), type = "html")
+```
