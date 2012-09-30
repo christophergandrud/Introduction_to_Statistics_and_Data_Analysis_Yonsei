@@ -149,7 +149,7 @@ How can we use **R** to create visual summaries of our data? What is `ggplot2`? 
 
 > Chen, Edwin. 2012. "Quick Introduction to ggplot2" [http://blog.echen.me/2012/01/17/quick-introduction-to-ggplot2/](http://blog.echen.me/2012/01/17/quick-introduction-to-ggplot2/)
 
-> **Chapter 1, 4, and 9 Graphical Excellence:** Tufte, Edward R. 2001. *The Visual Display of Quantitative Information*. Cheshire, Connecticut: Graphics Press.
+> **Chapters 1, 4, and 9:** Tufte, Edward R. 2001. *The Visual Display of Quantitative Information*. Cheshire, Connecticut: Graphics Press.
 
 *Extra:*
 
