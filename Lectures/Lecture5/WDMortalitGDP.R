@@ -1,7 +1,7 @@
 ##################
 # Gather World Bank Data on Mortality Rate & GDP per capita for 2009
 # Christopher Gandrud
-# Updated 24 September 2012
+# Updated 2 October 2012
 ##################
 
 #### Data to gather ####
@@ -32,6 +32,15 @@ MortalityGDP <- MortalityGDP[, c("country", "GDPperCapita", "InfantMortality", "
 
 # Recode region
 MortalityGDP$region <- factor(MortalityGDP$region, labels = c("None", "EAP", "EUR", "LA", "ME", "NA", "SA", "SSA"))
+
+# Reorder income factor levels
+library(gdata)
+
+MortalityGDP$income <- reorder(MortalityGDP$income, new.order = c(
+                                              "Aggregates", "High income: OECD", 
+                                              "High income: nonOECD", "Upper middle income", 
+                                              "Lower middle income", "Low income", 
+                                              "Not classified"))
 
 # Remove EU
 MortalityGDP <- subset(MortalityGDP, region != "None")

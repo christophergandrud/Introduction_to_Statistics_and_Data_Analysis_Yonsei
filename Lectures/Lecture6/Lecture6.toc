@@ -1,3 +1,4 @@
 \beamer@endinputifotherversion {3.10pt}
 \beamer@sectionintoc {2}{Assignment 2}{3}{0}{1}
 \beamer@sectionintoc {3}{Recap}{4}{0}{2}
+\beamer@sectionintoc {4}{Principles of Graphics Excelence}{9}{0}{3}

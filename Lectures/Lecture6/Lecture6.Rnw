@@ -73,9 +73,140 @@
 
 \frame{
   \frametitle{Quick Quiz (2)}
-  {\Large{What is the difference between the {\bf{population}} mean and the {\bf{sampling}} mean? }}
+  {\Large{What is the difference between the {\bf{population}} mean and the {\bf{sampling}} mean? \\[1cm]
+  Why would you log transform a variable?
+  }}
 }
 
+\frame{
+  \frametitle{Today}
+  {\Large{Last week: we largely learned how to describe our data {\emph{numerically}}. \\[0.5cm]
+  {\bf{Today}}: we will learn how to present our data with {\emph{graphics}}. \\[0.25cm]
+  We will learn both how to create graphics in R, but also the principles of effective statistical graphics.
+  }}
+}
+
+\frame{
+  \frametitle{Inferential Statistics}
+  {\Large{Many of the things we learn today will also apply to inferential statistics.}}
+}
+
+\frame{
+  {\Large{The first part of this lecture is based on Tufte (2001) \\[0.5cm]
+  Many of the examples are from the Junk Charts Blog (\url{http://junkcharts.typepad.com/}). \\[0.5cm]
+  We will also use the World Bank data we downloaded last class. \\
+  R Source Code at: \url{http://bit.ly/OTWEGS}
+  }}
+<<DataDownload, echo=FALSE, message=FALSE>>=
+# Load package
+library(devtools)
+# Gather data using source code at:
+# http://bit.ly/OTWEGS
+# Data is stored in a data frame: MortalityGDP
+source_url("http://bit.ly/OTWEGS")
+
+# Create data with no missing values of infant mortali
+InfantNoMiss <- subset(MortalityGDP,
+                           !is.na(InfantMortality))
+
+# Create High/Low Income Variable
+InfantNoMiss$DumMort[InfantNoMiss$InfantMortality
+                     >= 15] <- "high"
+InfantNoMiss$DumMort[InfantNoMiss$InfantMortality
+                     < 15] <- "low"
+@
+}
+
+%%%%%%%%%%%%%%%%% Principles of Graphical Excellence %%%%%%%%%%%%%
+\section{Principles of Graphics Excelence}
+\frame{
+  \frametitle{Why Graphics?}
+  \begin{center}
+  {\Large{Why use graphics? Why not just describe all of our data in tables?}}
+  \end{center}
+}
+
+\begin{frame}[fragile,plain]
+<<DataTableDump, tidy=FALSE>>=
+# Create data frame with GDP/Capita & Infant Mort.
+DataDump <- InfantNoMiss[, 
+              c("GDPperCapita", "InfantMortality")]
+
+# Show data
+DataDump
+@
+\end{frame}
+
+\begin{frame}[fragile,plain]
+<<SimpleScatter,echo=FALSE, fig.height=5, tidy=FALSE, warning=FALSE>>=
+# Load package
+library(ggplot2)
+
+# Rescale GDP/Capita in Thousands
+DataDumpRescale <- DataDump
+DataDumpRescale$GDPperCapita <- DataDumpRescale$GDPperCapita/1000
+
+# Create plot of GDP/Capita & Infant Mort.
+ggplot(data = DataDumpRescale, aes(x = InfantMortality, y = GDPperCapita)) +
+        geom_point(colour = "#E34A33") +
+        xlab("\n Infant Mortality Rate Per 1000 Births") +
+        ylab("GDP/Capita \n (1,000 of Current US$)\n") +
+        theme_bw(base_size = 16)
+@
+\end{frame}
+
+\frame{
+  \frametitle{Avoid Circles! (1)}
+  \begin{center}
+  {\Large{In general: Avoid using the {\emph{size}} of a circle to mean something!}}
+  \end{center}
+}
+
+\frame{
+    \frametitle{Avoid Circles! (2)}
+    {\Large{Why?}} \\[0.5cm]
+    
+}
+
+%%%%%%%%%%%%%%%%% Base R Graphics %%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% Graphics with ggplot2 %%%%%%%%%%%%%
+
+\frame{
+  \frametitle{Colours! (1)}
+  {\LARGE{Colours}} \\[0.5cm]
+  There are a number of ways to specify colours in ggplot2. \\[0.25cm]
+  The simplest way is to let ggplot choose the colours for you.
+}
+
+\begin{frame}[fragile,plain]
+<<ScatterColour1, tidy=FALSE, warning=FALSE, fig.height=4>>= 
+# Create scatter plot divided by region
+ggplot(data = InfantNoMiss, aes(log(InfantMortality),
+                                log(GDPperCapita),
+                                colour = income)) +
+      geom_point() + theme_bw()
+@
+\end{frame}
+
+%%%%%%%%%%%%%%%%% Graphics with GoogleVis %%%%%%%%%%%%%
+
+\frame{
+  \frametitle{Professional Graphics With R}
+  {\Large{Many people use R to create professional graphics. \\[0.5cm]
+  For example: see the New York Times' graphics blog: \url{http://chartsnthings.tumblr.com/} \\[0.5cm]
+  They often use R in combination with Adobe Illustrator. \\[0.5cm]
+  See Nathan Yau's Book {\emph{Visualize This: The Flowing Data Guide to Design, Visualization, and Statistics}} (\url{http://book.flowingdata.com/}).
+  }}
+}
+
+%%%%%%%% References
+\begin{frame}[allowframebreaks]
+  \frametitle{References}
+  Tufte, Edward R. 2001. The Visual Display of Quantitative Information. Cheshire, Connecticut: Graphics Press.
+ \\[0.25cm]
+ 
+\end{frame}
 
 
 \end{document}

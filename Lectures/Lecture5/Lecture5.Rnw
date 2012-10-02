@@ -525,6 +525,7 @@ ggplot(Normal, aes(x = Normal)) +
         geom_vline(xintercept = 50, colour = "red", linetype = "longdash") +
         annotate("text", x = 25, y = 0.01, label = "-1 SD", colour = LowerC) +
         annotate("text", x = 75, y = 0.01, label = "+1 SD", colour = UpperC) +
+        scale_x_continuous(breaks = c(-90, -50, 0, 20, 50, 80, 100, 150, 190), labels = c(-90, -50, 0, 20, 50, 80, 100, 150, 190)) +
         xlab("\n Simulated Data") + ylab("Density\n") + ggtitle("Density Plot for Simulated Data  with a Standard Deviation of 10\n") + 
         theme_bw()
 @
@@ -579,7 +580,7 @@ ggplot(Normal30, aes(x = Normal30)) +
         annotate("text", x = 25, y = 0.015, label = "-1 SD", colour = LowerC) +
         annotate("text", x = 75, y = 0.015, label = "+1 SD", colour = UpperC) +
         scale_y_continuous(limits = c(0, 0.04)) +
-        scale_x_continuous(breaks = c(-50, 0, 20, 50, 80, 100, 150), labels = c(-50, 0, 20, 50, 80, 100, 150)) +
+        scale_x_continuous(breaks = c(-90, -50, 0, 20, 50, 80, 100, 150, 185), labels = c(-90, -50, 0, 20, 50, 80, 100, 150, 185)) +
         xlab("\n Simulated Data") + ylab("Density\n") + ggtitle("Density Plot for Simulated Data with a Standard Deviation of 10\n") + 
         theme_bw()
 @
