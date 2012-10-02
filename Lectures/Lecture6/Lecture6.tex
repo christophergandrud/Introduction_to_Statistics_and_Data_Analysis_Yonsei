@@ -546,7 +546,9 @@ DataDump
 
 \frame{
   \frametitle{Another Issue}
-  {\LARGE{Colour blindness.}}
+  \begin{center}
+    {\LARGE{Colour blindness.}}
+  \end{center}
 }
 
 \frame{
@@ -566,6 +568,7 @@ DataDump
 }
 
 %%%%%%%%%%%%%%%%% Base R Graphics %%%%%%%%%%%%%
+\section{Base R Graphics}
 \frame{
   \frametitle{Base R Graphics}
   \begin{center}
@@ -582,15 +585,120 @@ DataDump
   \end{itemize}  
   }}
 }
+
+\begin{frame}[fragile]
+  \frametitle{A Basic Scatter Plot}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Create a basic scatter plot}
+\hlfunctioncall{with}(MortalityGDP,
+     \hlfunctioncall{plot}(x = InfantMortality, y = GDPperCapita))
+\end{alltt}
+\end{kframe}
+
+{\centering \includegraphics[width=\maxwidth]{figure/BasicPlot} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile,plain]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Basic scatter: axis labels & rescale GDP/Capita}
+\hlfunctioncall{with}(MortalityGDP,
+     \hlfunctioncall{plot}(x = InfantMortality, 
+          y = (GDPperCapita/1000),
+          xlab = \hlstring{"Infant Mortality per 1000 Births"},
+          ylab = \hlstring{"GDP/\hlfunctioncall{Capita} (1,000s of US$)"},
+          main = 
+          \hlstring{"Scatterplot of\textbackslash{}n GDP/Capita & Infant Mort."}))
+\end{alltt}
+\end{kframe}
+
+{\centering \includegraphics[width=\maxwidth]{figure/BasicPlotLabel} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
   
 
 %%%%%%%%%%%%%%%%% Graphics with ggplot2 %%%%%%%%%%%%%
+\section{ggplot2}
 \frame{
   \frametitle{Graphics with gglot2}
   \begin{center}
     {\LARGE{Graphics with ggplot2}}
   \end{center}
 }
+
+\frame{
+  \frametitle{Why ggplot2?}
+  {\LARGE{The ggplot2 package}} \\[0.5cm]
+  {\Large{The ggplot2 package allows us to do much more than base R graphics. \\[0.5cm]
+  }} 
+}
+
+\frame{
+  \frametitle{What is ggplot2?}
+  {\Large{``gg" means ``Grammar of Graphics"}} \\[0.25cm]
+  (2 just means it is the second one) \\[0.3cm]
+  \hline\\[0.3cm]
+  Each plot is made of {\bf{layers}}. Layers include the coordinate system (x-y), points, lables, etc. \\[0.25cm]
+  Each layer has {\bf{aesthetics}} (\texttt{aes}) including the x \& y, size, shape, and colour.\\[0.25cm]
+  The main layer types are called {\bf{geometrics}} (\texttt{geom}). These include lines, points, density plots, bars, and text. 
+}
+
+\begin{frame}[fragile]
+  \frametitle{Simple Example}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Scatterplot}
+\hlfunctioncall{ggplot}(data = MortalityGDP, \hlfunctioncall{aes}(x = InfantMortality, 
+                                y = GDPperCapita)) +
+      \hlfunctioncall{geom_point}()
+\end{alltt}
+\end{kframe}
+
+{\centering \includegraphics[width=\maxwidth]{figure/ggScatterSimple} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Simple Example with Blank Theme}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Scatterplot}
+\hlfunctioncall{ggplot}(data = MortalityGDP, \hlfunctioncall{aes}(x = InfantMortality, 
+                                y = GDPperCapita)) +
+      \hlfunctioncall{geom_point}() +
+      \hlfunctioncall{theme_bw}(base_size = 13)
+\end{alltt}
+\end{kframe}
+
+{\centering \includegraphics[width=\maxwidth]{figure/ggScatterSimpleBlank} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
 
 \frame{
   \frametitle{Colours! (1)}
@@ -643,6 +751,9 @@ ColourScatter <- \hlfunctioncall{ggplot}(data = InfantNoMiss,
                             \hlfunctioncall{log}(GDPperCapita))) +
                   \hlfunctioncall{geom_point}(\hlfunctioncall{aes}(colour = income)) + 
                   \hlfunctioncall{scale_color_manual}(values = Colours) +
+                  \hlfunctioncall{xlab}(\hlstring{"\textbackslash{}nLog Infant Mortality"}) +
+                  \hlfunctioncall{ylab}(\hlstring{"Log GDP/Capita\textbackslash{}n"}) +
+                  \hlfunctioncall{ggtitle}(\hlstring{"Log Transformed Data\textbackslash{}n"}) +
                   \hlfunctioncall{theme_bw}()
 \end{alltt}
 \end{kframe}
@@ -666,14 +777,60 @@ ColourScatter
 
 \end{knitrout}
 
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Create a violin Plot}
+Violin <- \hlfunctioncall{ggplot}(InfantNoMiss, \hlfunctioncall{aes}(
+                                \hlfunctioncall{factor}(DumMort),
+                                \hlfunctioncall{log}(GDPperCapita))) +
+                  \hlfunctioncall{geom_violin}(fill = \hlstring{"#E7298A"},
+                              colour = \hlstring{"#E7298A"},
+                              alpha = \hlfunctioncall{I}(0.5)) +
+                  \hlfunctioncall{geom_jitter}(color = \hlstring{"#7570B3"}) +
+                  \hlfunctioncall{xlab}(\hlstring{"\textbackslash{}n Infant Mortality"}) +
+                  \hlfunctioncall{ylab}(\hlstring{"Log GDP.Capital\textbackslash{}n"}) +
+                  \hlfunctioncall{theme_bw}(base_size = 16)
+\end{alltt}
+\end{kframe}
+\end{knitrout}
 
 \end{frame}
 
+\begin{frame}[fragile]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Create a violin Plot}
+Violin
+\end{alltt}
+\end{kframe}
+
+{\centering \includegraphics[width=\maxwidth]{figure/ViolinPlotShow} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+\frame{
+  \frametitle{More Info}
+  {\LARGE{More Information:}} \\[1cm]
+  \begin{center}
+    \url{http://docs.ggplot2.org/current/index.html}
+  \end{center}
+}
+
 %%%%%%%%%%%%%%%%% Graphics with GoogleVis %%%%%%%%%%%%%
 \frame{
-  \frametitle{Maps with gglot2}
+  \frametitle{Maps with GoogleVis}
   \begin{center}
-    {\LARGE{Maps with ggplot2}}
+    {\LARGE{Maps with GoogleVis}}
   \end{center}
 }
 

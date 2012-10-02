@@ -1,16 +1,15 @@
 \begin {knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcomment{# Show scatter plot}
-ColourScatter
+\hlcomment{# Create a violin Plot}
+Violin
 \end{alltt}
 \end{kframe}
 
-{\centering \includegraphics[width=\maxwidth]{figure/HexColoursScatter}
+{\centering \includegraphics[width=\maxwidth]{figure/ViolinPlotShow}
 
 }
 
 
 \end{knitrout}
-
 

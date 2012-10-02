@@ -1,0 +1,50 @@
+# Using GoogleVis for Maps
+## Christopher Gandrud
+## Week 6: Visualisation
+
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Load package
+library(devtools)
+# Gather data using source code at:
+# http://bit.ly/OTWEGS
+# Data is stored in a data frame: MortalityGDP
+source_url("http://bit.ly/OTWEGS")
+
+# Create data with no missing values of infant mortali
+InfantNoMiss <- subset(MortalityGDP,
+                           !is.na(InfantMortality))
+
+# Create High/Low Income Variable
+InfantNoMiss$DumMort[InfantNoMiss$InfantMortality
+                     >= 15] <- "high"
+InfantNoMiss$DumMort[InfantNoMiss$InfantMortality
+                     < 15] <- "low"
+```
+
+# Infant Mortality Map
+
+```{r, results='asis', message=FALSE, tidy=FALSE}
+# Load library
+library(googleVis)
+
+# Create infant mortality map
+MortMap <- gvisGeoMap(data = MortalityGDP,
+                        locationvar = "country",
+                        numvar = "InfantMortality",
+                      options = list(colors = "[0xEDDD00, 0xED6700, 0xA04400]")
+                      )
+
+print(MortMap, "chart")
+```
+
+### Notes
+
+- The results probably won't show up in the RStudio Preview window. You will need to open the HTML file in your web browser.
+
+- To include in R Markdown you need to set the chunk option `results='asis`.
+
+- Also it is important to `print` the map and use the argument `"chart"`.
+
+- I probably need to change the name of "Russia",

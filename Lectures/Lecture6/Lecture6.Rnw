@@ -151,7 +151,7 @@ DataDumpRescale$GDPperCapita <- DataDumpRescale$GDPperCapita/1000
 ggplot(data = DataDumpRescale, aes(x = InfantMortality, y = GDPperCapita)) +
         geom_point(colour = "#E34A33") +
         xlab("\n Infant Mortality Rate Per 1000 Births") +
-        ylab("GDP/Capita \n (1,000 of Current US$)\n") +
+        ylab("GDP/Capita \n (1,000s of Current US$)\n") +
         theme_bw(base_size = 16)
 @
 \end{frame}
@@ -309,7 +309,7 @@ ggplot(data = CircComp, aes(reorder(Names, Numbers), Numbers)) +
         geom_point(color = "#DE2D26", size = 7, shape = 3) +
         scale_y_continuous(limits = c(0, 100)) +
         ylab("") + xlab("") +
-        theme_bw()
+        theme_bw(base_size = 16)
 @
 \end{frame}
 
@@ -329,7 +329,9 @@ ggplot(data = CircComp, aes(reorder(Names, Numbers), Numbers)) +
 
 \frame{
   \frametitle{Another Issue}
-  {\LARGE{Colour blindness.}}
+  \begin{center}
+    {\LARGE{Colour blindness.}}
+  \end{center}
 }
 
 \frame{
@@ -366,15 +368,78 @@ ggplot(data = CircComp, aes(reorder(Names, Numbers), Numbers)) +
   \end{itemize}  
   }}
 }
+
+\begin{frame}[fragile]
+  \frametitle{A Basic Scatter Plot}
+<<BasicPlot, fig.height=4, tidy=FALSE>>=
+# Create a basic scatter plot
+with(MortalityGDP,
+     plot(x = InfantMortality, y = GDPperCapita))
+@
+\end{frame}
+
+\begin{frame}[fragile,plain]
+<<BasicPlotLabel, fig.height=3, tidy=FALSE>>=
+# Basic scatter: axis labels & rescale GDP/Capita
+with(MortalityGDP,
+     plot(x = InfantMortality, 
+          y = (GDPperCapita/1000),
+          xlab = "Infant Mortality per 1000 Births",
+          ylab = "GDP/Capita (1,000s of US$)",
+          main = 
+          "Scatterplot of\n GDP/Capita & Infant Mort."))
+@
+\end{frame}
   
 
 %%%%%%%%%%%%%%%%% Graphics with ggplot2 %%%%%%%%%%%%%
+\section{ggplot2}
 \frame{
   \frametitle{Graphics with gglot2}
   \begin{center}
     {\LARGE{Graphics with ggplot2}}
   \end{center}
 }
+
+\frame{
+  \frametitle{Why ggplot2?}
+  {\LARGE{The ggplot2 package}} \\[0.5cm]
+  {\Large{The ggplot2 package allows us to do much more than base R graphics. \\[0.5cm]
+  }} 
+}
+
+\frame{
+  \frametitle{What is ggplot2?}
+  {\Large{``gg" means ``Grammar of Graphics"}} \\[0.25cm]
+  (2 just means it is the second one) \\[0.3cm]
+  \hline\\[0.3cm]
+  Each plot is made of {\bf{layers}}. Layers include the coordinate system (x-y), points, lables, etc. \\[0.25cm]
+  Each layer has {\bf{aesthetics}} (\texttt{aes}) including the x \& y, size, shape, and colour.\\[0.25cm]
+  The main layer types are called {\bf{geometrics}} (\texttt{geom}). These include lines, points, density plots, bars, and text. 
+}
+
+\begin{frame}[fragile]
+  \frametitle{Simple Example}
+<<ggScatterSimple, warning=FALSE, tidy=FALSE, fig.height=3>>=
+# Scatterplot
+ggplot(data = MortalityGDP, aes(x = InfantMortality, 
+                                y = GDPperCapita)) +
+      geom_point()
+
+@
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Simple Example with Blank Theme}
+<<ggScatterSimpleBlank, warning=FALSE, tidy=FALSE, fig.height=3>>=
+# Scatterplot
+ggplot(data = MortalityGDP, aes(x = InfantMortality, 
+                                y = GDPperCapita)) +
+      geom_point() +
+      theme_bw(base_size = 13)
+
+@
+\end{frame}
 
 \frame{
   \frametitle{Colours! (1)}
@@ -414,6 +479,9 @@ ColourScatter <- ggplot(data = InfantNoMiss,
                             log(GDPperCapita))) +
                   geom_point(aes(colour = income)) + 
                   scale_color_manual(values = Colours) +
+                  xlab("\nLog Infant Mortality") +
+                  ylab("Log GDP/Capita\n") +
+                  ggtitle("Log Transformed Data\n") +
                   theme_bw()
 @
 \end{frame}
@@ -424,15 +492,55 @@ ColourScatter <- ggplot(data = InfantNoMiss,
 ColourScatter
 
 @
-
 \end{frame}
 
-%%%%%%%%%%%%%%%%% Graphics with GoogleVis %%%%%%%%%%%%%
+\begin{frame}[fragile]
+<<ViolinPlot, tidy=FALSE, fig.keep='none', warning=FALSE>>=
+# Create a violin Plot
+Violin <- ggplot(InfantNoMiss, aes(
+                                factor(DumMort),
+                                log(GDPperCapita))) +
+                  geom_violin(fill = "#E7298A",
+                              colour = "#E7298A",
+                              alpha = I(0.5)) +
+                  geom_jitter(color = "#7570B3") +
+                  xlab("\n Infant Mortality") +
+                  ylab("Log GDP.Capital\n") +
+                  theme_bw(base_size = 16)
+
+@
+\end{frame}
+
+\begin{frame}[fragile]
+<<ViolinPlotShow, tidy=FALSE, fig.height=5, warning=FALSE>>=
+# Create a violin Plot
+Violin
+@
+\end{frame}
+
 \frame{
-  \frametitle{Maps with gglot2}
+  \frametitle{Much More ggplot2 Info}
+  {\LARGE{More Information:}} \\[1cm]
   \begin{center}
-    {\LARGE{Maps with ggplot2}}
+    \url{http://docs.ggplot2.org/current/index.html}
   \end{center}
+}
+
+%%%%%%%%%%%%%%%%% Graphics with GoogleVis %%%%%%%%%%%%%
+\section{googleVis}
+\frame{
+  \frametitle{Maps with googleVis}
+  \begin{center}
+    {\LARGE{Maps with googleVis}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{The googleVis Package}
+  {\LARGE{googleVis}} \\[0.5cm]
+  We can create HTML based graphics with GoogleVis. \\[0.5cm]
+  HTML graphics can be {\bf{interactive}}. \\[0.5cm]
+  This includes {\bf{motion charts}} \& {\bf{maps}}.
 }
 
 

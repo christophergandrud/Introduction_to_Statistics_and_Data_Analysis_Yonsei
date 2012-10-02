@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  2 OCT 2012 17:59
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  2 OCT 2012 19:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1139,7 +1139,7 @@ Overfull \vbox (2385.25871pt too high) detected at line 371
 ]
 \openout4 = `Lecture6.vrb'.
 
- (./Lecture6.vrb <figure/SimpleScatter.pdf, id=111, 505.89pt x 361.35pt>
+ (./Lecture6.vrb <figure/SimpleScatter.pdf, id=123, 505.89pt x 361.35pt>
 File: figure/SimpleScatter.pdf Graphic file (type pdf)
 
 <use figure/SimpleScatter.pdf>
@@ -1210,7 +1210,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 [20
 
-] <figure/SpendingChange.png, id=190, 272.01625pt x 243.91125pt>
+] <figure/SpendingChange.png, id=202, 272.01625pt x 243.91125pt>
 File: figure/SpendingChange.png Graphic file (type png)
 
 <use figure/SpendingChange.png>
@@ -1227,7 +1227,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \openout4 = `Lecture6.vrb'.
 
  (./Lecture6.vrb
-<figure/SpendingGraph.pdf, id=198, 505.89pt x 361.35pt>
+<figure/SpendingGraph.pdf, id=210, 505.89pt x 361.35pt>
 File: figure/SpendingGraph.pdf Graphic file (type pdf)
 
 <use figure/SpendingGraph.pdf>
@@ -1244,7 +1244,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \openout4 = `Lecture6.vrb'.
 
  (./Lecture6.vrb
-<figure/SpendPerChange.pdf, id=212, 505.89pt x 361.35pt>
+<figure/SpendPerChange.pdf, id=224, 505.89pt x 361.35pt>
 File: figure/SpendPerChange.pdf Graphic file (type pdf)
 
 <use figure/SpendPerChange.pdf>
@@ -1320,7 +1320,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 [28
 
-] <figure/CirclesCompare.png, id=261, 288.07625pt x 247.92625pt>
+] <figure/CirclesCompare.png, id=273, 288.07625pt x 247.92625pt>
 File: figure/CirclesCompare.png Graphic file (type png)
 
 <use figure/CirclesCompare.png>
@@ -1337,7 +1337,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \openout4 = `Lecture6.vrb'.
 
  (./Lecture6.vrb
-<figure/GraphCirclesComp.pdf, id=269, 505.89pt x 289.08pt>
+<figure/GraphCirclesComp.pdf, id=282, 505.89pt x 289.08pt>
 File: figure/GraphCirclesComp.pdf Graphic file (type pdf)
 
 <use figure/GraphCirclesComp.pdf>
@@ -1351,7 +1351,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [30
 
  <./figure/GraphCirclesComp.pdf>]
-<figure/CirclesCompareNumbers.png, id=283, 288.07625pt x 247.92625pt>
+<figure/CirclesCompareNumbers.png, id=295, 288.07625pt x 247.92625pt>
 File: figure/CirclesCompareNumbers.png Graphic file (type png)
 
 <use figure/CirclesCompareNumbers.png>
@@ -1366,7 +1366,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [31
 
  <./figure/CirclesCompareNumbers.png (PNG copy)>]
-<figure/Ebbinghause.png, id=292, 501.875pt x 319.1925pt>
+<figure/Ebbinghause.png, id=304, 501.875pt x 319.1925pt>
 File: figure/Ebbinghause.png Graphic file (type png)
 
 <use figure/Ebbinghause.png>
@@ -1422,29 +1422,141 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [38
 
 ]
+\openout4 = `Lecture6.vrb'.
+
+ (./Lecture6.vrb <figure/BasicPlot.pdf, id=356, 505.89pt x 289.08pt>
+File: figure/BasicPlot.pdf Graphic file (type pdf)
+
+<use figure/BasicPlot.pdf>
+Package pdftex.def Info: figure/BasicPlot.pdf used on input line 11.
+(pdftex.def)             Requested size: 307.28987pt x 175.59749pt.
+)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
 [39
 
+ <./figure/BasicPlot.pdf>]
+\openout4 = `Lecture6.vrb'.
+
+ (./Lecture6.vrb
+LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 11.
+
+
+(/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/omscmtt.fd
+File: omscmtt.fd 
+)
+LaTeX Font Info:    Font shape `OMS/cmtt/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 11.
+
+Overfull \hbox (14.36296pt too wide) in paragraph at lines 11--11
+[]          []\OT1/cmtt/m/n/10.95 "Scatterplot of\OMS/cmsy/m/n/10.95 n\OT1/cmtt
+/m/n/10.95 n GDP/Capita & Infant Mort."[]))[] 
+ []
+
+<figure/BasicPlotLabel.pdf, id=369, 505.89pt x 216.81pt>
+File: figure/BasicPlotLabel.pdf Graphic file (type pdf)
+
+<use figure/BasicPlotLabel.pdf>
+Package pdftex.def Info: figure/BasicPlotLabel.pdf used on input line 15.
+(pdftex.def)             Requested size: 307.28987pt x 131.6981pt.
+) [40
+
+ <./figure/BasicPlotLabel.pdf>]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[41
+
 ]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[40
+[42
+
+]
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.658 }
+       
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.658 }
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[43
 
 ]
 \openout4 = `Lecture6.vrb'.
 
- (./Lecture6.vrb <figure/ScatterColour1.pdf, id=359, 505.89pt x 289.08pt>
+ (./Lecture6.vrb <figure/ggScatterSimple.pdf, id=402, 505.89pt x 216.81pt>
+File: figure/ggScatterSimple.pdf Graphic file (type pdf)
+
+<use figure/ggScatterSimple.pdf>
+Package pdftex.def Info: figure/ggScatterSimple.pdf used on input line 12.
+(pdftex.def)             Requested size: 307.28987pt x 131.6981pt.
+)
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[44
+
+ <./figure/ggScatterSimple.pdf>]
+\openout4 = `Lecture6.vrb'.
+
+ (./Lecture6.vrb
+<figure/ggScatterSimpleBlank.pdf, id=415, 505.89pt x 216.81pt>
+File: figure/ggScatterSimpleBlank.pdf Graphic file (type pdf)
+
+<use figure/ggScatterSimpleBlank.pdf>
+Package pdftex.def Info: figure/ggScatterSimpleBlank.pdf used on input line 13.
+
+(pdftex.def)             Requested size: 307.28987pt x 131.6981pt.
+)
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[45
+
+ <./figure/ggScatterSimpleBlank.pdf>]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[46
+
+]
+\openout4 = `Lecture6.vrb'.
+
+ (./Lecture6.vrb <figure/ScatterColour1.pdf, id=435, 505.89pt x 289.08pt>
 File: figure/ScatterColour1.pdf Graphic file (type pdf)
 
 <use figure/ScatterColour1.pdf>
 Package pdftex.def Info: figure/ScatterColour1.pdf used on input line 12.
 (pdftex.def)             Requested size: 307.28987pt x 175.59749pt.
-) [41
+) [47
 
  <./figure/ScatterColour1.pdf>]
 \openout4 = `Lecture6.vrb'.
@@ -1455,7 +1567,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[42
+[48
 
 ]
 \openout4 = `Lecture6.vrb'.
@@ -1466,40 +1578,78 @@ Overfull \hbox (14.63664pt too wide) in paragraph at lines 13--13
 ) +[] 
  []
 
-) [43
+) [49
 
 ]
 \openout4 = `Lecture6.vrb'.
 
  (./Lecture6.vrb
-<figure/HexColoursScatter.pdf, id=383, 505.89pt x 289.08pt>
+<figure/HexColoursScatter.pdf, id=459, 505.89pt x 289.08pt>
 File: figure/HexColoursScatter.pdf Graphic file (type pdf)
 
 <use figure/HexColoursScatter.pdf>
 Package pdftex.def Info: figure/HexColoursScatter.pdf used on input line 9.
 (pdftex.def)             Requested size: 307.28987pt x 175.59749pt.
-) [44
+) [50
 
  <./figure/HexColoursScatter.pdf>]
+\openout4 = `Lecture6.vrb'.
+
+
+(./Lecture6.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[45
+[51
+
+]
+\openout4 = `Lecture6.vrb'.
+
+ (./Lecture6.vrb <figure/ViolinPlotShow.pdf, id=477, 505.89pt x 361.35pt>
+File: figure/ViolinPlotShow.pdf Graphic file (type pdf)
+
+<use figure/ViolinPlotShow.pdf>
+Package pdftex.def Info: figure/ViolinPlotShow.pdf used on input line 9.
+(pdftex.def)             Requested size: 307.28987pt x 219.49687pt.
+)
+Overfull \vbox (0.46411pt too high) detected at line 819
+ []
+
+
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[52
+
+ <./figure/ViolinPlotShow.pdf>]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[53
 
 ]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[46
+[54
 
 ]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[47
+[55
+
+]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[56
 
 ]
 \tf@nav=\write6
@@ -1511,25 +1661,25 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `Lecture6.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 699.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 699.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 856.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 856.
  (./Lecture6.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 699.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 699.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 856.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 856.
 Package rerunfilecheck Info: File `Lecture6.out' has not changed.
-(rerunfilecheck)             Checksum: 4AD8D884848EC8D72EDC08CEE52535E0;154.
+(rerunfilecheck)             Checksum: A29E3E15C0EB5DA3487D854014FD831C;246.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 699.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 856.
  ) 
 Here is how much of TeX's memory you used:
- 18429 strings out of 493633
- 350211 string characters out of 3143377
+ 18528 strings out of 493633
+ 351834 string characters out of 3143377
  532172 words of memory out of 3000000
- 21155 multiletter control sequences out of 15000+200000
+ 21215 multiletter control sequences out of 15000+200000
  16308 words of font info for 63 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  49i,16n,60p,447b,589s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1545,10 +1695,10 @@ local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/lo
 cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/loc
 al/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Lecture6.pdf (47 pages, 403617 bytes).
+Output written on Lecture6.pdf (56 pages, 491215 bytes).
 PDF statistics:
- 480 PDF objects out of 1000 (max. 8388607)
- 393 compressed objects within 4 object streams
- 94 named destinations out of 1000 (max. 500000)
- 113 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 592 PDF objects out of 1000 (max. 8388607)
+ 485 compressed objects within 5 object streams
+ 113 named destinations out of 1000 (max. 500000)
+ 154 words of extra memory for PDF output out of 10000 (max. 10000000)
 
