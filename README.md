@@ -147,7 +147,7 @@ What kinds of simple statistical summaries can we use to understand and present 
 ### Week 6: Data Visualisation in R
 How can we use **R** to create visual summaries of our data? What is `ggplot2`? What is `googleVis`?
 
-> Chen, Edwin. 2012. "Quick Introduction to ggplot2" [http://blog.echen.me/2012/01/17/quick-introduction-to-ggplot2/](http://blog.echen.me/2012/01/17/quick-introduction-to-ggplot2/)
+> Fruehwald, Josef. 2012. "AVML 2012: ggplot2" <http://www.ling.upenn.edu/~joseff/avml2012/>.
 
 > **Chapters 1, 4, and 9:** Tufte, Edward R. 2001. *The Visual Display of Quantitative Information*. Cheshire, Connecticut: Graphics Press.
 
