@@ -92,6 +92,7 @@
 }
 
 \frame{
+  \frametitle{}
   {\Large{The first part of this lecture is based on Tufte (2001) \\[0.5cm]
   Many of the examples are from the Junk Charts Blog (\url{http://junkcharts.typepad.com/}). \\[0.5cm]
   We will also use the World Bank data we downloaded last class. \\
@@ -156,21 +157,224 @@ ggplot(data = DataDumpRescale, aes(x = InfantMortality, y = GDPperCapita)) +
 \end{frame}
 
 \frame{
+  \frametitle{Tufte's Principles}
+  {\LARGE{Goal of Statistical Graphics:}} \\[0.5cm]
+  \begin{center}
+    {\Large{The efficient communication of complex quantitative ideas.}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Tufte's Principles}
+  {\LARGE{Tufte's Principles for Excellent Statistical Graphics (2001, 13) (a selection):}} \\[0.25cm]
+  \begin{itemize}
+    \item show the data
+    \item encourage the eye to compare differences in the data
+    \item serve a clear purpose
+    \item avoid distorting the data
+    \item be closely integrated with the text
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{}
+  \begin{center}
+  {\LARGE{Show the Data \\[1cm]
+  Encourage the eye to compare differences. \\[1cm]
+  Serve a purpose.}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Show the data}
+  {\Large{Show the data, not other things like silly graphics, or unnecessary words.}} \\[0.5cm]
+  Have high {\bf{data ink}} ratio.
+  \begin{equation}
+    \mathrm{Data\:Ink\:Ratio = \frac{data-ink}{total\:ink}}
+  \end{equation}
+}
+
+\frame{
+  \frametitle{}
+  \begin{center}
+  {\LARGE{Example}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Encourge the Eye to Compare Differences}
+  {\Large{How did the budgets change?}} \\
+  \begin{center}
+    (Orange is 2013, Blue is 2012) \\
+    \includegraphics[scale=0.6]{figure/SpendingChange.png}
+  \end{center}
+}
+
+\begin{frame}[fragile]
+  \frametitle{A Little Better}
+<<CreateSpendingComp, echo=FALSE>>=
+# Recreate data
+Dept <- c("Research", "Research", "Industry", "Industry", "Infrastructure", "Infrastructure", "Food", "Food") 
+years <- c(2012, 2013, 2012, 2013, 2012, 2013, 2012, 2013)
+Spending <- c(16, 16.9, 15.1, 15.7, 23.1, 23.9, 18.1, 18.3)
+
+SpendingData <- data.frame(Dept, years, Spending)
+
+@
+
+<<SpendingGraph, echo=FALSE, fig.height=5>>=
+ggplot(SpendingData, aes(x = years, y = Spending, group = Dept, color = Dept)) +
+        geom_line(size=7) +
+        xlab("") + ylab("Trillion Won\n") +
+        scale_x_continuous(breaks = c(2012, 2013)) +
+        theme_bw(base_size = 16)
+        
+@
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Even Better}
+<<PercentChangeSpending, echo=FALSE>>=
+# Create percent spending change data
+Dept2 <- c("Research", "Industry", "Infrastructure", "Food")
+SpendChange <- c(5.6, 3.97, 3.46, 1.1)
+ChangeData <- data.frame(Dept2, SpendChange)
+@
+
+<<SpendPerChange, echo=FALSE, fig.height=5>>=
+ggplot(ChangeData, aes(x = Dept2, y = SpendChange)) +
+        geom_point(size = 7, color = "#FDBB84") +
+        scale_y_continuous(limits = c(0, 10), breaks = c(0, 5, 10), labels = c(0, 5, 10)) +
+        xlab("") + ylab("% Change\n") + 
+        ggtitle("Percentage Change in Departmental Spending\n\n 2012 to 2013\n") +
+        theme_bw(base_size = 16)
+@
+\end{frame}
+
+
+\frame{
+  \frametitle{}
+  \begin{center}
+  {\LARGE{Avoid distorting the data.}} \\[1cm]
+  Special case: Circles.
+  \end{center}
+}
+
+\frame{
   \frametitle{Avoid Circles! (1)}
   \begin{center}
   {\Large{In general: Avoid using the {\emph{size}} of a circle to mean something!}}
-  \end{center}
+  \end{center} \\[0.5cm]
+  This includes avoiding:
+  \begin{itemize}
+    \item Bubble charts
+    \item Pie charts
+  \end{itemize}
 }
 
 \frame{
     \frametitle{Avoid Circles! (2)}
     {\Large{Why?}} \\[0.5cm]
-    
+    Circles can distort data.
+    \begin{itemize}
+      \item It is very difficult to compare their size
+      \item The Ebbinghause Illusion!
+    \end{itemize}
+}
+
+\frame{
+  \frametitle{}
+  Order the 4 circles from largest to smallest. \\[0.25cm]
+  The circles are on a scale of 0-100, so how much bigger are each of the circles relative to each other? \\[0.25cm]
+  \begin{center}
+    \includegraphics[scale=0.6]{figure/CirclesCompare.png}
+  \end{center}
+}
+
+\begin{frame}[fragile]
+  Order the 4 bars from largest to smallest. \\[0.25cm]
+  How much bigger are each of the circles relative to each other? \\[0.25cm]
+
+<<CreateCirclesComp, echo=FALSE>>=
+# Recreate Circles Data
+Names <- c("Email", "Driver's License", "Credit Score", "Phone Number")
+Numbers <- c(46, 62, 57, 58)
+
+CircComp <- data.frame(Names, Numbers, stringsAsFactors = FALSE)
+@
+
+<<GraphCirclesComp, echo=FALSE, fig.height=4>>= 
+# Create bar chart with circles data
+ggplot(data = CircComp, aes(reorder(Names, Numbers), Numbers)) +
+        geom_point(color = "#DE2D26", size = 7, shape = 3) +
+        scale_y_continuous(limits = c(0, 100)) +
+        ylab("") + xlab("") +
+        theme_bw()
+@
+\end{frame}
+
+\frame{
+  \frametitle{}
+  {\Large{The circles basically tell you nothing that a simple table could do better.}}
+  \begin{center}
+    \includegraphics[scale=0.6]{figure/CirclesCompareNumbers.png}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Ebbinghause Illusion}
+  {\Large{Which circle is bigger?}}
+  \includegraphics[scale=0.6]{figure/Ebbinghause.png}
+}
+
+\frame{
+  \frametitle{Another Issue}
+  {\LARGE{Colour blindness.}}
+}
+
+\frame{
+  \frametitle{Be colour blind friendly.}
+  {\LARGE{ Colour blindness:}} \\[0.5cm]
+  People who are colour blind can have difficulty distinquishing between red-green and blue-yellow. \\[0.25cm]
+  About 5-8\% of men are colour blind. \\[0.25cm]
+  We need to choose colour schemes for our graphics that are {\bf{colour blind friendly}}.\\[0.25cm]
+  For more information see \url{http://www.usability.gov/articles/newsletter/pubs/022010new.html}.
+}
+
+\frame{
+  \frametitle{Warning}
+  {\LARGE{Remember:}} \\[0.5cm]
+  {\Large{Graphics are only as good as what you put in them. \\[0.5cm]
+  Silly data and statistics will always create silly graphs.}}
 }
 
 %%%%%%%%%%%%%%%%% Base R Graphics %%%%%%%%%%%%%
+\section{Base R Graphics}
+\frame{
+  \frametitle{Base R Graphics}
+  \begin{center}
+    {\LARGE{Base R Graphics}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Base R Graphics}
+  {\Large{Last week we saw that R has some basic graphics functions like:
+  \begin{itemize}
+    \item \texttt{plot}
+    \item \texttt{histogram}
+  \end{itemize}  
+  }}
+}
+  
 
 %%%%%%%%%%%%%%%%% Graphics with ggplot2 %%%%%%%%%%%%%
+\frame{
+  \frametitle{Graphics with gglot2}
+  \begin{center}
+    {\LARGE{Graphics with ggplot2}}
+  \end{center}
+}
 
 \frame{
   \frametitle{Colours! (1)}
@@ -183,13 +387,54 @@ ggplot(data = DataDumpRescale, aes(x = InfantMortality, y = GDPperCapita)) +
 <<ScatterColour1, tidy=FALSE, warning=FALSE, fig.height=4>>= 
 # Create scatter plot divided by region
 ggplot(data = InfantNoMiss, aes(log(InfantMortality),
-                                log(GDPperCapita),
-                                colour = income)) +
-      geom_point() + theme_bw()
+                                log(GDPperCapita))) +
+      geom_point(aes(colour = income)) + 
+      theme_bw()
 @
 \end{frame}
 
+\begin{frame}[fragile]
+  \frametitle{Colors! (2)}
+  There are many ways to pick specific colors. \\[0.5cm]
+  In this class we will mainly use {\bf{hexadecimal}} colours. \\[0,25cm]
+  This is probably the most comonly used system for choosing colours on the web.\\[0.5cm]
+  {\bf{Every}} colour is given six digits. \\[0.25cm]
+  A good website for getting hexadecimal colour schemes is: \url{http://colorbrewer2.org/}.
+\end{frame}
+
+\begin{frame}[fragile,plain]
+<<HexColorScatterCode, tidy=FALSE, fig.keep='none', warning=FALSE>>=
+# Create colour vector
+Colours <- c("#1B9E77", "#D95F02", "#7570B3", 
+             "#E7298A", "#66A61E", "#E6AB02")
+
+# Create graph
+ColourScatter <- ggplot(data = InfantNoMiss, 
+                        aes(log(InfantMortality),
+                            log(GDPperCapita))) +
+                  geom_point(aes(colour = income)) + 
+                  scale_color_manual(values = Colours) +
+                  theme_bw()
+@
+\end{frame}
+
+\begin{frame}[fragile,plain]
+<<HexColoursScatter, warning=FALSE, fig.height=4>>=
+# Show scatter plot
+ColourScatter
+
+@
+
+\end{frame}
+
 %%%%%%%%%%%%%%%%% Graphics with GoogleVis %%%%%%%%%%%%%
+\frame{
+  \frametitle{Maps with gglot2}
+  \begin{center}
+    {\LARGE{Maps with ggplot2}}
+  \end{center}
+}
+
 
 \frame{
   \frametitle{Professional Graphics With R}

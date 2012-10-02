@@ -1,18 +1,16 @@
 \begin {knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcomment{# Create scatter plot divided by region}
-\hlfunctioncall{ggplot}(data = InfantNoMiss, \hlfunctioncall{aes}(\hlfunctioncall{log}(InfantMortality),
-                                \hlfunctioncall{log}(GDPperCapita),
-                                colour = region)) +
-      \hlfunctioncall{geom_point}() + \hlfunctioncall{theme_bw}()
+\hlcomment{# Show scatter plot}
+ColourScatter
 \end{alltt}
 \end{kframe}
 
-{\centering \includegraphics[width=\maxwidth]{figure/ScatterColour1}
+{\centering \includegraphics[width=\maxwidth]{figure/HexColoursScatter}
 
 }
 
 
 \end{knitrout}
+
 
