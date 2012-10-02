@@ -164,7 +164,9 @@ How confident are we that our findings in our samples are actually present in th
 
 > **Chapter 1, Fundamentals:** Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. Chichester: John Wiley & Sons. Ltd. 
 
-### Week 8: Statistical Inference with Large Samples
+### Week 8: No Class (Midterm Week)
+
+### Week 9: Statistical Inference with Large Samples
 What basic tools can we use to make inferences when we have large data samples?
 
 > **Chapter 5:** *OpenIntro Statistics*
