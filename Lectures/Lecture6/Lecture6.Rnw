@@ -543,6 +543,20 @@ Violin
   This includes {\bf{motion charts}} \& {\bf{maps}}.
 }
 
+\frame{
+  \frametitle{Map Example}
+  
+}
+
+\frame{
+  \frametitle{More googleVis Information}
+  {\LARGE{More Information:}} \\[1cm]
+  \begin{center}
+    {\bf{Class Example (all files):}} \url{http://bit.ly/WdeMAw} \\[0.5cm]
+    {\bf{googleVis Info:}} \url{http://code.google.com/p/google-motion-charts-with-r/}
+  \end{center}
+}
+
 
 \frame{
   \frametitle{Professional Graphics With R}

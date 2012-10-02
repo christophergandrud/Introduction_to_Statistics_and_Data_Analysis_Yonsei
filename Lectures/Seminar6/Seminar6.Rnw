@@ -1,0 +1,69 @@
+\documentclass{beamer}
+\usetheme{Stats}
+\setbeamercovered{transparent}
+\usepackage{color}
+\usepackage{hyperref}
+  \hypersetup{
+  	colorlinks=true
+		linkcolor=black
+		}
+\usepackage{url}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{booktabs}
+
+<<ParentGlobalOpts, echo=FALSE>>=
+  options(width=50)
+  opts_chunk$set(fig.align='center')
+@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title Slide %%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[]{Intro to Social Science Data Analysis \\[1cm] Seminar 6: Data Visualisation in R}
+\author[]{
+    \href{mailto:gandrud@yonsei.ac.kr}{Christopher Gandrud}
+}
+\date{\today}
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+\frame{
+	\frametitle{Principles of Graphical Excellence}
+  What does it mean to ``show the data"? \\[0.5cm]
+  What is a high data-ink ratio?
+}
+
+\frame{
+  \frametitle{Bubbles!}
+  Why should you use circles in statistical graphics cautiously?
+}
+
+\frame{
+  \frametitle{Base R Graphics}
+  Make a graph in base R (using any data). \\[0.25cm]
+  Make sure the figure is labeled well.
+}
+
+\frame{
+  \frametitle{ggplot2}
+  With ggplot2 make: 
+  \begin{itemize}
+    \item A scatter plot,
+    \item A density plot
+    \item A line graph 
+    \item A bar graph
+  \end{itemize}\\[0.25cm]
+  Use colour to show groups in your data in at least one of these graphs.
+}
+
+
+\frame{
+  \frametitle{Maps}
+  Make a map with googleVis,
+}
+
+
+\end{document}
