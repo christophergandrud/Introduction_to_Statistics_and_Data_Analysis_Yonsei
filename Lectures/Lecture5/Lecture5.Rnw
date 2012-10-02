@@ -34,6 +34,13 @@
 \frame{\tableofcontents}
 
 %%%%%%%%%%%%%%%%%% Recap %%%%%%%%%%%%%%%%%%
+
+\frame{
+  \frametitle{Make Up Class}
+  {\Large{We need to decide a time to have a make up class. \\[0.5cm]
+  The purpose of the class will be to give you a chance to get started on Assignment 2.}}
+}
+
 \section{Recap}
 \frame{
 	\frametitle{Review Questions 1}
@@ -445,7 +452,7 @@ boxplot(InfantNoMiss$InfantMortality,
   \]
   {\bf{Sum of Squares}}: the sum of the squared deviations (they have to be squared or the sum will $= 0$)
   \[
-    \mathrm{Sum\:of\:Squares} = \sum(x - \bar{x})
+    \mathrm{Sum\:of\:Squares} = \sum(x - \bar{x})^{2}
   \]
   {\bf{Degrees of Freedom}}: Sample size $n$ minus the number of parameters. Today the number of parameters $= 1$. {\small{(See Crawley 2005, 36-37 for a good explanation.)}}
   \[
@@ -459,7 +466,7 @@ boxplot(InfantNoMiss$InfantMortality,
   {\Large{The standard deviation is made of the following parts.}} \\[0.25cm]
   {\bf{Variance ($s^{2}$)}}: roughly the average deviation.
   \[
-    s^{2} = \frac {\mathrm{Sum\:of\:Squares}}{\mathrm{Degrees\:of\:Freedom}} = \frac{\sum(x - \bar{x})}{n - 1}
+    s^{2} = \frac {\mathrm{Sum\:of\:Squares}}{\mathrm{Degrees\:of\:Freedom}} = \frac{\sum(x - \bar{x})^{2}}{n - 1}
   \]
 
   {\bf{Standard Deviation ($s$)}}: square root of the variance
@@ -478,8 +485,9 @@ sd(InfantNoMiss$InfantMortality)
 @
 \end{frame}
 
+% Standard deviation plot for normally distributed data with SD of 10
 \begin{frame}[fragile]
-<<SDNormal, echo=FALSE, message=FALSE, fig.height=5>>=
+<<SDNormal10, echo=FALSE, message=FALSE, fig.height=5>>=
 # Helpful information from StackExchange discussion
 # http://stackoverflow.com/questions/3494593/shading-a-kernel-density-plot-between-two-points?lq=1
 # Load zoo package
@@ -517,10 +525,66 @@ ggplot(Normal, aes(x = Normal)) +
         geom_vline(xintercept = 50, colour = "red", linetype = "longdash") +
         annotate("text", x = 25, y = 0.01, label = "-1 SD", colour = LowerC) +
         annotate("text", x = 75, y = 0.01, label = "+1 SD", colour = UpperC) +
-        xlab("\n Simulated Data") + ylab("Density\n") + ggtitle("Density Plot for Simulated Data\n") + 
+        xlab("\n Simulated Data") + ylab("Density\n") + ggtitle("Density Plot for Simulated Data  with a Standard Deviation of 10\n") + 
         theme_bw()
 @
 \end{frame}
+
+% Standard deviation plot for normally distributed data with SD of 30
+\begin{frame}[fragile]
+<<SimulateSD30>>=
+# Simulate Normally Distributed data with SD of 30
+Normal30 <- rnorm(100000, mean = 50, sd = 30)
+@
+
+<<SDNormal30, echo=FALSE, message=FALSE, fig.height=4>>=
+# Helpful information from StackExchange discussion
+# http://stackoverflow.com/questions/3494593/shading-a-kernel-density-plot-between-two-points?lq=1
+# Load zoo package
+library(zoo)
+
+# Convert to data frame
+Normal30 <- data.frame(Normal30)
+
+# Find density for +/- 1 SD
+DensityLower <- density(Normal30$Normal30, from = 20, to = 50)
+DensityUpper <- density(Normal30$Normal30, from = 50, to = 80)
+
+# Extract density values (y values)
+YLower <- DensityLower$y
+YUpper <- DensityUpper$y
+
+# Extract x values
+XLower <- DensityLower$x
+XUpper <- DensityUpper$x
+
+# Merge vectors into data frames
+Lower <- data.frame(YLower, XLower)
+Upper <- data.frame(YUpper, XUpper)
+
+# Add zero variable so that the shaded area goes down to 0
+Lower$Zero <- 0
+Upper$Zero <- 0
+
+# Upper and Lower colours
+LowerC <- "#80B2CD"
+UpperC <- "#4F6F80"
+
+# Create density plot
+ggplot(Normal30, aes(x = Normal30)) +
+        geom_density() +
+        geom_ribbon(data = Lower, aes(x = XLower, ymax = YLower, ymin = Zero), fill = LowerC, alpha = 0.4) +
+        geom_ribbon(data = Upper, aes(x = XUpper, ymax = YUpper, ymin = Zero), fill = UpperC, alpha = 0.4) +
+        geom_vline(xintercept = 50, colour = "red", linetype = "longdash") +
+        annotate("text", x = 25, y = 0.015, label = "-1 SD", colour = LowerC) +
+        annotate("text", x = 75, y = 0.015, label = "+1 SD", colour = UpperC) +
+        scale_y_continuous(limits = c(0, 0.04)) +
+        scale_x_continuous(breaks = c(-50, 0, 20, 50, 80, 100, 150), labels = c(-50, 0, 20, 50, 80, 100, 150)) +
+        xlab("\n Simulated Data") + ylab("Density\n") + ggtitle("Density Plot for Simulated Data with a Standard Deviation of 10\n") + 
+        theme_bw()
+@
+\end{frame}
+
 
 \begin{frame}[fragile]
 <<SDMort, echo=FALSE, message=FALSE, fig.height=5>>=
