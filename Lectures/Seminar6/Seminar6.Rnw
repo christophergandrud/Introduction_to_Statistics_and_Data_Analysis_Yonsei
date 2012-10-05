@@ -37,8 +37,18 @@
 }
 
 \frame{
-  \frametitle{Bubbles!}
-  Why should you use circles in statistical graphics cautiously?
+  \frametitle{What's the story? How well does the graph help you see it? How could it be better?}
+  \begin{center}
+    \includegraphics[scale=0.6]{CircleTerror.png}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Better}
+  \begin{center}
+    \includegraphics[scale=0.35]{NoMoreCircleTerror.png} \\
+    {\tiny{Source: \url{http://junkcharts.typepad.com/junk_charts/2012/10/expanding-circles-of-error.html}}}
+  \end{center}
 }
 
 \frame{
