@@ -2,6 +2,6 @@
 \beamer@sectionintoc {2}{Assignment 2}{3}{0}{1}
 \beamer@sectionintoc {3}{Recap}{4}{0}{2}
 \beamer@sectionintoc {4}{Principles of Graphics Excelence}{9}{0}{3}
-\beamer@sectionintoc {5}{Base R Graphics}{36}{0}{4}
-\beamer@sectionintoc {6}{ggplot2}{41}{0}{5}
-\beamer@sectionintoc {7}{googleVis}{54}{0}{6}
+\beamer@sectionintoc {5}{Base R Graphics}{44}{0}{4}
+\beamer@sectionintoc {6}{ggplot2}{49}{0}{5}
+\beamer@sectionintoc {7}{googleVis}{62}{0}{6}

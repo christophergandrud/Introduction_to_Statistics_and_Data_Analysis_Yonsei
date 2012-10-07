@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  5 OCT 2012 09:31
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  7 OCT 2012 15:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1421,10 +1421,79 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 [38
 
+] <figure/BadColourBar.png, id=363, 540.0175pt x 311.1625pt>
+File: figure/BadColourBar.png Graphic file (type png)
+
+<use figure/BadColourBar.png>
+Package pdftex.def Info: figure/BadColourBar.png used on input line 583.
+(pdftex.def)             Requested size: 270.00809pt x 155.58087pt.
+
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[39
+
+ <./figure/BadColourBar.png (PNG copy)>]
+<figure/GoodColourBar.png, id=371, 536.0025pt x 306.14375pt>
+File: figure/GoodColourBar.png Graphic file (type png)
+
+<use figure/GoodColourBar.png>
+Package pdftex.def Info: figure/GoodColourBar.png used on input line 590.
+(pdftex.def)             Requested size: 268.0006pt x 153.07149pt.
+
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[40
+
+ <./figure/GoodColourBar.png (PNG copy)>]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[41
+
+]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[42
+
+]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[43
+
+]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[44
+
+]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[45
+
+]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[46
+
 ]
 \openout4 = `Lecture6.vrb'.
 
- (./Lecture6.vrb <figure/BasicPlot.pdf, id=362, 505.89pt x 289.08pt>
+ (./Lecture6.vrb <figure/BasicPlot.pdf, id=424, 505.89pt x 289.08pt>
 File: figure/BasicPlot.pdf Graphic file (type pdf)
 
 <use figure/BasicPlot.pdf>
@@ -1435,7 +1504,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[39
+[47
 
  <./figure/BasicPlot.pdf>]
 \openout4 = `Lecture6.vrb'.
@@ -1455,33 +1524,33 @@ Overfull \hbox (14.36296pt too wide) in paragraph at lines 11--11
 /m/n/10.95 n GDP/Capita & Infant Mort."[]))[] 
  []
 
-<figure/BasicPlotLabel.pdf, id=375, 505.89pt x 216.81pt>
+<figure/BasicPlotLabel.pdf, id=437, 505.89pt x 216.81pt>
 File: figure/BasicPlotLabel.pdf Graphic file (type pdf)
 
 <use figure/BasicPlotLabel.pdf>
 Package pdftex.def Info: figure/BasicPlotLabel.pdf used on input line 15.
 (pdftex.def)             Requested size: 307.28987pt x 131.6981pt.
-) [40
+) [48
 
  <./figure/BasicPlotLabel.pdf>]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[41
+[49
 
 ]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[42
+[50
 
 ]
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.658 }
+l.703 }
        
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1493,7 +1562,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.658 }
+l.703 }
        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1504,12 +1573,12 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[43
+[51
 
 ]
 \openout4 = `Lecture6.vrb'.
 
- (./Lecture6.vrb <figure/ggScatterSimple.pdf, id=408, 505.89pt x 216.81pt>
+ (./Lecture6.vrb <figure/ggScatterSimple.pdf, id=469, 505.89pt x 216.81pt>
 File: figure/ggScatterSimple.pdf Graphic file (type pdf)
 
 <use figure/ggScatterSimple.pdf>
@@ -1520,13 +1589,13 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[44
+[52
 
  <./figure/ggScatterSimple.pdf>]
 \openout4 = `Lecture6.vrb'.
 
  (./Lecture6.vrb
-<figure/ggScatterSimpleBlank.pdf, id=421, 505.89pt x 216.81pt>
+<figure/ggScatterSimpleBlank.pdf, id=482, 505.89pt x 216.81pt>
 File: figure/ggScatterSimpleBlank.pdf Graphic file (type pdf)
 
 <use figure/ggScatterSimpleBlank.pdf>
@@ -1538,25 +1607,25 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[45
+[53
 
  <./figure/ggScatterSimpleBlank.pdf>]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[46
+[54
 
 ]
 \openout4 = `Lecture6.vrb'.
 
- (./Lecture6.vrb <figure/ScatterColour1.pdf, id=441, 505.89pt x 289.08pt>
+ (./Lecture6.vrb <figure/ScatterColour1.pdf, id=502, 505.89pt x 289.08pt>
 File: figure/ScatterColour1.pdf Graphic file (type pdf)
 
 <use figure/ScatterColour1.pdf>
 Package pdftex.def Info: figure/ScatterColour1.pdf used on input line 12.
 (pdftex.def)             Requested size: 307.28987pt x 175.59749pt.
-) [47
+) [55
 
  <./figure/ScatterColour1.pdf>]
 \openout4 = `Lecture6.vrb'.
@@ -1567,7 +1636,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[48
+[56
 
 ]
 \openout4 = `Lecture6.vrb'.
@@ -1578,19 +1647,19 @@ Overfull \hbox (14.63664pt too wide) in paragraph at lines 13--13
 ) +[] 
  []
 
-) [49
+) [57
 
 ]
 \openout4 = `Lecture6.vrb'.
 
  (./Lecture6.vrb
-<figure/HexColoursScatter.pdf, id=465, 505.89pt x 289.08pt>
+<figure/HexColoursScatter.pdf, id=526, 505.89pt x 289.08pt>
 File: figure/HexColoursScatter.pdf Graphic file (type pdf)
 
 <use figure/HexColoursScatter.pdf>
 Package pdftex.def Info: figure/HexColoursScatter.pdf used on input line 9.
 (pdftex.def)             Requested size: 307.28987pt x 175.59749pt.
-) [50
+) [58
 
  <./figure/HexColoursScatter.pdf>]
 \openout4 = `Lecture6.vrb'.
@@ -1601,19 +1670,19 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[51
+[59
 
 ]
 \openout4 = `Lecture6.vrb'.
 
- (./Lecture6.vrb <figure/ViolinPlotShow.pdf, id=483, 505.89pt x 361.35pt>
+ (./Lecture6.vrb <figure/ViolinPlotShow.pdf, id=545, 505.89pt x 361.35pt>
 File: figure/ViolinPlotShow.pdf Graphic file (type pdf)
 
 <use figure/ViolinPlotShow.pdf>
 Package pdftex.def Info: figure/ViolinPlotShow.pdf used on input line 9.
 (pdftex.def)             Requested size: 307.28987pt x 219.49687pt.
 )
-Overfull \vbox (0.46411pt too high) detected at line 819
+Overfull \vbox (0.46411pt too high) detected at line 864
  []
 
 
@@ -1621,27 +1690,27 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[52
+[60
 
  <./figure/ViolinPlotShow.pdf>]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[53
+[61
 
 ]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[54
+[62
 
 ]
 ! Illegal parameter number in definition of \iterate.
 <to be read again> 
                    c
-l.847 }
+l.892 }
        
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1650,7 +1719,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \iterate.
 <to be read again> 
                    c
-l.847 }
+l.892 }
        
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1659,23 +1728,23 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \beamer@doifinframe.
 <to be read again> 
                    c
-l.847 }
+l.892 }
        
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
-<figure/RStudioUse.png, id=513, 774.895pt x 471.7625pt>
+<figure/RStudioUse.png, id=576, 774.895pt x 471.7625pt>
 File: figure/RStudioUse.png Graphic file (type png)
 
 <use figure/RStudioUse.png>
-Package pdftex.def Info: figure/RStudioUse.png used on input line 847.
+Package pdftex.def Info: figure/RStudioUse.png used on input line 892.
 (pdftex.def)             Requested size: 271.21732pt x 165.11934pt.
 
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    c
-l.847 }
+l.892 }
        
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1684,7 +1753,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    c
-l.847 }
+l.892 }
        
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1695,42 +1764,42 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[55
+[63
 
  <./figure/RStudioUse.png (PNG copy)>]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[56
+[64
 
 ]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[57
+[65
 
 ]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[58
+[66
 
 ]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[59
+[67
 
 ]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[60
+[68
 
 ]
 \tf@nav=\write6
@@ -1742,11 +1811,11 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `Lecture6.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 890.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 890.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 935.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 935.
  (./Lecture6.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 890.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 890.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 935.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 935.
 Package rerunfilecheck Info: File `Lecture6.out' has not changed.
 (rerunfilecheck)             Checksum: 3EC499650D1B508BBFC75BBCE03B286C;290.
 
@@ -1754,13 +1823,13 @@ Package rerunfilecheck Info: File `Lecture6.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 890.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 935.
  ) 
 Here is how much of TeX's memory you used:
- 18578 strings out of 493633
- 352672 string characters out of 3143377
+ 18616 strings out of 493633
+ 353191 string characters out of 3143377
  532172 words of memory out of 3000000
- 21254 multiletter control sequences out of 15000+200000
+ 21274 multiletter control sequences out of 15000+200000
  16476 words of font info for 64 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  49i,16n,60p,447b,589s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1777,10 +1846,10 @@ ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/lo
 cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/loc
 al/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local
 /texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Lecture6.pdf (60 pages, 659910 bytes).
+Output written on Lecture6.pdf (68 pages, 696519 bytes).
 PDF statistics:
- 636 PDF objects out of 1000 (max. 8388607)
- 522 compressed objects within 6 object streams
- 122 named destinations out of 1000 (max. 500000)
- 167 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 700 PDF objects out of 1000 (max. 8388607)
+ 576 compressed objects within 6 object streams
+ 138 named destinations out of 1000 (max. 500000)
+ 177 words of extra memory for PDF output out of 10000 (max. 10000000)
 
