@@ -410,6 +410,7 @@ ggplot(data = CircComp, aes(reorder(Names, Numbers), Numbers)) +
   \begin{itemize}
     \item \texttt{plot}
     \item \texttt{histogram}
+    \item \texttt{boxplot}
   \end{itemize}  
   }}
 }
