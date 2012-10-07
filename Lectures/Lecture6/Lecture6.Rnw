@@ -336,6 +336,13 @@ ggplot(data = CircComp, aes(reorder(Names, Numbers), Numbers)) +
 }
 
 \frame{
+  \frametitle{Colour \& Context Illusions}
+  \begin{center}
+    \includegraphics[scale=0.5]{figure/ColourContext.png}
+  \end{center}
+}
+
+\frame{
   \frametitle{Colour Principles}
   {\Large{{\bf{Only}} give graphical features (e.g. bars in a bar chart) different colours if it {\bf{means something}} in the data.}} \\[0.5cm]
   See: Stephen Few \url{http://www.perceptualedge.com/articles/visual_business_intelligence/rules_for_using_color.pdf}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  7 OCT 2012 15:52
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  7 OCT 2012 16:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1386,14 +1386,20 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 [33
 
-]
+] <figure/ColourContext.png, id=325, 568.1225pt x 297.11pt>
+File: figure/ColourContext.png Graphic file (type png)
+
+<use figure/ColourContext.png>
+Package pdftex.def Info: figure/ColourContext.png used on input line 560.
+(pdftex.def)             Requested size: 284.06055pt x 148.55463pt.
+
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
 [34
 
-]
+ <./figure/ColourContext.png (PNG copy)>]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1421,7 +1427,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 [38
 
-] <figure/BadColourBar.png, id=363, 540.0175pt x 311.1625pt>
+] <figure/BadColourBar.png, id=364, 540.0175pt x 311.1625pt>
 File: figure/BadColourBar.png Graphic file (type png)
 
 <use figure/BadColourBar.png>
@@ -1435,7 +1441,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [39
 
  <./figure/BadColourBar.png (PNG copy)>]
-<figure/GoodColourBar.png, id=371, 536.0025pt x 306.14375pt>
+<figure/GoodColourBar.png, id=372, 536.0025pt x 306.14375pt>
 File: figure/GoodColourBar.png Graphic file (type png)
 
 <use figure/GoodColourBar.png>
@@ -1493,7 +1499,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 ]
 \openout4 = `Lecture6.vrb'.
 
- (./Lecture6.vrb <figure/BasicPlot.pdf, id=424, 505.89pt x 289.08pt>
+ (./Lecture6.vrb <figure/BasicPlot.pdf, id=425, 505.89pt x 289.08pt>
 File: figure/BasicPlot.pdf Graphic file (type pdf)
 
 <use figure/BasicPlot.pdf>
@@ -1524,7 +1530,7 @@ Overfull \hbox (14.36296pt too wide) in paragraph at lines 11--11
 /m/n/10.95 n GDP/Capita & Infant Mort."[]))[] 
  []
 
-<figure/BasicPlotLabel.pdf, id=437, 505.89pt x 216.81pt>
+<figure/BasicPlotLabel.pdf, id=438, 505.89pt x 216.81pt>
 File: figure/BasicPlotLabel.pdf Graphic file (type pdf)
 
 <use figure/BasicPlotLabel.pdf>
@@ -1578,7 +1584,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 ]
 \openout4 = `Lecture6.vrb'.
 
- (./Lecture6.vrb <figure/ggScatterSimple.pdf, id=469, 505.89pt x 216.81pt>
+ (./Lecture6.vrb <figure/ggScatterSimple.pdf, id=470, 505.89pt x 216.81pt>
 File: figure/ggScatterSimple.pdf Graphic file (type pdf)
 
 <use figure/ggScatterSimple.pdf>
@@ -1595,7 +1601,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \openout4 = `Lecture6.vrb'.
 
  (./Lecture6.vrb
-<figure/ggScatterSimpleBlank.pdf, id=482, 505.89pt x 216.81pt>
+<figure/ggScatterSimpleBlank.pdf, id=483, 505.89pt x 216.81pt>
 File: figure/ggScatterSimpleBlank.pdf Graphic file (type pdf)
 
 <use figure/ggScatterSimpleBlank.pdf>
@@ -1619,7 +1625,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 ]
 \openout4 = `Lecture6.vrb'.
 
- (./Lecture6.vrb <figure/ScatterColour1.pdf, id=502, 505.89pt x 289.08pt>
+ (./Lecture6.vrb <figure/ScatterColour1.pdf, id=503, 505.89pt x 289.08pt>
 File: figure/ScatterColour1.pdf Graphic file (type pdf)
 
 <use figure/ScatterColour1.pdf>
@@ -1653,7 +1659,7 @@ Overfull \hbox (14.63664pt too wide) in paragraph at lines 13--13
 \openout4 = `Lecture6.vrb'.
 
  (./Lecture6.vrb
-<figure/HexColoursScatter.pdf, id=526, 505.89pt x 289.08pt>
+<figure/HexColoursScatter.pdf, id=527, 505.89pt x 289.08pt>
 File: figure/HexColoursScatter.pdf Graphic file (type pdf)
 
 <use figure/HexColoursScatter.pdf>
@@ -1675,7 +1681,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 ]
 \openout4 = `Lecture6.vrb'.
 
- (./Lecture6.vrb <figure/ViolinPlotShow.pdf, id=545, 505.89pt x 361.35pt>
+ (./Lecture6.vrb <figure/ViolinPlotShow.pdf, id=546, 505.89pt x 361.35pt>
 File: figure/ViolinPlotShow.pdf Graphic file (type pdf)
 
 <use figure/ViolinPlotShow.pdf>
@@ -1734,7 +1740,7 @@ You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
-<figure/RStudioUse.png, id=576, 774.895pt x 471.7625pt>
+<figure/RStudioUse.png, id=577, 774.895pt x 471.7625pt>
 File: figure/RStudioUse.png Graphic file (type png)
 
 <use figure/RStudioUse.png>
@@ -1826,10 +1832,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 935.
  ) 
 Here is how much of TeX's memory you used:
- 18616 strings out of 493633
- 353191 string characters out of 3143377
+ 18621 strings out of 493633
+ 353323 string characters out of 3143377
  532172 words of memory out of 3000000
- 21274 multiletter control sequences out of 15000+200000
+ 21278 multiletter control sequences out of 15000+200000
  16476 words of font info for 64 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  49i,16n,60p,447b,589s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1846,10 +1852,10 @@ ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/lo
 cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/loc
 al/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local
 /texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Lecture6.pdf (68 pages, 696519 bytes).
+Output written on Lecture6.pdf (68 pages, 700986 bytes).
 PDF statistics:
- 700 PDF objects out of 1000 (max. 8388607)
+ 701 PDF objects out of 1000 (max. 8388607)
  576 compressed objects within 6 object streams
  138 named destinations out of 1000 (max. 500000)
- 177 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 182 words of extra memory for PDF output out of 10000 (max. 10000000)
 
