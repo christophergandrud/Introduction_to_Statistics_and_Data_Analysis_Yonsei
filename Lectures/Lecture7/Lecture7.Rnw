@@ -96,8 +96,20 @@
 
 \frame{
   \frametitle{Today's Data}
-  {\large{Most of the examples for today's lecture will use data from the OpenIntro book. \\[0.5cm]
-  You can download it like this:}}
+  Most of the examples for today's lecture will use data from the OpenIntro book. \\[0.5cm]
+  You can download it like this:
+<<DataDownload, message=FALSE>>=
+# Load package RCurl
+library(RCurl)
+
+# Download data
+Run10 <- getURL("https://raw.github.com/christophergandrud/Introduction_to_Statistics_and_Data_Analysis_Yonsei/master/Lectures/Lecture7/OpenIntroData/run10.txt")
+
+# Convert Run10 to data.frame
+Run10 <- read.table(textConnection(Run10),
+                    sep = "\t", header = TRUE)
+
+@
 }
 
 

@@ -149,8 +149,28 @@
 
 \frame{
   \frametitle{Today's Data}
-  {\large{Most of the examples for today's lecture will use data from the OpenIntro book. \\[0.5cm]
-  You can download it like this:}}
+  Most of the examples for today's lecture will use data from the OpenIntro book. \\[0.5cm]
+  You can download it like this:
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Load package RCurl}
+\hlfunctioncall{library}(RCurl)
+\end{alltt}
+
+
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: bitops}}\begin{alltt}
+
+\hlcomment{# Download data}
+Run10 <- \hlfunctioncall{getURL}(\hlstring{"https://raw.github.com/christophergandrud/Introduction_to_Statistics_and_Data_Analysis_Yonsei/master/Lectures/Lecture7/OpenIntroData/run10.txt"})
+
+\hlcomment{# Convert Run10 to data.frame}
+Run10 <- \hlfunctioncall{read.table}(\hlfunctioncall{textConnection}(Run10), sep = \hlstring{"\textbackslash{}t"}, 
+    header = TRUE)
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
 }
 
 
