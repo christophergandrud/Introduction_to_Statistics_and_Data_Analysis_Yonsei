@@ -67,6 +67,8 @@
 \usepackage{tikz}
 \usepackage{booktabs}
 
+\usepackage[buttonsize=1em]{animate}
+
 
 
 
@@ -147,33 +149,529 @@
   \end{center}
 }
 
-\frame{
-  \frametitle{Today's Data}
-  Most of the examples for today's lecture will use data from the OpenIntro book. \\[0.5cm]
-  You can download it like this:
+\section{Take a Sample}
+\begin{frame}[fragile]
+  \frametitle{Today's Data Download}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hlcomment{# Load package RCurl}
 \hlfunctioncall{library}(RCurl)
-\end{alltt}
 
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: bitops}}\begin{alltt}
+\hlcomment{# Create URL object for OpenIntro data}
+url <- \hlfunctioncall{paste}(\hlstring{"https://raw.github.com/christopher"},
+             \hlstring{"gandrud/Introduction_to_Statistics_"},
+             \hlstring{"and_Data_Analysis"},
+             \hlstring{"_Yonsei/master/Lectures/Lecture7/"},
+             \hlstring{"OpenIntroData/run10.txt"}, sep = \hlstring{""})
 
 \hlcomment{# Download data}
-Run10 <- \hlfunctioncall{getURL}(\hlstring{"https://raw.github.com/christophergandrud/Introduction_to_Statistics_and_Data_Analysis_Yonsei/master/Lectures/Lecture7/OpenIntroData/run10.txt"})
+Run10 <- \hlfunctioncall{getURL}(url, ssl.verifypeer = FALSE)
 
 \hlcomment{# Convert Run10 to data.frame}
-Run10 <- \hlfunctioncall{read.table}(\hlfunctioncall{textConnection}(Run10), sep = \hlstring{"\textbackslash{}t"}, 
-    header = TRUE)
+Run10 <- \hlfunctioncall{read.table}(\hlfunctioncall{textConnection}(Run10),
+                    sep = \hlstring{"\textbackslash{}t"}, header = TRUE)
 \end{alltt}
 \end{kframe}
 \end{knitrout}
 
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Today's Variables}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlfunctioncall{names}(Run10)
+\end{alltt}
+\begin{verbatim}
+## [1] "place"    "time"     "pace"     "age"     
+## [5] "gender"   "location" "state"    "divPlace"
+## [9] "divTot"
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+  {\bf{Today we will use these variables (from Diaz et al. (2011, Ch. 4)):}}
+  \begin{table}
+    \begin{tabular}{l p{4cm}}
+      \hline
+      Variable & Description \\[0.3cm] 
+      \hline\hline
+      \texttt{time} & ten mile run time, minutes \\
+      \texttt{age} & age of runner in years \\
+      \hline
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Random Sample}
+{\large{Our data contains the {\bf{entire population}} of 16,974 runners who finished the 2009 Cherry Blosom 10 Mile Run in Washington, DC. \\[0.5cm]
+  But imagine, however, that we only have a {\bf{simple random sample}} of 100 runners.}}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Illustrate Random Sample}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \animategraphics[,controls,loop]{1}{figure/SamplingAnimation}{1}{50}
+
 }
 
 
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Take random sample}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Find number of runners in population}
+\hlfunctioncall{nrow}(Run10)
+\end{alltt}
+\begin{verbatim}
+## [1] 16924
+\end{verbatim}
+\begin{alltt}
+
+\hlcomment{# Take a random sample of 100 runners}
+Run10Samp <- Run10[\hlfunctioncall{sample}(1:\hlfunctioncall{nrow}(Run10), 100,
+                          replace=FALSE),]
+
+\hlcomment{# Find number of runners in sample}
+\hlfunctioncall{nrow}(Run10Samp)
+\end{alltt}
+\begin{verbatim}
+## [1] 100
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Sample Distribution of \texttt{time}}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlfunctioncall{hist}(Run10Samp$time)
+\end{alltt}
+\end{kframe}
+
+{\centering \includegraphics[width=\maxwidth]{figure/HistSampTime} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Sample Distribution of \texttt{age}}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlfunctioncall{hist}(Run10Samp$age)
+\end{alltt}
+\end{kframe}
+
+{\centering \includegraphics[width=\maxwidth]{figure/HistSampAge} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+%%%%%%%%%%%%% Point Estimates \& Population Parameters
+\section{Point Estimates \& Population Parameters}
+\frame{
+  \frametitle{The Question}
+  \begin{center}
+    {\Large{How similar is the sample to the population?\\[1cm]
+    In other words, how {\bf{representative}} is the sample? \\[1cm]
+    In other other words, what can we {\bf{infer}} about the population from the sample?}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{More specifically: Means}
+  {\Large{Today we are particularly interested in how similar the {\bf{sample means}} $\bar{x}$ are to the {\bf{true population means $\mu$ for:}} \\[0.25cm]
+  \begin{itemize}
+    \item<2-> average \texttt{time} it took to complete the race,
+    \item<3-> average \texttt{age} of the runners.}}
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{Inference}
+  {\Large{To answer this question we will need tools of {\bf{statistical inference}}. \\[1cm]
+  Today we will learn the basics of statistical inference. \\[0.5cm]
+  We will use these tools throughout the rest of the course and statistics. \\[0.5cm]
+  Statistical inference is key for linking our (sampled) data to what we care about: questions about populations.}}
+}
+
+\begin{frame}[fragile]
+  \frametitle{The Sample Means}
+    {\Large{Lets find our sample means.\\[0.5cm]
+    Time:}}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlfunctioncall{mean}(Run10Samp$time)
+\end{alltt}
+\begin{verbatim}
+## [1] 93.06
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+  {\Large{Age:}}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlfunctioncall{mean}(Run10Samp$age)
+\end{alltt}
+\begin{verbatim}
+## [1] 34.73
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\frame{
+  \frametitle{Point Estimates (1)}
+  \begin{center}
+{\Large{These are {\bf{point estimates}} of a {\bf{population parameter}}, the population mean.}}
+  \end{center}
+}
+
+\begin{frame}[fragile]
+  \frametitle{Point Estimates (2)}
+  {\large{We can find point estimates of other parameters. \\[0.5cm]
+  For example, lets find point estimates for the sample {\bf{standard deviation of the mean}} ($s$). (The population parameter of the standard deviation is usually written $\sigma$).\\[0.25cm]
+  Time:}}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlfunctioncall{sd}(Run10Samp$time)
+\end{alltt}
+\begin{verbatim}
+## [1] 17.17
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+  {\large{Age:}}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlfunctioncall{sd}(Run10Samp$age)
+\end{alltt}
+\begin{verbatim}
+## [1] 9.173
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\frame{
+  \frametitle{Summary of our Random Sample}
+  \begin{table}
+    \begin{tabular}{l  c c | c c}
+    \hline
+    Variable & $\bar{x}$ & $\mu$ & $s$ & $\sigma$ \\
+    \hline\hline
+    \texttt{time} & 93.1 & ? & 17.2 & ? \\
+      \texttt{age} & 34.7 & ? & 9.2 & ? \\
+      \hline
+    
+    \end{tabular}
+  \end{table}
+}
+
+\frame{
+  \frametitle{But\ldots}
+  \begin{center}
+  {\Large{But, {\bf{how do we know}} how {\bf{close}} the point estimates are to the real population parameters? \\[1cm] 
+  Especially, since when we take {\bf{other samples}} we will get {\bf{different estimates}}.}}
+  \end{center}
+}
+
+\begin{frame}[fragile]
+  \frametitle{10000 Sample Means!}
+{\Large{Lets find the sample mean of \texttt{time} ($\bar{x}_{time}$) in 10,000 samples!}}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Find the sample means from 10,000 samples}
+TimeSampMeans <- \hlfunctioncall{rep}(0, 10000)
+  \hlfunctioncall{for} (i in 1:10000) \{
+    Samp <- \hlfunctioncall{sample}(Run10$time, 100)
+    TimeSampMeans[i] <- \hlfunctioncall{mean}(Samp)
+    \}
+
+\hlcomment{# Create a data frame object}
+TimeSampMeans <- \hlfunctioncall{data.frame}(TimeSampMeans)
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Distribution of the 10,000 Sample Means!}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=\maxwidth]{figure/DistTimeSampleMean} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+\frame{
+  \frametitle{Sampling distribution and the population mean}
+  \begin{center}
+    {\Large{The sampling distribution is {\bf{centered}} on the population mean!\\[1cm]
+    Stated much more confusingly: the mean of the sampling distribution of the sample means is the population mean.}}
+  \end{center}
+}
+
+\begin{frame}[fragile]
+    \frametitle{Population Mean vs. Sample Means}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=\maxwidth]{figure/DistPopSampMean} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+\section{Standard Error}
+\frame{
+  \frametitle{Not solved yet.}
+  \begin{center}
+    {\Large{Ok, that is nice in theory, but what if we don't know the sampling distribution? \\[1cm]
+    In real life we can't take 10,000 samples!}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Question}
+  \begin{center}
+    {\Large{What would the sampling distribution of the sample mean look like if the sample size was 5,000 rather than 100?}}
+  \end{center}
+}
+
+\begin{frame}[fragile]
+    \frametitle{Comparing Sampling Distributions of $\bar{x}_{test}$ 100 vs. 5,000}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=\maxwidth]{figure/DistTimeSampleMean5000} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+\frame{
+  \frametitle{Sample Size, Point Estimates, and Population Parameters}
+  \begin{center}
+    {\Large{The {\bf{likely distance}} between the sample mean and the population mean is a related to {\bf{sample size}} ($n$), \\[1cm]
+    The {\bf{bigger}} the sample size, the more likely it is that the point estimate is {\bf{close}} to the population parameter.}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Variability}
+  \begin{center}
+    {\Large{Also, a {\bf{smaller sample standard deviation}} ($s$) indicates less variability $\rightarrow$ more likely that the point estimate is {\bf{close}} to the population parameter. \\[1cm]
+    So\ldots}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Finally, the Standar Error!}
+    {\Large{Standard Error ($SE$):}}
+    \[
+      SE = \frac{s}{\sqrt{n}}
+    \] \\[1cm]
+    Assuming that the observations are \emph{independent}, i.e. the value of one observation does not depend on the value of another observation.
+}
+
+\frame{
+  \frametitle{SE and Uncertainty}
+  {\Large{The standard error is a measure of our {\bf{uncertainty}} about how well the point estimate represents the population parameter.}}
+}
+
+\begin{frame}[fragile]
+  \frametitle{The Standard Error of the Mean of \texttt{time}}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Load plotrix}
+\hlfunctioncall{library}(plotrix)
+
+\hlcomment{# Calculate standard error of the mean of time}
+\hlfunctioncall{std.error}(Run10Samp$time)
+\end{alltt}
+\begin{verbatim}
+## [1] 1.717
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+  {\large{So, \texttt{time} in our original sample with 100 observations had a sampleing mean of 93.1 and a standard error of 1.7.
+\end{frame}
+
+%%%%%%%%%%%%% Confidence Intervals
+\section{Confidence Intervals}
+\frame{
+  \frametitle{Um\ldots}
+  {\Large{Um \ldots a sampleing mean of 93.1 and a standard error of 1.7? \\[1cm]
+  That's not very easy to understand.}}
+}
+
+\frame{
+  \frametitle{We need something more usefull.}
+  {\Large{We need something that is more {\bf{intuitive}} to interpret. \\[0.5cm]
+  Maybe a {\bf{range}} of likely population parameter values.}}
+}
+
+\frame{
+  \frametitle{}
+  \begin{center}
+    {\LARGE{The Confidence Interval!}}
+  \end{center}
+}
+
+\begin{frame}[fragile]
+  \frametitle{Standard Error and the Sampling Distribution}
+  {\Large{About {\bf{95\%}} of the time the population paramenter will be within {\bf{about 2 standard errors}} of the point estimate. \\[1cm]
+  95\% Confidence Interval ($CI$):}}
+  \[
+    CI = \mathrm{point\:estmiate} \pm 2 * SE
+  \]
+\end{frame}
+
+
+
+
+\frame{
+  \frametitle{Central Limit Theorem}
+  {\Large{Central Limit Theorem (informal definition):}} \\[0.5cm]
+  If a sample has at least 50 independent observations, and the data is not extremely skewed, the distribution of the sampling mean closely approximates the normal distribution (Diaz et al., 2011, 151)) \\[0.5cm]
+  So what? This lets our confidence interval be more {\bf{precise}}. 
+  \[
+    CI = \mathrm{point\:estmiate} \pm 1.96 * SE
+  \]
+}
+
+\begin{frame}[fragile]
+  \frametitle{Confidence Interval Simulation}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \animategraphics[,controls,loop]{1}{figure/CIAnimation}{1}{50}
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Let's calculate some 95\% confidence intervals for \texttt{time}}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Find Mean of time}
+MeanTime <- \hlfunctioncall{mean}(Run10Samp$time)
+
+\hlcomment{# Find Standard Error of the mean of time}
+SETime <- \hlfunctioncall{std.error}(Run10Samp$time)
+
+\hlcomment{# Lower CI}
+LowerTime <- MeanTime - 1.96 * SETime
+
+\hlcomment{# Upper CI}
+UpperTime <- MeanTime + 1.96 * SETime
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Show Confidence Intervals}
+LowerTime
+\end{alltt}
+\begin{verbatim}
+## [1] 89.7
+\end{verbatim}
+\begin{alltt}
+
+UpperTime
+\end{alltt}
+\begin{verbatim}
+## [1] 96.43
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+
+
+\end{frame}
+
+\frame{
+  \frametitle{Summary of our Parameter Estimates}
+  \begin{table}
+    \begin{tabular}{l  c c c | c}
+    \hline
+    Variable & Lower CI & Mean & Upper CI & Population Mean \\
+    \hline\hline
+    \texttt{time} & 89.7 & 93.1 & 96.4 & 94.5 \\
+      \texttt{age} & 32.9 & 34.7 & 36.5 & 35.5 \\
+      \hline
+    
+    \end{tabular}
+  \end{table}
+}
+
+
+\begin{frame}[allowframebreaks]
+  \frametitle{References}
+  Diaz, David M., Christopher D. Barr, and Mine \c{C}etinkaya-Rundel. 2011. OpenIntro Statistics. 1st ed. \url{http://www.openintro.org/stat/downloads.php}. \\[0.25cm] 
+\end{frame}
 
 
 

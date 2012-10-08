@@ -1,3 +1,7 @@
 \beamer@endinputifotherversion {3.10pt}
 \beamer@sectionintoc {2}{Assignment 2}{3}{0}{1}
 \beamer@sectionintoc {3}{Recap}{4}{0}{2}
+\beamer@sectionintoc {4}{Take a Sample}{8}{0}{3}
+\beamer@sectionintoc {5}{Point Estimates \& Population Parameters}{15}{0}{4}
+\beamer@sectionintoc {6}{Standard Error}{29}{0}{5}
+\beamer@sectionintoc {7}{Confidence Intervals}{37}{0}{6}

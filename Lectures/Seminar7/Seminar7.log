@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  8 OCT 2012 19:31
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  8 OCT 2012 19:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Lecture7.tex
-(./Lecture7.tex
+**Seminar7.tex
+(./Seminar7.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
 rman-x-2009-06-19, ngerman-x-2009-06-19, afrikaans, ancientgreek, ibycus, arabi
@@ -878,96 +878,29 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count165
 \@thisrulewidth=\dimen209
 )
-(/usr/local/texlive/2011/texmf-dist/tex/latex/animate/animate.sty
-Package: animate 2010/09/28 PDF animations from files and inline graphics
+(./Seminar7.aux)
+\openout1 = `Seminar7.aux'.
 
-(/usr/local/texlive/2011/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/ifdraft.sty
-Package: ifdraft 2008/08/11 v1.3 Switch for option draft (HO)
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count166
-\calc@Bcount=\count167
-\calc@Adimen=\dimen210
-\calc@Bdimen=\dimen211
-\calc@Askip=\skip57
-\calc@Bskip=\skip58
-LaTeX Info: Redefining \setlength on input line 76.
-LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count168
-\calc@Cskip=\skip59
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/animate/animfp.sty
-Package: animfp 2009/07/23 fixed point addition for animate.sty
-\afp@xs=\count169
-\afp@xia=\count170
-\afp@xib=\count171
-\afp@xfa=\count172
-\afp@xfb=\count173
-\afp@rega=\count174
-\afp@regb=\count175
-\afp@regs=\count176
-)
-(/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count177
-\scratchdimen=\dimen212
-\scratchbox=\box56
-\nofMPsegments=\count178
-\nofMParguments=\count179
-\everyMPshowfont=\toks42
-\MPscratchCnt=\count180
-\MPscratchDim=\dimen213
-\MPnumerator=\count181
-\makeMPintoPDFobject=\count182
-\everyMPtoPDFconversion=\toks43
-)
-\@anim@@fields=\count183
-\@anim@@ocgs=\count184
-\@anim@@posterocgs=\count185
-\@anim@box=\box57
-\@anim@tmpdima=\dimen214
-\@anim@tmpdimb=\dimen215
-\@anim@num=\count186
-\@anim@curframe=\count187
-\@anim@curframe@zb=\count188
-\@anim@resize=\count189
-\@anim@skipfram=\count190
-\@anim@mulframecnt=\count191
-\@anim@@tmlnfile=\read2
-\@anim@tmpcnt=\count192
-\c@@anim@tmpcnt=\count193
-\@anim@curlayer=\count194
-\@anim@lineno=\count195
-\@anim@begin=\toks44
-\@anim@end=\toks45
-) (./Lecture7.aux)
-\openout1 = `Lecture7.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 84.
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/base/ts1cmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 82.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 82.
+ (/usr/local/texlive/2011/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    ... okay on input line 82.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1003,7 +936,20 @@ LaTeX Font Info:    ... okay on input line 84.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count166
+\scratchdimen=\dimen210
+\scratchbox=\box56
+\nofMPsegments=\count167
+\nofMParguments=\count168
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count169
+\MPscratchDim=\dimen211
+\MPnumerator=\count170
+\makeMPintoPDFobject=\count171
+\everyMPtoPDFconversion=\toks43
+) (/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -1019,8 +965,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box58
-Package hyperref Info: Link coloring OFF on input line 84.
+\AtBeginShipoutBox=\box57
+Package hyperref Info: Link coloring OFF on input line 82.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
@@ -1028,15 +974,15 @@ Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 (/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count196
+\c@section@level=\count172
 )
-LaTeX Info: Redefining \ref on input line 84.
-LaTeX Info: Redefining \pageref on input line 84.
-LaTeX Info: Redefining \nameref on input line 84.
+LaTeX Info: Redefining \ref on input line 82.
+LaTeX Info: Redefining \pageref on input line 82.
+LaTeX Info: Redefining \nameref on input line 82.
 
-(./Lecture7.out) (./Lecture7.out)
+(./Seminar7.out) (./Seminar7.out)
 \@outlinefile=\write5
-\openout5 = `Lecture7.out'.
+\openout5 = `Seminar7.out'.
 
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/beamer/translator/dicts/translato
@@ -1063,20 +1009,20 @@ Dictionary: translator-numbers-dictionary, Language: English
 r-theorem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-(./Lecture7.nav)
+(./Seminar7.nav)
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 84.
+(Font)              size <5> substituted on input line 82.
 
 
-Overfull \hbox (3.63992pt too wide) in paragraph at lines 84--84
+Overfull \hbox (3.63992pt too wide) in paragraph at lines 82--82
 [][]  
  []
 
 ! Undefined control sequence.
 <argument> \titlevsep 
                       
-l.86 \frame{\titlepage}
+l.84 \frame{\titlepage}
                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1087,7 +1033,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    \ignorespaces 
-l.86 \frame{\titlepage}
+l.84 \frame{\titlepage}
                        
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -1096,7 +1042,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \ignorespaces 
-l.86 \frame{\titlepage}
+l.84 \frame{\titlepage}
                        
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1113,7 +1059,13 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [1
 
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./Lecture7.toc)
+\openout4 = `Seminar7.vrb'.
+
+
+(./Seminar7.vrb
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 6.
+)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1121,15 +1073,9 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [2
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 117.
- (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 117.
+\openout4 = `Seminar7.vrb'.
 
-(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-)
+ (./Seminar7.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1150,26 +1096,18 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 [5
 
-] <figure/Employees3D.png, id=98, 559.08875pt x 397.485pt>
-File: figure/Employees3D.png Graphic file (type png)
-
-<use figure/Employees3D.png>
-Package pdftex.def Info: figure/Employees3D.png used on input line 142.
-(pdftex.def)             Requested size: 223.63153pt x 158.99118pt.
-
+]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
 [6
 
- <./figure/Employees3D.png (PNG copy)>]
-<figure/EmployeesFlat.png, id=108, 563.10374pt x 392.46625pt>
-File: figure/EmployeesFlat.png Graphic file (type png)
-
-<use figure/EmployeesFlat.png>
-Package pdftex.def Info: figure/EmployeesFlat.png used on input line 150.
-(pdftex.def)             Requested size: 225.2375pt x 156.9837pt.
+] <ConfInt.png, id=57, 586.19pt x 434.62375pt>
+File: ConfInt.png Graphic file (type png)
+ <use ConfInt.png>
+Package pdftex.def Info: ConfInt.png used on input line 155.
+(pdftex.def)             Requested size: 234.47185pt x 173.8464pt.
 
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
@@ -1177,25 +1115,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 [7
 
- <./figure/EmployeesFlat.png (PNG copy)>]
-\openout4 = `Lecture7.vrb'.
-
- (./Lecture7.vrb
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 6.
-LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 20.
-
-
-(/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/omscmtt.fd
-File: omscmtt.fd 
-)
-LaTeX Font Info:    Font shape `OMS/cmtt/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 20.
-)
-Overfull \vbox (0.1142pt too high) detected at line 178
- []
-
-
+ <./ConfInt.png (PNG copy)>]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1203,618 +1123,48 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [8
 
 ]
-\openout4 = `Lecture7.vrb'.
-
- (./Lecture7.vrb)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[9
-
-]
-\openout4 = `Lecture7.vrb'.
-
- (./Lecture7.vrb)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[10
-
-]
-\openout4 = `Lecture7.vrb'.
-
- (./Lecture7.vrb <./figure/SamplingAnimation1.pdf> <./figure/SamplingAnimation2
-.pdf> <./figure/SamplingAnimation3.pdf> <./figure/SamplingAnimation4.pdf> <./fi
-gure/SamplingAnimation5.pdf> <./figure/SamplingAnimation6.pdf> <./figure/Sampli
-ngAnimation7.pdf> <./figure/SamplingAnimation8.pdf> <./figure/SamplingAnimation
-9.pdf> <./figure/SamplingAnimation10.pdf> <./figure/SamplingAnimation11.pdf> <.
-/figure/SamplingAnimation12.pdf> <./figure/SamplingAnimation13.pdf> <./figure/S
-amplingAnimation14.pdf> <./figure/SamplingAnimation15.pdf> <./figure/SamplingAn
-imation16.pdf> <./figure/SamplingAnimation17.pdf> <./figure/SamplingAnimation18
-.pdf> <./figure/SamplingAnimation19.pdf> <./figure/SamplingAnimation20.pdf> <./
-figure/SamplingAnimation21.pdf> <./figure/SamplingAnimation22.pdf> <./figure/Sa
-mplingAnimation23.pdf> <./figure/SamplingAnimation24.pdf> <./figure/SamplingAni
-mation25.pdf> <./figure/SamplingAnimation26.pdf> <./figure/SamplingAnimation27.
-pdf> <./figure/SamplingAnimation28.pdf> <./figure/SamplingAnimation29.pdf> <./f
-igure/SamplingAnimation30.pdf> <./figure/SamplingAnimation31.pdf> <./figure/Sam
-plingAnimation32.pdf> <./figure/SamplingAnimation33.pdf> <./figure/SamplingAnim
-ation34.pdf> <./figure/SamplingAnimation35.pdf> <./figure/SamplingAnimation36.p
-df> <./figure/SamplingAnimation37.pdf> <./figure/SamplingAnimation38.pdf> <./fi
-gure/SamplingAnimation39.pdf> <./figure/SamplingAnimation40.pdf> <./figure/Samp
-lingAnimation41.pdf> <./figure/SamplingAnimation42.pdf> <./figure/SamplingAnima
-tion43.pdf> <./figure/SamplingAnimation44.pdf> <./figure/SamplingAnimation45.pd
-f> <./figure/SamplingAnimation46.pdf> <./figure/SamplingAnimation47.pdf> <./fig
-ure/SamplingAnimation48.pdf> <./figure/SamplingAnimation49.pdf> <./figure/Sampl
-ingAnimation50.pdf>)
-Overfull \vbox (67.21004pt too high) detected at line 227
- []
-
-
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[11
-
-]
-\openout4 = `Lecture7.vrb'.
-
- (./Lecture7.vrb)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[12
-
-]
-\openout4 = `Lecture7.vrb'.
-
- (./Lecture7.vrb <figure/HistSampTime.pdf, id=633, 505.89pt x 289.08pt>
-File: figure/HistSampTime.pdf Graphic file (type pdf)
-
-<use figure/HistSampTime.pdf>
-Package pdftex.def Info: figure/HistSampTime.pdf used on input line 9.
-(pdftex.def)             Requested size: 307.28987pt x 175.59749pt.
-)
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 273.
-
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[13
-
- <./figure/HistSampTime.pdf>]
-\openout4 = `Lecture7.vrb'.
-
- (./Lecture7.vrb
-<figure/HistSampAge.pdf, id=649, 505.89pt x 289.08pt>
-File: figure/HistSampAge.pdf Graphic file (type pdf)
-
-<use figure/HistSampAge.pdf>
-Package pdftex.def Info: figure/HistSampAge.pdf used on input line 9.
-(pdftex.def)             Requested size: 307.28987pt x 175.59749pt.
-)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[14
-
- <./figure/HistSampAge.pdf>]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[15
-
-]
-! Extra }, or forgotten \endgroup.
-\beamer@doifinframe ...xttt {age} of the runners.}
-                                                  } \end {itemize} \end {bea...
-l.311 }
-       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten \endgroup.
-\beamer@doifinframe ...ttt {age} of the runners.}}
-                                                   \end {itemize} \end {beam...
-l.311 }
-       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.311 }
-       
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.311 }
-       
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[16
-
-]
-! Extra }, or forgotten \endgroup.
-\beamer@doifinframe ...xttt {age} of the runners.}
-                                                  } \end {itemize} \end {bea...
-l.311 }
-       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten \endgroup.
-\beamer@doifinframe ...ttt {age} of the runners.}}
-                                                   \end {itemize} \end {beam...
-l.311 }
-       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.311 }
-       
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.311 }
-       
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[17
-
-]
-! Extra }, or forgotten \endgroup.
-\beamer@doifinframe ...xttt {age} of the runners.}
-                                                  } \end {itemize} \end {bea...
-l.311 }
-       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten \endgroup.
-\beamer@doifinframe ...ttt {age} of the runners.}}
-                                                   \end {itemize} \end {beam...
-l.311 }
-       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.311 }
-       
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.311 }
-       
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[18
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[19
-
-]
-\openout4 = `Lecture7.vrb'.
-
- (./Lecture7.vrb)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[20
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[21
-
-]
-\openout4 = `Lecture7.vrb'.
-
- (./Lecture7.vrb)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[22
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[23
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[24
-
-]
-\openout4 = `Lecture7.vrb'.
-
- (./Lecture7.vrb)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[25
-
-]
-\openout4 = `Lecture7.vrb'.
-
- (./Lecture7.vrb
-<figure/DistTimeSampleMean.pdf, id=745, 505.89pt x 289.08pt>
-File: figure/DistTimeSampleMean.pdf Graphic file (type pdf)
-
-<use figure/DistTimeSampleMean.pdf>
-Package pdftex.def Info: figure/DistTimeSampleMean.pdf used on input line 5.
-(pdftex.def)             Requested size: 307.28987pt x 175.59749pt.
-)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[26
-
- <./figure/DistTimeSampleMean.pdf>]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[27
-
-]
-\openout4 = `Lecture7.vrb'.
-
- (./Lecture7.vrb <figure/DistPopSampMean.pdf, id=765, 505.89pt x 361.35pt>
-File: figure/DistPopSampMean.pdf Graphic file (type pdf)
-
-<use figure/DistPopSampMean.pdf>
-Package pdftex.def Info: figure/DistPopSampMean.pdf used on input line 5.
-(pdftex.def)             Requested size: 307.28987pt x 219.49687pt.
-)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[28
-
- <./figure/DistPopSampMean.pdf>]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[29
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[30
-
-]
-\openout4 = `Lecture7.vrb'.
-
- (./Lecture7.vrb
-<figure/DistTimeSampleMean5000.pdf, id=791, 505.89pt x 361.35pt>
-File: figure/DistTimeSampleMean5000.pdf Graphic file (type pdf)
-
-<use figure/DistTimeSampleMean5000.pdf>
-Package pdftex.def Info: figure/DistTimeSampleMean5000.pdf used on input line 5
-.
-(pdftex.def)             Requested size: 307.28987pt x 219.49687pt.
-)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[31
-
- <./figure/DistTimeSampleMean5000.pdf>]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[32
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[33
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[34
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[35
-
-]
-\openout4 = `Lecture7.vrb'.
-
- (./Lecture7.vrb)
-! Missing } inserted.
-<inserted text> 
-                }
-l.549 \end{frame}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.549 \end{frame}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[36
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[37
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[38
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[39
-
-]
-\openout4 = `Lecture7.vrb'.
-
- (./Lecture7.vrb)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[40
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[41
-
-]
-\openout4 = `Lecture7.vrb'.
-
- (./Lecture7.vrb <./figure/CIAnimation1.pdf> <./figure/CIAnimation2.pdf> <./fig
-ure/CIAnimation3.pdf> <./figure/CIAnimation4.pdf> <./figure/CIAnimation5.pdf> <
-./figure/CIAnimation6.pdf> <./figure/CIAnimation7.pdf> <./figure/CIAnimation8.p
-df> <./figure/CIAnimation9.pdf> <./figure/CIAnimation10.pdf> <./figure/CIAnimat
-ion11.pdf> <./figure/CIAnimation12.pdf> <./figure/CIAnimation13.pdf> <./figure/
-CIAnimation14.pdf> <./figure/CIAnimation15.pdf> <./figure/CIAnimation16.pdf> <.
-/figure/CIAnimation17.pdf> <./figure/CIAnimation18.pdf> <./figure/CIAnimation19
-.pdf> <./figure/CIAnimation20.pdf> <./figure/CIAnimation21.pdf> <./figure/CIAni
-mation22.pdf> <./figure/CIAnimation23.pdf> <./figure/CIAnimation24.pdf> <./figu
-re/CIAnimation25.pdf> <./figure/CIAnimation26.pdf> <./figure/CIAnimation27.pdf>
- <./figure/CIAnimation28.pdf> <./figure/CIAnimation29.pdf> <./figure/CIAnimatio
-n30.pdf> <./figure/CIAnimation31.pdf> <./figure/CIAnimation32.pdf> <./figure/CI
-Animation33.pdf> <./figure/CIAnimation34.pdf> <./figure/CIAnimation35.pdf> <./f
-igure/CIAnimation36.pdf> <./figure/CIAnimation37.pdf> <./figure/CIAnimation38.p
-df> <./figure/CIAnimation39.pdf> <./figure/CIAnimation40.pdf> <./figure/CIAnima
-tion41.pdf> <./figure/CIAnimation42.pdf> <./figure/CIAnimation43.pdf> <./figure
-/CIAnimation44.pdf> <./figure/CIAnimation45.pdf> <./figure/CIAnimation46.pdf> <
-./figure/CIAnimation47.pdf> <./figure/CIAnimation48.pdf> <./figure/CIAnimation4
-9.pdf> <./figure/CIAnimation50.pdf>)
-Overfull \vbox (31.07504pt too high) detected at line 606
- []
-
-
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[42
-
-]
-\openout4 = `Lecture7.vrb'.
-
- (./Lecture7.vrb)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[43
-
-]
-\openout4 = `Lecture7.vrb'.
-
- (./Lecture7.vrb)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[44
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[45
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[46
-
-]
 \tf@nav=\write6
-\openout6 = `Lecture7.nav'.
+\openout6 = `Seminar7.nav'.
 
 \tf@toc=\write7
-\openout7 = `Lecture7.toc'.
+\openout7 = `Seminar7.toc'.
 
 \tf@snm=\write8
-\openout8 = `Lecture7.snm'.
+\openout8 = `Seminar7.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 678.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 678.
- (./Lecture7.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 678.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 678.
-Package rerunfilecheck Info: File `Lecture7.out' has not changed.
-(rerunfilecheck)             Checksum: 7EA2A6CB9EB4603ABC0F4943135536EC;316.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 164.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 164.
+ (./Seminar7.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 164.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 164.
+Package rerunfilecheck Info: File `Seminar7.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 678.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 164.
  ) 
 Here is how much of TeX's memory you used:
- 19396 strings out of 493633
- 366679 string characters out of 3143377
- 440348 words of memory out of 3000000
- 21978 multiletter control sequences out of 15000+200000
- 18187 words of font info for 71 fonts, out of 3000000 for 9000
+ 18033 strings out of 493633
+ 343102 string characters out of 3143377
+ 413197 words of memory out of 3000000
+ 20886 multiletter control sequences out of 15000+200000
+ 7284 words of font info for 27 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 49i,16n,60p,447b,596s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
-usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/l
-ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/lo
-cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/loc
-al/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local
-/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/t
-exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/
-texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/
-texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
-exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/te
-xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/tex
-live/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texli
-ve/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Lecture7.pdf (46 pages, 1223700 bytes).
+ 49i,16n,53p,447b,425s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
+></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb>
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></
+usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></us
+r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></u
+sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></us
+r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Seminar7.pdf (8 pages, 90433 bytes).
 PDF statistics:
- 1621 PDF objects out of 1728 (max. 8388607)
- 1109 compressed objects within 12 object streams
- 100 named destinations out of 1000 (max. 500000)
- 1934 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 100 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
+ 17 named destinations out of 1000 (max. 500000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

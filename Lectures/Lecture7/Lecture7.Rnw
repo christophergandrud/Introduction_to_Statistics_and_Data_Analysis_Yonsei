@@ -12,6 +12,8 @@
 \usepackage{tikz}
 \usepackage{booktabs}
 
+\usepackage[buttonsize=1em]{animate}
+
 <<ParentGlobalOpts, echo=FALSE>>=
   options(width=50)
   opts_chunk$set(fig.align='center')
@@ -94,25 +96,463 @@
   \end{center}
 }
 
-\frame{
-  \frametitle{Today's Data}
-  Most of the examples for today's lecture will use data from the OpenIntro book. \\[0.5cm]
-  You can download it like this:
-<<DataDownload, message=FALSE>>=
+\section{Take a Sample}
+\begin{frame}[fragile]
+  \frametitle{Today's Data Download}
+<<DataDownload, message=FALSE, tidy=FALSE>>=
 # Load package RCurl
 library(RCurl)
 
+# Create URL object for OpenIntro data
+url <- paste("https://raw.github.com/christopher",
+             "gandrud/Introduction_to_Statistics_",
+             "and_Data_Analysis",
+             "_Yonsei/master/Lectures/Lecture7/",
+             "OpenIntroData/run10.txt", sep = "")
+
 # Download data
-Run10 <- getURL("https://raw.github.com/christophergandrud/Introduction_to_Statistics_and_Data_Analysis_Yonsei/master/Lectures/Lecture7/OpenIntroData/run10.txt")
+Run10 <- getURL(url, ssl.verifypeer = FALSE)
 
 # Convert Run10 to data.frame
 Run10 <- read.table(textConnection(Run10),
                     sep = "\t", header = TRUE)
 
 @
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Today's Variables}
+<<DataNames>>=
+  names(Run10)
+@
+
+  {\bf{Today we will use these variables (from Diaz et al. (2011, Ch. 4)):}}
+  \begin{table}
+    \begin{tabular}{l p{4cm}}
+      \hline
+      Variable & Description \\[0.3cm] 
+      \hline\hline
+      \texttt{time} & ten mile run time, minutes \\
+      \texttt{age} & age of runner in years \\
+      \hline
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Random Sample}
+{\large{Our data contains the {\bf{entire population}} of 16,974 runners who finished the 2009 Cherry Blosom 10 Mile Run in Washington, DC. \\[0.5cm]
+  But imagine, however, that we only have a {\bf{simple random sample}} of 100 runners.}}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Illustrate Random Sample}
+<<SamplingAnimation, echo=FALSE, fig.show='animate', fig.height=4, fig.width=4>>=
+# Load library
+library(animation)
+
+# Create sample animation
+sample.simple()
+@
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Take random sample}
+<<RunnerRandom, tidy=FALSE>>=
+# Find number of runners in population
+nrow(Run10)
+
+# Take a random sample of 100 runners
+Run10Samp <- Run10[sample(1:nrow(Run10), 100,
+                          replace=FALSE),]
+
+# Find number of runners in sample
+nrow(Run10Samp)
+@
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Sample Distribution of \texttt{time}}
+<<HistSampTime, fig.height=4>>=
+hist(Run10Samp$time)
+@
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Sample Distribution of \texttt{age}}
+<<HistSampAge, fig.height=4>>=
+hist(Run10Samp$age)
+@
+\end{frame}
+
+%%%%%%%%%%%%% Point Estimates \& Population Parameters
+\section{Point Estimates \& Population Parameters}
+\frame{
+  \frametitle{The Question}
+  \begin{center}
+    {\Large{How similar is the sample to the population?\\[1cm]
+    In other words, how {\bf{representative}} is the sample? \\[1cm]
+    In other other words, what can we {\bf{infer}} about the population from the sample?}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{More specifically: Means}
+  {\Large{Today we are particularly interested in how similar the {\bf{sample means}} $\bar{x}$ are to the {\bf{true population means $\mu$ for:}} \\[0.25cm]
+  \begin{itemize}
+    \item<2-> average \texttt{time} it took to complete the race,
+    \item<3-> average \texttt{age} of the runners.}}
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{Inference}
+  {\Large{To answer this question we will need tools of {\bf{statistical inference}}. \\[1cm]
+  Today we will learn the basics of statistical inference. \\[0.5cm]
+  We will use these tools throughout the rest of the course and statistics. \\[0.5cm]
+  Statistical inference is key for linking our (sampled) data to what we care about: questions about populations.}}
+}
+
+\begin{frame}[fragile]
+  \frametitle{The Sample Means}
+    {\Large{Lets find our sample means.\\[0.5cm]
+    Time:}}
+<<TimeMean>>=
+mean(Run10Samp$time)
+@
+
+  {\Large{Age:}}
+<<AgeMean>>=
+mean(Run10Samp$age)
+@
+\end{frame}
+
+\frame{
+  \frametitle{Point Estimates (1)}
+  \begin{center}
+{\Large{These are {\bf{point estimates}} of a {\bf{population parameter}}, the population mean.}}
+  \end{center}
+}
+
+\begin{frame}[fragile]
+  \frametitle{Point Estimates (2)}
+  {\large{We can find point estimates of other parameters. \\[0.5cm]
+  For example, lets find point estimates for the sample {\bf{standard deviation of the mean}} ($s$). (The population parameter of the standard deviation is usually written $\sigma$).\\[0.25cm]
+  Time:}}
+<<TimeSD>>=
+sd(Run10Samp$time)
+@
+
+  {\large{Age:}}
+<<AgeSD>>=
+sd(Run10Samp$age)
+@
+\end{frame}
+
+\frame{
+  \frametitle{Summary of our Random Sample}
+  \begin{table}
+    \begin{tabular}{l  c c | c c}
+    \hline
+    Variable & $\bar{x}$ & $\mu$ & $s$ & $\sigma$ \\
+    \hline\hline
+    \texttt{time} & \Sexpr{round(mean(Run10Samp$time), digits = 1)} & ? & \Sexpr{round(sd(Run10Samp$time), digits = 1)} & ? \\
+      \texttt{age} & \Sexpr{round(mean(Run10Samp$age), digits = 1)} & ? & \Sexpr{round(sd(Run10Samp$age), digits = 1)} & ? \\
+      \hline
+    
+    \end{tabular}
+  \end{table}
+}
+
+\frame{
+  \frametitle{But\ldots}
+  \begin{center}
+  {\Large{But, {\bf{how do we know}} how {\bf{close}} the point estimates are to the real population parameters? \\[1cm] 
+  Especially, since when we take {\bf{other samples}} we will get {\bf{different estimates}}.}}
+  \end{center}
+}
+
+\begin{frame}[fragile]
+  \frametitle{10000 Sample Means!}
+{\Large{Lets find the sample mean of \texttt{time} ($\bar{x}_{time}$) in 10,000 samples!}}
+<<TenThousand, tidy=FALSE>>=
+# Find the sample means from 10,000 samples
+TimeSampMeans <- rep(0, 10000)
+  for (i in 1:10000) {
+    Samp <- sample(Run10$time, 100)
+    TimeSampMeans[i] <- mean(Samp)
+    }
+
+# Create a data frame object
+TimeSampMeans <- data.frame(TimeSampMeans)
+@
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Distribution of the 10,000 Sample Means!}
+<<DistTimeSampleMean, tidy=FALSE, fig.height=4, echo=FALSE>>=
+# Create object of 1st sample mean
+OneTimeMean <- mean(Run10Samp$time)
+
+# Load library
+library(ggplot2)
+
+# Graph sampling distibution
+ggplot(TimeSampMeans, aes(x = TimeSampMeans)) + 
+        geom_density() + 
+        geom_vline(xintercept = OneTimeMean, colour = "#8DA0CB", linetype = "longdash") +
+        annotate("text", x = 99, y = 0.2, label = "Our 1st\n Sample Mean", colour = "#8DA0CB") +
+        xlab("\nSample Means of Time") + ylab("Density\n") + 
+        ggtitle("The Sampling Distribution of the Mean of Time\n") +
+        theme_bw()
+@
+\end{frame}
+
+\frame{
+  \frametitle{Sampling distribution and the population mean}
+  \begin{center}
+    {\Large{The sampling distribution is {\bf{centered}} on the population mean!\\[1cm]
+    Stated much more confusingly: the mean of the sampling distribution of the sample means is the population mean.}}
+  \end{center}
+}
+
+\begin{frame}[fragile]
+    \frametitle{Population Mean vs. Sample Means}
+<<DistPopSampMean, tidy=FALSE, fig.height=5, echo=FALSE>>=
+# Create object population mean
+PopMeanTime <- mean(Run10$time)
+
+# Load library
+library(ggplot2)
+
+# Graph sampling distibution
+ggplot(TimeSampMeans, aes(x = TimeSampMeans)) + 
+        geom_density() + 
+        geom_vline(xintercept = OneTimeMean, colour = "#8DA0CB", linetype = "longdash") +
+        geom_vline(xintercept = PopMeanTime, colour = "#1F78B4", linetype = 1) +
+        annotate("text", x = 99, y = 0.15, label = "Our 1st\n Sample Mean", colour = "#8DA0CB") +
+        annotate("text", x = 99, y = 0.2, label = "Population Mean", colour = "#1F78B4") +
+        xlab("\nSample Means of Time") + ylab("Density\n") + 
+        ggtitle("The Sampling Distribution of the Mean of Time\n") +
+        theme_bw()
+@
+\end{frame}
+
+\section{Standard Error}
+\frame{
+  \frametitle{Not solved yet.}
+  \begin{center}
+    {\Large{Ok, that is nice in theory, but what if we don't know the sampling distribution? \\[1cm]
+    In real life we can't take 10,000 samples!}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Question}
+  \begin{center}
+    {\Large{What would the sampling distribution of the sample mean look like if the sample size was 5,000 rather than 100?}}
+  \end{center}
+}
+
+\begin{frame}[fragile]
+    \frametitle{Comparing Sampling Distributions of $\bar{x}_{test}$ 100 vs. 5,000}
+<<DistTimeSampleMean5000, tidy=FALSE, fig.height=5, echo=FALSE, message=FALSE>>=
+# Load library
+library(reshape2)
+library(gdata)
+
+# Find the sample means from 10,000 samples of size 5,000
+TimeSampMeans5000 <- rep(0, 10000) 
+  for (i in 1:10000) {
+    Samp <- sample(Run10$time, 5000)
+    TimeSampMeans5000[i] <- mean(Samp) 
+  }
+  
+# Create a data frame object
+TimeSampMeans5000 <- data.frame(TimeSampMeans5000)
+
+# Combine with TimeSampMeans
+SamplDist <- cbind(TimeSampMeans, TimeSampMeans5000)
+
+# Melt in preparation of graphing
+SampleDistMolten <- melt(SamplDist)
+
+# Recode variable
+SampleDistMolten$SampleSize[SampleDistMolten$variable == "TimeSampMeans"] <- 100
+SampleDistMolten$SampleSize[SampleDistMolten$variable == "TimeSampMeans5000"] <- 5000
+
+Scale = c("#ADDD8E", "#31A354")
+
+# Graph sampling distibution
+ggplot(SampleDistMolten, aes(x = value, colour = factor(SampleSize), fill = factor(SampleSize))) + 
+        geom_density(alpha = I(0.5), name = "Sample Size") + 
+        scale_colour_manual(values = Scale, name = "Sample Size") +
+        scale_fill_manual(values = Scale, name = "Sample Size") +
+        geom_vline(xintercept = OneTimeMean, colour = "#8DA0CB", linetype = "longdash") +
+        geom_vline(xintercept = PopMeanTime, colour = "#1F78B4", linetype = 1) +
+        annotate("text", x = 99, y = 1.5, label = "Our 1st\n Sample Mean", colour = "#8DA0CB") +
+        annotate("text", x = 99, y = 2, label = "Population\n Mean", colour = "#1F78B4") +
+        xlab("\nSample Means of Time") + ylab("Density\n") + 
+        ggtitle("Comparing Sample Sizes\n") +
+        theme_bw()
+@
+\end{frame}
+
+\frame{
+  \frametitle{Sample Size, Point Estimates, and Population Parameters}
+  \begin{center}
+    {\Large{The {\bf{likely distance}} between the sample mean and the population mean is a related to {\bf{sample size}} ($n$), \\[1cm]
+    The {\bf{bigger}} the sample size, the more likely it is that the point estimate is {\bf{close}} to the population parameter.}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Variability}
+  \begin{center}
+    {\Large{Also, a {\bf{smaller sample standard deviation}} ($s$) indicates less variability $\rightarrow$ more likely that the point estimate is {\bf{close}} to the population parameter. \\[1cm]
+    So\ldots}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Finally, the Standar Error!}
+    {\Large{Standard Error ($SE$):}}
+    \[
+      SE = \frac{s}{\sqrt{n}}
+    \] \\[1cm]
+    Assuming that the observations are \emph{independent}, i.e. the value of one observation does not depend on the value of another observation.
+}
+
+\frame{
+  \frametitle{SE and Uncertainty}
+  {\Large{The standard error is a measure of our {\bf{uncertainty}} about how well the point estimate represents the population parameter.}}
+}
+
+\begin{frame}[fragile]
+  \frametitle{The Standard Error of the Mean of \texttt{time}}
+<<SEofMean>>=
+# Load plotrix
+library(plotrix)
+
+# Calculate standard error of the mean of time
+std.error(Run10Samp$time)
+@
+
+  {\large{So, \texttt{time} in our original sample with 100 observations had a sampleing mean of \Sexpr{round(mean(Run10Samp$time), digit = 1)} and a standard error of \Sexpr{round(std.error(Run10Samp$time), digit = 1)}.
+\end{frame}
+
+%%%%%%%%%%%%% Confidence Intervals
+\section{Confidence Intervals}
+\frame{
+  \frametitle{Um\ldots}
+  {\Large{Um \ldots a sampleing mean of \Sexpr{round(mean(Run10Samp$time), digit = 1)} and a standard error of \Sexpr{round(std.error(Run10Samp$time), digit = 1)}? \\[1cm]
+  That's not very easy to understand.}}
+}
+
+\frame{
+  \frametitle{We need something more usefull.}
+  {\Large{We need something that is more {\bf{intuitive}} to interpret. \\[0.5cm]
+  Maybe a {\bf{range}} of likely population parameter values.}}
+}
+
+\frame{
+  \frametitle{}
+  \begin{center}
+    {\LARGE{The Confidence Interval!}}
+  \end{center}
+}
+
+\begin{frame}[fragile]
+  \frametitle{Standard Error and the Sampling Distribution}
+  {\Large{About {\bf{95\%}} of the time the population paramenter will be within {\bf{about 2 standard errors}} of the point estimate. \\[1cm]
+  95\% Confidence Interval ($CI$):}}
+  \[
+    CI = \mathrm{point\:estmiate} \pm 2 * SE
+  \]
+\end{frame}
+
+
+
+
+\frame{
+  \frametitle{Central Limit Theorem}
+  {\Large{Central Limit Theorem (informal definition):}} \\[0.5cm]
+  If a sample has at least 50 independent observations, and the data is not extremely skewed, the distribution of the sampling mean closely approximates the normal distribution (Diaz et al., 2011, 151)) \\[0.5cm]
+  So what? This lets our confidence interval be more {\bf{precise}}. 
+  \[
+    CI = \mathrm{point\:estmiate} \pm 1.96 * SE
+  \]
+}
+
+\begin{frame}[fragile]
+  \frametitle{Confidence Interval Simulation}
+<<CIAnimation, echo=FALSE, fig.show='animate', fig.height=3.5, fig.width=4>>=
+conf.int()
+@
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Let's calculate some 95\% confidence intervals for \texttt{time}}
+<<ConfIntCalc>>=
+# Find Mean of time 
+MeanTime <- mean(Run10Samp$time)
+
+# Find Standard Error of the mean of time
+SETime <- std.error(Run10Samp$time)
+
+# Lower CI 
+LowerTime <- MeanTime - 1.96 * SETime
+
+# Upper CI
+UpperTime <- MeanTime + 1.96 * SETime
+@
+\end{frame}
+
+\begin{frame}[fragile]
+<<ShowCI>>=
+# Show Confidence Intervals
+LowerTime
+
+UpperTime
+@
+
+<<HiddenAge, echo=FALSE, results='hide'>>=
+# Find Mean of age 
+MeanAge <- mean(Run10Samp$age)
+
+# Find Standard Error of the mean of age
+SEAge <- std.error(Run10Samp$age)
+
+# Lower CI 
+LowerAge <- MeanAge - 1.96 * SEAge
+
+# Upper CI
+UpperAge <- MeanAge + 1.96 * SEAge
+
+@
+\end{frame}
+
+\frame{
+  \frametitle{Summary of our Parameter Estimates}
+  \begin{table}
+    \begin{tabular}{l  c c c | c}
+    \hline
+    Variable & Lower CI & Mean & Upper CI & Population Mean \\
+    \hline\hline
+    \texttt{time} & \Sexpr{round(LowerTime, digits = 1)} & \Sexpr{round(MeanTime, digits = 1)} & \Sexpr{round(UpperTime, digits = 1)} & \Sexpr{round(mean(Run10$time), digits = 1)} \\
+      \texttt{age} & \Sexpr{round(LowerAge, digits = 1)} & \Sexpr{round(MeanAge, digits = 1)} & \Sexpr{round(UpperAge, digits = 1)} & \Sexpr{round(mean(Run10$age, na.rm = TRUE), digits = 1)} \\
+      \hline
+    
+    \end{tabular}
+  \end{table}
 }
 
 
+\begin{frame}[allowframebreaks]
+  \frametitle{References}
+  Diaz, David M., Christopher D. Barr, and Mine \c{C}etinkaya-Rundel. 2011. OpenIntro Statistics. 1st ed. \url{http://www.openintro.org/stat/downloads.php}. \\[0.25cm] 
+\end{frame}
 
 
 

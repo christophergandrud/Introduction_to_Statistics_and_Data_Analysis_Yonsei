@@ -1,0 +1,22 @@
+\begin {knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Show Confidence Intervals}
+LowerTime
+\end{alltt}
+\begin{verbatim}
+## [1] 89.7
+\end{verbatim}
+\begin{alltt}
+
+UpperTime
+\end{alltt}
+\begin{verbatim}
+## [1] 96.43
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+
+

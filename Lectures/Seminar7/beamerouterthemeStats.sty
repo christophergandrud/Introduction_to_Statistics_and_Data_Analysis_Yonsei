@@ -1,0 +1,80 @@
+% This file may be distributed and/or modified
+% Modified from BerlinFU theme
+% Includes footer from Bunsen theme
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% See the file doc/licenses/LICENSE for more details.
+
+\ProvidesPackage{beamerouterthemeStats}[2012/04/05]
+
+\mode<presentation>
+
+\definecolor{uipaleblue}{RGB}{96,123,139}
+
+% Sidebar
+
+\setbeamertemplate*{sidebar left}{}
+\setbeamertemplate*{sidebar right}{}
+\setbeamertemplate*{sidebar canvas left}{}
+\setbeamertemplate*{sidebar canvas right}{}
+
+% Footer styling
+\setbeamercolor{section in footer}{fg=white,bg=uipaleblue}
+\setbeamercolor{subsection in footer}{fg=white,bg=uipaleblue}
+\setbeamercolor{pagenumber in footer}{fg=white,bg=uipaleblue}
+
+\defbeamertemplate*{footline}{Stats}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.25ex,dp=1ex,center]{section in footer}%
+    \insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.34\paperwidth,ht=2.25ex,dp=1ex,center]{subsection in footer}%
+    \insertsectionhead
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.34\paperwidth,ht=2.25ex,dp=1ex,center]{pagenumber in footer}%
+   \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+% Headline
+
+
+% Frame title: Stats
+
+\defbeamertemplate{frametitle}{Stats}{%
+  \vspace*{1mm}
+  {\usebeamerfont*{frametitle}\usebeamercolor[fg]{frametitle}\insertframetitle}\\[-0.5\normalbaselineskip]
+  {\usebeamercolor{separation line}\hspace*{-5pt}\rule{\paperwidth}{\Stats@rule}}\par\vspace{-1.5ex}}
+
+\def\beamer@afteright{\vskip0.35cm\advance\leftskip by .35cm\advance\rightskip by 1.7cm}
+
+
+
+\mode
+<all>
+  \newcommand\fachbereich[1]{\def\insertfachbereich{#1}}
+  \fachbereich{}%
+
+\defbeamertemplate*{title page}{Stats}{%
+  \vspace*{-0.5ex}
+    \vspace{1cm}
+  {\usebeamerfont{title}\usebeamercolor[fg]{frametitle}\inserttitle}\\[\titlevsep]
+  \ifx\insertsubtitle\@empty\else\vskip0.25em%
+    {\usebeamerfont{subtitle}\insertsubtitle\par}%
+  \fi%
+  \par\vfill
+  \begin{beamercolorbox}[sep=0pt]{author}
+    {\usebeamerfont{author}\insertauthor}\\
+    {\usebeamerfont{institute}\insertinstitute}
+  \end{beamercolorbox}
+  \par\vfill
+  {\usebeamerfont{date}\usebeamercolor*[fg]{date}\insertdate%\rule[-.5ex]{0pt}{.5ex}
+    }
+  \par\vfill~\vspace*{-\fill}}
+
+\endinput

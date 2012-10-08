@@ -1,0 +1,93 @@
+\documentclass{beamer}
+\usetheme{Stats}
+\setbeamercovered{transparent}
+\usepackage{color}
+\usepackage{hyperref}
+  \hypersetup{
+  	colorlinks=true
+		linkcolor=black
+		}
+\usepackage{url}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{booktabs}
+
+<<ParentGlobalOpts, echo=FALSE>>=
+  options(width=50)
+  opts_chunk$set(fig.align='center')
+@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title Slide %%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[]{Intro to Social Science Data Analysis \\[1cm] Lecture 7: Overview of Statistical Inference}
+\author[]{
+    \href{mailto:gandrud@yonsei.ac.kr}{Christopher Gandrud}
+}
+\date{\today}
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+
+\begin{frame}[fragile]
+  \frametitle{Download Data from OpenIntro}
+<<Download, tidy=FALSE>>=
+# Download data
+download.file("http://bit.ly/PO9XsF", 
+              destfile = "ames.RData")
+
+# Load Data
+load("ames.RData")
+@
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Take a random sample}
+<<Sample, tidy=FALSE>>=
+# Find number of observations
+nrow(ames)
+
+# Take a random sample of 100 observations
+amesSamp <- ames[sample(1:nrow(ames), 100,
+                          replace=FALSE),]
+
+# Find number of observations in sample
+nrow(amesSamp)
+@
+\end{frame}
+
+\frame{
+  \frametitle{Find Variables}
+  {\Large{Find {\bf{3 continuous numeric variables}} in the data set \texttt{ames}}}
+}
+
+\frame{
+  \frametitle{Describe}
+{\Large{Choose descriptive statistics/graphs to describe the 3 variables {\bf{in your sample}}.}}
+}
+
+\frame{
+  \frametitle{Inferential Statistics}
+{\Large{Using only the sample means, what do you {\bf{estimate the population means}} are?}}
+}
+
+\frame{
+  \frametitle{Graphs}
+  What might this graph show? \\[0.25cm]
+  Why is one of the lines highlighted in red?
+  
+  \begin{center}
+    \includegraphics[scale=0.4]{ConfInt.png}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Nominal Data}
+  {\Large{What kind of population parameters could we be interested in for nominal data?}}
+}
+
+
+
+\end{document}
