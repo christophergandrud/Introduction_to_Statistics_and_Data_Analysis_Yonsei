@@ -1,0 +1,107 @@
+\documentclass{beamer}
+\usetheme{Stats}
+\setbeamercovered{transparent}
+\usepackage{color}
+\usepackage{hyperref}
+  \hypersetup{
+  	colorlinks=true
+		linkcolor=black
+		}
+\usepackage{url}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{booktabs}
+
+<<ParentGlobalOpts, echo=FALSE>>=
+  options(width=50)
+  opts_chunk$set(fig.align='center')
+@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title Slide %%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[]{Intro to Social Science Data Analysis \\[1cm] Lecture 7: Overview of Statistical Inference}
+\author[]{
+    \href{mailto:gandrud@yonsei.ac.kr}{Christopher Gandrud}
+}
+\date{\today}
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section[Outline]{}
+\frame{\tableofcontents}
+
+%%%%%%%%%%% Assignment 2 Reminder
+\section{Assignment 2}
+\frame{
+  \frametitle{Assignment 2}
+  \textbf{Due:} Friday 19 October \\[0.25cm]
+  
+  \textbf{Describe} at least \textbf{3} variables in a data set.\\[0.25cm]
+  {\small{
+    You need to select a \textbf{range of descriptive statistical tools}. The tools should include both \textbf{numerical descriptive statistics} and \textbf{graphics}.\\[0.25cm]
+
+    These tools should describe the variables':
+    \begin{itemize}
+      \item<1-> central tendency,
+      \item<1-> variation,
+      \item<1-> their relationships with the other variables.
+    \end{itemize}
+
+    The descriptions need to be discussed \textbf{in paragraph form}. \\[0.25cm]
+
+    The description must be \textbf{reproducible}. So you should email me the link to a Dropbox folder with:
+    \begin{itemize}
+      \item<1-> the \texttt{.csv} data set,
+      \item<1-> the \texttt{.Rmd} R markdown file,
+      \item<1-> the final \texttt{.html} file.
+    \end{itemize}
+  }}
+}
+
+%%%%%%%%%%%%%%% Recap
+\section{Recap}
+\frame{
+	\frametitle{Principles of Quantitative Graphics (1)}
+{\Large{What are some of the goals that quantitative graphics should try to acheive?}}
+}
+
+\frame{
+  \frametitle{Principles of Quantitative Graphics (2)}
+  {\Large{What are some things you should not do in quantitative graphics? \\[0.5cm]
+  In particular, how does the {\bf{data-ink ratio}} help us create effective graphics? \\[0.5cm]
+  Remember:}}
+  \[
+    \mathrm{Data\:Ink\:Ratio = \frac{data-ink}{total\:ink}}
+  \]
+}
+
+\frame{
+  \frametitle{What is wrong with this graph?}
+  \begin{center}
+    \includegraphics[scale=0.4]{figure/Employees3D.png} \\
+    {\tiny{Source: \url{http://www.perceptualedge.com/articles/visual_business_intelligence/rules_for_using_color.pdf}}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Improved}
+  \begin{center}
+    \includegraphics[scale=0.4]{figure/EmployeesFlat.png} \\
+    {\tiny{Source: \url{http://www.perceptualedge.com/articles/visual_business_intelligence/rules_for_using_color.pdf}}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Today's Data}
+  {\large{Most of the examples for today's lecture will use data from the OpenIntro book. \\[0.5cm]
+  You can download it like this:}}
+}
+
+
+
+
+
+\end{document}
