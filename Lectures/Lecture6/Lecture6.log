@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  7 OCT 2012 16:33
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  9 OCT 2012 10:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1830,7 +1830,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 936.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 936.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 936.
 Package rerunfilecheck Info: File `Lecture6.out' has not changed.
-(rerunfilecheck)             Checksum: 3EC499650D1B508BBFC75BBCE03B286C;290.
+(rerunfilecheck)             Checksum: BB67735F946DB1A732E20AFBB09416F7;291.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1859,7 +1859,7 @@ ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/lo
 cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/loc
 al/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local
 /texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Lecture6.pdf (69 pages, 701729 bytes).
+Output written on Lecture6.pdf (69 pages, 701923 bytes).
 PDF statistics:
  709 PDF objects out of 1000 (max. 8388607)
  583 compressed objects within 6 object streams
