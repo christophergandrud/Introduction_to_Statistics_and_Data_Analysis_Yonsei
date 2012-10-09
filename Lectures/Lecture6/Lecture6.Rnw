@@ -81,21 +81,21 @@
 \frame{
   \frametitle{Today}
   {\Large{Last week: we largely learned how to describe our data {\emph{numerically}}. \\[0.5cm]
-  {\bf{Today}}: we will learn how to present our data with {\emph{graphics}}. \\[0.25cm]
-  We will learn both how to create graphics in R, but also the principles of effective statistical graphics.
+  {\bf{Today}}: we will learn how to present our data with {\emph{graphics}}. \\[0.5cm]
+  We will learn both how to create graphics in R and the principles of effective statistical graphics.
   }}
 }
 
 \frame{
   \frametitle{Inferential Statistics}
-  {\Large{Many of the things we learn today will also apply to inferential statistics.}}
+  {\Large{Many of the things we learn today will also apply to presenting inferential statistics.}}
 }
 
 \frame{
   \frametitle{}
-  {\Large{The first part of this lecture is based on Tufte (2001) \\[0.5cm]
+  {\Large{The first part of this lecture is based on Tufte (2001). \\[0.5cm]
   Many of the examples are from the Junk Charts Blog (\url{http://junkcharts.typepad.com/}). \\[0.5cm]
-  We will also use the World Bank data we downloaded last class. \\
+  We will also use the World Bank data we downloaded last class. \\[0.25cm]
   R Source Code at: \url{http://bit.ly/OTWEGS}
   }}
 <<DataDownload, echo=FALSE, message=FALSE>>=
@@ -337,6 +337,7 @@ ggplot(data = CircComp, aes(reorder(Names, Numbers), Numbers)) +
 
 \frame{
   \frametitle{Colour \& Context Illusions}
+{\Large{Which square is darkest?}}
   \begin{center}
     \includegraphics[scale=0.5]{figure/ColourContext.png}
   \end{center}

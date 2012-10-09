@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  9 OCT 2012 10:42
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  9 OCT 2012 10:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1390,7 +1390,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 File: figure/ColourContext.png Graphic file (type png)
 
 <use figure/ColourContext.png>
-Package pdftex.def Info: figure/ColourContext.png used on input line 560.
+Package pdftex.def Info: figure/ColourContext.png used on input line 561.
 (pdftex.def)             Requested size: 284.06055pt x 148.55463pt.
 
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
@@ -1431,7 +1431,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 File: figure/BadColourBar.png Graphic file (type png)
 
 <use figure/BadColourBar.png>
-Package pdftex.def Info: figure/BadColourBar.png used on input line 583.
+Package pdftex.def Info: figure/BadColourBar.png used on input line 584.
 (pdftex.def)             Requested size: 270.00809pt x 155.58087pt.
 
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
@@ -1445,7 +1445,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 File: figure/GoodColourBar.png Graphic file (type png)
 
 <use figure/GoodColourBar.png>
-Package pdftex.def Info: figure/GoodColourBar.png used on input line 590.
+Package pdftex.def Info: figure/GoodColourBar.png used on input line 591.
 (pdftex.def)             Requested size: 268.0006pt x 153.07149pt.
 
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
@@ -1563,7 +1563,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.704 }
+l.705 }
        
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1575,7 +1575,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.704 }
+l.705 }
        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1695,7 +1695,7 @@ File: figure/ViolinPlotShow.pdf Graphic file (type pdf)
 Package pdftex.def Info: figure/ViolinPlotShow.pdf used on input line 9.
 (pdftex.def)             Requested size: 307.28987pt x 219.49687pt.
 )
-Overfull \vbox (0.46411pt too high) detected at line 865
+Overfull \vbox (0.46411pt too high) detected at line 866
  []
 
 
@@ -1723,7 +1723,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 ! Illegal parameter number in definition of \iterate.
 <to be read again> 
                    c
-l.893 }
+l.894 }
        
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1732,7 +1732,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \iterate.
 <to be read again> 
                    c
-l.893 }
+l.894 }
        
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1741,7 +1741,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \beamer@doifinframe.
 <to be read again> 
                    c
-l.893 }
+l.894 }
        
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1751,13 +1751,13 @@ are all screwed up? I'm going to assume that you meant ##.
 File: figure/RStudioUse.png Graphic file (type png)
 
 <use figure/RStudioUse.png>
-Package pdftex.def Info: figure/RStudioUse.png used on input line 893.
+Package pdftex.def Info: figure/RStudioUse.png used on input line 894.
 (pdftex.def)             Requested size: 271.21732pt x 165.11934pt.
 
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    c
-l.893 }
+l.894 }
        
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1766,7 +1766,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    c
-l.893 }
+l.894 }
        
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1824,11 +1824,11 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `Lecture6.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 936.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 936.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 937.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 937.
  (./Lecture6.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 936.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 936.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 937.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 937.
 Package rerunfilecheck Info: File `Lecture6.out' has not changed.
 (rerunfilecheck)             Checksum: BB67735F946DB1A732E20AFBB09416F7;291.
 
@@ -1836,7 +1836,7 @@ Package rerunfilecheck Info: File `Lecture6.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 936.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 937.
  ) 
 Here is how much of TeX's memory you used:
  18623 strings out of 493633
@@ -1859,7 +1859,7 @@ ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/lo
 cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/loc
 al/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local
 /texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Lecture6.pdf (69 pages, 701923 bytes).
+Output written on Lecture6.pdf (69 pages, 701934 bytes).
 PDF statistics:
  709 PDF objects out of 1000 (max. 8388607)
  583 compressed objects within 6 object streams
