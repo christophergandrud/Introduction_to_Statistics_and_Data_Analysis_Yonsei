@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.10pt}
+\beamer@sectionintoc {2}{Assignment 3}{3}{0}{1}
+\beamer@sectionintoc {3}{Recap}{4}{0}{2}
+\beamer@sectionintoc {4}{Hypothesis Testing}{12}{0}{3}
+\beamer@sectionintoc {5}{p-values}{28}{0}{4}

@@ -126,7 +126,7 @@ Run10 <- read.table(textConnection(Run10),
   names(Run10)
 @
 
-  {\bf{Today we will use these variables (from Diaz et al. (2011, Ch. 4)):}}
+  {\bf{Today}} we will use these variables (from Diaz et al. (2011, Ch. 4)):
   \begin{table}
     \begin{tabular}{l p{4cm}}
       \hline
@@ -391,8 +391,8 @@ ggplot(SampleDistMolten, aes(x = value, colour = factor(SampleSize), fill = fact
         scale_fill_manual(values = Scale, name = "Sample Size") +
         geom_vline(xintercept = OneTimeMean, colour = "#8DA0CB", linetype = "longdash") +
         geom_vline(xintercept = PopMeanTime, colour = "#1F78B4", linetype = 1) +
-        annotate("text", x = 99, y = 1.5, label = "Our 1st\n Sample Mean", colour = "#8DA0CB") +
-        annotate("text", x = 99, y = 2, label = "Population\n Mean", colour = "#1F78B4") +
+        annotate("text", x = 98, y = 1.25, label = "Our 1st\n Sample Mean", colour = "#8DA0CB") +
+        annotate("text", x = 98, y = 1.75, label = "Population\n Mean", colour = "#1F78B4") +
         xlab("\nSample Means of Time") + ylab("Density\n") + 
         ggtitle("Comparing Sample Sizes\n") +
         theme_bw()
@@ -402,7 +402,7 @@ ggplot(SampleDistMolten, aes(x = value, colour = factor(SampleSize), fill = fact
 \frame{
   \frametitle{Sample Size, Point Estimates, and Population Parameters}
   \begin{center}
-    {\Large{The {\bf{likely distance}} between the sample mean and the population mean is a related to {\bf{sample size}} ($n$), \\[1cm]
+    {\Large{The {\bf{likely distance}} between the sample mean and the population mean is related to the {\bf{sample size}} ($n$), \\[1cm]
     The {\bf{bigger}} the sample size, the more likely it is that the point estimate is {\bf{close}} to the population parameter.}}
   \end{center}
 }
@@ -547,6 +547,47 @@ UpperAge <- MeanAge + 1.96 * SEAge
     \end{tabular}
   \end{table}
 }
+
+\begin{frame}[fragile]
+  \frametitle{Alternative}
+<<ConfIntSetUp, echo=FALSE>>=
+# Combine Time estimates into a data frame
+TimeEst <- data.frame(cbind(LowerTime, MeanTime, UpperTime))
+TimeEst$Var <- "Time"
+
+# Combine Age estimates into a data frame
+AgeEst <- data.frame(cbind(LowerAge, MeanAge, UpperAge))
+AgeEst$Var <- "Age"
+@
+
+<<ConfIntPlot, echo=FALSE, message=FALSE, fig.height=4>>=
+# Load library for combining plots
+library(gridExtra)
+
+# Plot Time estimates
+TimePlot <- ggplot(data = TimeEst, aes(x = Var,
+                             y = MeanTime,
+                             ymin = LowerTime,
+                             ymax = UpperTime)) +
+          geom_pointrange(size = 4, colour = "#91CF60") + 
+          coord_flip() +
+          xlab("") + ylab("") +
+          theme_bw(base_size = 15)
+
+# Plot Age estimates
+AgePlot <- ggplot(data = AgeEst, aes(x = Var,
+                             y = MeanAge,
+                             ymin = LowerAge,
+                             ymax = UpperAge)) +
+          geom_pointrange(size = 4, colour = "#FC8D59") + 
+          coord_flip() +
+          xlab("") + ylab("") +
+          theme_bw(base_size = 15)
+
+# Combine Plots
+grid.arrange(TimePlot, AgePlot, main = "95% Confidence Intervals for the Mean (n = 100)")
+@
+\end{frame}
 
 
 \begin{frame}[allowframebreaks]

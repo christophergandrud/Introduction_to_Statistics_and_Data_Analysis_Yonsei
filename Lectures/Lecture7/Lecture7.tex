@@ -193,7 +193,7 @@ Run10 <- \hlfunctioncall{read.table}(\hlfunctioncall{textConnection}(Run10),
 \end{knitrout}
 
 
-  {\bf{Today we will use these variables (from Diaz et al. (2011, Ch. 4)):}}
+  {\bf{Today}} we will use these variables (from Diaz et al. (2011, Ch. 4)):
   \begin{table}
     \begin{tabular}{l p{4cm}}
       \hline
@@ -328,7 +328,7 @@ Run10Samp <- Run10[\hlfunctioncall{sample}(1:\hlfunctioncall{nrow}(Run10), 100,
 \hlfunctioncall{mean}(Run10Samp$time)
 \end{alltt}
 \begin{verbatim}
-## [1] 93.06
+## [1] 94.88
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -341,7 +341,7 @@ Run10Samp <- Run10[\hlfunctioncall{sample}(1:\hlfunctioncall{nrow}(Run10), 100,
 \hlfunctioncall{mean}(Run10Samp$age)
 \end{alltt}
 \begin{verbatim}
-## [1] 34.73
+## [1] 37.61
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -366,7 +366,7 @@ Run10Samp <- Run10[\hlfunctioncall{sample}(1:\hlfunctioncall{nrow}(Run10), 100,
 \hlfunctioncall{sd}(Run10Samp$time)
 \end{alltt}
 \begin{verbatim}
-## [1] 17.17
+## [1] 16.71
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -379,7 +379,7 @@ Run10Samp <- Run10[\hlfunctioncall{sample}(1:\hlfunctioncall{nrow}(Run10), 100,
 \hlfunctioncall{sd}(Run10Samp$age)
 \end{alltt}
 \begin{verbatim}
-## [1] 9.173
+## [1] 11.65
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -393,8 +393,8 @@ Run10Samp <- Run10[\hlfunctioncall{sample}(1:\hlfunctioncall{nrow}(Run10), 100,
     \hline
     Variable & $\bar{x}$ & $\mu$ & $s$ & $\sigma$ \\
     \hline\hline
-    \texttt{time} & 93.1 & ? & 17.2 & ? \\
-      \texttt{age} & 34.7 & ? & 9.2 & ? \\
+    \texttt{time} & 94.9 & ? & 16.7 & ? \\
+      \texttt{age} & 37.6 & ? & 11.7 & ? \\
       \hline
     
     \end{tabular}
@@ -500,7 +500,7 @@ TimeSampMeans <- \hlfunctioncall{data.frame}(TimeSampMeans)
 \frame{
   \frametitle{Sample Size, Point Estimates, and Population Parameters}
   \begin{center}
-    {\Large{The {\bf{likely distance}} between the sample mean and the population mean is a related to {\bf{sample size}} ($n$), \\[1cm]
+    {\Large{The {\bf{likely distance}} between the sample mean and the population mean is related to the {\bf{sample size}} ($n$), \\[1cm]
     The {\bf{bigger}} the sample size, the more likely it is that the point estimate is {\bf{close}} to the population parameter.}}
   \end{center}
 }
@@ -539,20 +539,20 @@ TimeSampMeans <- \hlfunctioncall{data.frame}(TimeSampMeans)
 \hlfunctioncall{std.error}(Run10Samp$time)
 \end{alltt}
 \begin{verbatim}
-## [1] 1.717
+## [1] 1.671
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
 
 
-  {\large{So, \texttt{time} in our original sample with 100 observations had a sampleing mean of 93.1 and a standard error of 1.7.
+  {\large{So, \texttt{time} in our original sample with 100 observations had a sampleing mean of 94.9 and a standard error of 1.7.
 \end{frame}
 
 %%%%%%%%%%%%% Confidence Intervals
 \section{Confidence Intervals}
 \frame{
   \frametitle{Um\ldots}
-  {\Large{Um \ldots a sampleing mean of 93.1 and a standard error of 1.7? \\[1cm]
+  {\Large{Um \ldots a sampleing mean of 94.9 and a standard error of 1.7? \\[1cm]
   That's not very easy to understand.}}
 }
 
@@ -635,14 +635,14 @@ UpperTime <- MeanTime + 1.96 * SETime
 LowerTime
 \end{alltt}
 \begin{verbatim}
-## [1] 89.7
+## [1] 91.61
 \end{verbatim}
 \begin{alltt}
 
 UpperTime
 \end{alltt}
 \begin{verbatim}
-## [1] 96.43
+## [1] 98.16
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -659,13 +659,30 @@ UpperTime
     \hline
     Variable & Lower CI & Mean & Upper CI & Population Mean \\
     \hline\hline
-    \texttt{time} & 89.7 & 93.1 & 96.4 & 94.5 \\
-      \texttt{age} & 32.9 & 34.7 & 36.5 & 35.5 \\
+    \texttt{time} & 91.6 & 94.9 & 98.2 & 94.5 \\
+      \texttt{age} & 35.3 & 37.6 & 39.9 & 35.5 \\
       \hline
     
     \end{tabular}
   \end{table}
 }
+
+\begin{frame}[fragile]
+  \frametitle{Alternative}
+
+
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=\maxwidth]{figure/ConfIntPlot} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
 
 
 \begin{frame}[allowframebreaks]
