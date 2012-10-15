@@ -1,0 +1,27 @@
+\frametitle {Take a random sample}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Find number of observations}
+\hlfunctioncall{nrow}(ames)
+\end{alltt}
+
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'ames' not found}}\begin{alltt}
+
+\hlcomment{# Take a random sample of 100 observations}
+amesSamp <- ames[\hlfunctioncall{sample}(1:\hlfunctioncall{nrow}(ames), 100,
+                          replace=FALSE),]
+\end{alltt}
+
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'ames' not found}}\begin{alltt}
+
+\hlcomment{# Find number of observations in sample}
+\hlfunctioncall{nrow}(amesSamp)
+\end{alltt}
+
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'amesSamp' not found}}\end{kframe}
+\end{knitrout}
+

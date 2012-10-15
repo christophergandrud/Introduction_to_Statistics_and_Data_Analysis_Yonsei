@@ -1,0 +1,99 @@
+\documentclass{beamer}
+\usetheme{Stats}
+\setbeamercovered{transparent}
+\usepackage{color}
+\usepackage{hyperref}
+  \hypersetup{
+  	colorlinks=true
+		linkcolor=black
+		}
+\usepackage{url}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{booktabs}
+
+<<ParentGlobalOpts, echo=FALSE>>=
+  options(width=50)
+  opts_chunk$set(fig.align='center')
+@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title Slide %%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[]{Intro to Social Science Data Analysis \\[1cm] Seminar 9: Overview of Statistical Inference (II)}
+\author[]{
+    \href{mailto:gandrud@yonsei.ac.kr}{Christopher Gandrud}
+}
+\date{\today}
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}[fragile]
+  \frametitle{Download Data from OpenIntro}
+<<Download, tidy=FALSE>>=
+# Download data
+download.file("http://bit.ly/PO9XsF", 
+              destfile = "ames.RData")
+
+# Load Data
+load("ames.RData")
+@
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Take a random sample}
+<<Sample, tidy=FALSE>>=
+# Find number of observations
+nrow(ames)
+
+# Take a random sample of 100 observations
+amesSamp <- ames[sample(1:nrow(ames), 100,
+                          replace=FALSE),]
+
+# Find number of observations in sample
+nrow(amesSamp)
+@
+\end{frame}
+
+\frame{
+  \frametitle{Hypothesis Tests}
+  Pick 3 continuous variables and formulate null and alternative hypotheses for testing whether the sample is representative of the population.
+}
+
+\frame{
+  \frametitle{Hypothesis Tests}
+  Test these hypotheses with 95\% and 99\% confidence intervals.
+}
+
+\frame{
+  \frametitle{Hypothesis Tests}
+  Test these hypotheses p-values using the 95\% and 99\% significance levels.
+}
+
+\frame{
+  \frametitle{Hypothesis Tests}
+  How do the results from the p-value tests correspond to the confidence interval tests?
+}
+
+\frame{
+  \frametitle{Subset}
+  Subset the one of your variables by the variable \texttt{Central.Air}.\\[0.5cm]
+  It has the values \texttt{Y} and \texttt{N}.
+}
+
+\frame{
+  \frametitle{Subset}
+  Is there a significant difference in the mean value of the variable for houses with air conditioning and without air conditioning?
+}
+
+
+
+
+
+
+
+
+
+\end{document}

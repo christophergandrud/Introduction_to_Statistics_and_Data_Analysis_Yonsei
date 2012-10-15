@@ -74,7 +74,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title Slide %%%%%%%%%%%%%%%%%%%%%%%%%%
-\title[]{Intro to Social Science Data Analysis \\[1cm] Lecture 9: Statistical Inference with Large Samples}
+\title[]{Intro to Social Science Data Analysis \\[1cm] Lecture 9: Overview of Statistical Inference (II)}
 \author[]{
     \href{mailto:gandrud@yonsei.ac.kr}{Christopher Gandrud}
 }
@@ -122,26 +122,29 @@
 
 \frame{
   \frametitle{Today}
-{\Large{Last class we largely looked at how to draw inferences about a population {\bf{mean}} from a sample {\bf{mean}}. \\[0.5cm]
+{\Large{Last class we largely looked at how to draw inferences about a population {\bf{mean}} from a sample {\bf{mean}}.  }} \\[0.5cm]
   Today we will expand our inferential tools by learning about:
   \begin{itemize}
-    \item Hypothesis testing \& p-values,
+    \item Hypothesis testing including $\mathrm{Z}$ scores, $t$ distributions, \& p-values,
     \item Comparing 2 population means,
+  \end{itemize}
+  Next class:
+  \begin{itemize}
     \item Making inferences with population proportions,
     \item Inferential statistics with categorical variables.
   \end{itemize}
-  }}
+
 }
 
 %%%%%%%%%%% Hypothesis testing
-\section{Hypothesis Testing}
+\section{Hypothesis Testing: Overview}
 \begin{frame}[fragile]
   \frametitle{Hypothesis Testing Setup}
   {\large{Imagine that we have a sample of 200 Cherrry Blossom Run Finishing times from the 2009 race. \\[0.25cm] (This example is largely from Diaz et al. 2011. See last week's lecture for more details) \\[0.5cm]
 
 
 
-  The mean finishing time in the sample is 95.5 minutes with a standard deviation of 16.1}}
+  The mean finishing time in the sample is 93.2 minutes with a standard deviation of 14.8}}
 \end{frame}
 
 \frame{
@@ -246,6 +249,8 @@
 }}
 }
 
+%%%%%%%%%%%% Z Scores & t distributions
+\section{$\mathrm{Z}$ Scores and $t$ Distributions}
 \frame{
   \frametitle{Quantifying Error Probabilities}
   We previously used a 95\% confidence interval to test the Null Hypothesis. \\[0.5cm]
@@ -275,6 +280,82 @@
   For example, at the 99\% significance level we will incorrectly reject the $H_{0}$ 1\% of the time.}}
 }
 
+\frame{
+  \frametitle{99\% Confidence Interval}
+{\LARGE{The 99\% Confidence Interval of the Mean: \\[0.5cm]
+  \[
+    CI_{99\%} = \bar{x} \pm 2.58 * SE_{\bar{x}}
+  \]
+  }}
+}
+
+\begin{frame}[fragile]
+  \frametitle{Comparing Confidence Intervals}
+
+
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=\maxwidth]{figure/PlotCICompare} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+\frame{
+  \frametitle{Confidence Intervals and \mathrm{Z} Scores}
+  \begin{center}
+{\Large{Where does the 2.58 come from? \\[0.5cm]
+  Where does the 1.96 come from (for 95\% confidence intervals)? }}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Confidence Intervals and \mathrm{Z} Scores}
+{\large{They are the $\mathrm{Z}$ score for the confidence level. \\[0.5cm]
+  $\mathrm{Z}$ scores are number of standard deviations above or below the mean that an observation falls\\[0.5cm]
+  Because of the Central Limit Theorem, if 
+  \begin{itemize}
+    \item<1-> The sample observations are {\bf{independent}},
+    \item<1-> The sample size is {\bf{large}} (about $n \geq 50$),
+    \item<1-> The distribution is not extremely skewed.
+  \end{itemize}
+  then we can assume that\ldots
+  }}
+}
+
+\begin{frame}
+  \frametitle{$\mathrm{Z}$ Scores and Confidence Intervals}
+  \begin{center}
+    \includegraphics[scale=0.45]{figure/ZScore.png} \\
+    Source: Diaz et al. (2011, 154)
+  \end{center}
+\end{frame}
+
+\frame{
+  \frametitle{What if the Central Limit Theorem's Assumptions Aren't Met?}
+{\Large{What if the Central Limit Theorem's Assumptions Aren't Met?}} \\[0.5cm]
+  \begin{itemize}
+    \item Dependent data: See Sainani (2010): \url{http://www.stanford.edu/~kcobb/hrp259/correlateddata.pdf}. 
+    \item The larger the sample, the more lenient you can be about skewness.
+    \item If you have a smaller sample size and it is skewed, you can use a version of the Wilcox test (in R \texttt{wilcox.test}) for hypothesis testing. See Crawley (2005, Ch. 5)
+    \item If you have a small sample (about $n < 50$) that is not highly skewed, you can use the $t$ distribution to calculate confidence intervals. See Diaz et al. (2011, Ch. 6).
+  \end{itemize}
+}
+
+\begin{frame}
+  \frametitle{The $t$ distribution with various Degrees of Freedom}
+  \begin{center}
+    \includegraphics[scale=0.5]{figure/tDist.png} \\
+    df = Degrees of Freedom ($n - 1$)\\[0.25cm]
+    {\tiny{Source: Diaz et al. (2011, 244)}}
+  \end{center}
+\end{frame}
+
 %%%%%%%%%%%% p-values
 \section{p-values}
 \frame{
@@ -282,87 +363,123 @@
   {\Large{Some researchers like to quantify the strength of the evidence against the Null Hypothesis with a tool called the {\bf{p-value}}.}}
 }
 
-\frame{
+\begin{frame}[fragile]
   \frametitle{What is the p-value}
 {\LARGE{p-value}} \\[0.5cm]
-  The probability of seeing data at least as favourable to the alternative hypothesis as our current data, {\emph{if the null hypothesis is true}}.
-}
+  The probability of seeing data at least as favourable to the alternative hypothesis as our current data, {\emph{if the null hypothesis is true}}. \\[0.5cm]
+  In our previous {\bf{example}}, we would want to know the probability of seeing a mean of at least 94.5 if the true population mean is actually 93.29 (the population mean for 2006).
+\end{frame}
 
+\begin{frame}[fragile]
+  \frametitle{Visualizing the p-value}
+  \begin{center}
+    \includegraphics[scale=0.5]{figure/AbstractP.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Example}
+{\LARGE{Example}} \\[0.5cm]
+  In our previous {\bf{example}}, we would want to know the probability of seeing a mean of at least 94.5 if the true population mean is actually 93.29 (the population mean for 2006). \\[0.5cm]
+\end{frame}
+
+\begin{frame}[fragile]
+\
+  We first calculated the $\mathrm{Z}$ score of the sample mean $\bar{x} = 94.5$
+\[
+  \mathrm{Z} = \frac{\bar{x} - \mathrm{null\:value}}{SE_{\bar{x}}}
+\]\\[0.25cm]
+In R:
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Load library}
+\hlfunctioncall{library}(plotrix)
+
+\hlcomment{# Find Z score }
+Z <- (\hlfunctioncall{mean}(Run10Samp$time) - 93.29)/
+      \hlfunctioncall{std.error}(Run10Samp$time)
+
+Z
+\end{alltt}
+\begin{verbatim}
+## [1] -0.05174
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{$\mathrm{Z}$ Scores and Confidence Intervals}
+  \begin{center}
+    \includegraphics[scale=0.45]{figure/ZScore.png} \\
+    Source: Diaz et al. (2011, 154)
+  \end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Find p-values}
+  To find the p-value for the -0.1 use \texttt{pnorm}.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+P1 <- 1 - \hlfunctioncall{pnorm}(Z)
+P1
+\end{alltt}
+\begin{verbatim}
+## [1] 0.5206
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+So, if the null hypothesis was true we would have a 0.5206 probability of observing a mean of at least -0.1 larger than the 2006 mean. \\[0.25cm]
+This is bigger than the 0.05 significance level. So, we fail to reject the null hypothesis that $\mu{x}_{09} > \mu{x}_{06}$.
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Um\ldots}
+  But we were interested in the null hypothesis $\mu{x}_{09} = \mu{x}_{06}$, not $\mu{x}_{09} > \mu{x}_{06}$. \\[0.5cm]
+  So far we have only looked one tail of the distribution. to examine both tails simply {\bf{multiply the one-tail p-value by 2}}.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+P2 <- 2 * (1 - \hlfunctioncall{pnorm}(Z))
+
+P2
+\end{alltt}
+\begin{verbatim}
+## [1] 1.041
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+We fail to reject the null hypothesis that $\mu{x}_{09} = \mu{x}_{06}$. \\[0.25cm]
+In other words, we have evidence that there is no difference in the mean finishing times from the 2006 and 2009 Cherry Blossom Run.
+
+\end{frame}
+
+%%%%%%%%%%% Comparing 2 Means
+\section{Comparing Two (Independent) Means}
 \frame{
   \frametitle{Question}
   \begin{center}
-{\Large{Using p-values to comparing means: \\[0.5cm]
   Are men's finishing times different than women's finishing time in the 2009 Cherry Blossom Run?}}
   \end{center}
 }
 
-\frame{
-  \frametitle{}
-  \begin{center}
-{\Large{First the Descriptive Statistics}}
-  \end{center}
-}
-
-\begin{frame}[fragile,plain]
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlcomment{#### Summary of Men's Times #### Subset sample to}
-\hlcomment{#### include only men's Times}
-MenSubset <- \hlfunctioncall{subset}(Run10Samp$time, Run10Samp$gender == 
-    \hlstring{"M"})
-\hlcomment{# Mean}
-Mean <- \hlfunctioncall{mean}(MenSubset)
-\hlcomment{# Standard Deviation}
-SD <- \hlfunctioncall{sd}(MenSubset)
-\hlcomment{# Number of observations}
-N <- \hlfunctioncall{length}(MenSubset)
-\hlcomment{# Create Gender Variable}
-Gender <- \hlstring{"Male"}
-\hlcomment{# Combine}
-GenderData <- \hlfunctioncall{data.frame}(Gender, Mean, SD, N)
-\end{alltt}
-\end{kframe}
-\end{knitrout}
-
-\end{frame}
-
-\begin{frame}[fragile,plain]
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlcomment{#### Summary of Women's Times #### Subset sample}
-\hlcomment{#### to include only women's Times}
-WomenSubset <- \hlfunctioncall{subset}(Run10Samp$time, Run10Samp$gender == 
-    \hlstring{"F"})
-\hlcomment{# Mean}
-Mean <- \hlfunctioncall{mean}(WomenSubset)
-\hlcomment{# Standard Deviation}
-SD <- \hlfunctioncall{sd}(WomenSubset)
-\hlcomment{# Number of observations}
-N <- \hlfunctioncall{length}(WomenSubset)
-\hlcomment{# Create Gender Variable}
-Gender <- \hlstring{"Female"}
-\hlcomment{# Combine}
-GenderDataF <- \hlfunctioncall{data.frame}(Gender, Mean, SD, N)
-
-\hlcomment{# Combine into one data frame}
-GenderData <- \hlfunctioncall{data.frame}(\hlfunctioncall{rbind}(GenderData, GenderDataF))
-\end{alltt}
-\end{kframe}
-\end{knitrout}
-
-\end{frame}
-
 \begin{frame}[fragile]
   \frametitle{Summary Descriptives}
+
+
+  
   \begin{table}
   \caption{Descriptive Statistics of the Sample}
   \begin{tabular}{c | c c c}
   & $\bar{x}$ & $s$ & $n$ \\
   \hline\hline
-  Female & 100.7 & 15.3 & 101 \\
-  Male & 90.2 & 15.1 & 99 \\
+  Female & 98 & 14.8 & 117 \\
+  Male & 86.5 & 12.2 & 83 \\
   \hline
   
   \end{tabular}
@@ -374,9 +491,9 @@ GenderData <- \hlfunctioncall{data.frame}(\hlfunctioncall{rbind}(GenderData, Gen
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hlcomment{# Compare densities of Men/Women Times}
-\hlfunctioncall{ggplot}(Run10Samp, \hlfunctioncall{aes}(time)) +
-        \hlfunctioncall{geom_density}(\hlfunctioncall{aes}(
-          line = gender, color = gender)) +
+\hlfunctioncall{ggplot}(Run10Samp, \hlfunctioncall{aes}(y = time, 
+                      x = gender, color = gender)) +
+        \hlfunctioncall{geom_boxplot}() +
         \hlfunctioncall{theme_bw}()
 \end{alltt}
 \end{kframe}
@@ -391,16 +508,149 @@ GenderData <- \hlfunctioncall{data.frame}(\hlfunctioncall{rbind}(GenderData, Gen
 \end{frame}
 
 \frame{
-  \frametitle{Comparing Means: Hypothesis Testing}
-  {\Large{Null Hypothesis: $\mu_{men} = \mu_{women}$ \\[0.25cm]
-  Alternative Hypothesis: $\mu_{men} \neq \mu_{women}$ \\[0.5cm]
-  An equivalent way to write this null hypothesis is: $\mu_{men} - \mu_{women} = 0$
+  \frametitle{Comparing Two Means: Hypothesis Testing}
+  {\Large{Null Hypothesis: 
+  \begin{center}
+    $\mu_{m} = \mu_{w}$ \\[0.25cm]
+  \end{center}
+  Alternative Hypothesis: 
+  \begin{center}
+    $\mu_{m} \neq \mu_{w}$ \\[0.5cm]
+  \end{center}
+  An equivalent way to write this null hypothesis is: 
+  \begin{center}
+    $\mu_{m} - \mu_{w} = 0$
+  \end{center}
   }}
+}
+
+\begin{frame}[fragile]
+  \frametitle{Our Sample}
+  The {\bf{difference in mean}} times between Men and Women is:
+  \begin{center}
+    $\mu_{m} - \mu_{w}$ \\[0.25cm]
+    86.5 - 98 = -11.5
+  \end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Standard Error of the Difference of Two Means}
+{\Large{Standard Error of the Difference of Two Means:}}
+\[
+  SE_{\bar{x}_{m} - \bar{x}_{w}} = \frac{\sigma_{m}}{\sqrt{n_{m}}} + \frac{\sigma_{w}}{\sqrt{n_{w}}}
+\] \\[0.5cm]
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Approximate the Standard Error.}
+  Because in our sample each gender has {\bf{more than 50 observations}} that are {\bf{independent}}, and the is {\bf{normally distributed}} we can use the {\bf{sample standard deviations}} to approximate the standard error of the difference of two means:
+\[
+  SE_{\bar{x}_{m} - \bar{x}_{w}} = \frac{\sigma_{m}}{\sqrt{n_{m}}} + \frac{\sigma_{w}}{\sqrt{n_{w}}} \approx \frac{s_{m}}{\sqrt{n_{m}}} + \frac{s_{w}}{\sqrt{n_{w}}} = \frac{12.2}{\sqrt{83}}} + \frac{14.8}{\sqrt{117}}
+\]\\[0.5cm]
+\[
+SE_{\bar{x}_{m} - \bar{x}_{w}} = 2.7005
+\]
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{The R Code}
+{\Large{Here is the R Code for Everything We Need (1)}}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Subset Samples}
+MenSubset <- \hlfunctioncall{subset}(Run10Samp$time, 
+                       Run10Samp$gender == \hlstring{"M"})
+WomenSubset <- \hlfunctioncall{subset}(Run10Samp$time, 
+                       Run10Samp$gender == \hlstring{"F"})
+
+\hlcomment{# Means}
+MeanMen <- \hlfunctioncall{mean}(MenSubset)
+MeanWomen <- \hlfunctioncall{mean}(WomenSubset)
+
+\hlcomment{# Mean difference}
+MeanDiff <- MeanMen - MeanWomen
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{The R Code}
+{\Large{Here is the R Code for Everything We Need (2)}}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Standard Errors}
+SEMen <- \hlfunctioncall{std.error}(MenSubset)
+SEWomen <- \hlfunctioncall{std.error}(WomenSubset)
+
+\hlcomment{# Standard error of the difference of two means}
+SEDiff <- SEMen + SEWomen
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Hypothesis Testing}
+{\Large{Now that we have the difference in means, the standard error of the difference in means, and the sample sizes we can statistically examine whether or not the mean finishing times are different for men and women.}}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Confidence Intervals}
+{\Large{Let's find the 95\% Confidence interval of the Difference of the Two Means}}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Lower bound of the confidence interval}
+Lower <- MeanDiff - 1.96 * SEDiff
+
+\hlcomment{# Upper bound of the confidence interval}
+Upper <- MeanDiff + 1.96 * SEDiff
+
+Lower
+\end{alltt}
+\begin{verbatim}
+## [1] -16.76
+\end{verbatim}
+\begin{alltt}
+Upper
+\end{alltt}
+\begin{verbatim}
+## [1] -6.174
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Better}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=\maxwidth]{figure/PlotCIDiffMeans} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+\frame{
+  \frametitle{Substantive Interpretation}
+{\large{So, we can reject the null hypothesis that $\mu_{m} - \mu_{w} = 0$ \\[0.5cm]
+I.e. we have evidence that women's and men's finishing times in the 2009 Cherry Blossom Race were different.}}
 }
 
 
 \begin{frame}[allowframebreaks]
   \frametitle{References}
+  Crawley, Michael J. 2005. Statistics: An Introduction Using R. Chichester: John Wiley & Sons. Ltd. \\[0.25cm]
   Diaz, David M., Christopher D. Barr, and Mine \c{C}etinkaya-Rundel. 2011. OpenIntro Statistics. 1st ed. \url{http://www.openintro.org/stat/downloads.php}. \\[0.25cm] 
 \end{frame}
 

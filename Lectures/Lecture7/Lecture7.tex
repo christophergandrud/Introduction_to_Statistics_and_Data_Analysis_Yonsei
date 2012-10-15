@@ -328,7 +328,7 @@ Run10Samp <- Run10[\hlfunctioncall{sample}(1:\hlfunctioncall{nrow}(Run10), 100,
 \hlfunctioncall{mean}(Run10Samp$time)
 \end{alltt}
 \begin{verbatim}
-## [1] 94.88
+## [1] 95.78
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -341,7 +341,7 @@ Run10Samp <- Run10[\hlfunctioncall{sample}(1:\hlfunctioncall{nrow}(Run10), 100,
 \hlfunctioncall{mean}(Run10Samp$age)
 \end{alltt}
 \begin{verbatim}
-## [1] 37.61
+## [1] 34.37
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -366,7 +366,7 @@ Run10Samp <- Run10[\hlfunctioncall{sample}(1:\hlfunctioncall{nrow}(Run10), 100,
 \hlfunctioncall{sd}(Run10Samp$time)
 \end{alltt}
 \begin{verbatim}
-## [1] 16.71
+## [1] 17.13
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -379,7 +379,7 @@ Run10Samp <- Run10[\hlfunctioncall{sample}(1:\hlfunctioncall{nrow}(Run10), 100,
 \hlfunctioncall{sd}(Run10Samp$age)
 \end{alltt}
 \begin{verbatim}
-## [1] 11.65
+## [1] 9.138
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -393,8 +393,8 @@ Run10Samp <- Run10[\hlfunctioncall{sample}(1:\hlfunctioncall{nrow}(Run10), 100,
     \hline
     Variable & $\bar{x}$ & $\mu$ & $s$ & $\sigma$ \\
     \hline\hline
-    \texttt{time} & 94.9 & ? & 16.7 & ? \\
-      \texttt{age} & 37.6 & ? & 11.7 & ? \\
+    \texttt{time} & 95.8 & ? & 17.1 & ? \\
+      \texttt{age} & 34.4 & ? & 9.1 & ? \\
       \hline
     
     \end{tabular}
@@ -539,20 +539,20 @@ TimeSampMeans <- \hlfunctioncall{data.frame}(TimeSampMeans)
 \hlfunctioncall{std.error}(Run10Samp$time)
 \end{alltt}
 \begin{verbatim}
-## [1] 1.671
+## [1] 1.713
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
 
 
-  {\large{So, \texttt{time} in our original sample with 100 observations had a sampleing mean of 94.9 and a standard error of 1.7.
+  {\large{So, \texttt{time} in our original sample with 100 observations had a sampleing mean of 95.8 and a standard error of 1.7.
 \end{frame}
 
 %%%%%%%%%%%%% Confidence Intervals
 \section{Confidence Intervals}
 \frame{
   \frametitle{Um\ldots}
-  {\Large{Um \ldots a sampleing mean of 94.9 and a standard error of 1.7? \\[1cm]
+  {\Large{Um \ldots a sampleing mean of 95.8 and a standard error of 1.7? \\[1cm]
   That's not very easy to understand.}}
 }
 
@@ -606,6 +606,49 @@ TimeSampMeans <- \hlfunctioncall{data.frame}(TimeSampMeans)
 \end{frame}
 
 \begin{frame}[fragile]
+  \frametitle{Visually Confirm Normally Distributied Time Data}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Create Quantile-Quantile Plots}
+\hlfunctioncall{qqnorm}(Run10Samp$time); \hlfunctioncall{qqline}(Run10Samp$time)
+\end{alltt}
+\end{kframe}
+
+{\centering \includegraphics[width=\maxwidth]{figure/QQPlotTime} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Visually Confirm Normally Distributied Age Data}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Create Quantile-Quantile Plots}
+\hlfunctioncall{qqnorm}(Run10Samp$age); \hlfunctioncall{qqline}(Run10Samp$age)
+\end{alltt}
+\end{kframe}
+
+{\centering \includegraphics[width=\maxwidth]{figure/QQPlotAge} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+\frame{
+  \frametitle{Independence}
+{\Large{In general, observations from a simple random sample of {\bf{less than 10\% of the population}} will be independent.}}
+}
+
+\begin{frame}[fragile]
   \frametitle{Let's calculate some 95\% confidence intervals for \texttt{time}}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
@@ -635,14 +678,14 @@ UpperTime <- MeanTime + 1.96 * SETime
 LowerTime
 \end{alltt}
 \begin{verbatim}
-## [1] 91.61
+## [1] 92.43
 \end{verbatim}
 \begin{alltt}
 
 UpperTime
 \end{alltt}
 \begin{verbatim}
-## [1] 98.16
+## [1] 99.14
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -659,8 +702,8 @@ UpperTime
     \hline
     Variable & Lower CI & Mean & Upper CI & Population Mean \\
     \hline\hline
-    \texttt{time} & 91.6 & 94.9 & 98.2 & 94.5 \\
-      \texttt{age} & 35.3 & 37.6 & 39.9 & 35.5 \\
+    \texttt{time} & 92.4 & 95.8 & 99.1 & 94.5 \\
+      \texttt{age} & 32.6 & 34.4 & 36.2 & 35.5 \\
       \hline
     
     \end{tabular}

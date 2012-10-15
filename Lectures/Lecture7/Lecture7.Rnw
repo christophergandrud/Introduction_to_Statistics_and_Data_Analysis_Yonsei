@@ -493,6 +493,27 @@ conf.int()
 \end{frame}
 
 \begin{frame}[fragile]
+  \frametitle{Visually Confirm Normally Distributied Time Data}
+<<QQPlotTime, tidy=FALSE, fig.height=4>>=
+# Create Quantile-Quantile Plots
+qqnorm(Run10Samp$time); qqline(Run10Samp$time)
+@
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Visually Confirm Normally Distributied Age Data}
+<<QQPlotAge, tidy=FALSE, fig.height=4>>=
+# Create Quantile-Quantile Plots
+qqnorm(Run10Samp$age); qqline(Run10Samp$age)
+@
+\end{frame}
+
+\frame{
+  \frametitle{Independence}
+{\Large{In general, observations from a simple random sample of {\bf{less than 10\% of the population}} will be independent.}}
+}
+
+\begin{frame}[fragile]
   \frametitle{Let's calculate some 95\% confidence intervals for \texttt{time}}
 <<ConfIntCalc>>=
 # Find Mean of time 

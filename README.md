@@ -157,7 +157,7 @@ How can we use **R** to create visual summaries of our data? What is `ggplot2`? 
 
 > *If you have access to Adobe Illustrator and want to make commercial journal quality graphics with **R** see:* Sigal, Mathew. 2011. *Make it Pretty:* An Introduction to Graphical Post-Processing with Adobe Illustrator. Presentation to York University Department of Psychology Quantitative Methods Brownbag.  <http://www.psych.yorku.ca/quantmethods/BrownBag/Sigal-2011-Post-Processing-Handouts.pdf>
 
-### Week 7: Overview of Statistical Inference
+### Week 7: Overview of Statistical Inference (I)
 How confident are we that our findings in our samples are actually present in the real world?
 
 > **Chapter 4:** *OpenIntro Statistics*
@@ -166,7 +166,7 @@ How confident are we that our findings in our samples are actually present in th
 
 ### Week 8: No Class (Midterm Week)
 
-### Week 9: Statistical Inference with Large Samples
+### Week 9: Overview of Statistical Inference (II)
 What basic tools can we use to make inferences when we have large data samples?
 
 > **Chapter 5:** *OpenIntro Statistics*

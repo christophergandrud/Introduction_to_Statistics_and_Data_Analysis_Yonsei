@@ -1,15 +1,8 @@
-\begin {knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlcomment{# Compare densities of Men/Women Times}
-\hlfunctioncall{ggplot}(Run10Samp, \hlfunctioncall{aes}(time)) +
-        \hlfunctioncall{geom_density}(\hlfunctioncall{aes}(
-          line = gender, color = gender)) +
-        \hlfunctioncall{theme_bw}()
-\end{alltt}
-\end{kframe}
+\frametitle {Better}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 
-{\centering \includegraphics[width=\maxwidth]{figure/GenderDist}
+{\centering \includegraphics[width=\maxwidth]{figure/PlotCIDiffMeans}
 
 }
 
