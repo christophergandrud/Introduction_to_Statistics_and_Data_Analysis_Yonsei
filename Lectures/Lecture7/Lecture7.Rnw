@@ -207,7 +207,7 @@ hist(Run10Samp$age)
 
 \frame{
   \frametitle{Inference}
-  {\Large{To answer this question we will need tools of {\bf{statistical inference}}. \\[1cm]
+  {\Large{To answer these questions we will need tools of {\bf{statistical inference}}. \\[1cm]
   Today we will learn the basics of statistical inference. \\[0.5cm]
   We will use these tools throughout the rest of the course and statistics. \\[0.5cm]
   Statistical inference is key for linking our (sampled) data to what we care about: questions about populations.}}
@@ -268,7 +268,7 @@ sd(Run10Samp$age)
   \frametitle{But\ldots}
   \begin{center}
   {\Large{But, {\bf{how do we know}} how {\bf{close}} the point estimates are to the real population parameters? \\[1cm] 
-  Especially, since when we take {\bf{other samples}} we will get {\bf{different estimates}}.}}
+  Especially since taking {\bf{other samples}} we will create {\bf{different estimates}}.}}
   \end{center}
 }
 
@@ -349,14 +349,14 @@ ggplot(TimeSampMeans, aes(x = TimeSampMeans)) +
 }
 
 \frame{
-  \frametitle{Question}
+  \frametitle{Question\ldots}
   \begin{center}
-    {\Large{What would the sampling distribution of the sample mean look like if the sample size was 5,000 rather than 100?}}
+    {\Large{Question: What would the sampling distribution of the sample mean look like if the sample size was 5,000 rather than 100?}}
   \end{center}
 }
 
 \begin{frame}[fragile]
-    \frametitle{Comparing Sampling Distributions of $\bar{x}_{test}$ 100 vs. 5,000}
+    \frametitle{Comparing Sampling Distributions of $\bar{x}_{time}$ 100 vs. 5,000}
 <<DistTimeSampleMean5000, tidy=FALSE, fig.height=5, echo=FALSE, message=FALSE>>=
 # Load library
 library(reshape2)
@@ -426,7 +426,7 @@ ggplot(SampleDistMolten, aes(x = value, colour = factor(SampleSize), fill = fact
 
 \frame{
   \frametitle{SE and Uncertainty}
-  {\Large{The standard error is a measure of our {\bf{uncertainty}} about how well the point estimate represents the population parameter.}}
+  {\Large{The {\bf{standard error}} is a {\bf{measure}} of our {\bf{uncertainty}} about how well the point estimate represents the population parameter.}}
 }
 
 \begin{frame}[fragile]
@@ -439,7 +439,7 @@ library(plotrix)
 std.error(Run10Samp$time)
 @
 
-  {\large{So, \texttt{time} in our original sample with 100 observations had a sampleing mean of \Sexpr{round(mean(Run10Samp$time), digit = 1)} and a standard error of \Sexpr{round(std.error(Run10Samp$time), digit = 1)}.
+  {\large{\texttt{Time} in our original sample with 100 observations had a sampleing mean of \Sexpr{round(mean(Run10Samp$time), digit = 1)} and a standard error of \Sexpr{round(std.error(Run10Samp$time), digit = 1)}.
 \end{frame}
 
 %%%%%%%%%%%%% Confidence Intervals
