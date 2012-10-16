@@ -67,7 +67,7 @@
 \section{Recap}
 \frame{
 	\frametitle{Principles of Quantitative Graphics (1)}
-{\Large{What are some of the goals that quantitative graphics should try to acheive?}}
+{\Large{What are some of the goals that quantitative graphics should try to achieve?}}
 }
 
 \frame{
@@ -141,7 +141,7 @@ Run10 <- read.table(textConnection(Run10),
 
 \begin{frame}[fragile]
   \frametitle{Random Sample}
-{\large{Our data contains the {\bf{entire population}} of 16,974 runners who finished the 2009 Cherry Blosom 10 Mile Run in Washington, DC. \\[0.5cm]
+{\large{Our data contains the {\bf{entire population}} of 16,974 runners who finished the 2009 Cherry Blossom 10 Mile Run in Washington, DC. \\[0.5cm]
   But imagine, however, that we only have a {\bf{simple random sample}} of 100 runners.}}
 \end{frame}
 
@@ -416,7 +416,7 @@ ggplot(SampleDistMolten, aes(x = value, colour = factor(SampleSize), fill = fact
 }
 
 \frame{
-  \frametitle{Finally, the Standar Error!}
+  \frametitle{Finally, the Standard Error!}
     {\Large{Standard Error ($SE$):}}
     \[
       SE = \frac{s}{\sqrt{n}}
@@ -439,19 +439,19 @@ library(plotrix)
 std.error(Run10Samp$time)
 @
 
-  {\large{\texttt{Time} in our original sample with 100 observations had a sampleing mean of \Sexpr{round(mean(Run10Samp$time), digit = 1)} and a standard error of \Sexpr{round(std.error(Run10Samp$time), digit = 1)}.
+  {\large{\texttt{Time} in our original sample with 100 observations had a sampling mean of \Sexpr{round(mean(Run10Samp$time), digit = 1)} and a standard error of \Sexpr{round(std.error(Run10Samp$time), digit = 1)}.
 \end{frame}
 
 %%%%%%%%%%%%% Confidence Intervals
 \section{Confidence Intervals}
 \frame{
   \frametitle{Um\ldots}
-  {\Large{Um \ldots a sampleing mean of \Sexpr{round(mean(Run10Samp$time), digit = 1)} and a standard error of \Sexpr{round(std.error(Run10Samp$time), digit = 1)}? \\[1cm]
+  {\Large{Um \ldots a sampling mean of \Sexpr{round(mean(Run10Samp$time), digit = 1)} and a standard error of \Sexpr{round(std.error(Run10Samp$time), digit = 1)}? \\[1cm]
   That's not very easy to understand.}}
 }
 
 \frame{
-  \frametitle{We need something more usefull.}
+  \frametitle{We need something more useful.}
   {\Large{We need something that is more {\bf{intuitive}} to interpret. \\[0.5cm]
   Maybe a {\bf{range}} of likely population parameter values.}}
 }
@@ -465,10 +465,10 @@ std.error(Run10Samp$time)
 
 \begin{frame}[fragile]
   \frametitle{Standard Error and the Sampling Distribution}
-  {\Large{About {\bf{95\%}} of the time the population paramenter will be within {\bf{about 2 standard errors}} of the point estimate. \\[1cm]
+  {\Large{About {\bf{95\%}} of the time the population parameter will be within {\bf{about 2 standard errors}} of the point estimate. \\[1cm]
   95\% Confidence Interval ($CI$):}}
   \[
-    CI = \mathrm{point\:estmiate} \pm 2 * SE
+    CI = \mathrm{point\:estimate} \pm 2 * SE
   \]
 \end{frame}
 
@@ -481,7 +481,7 @@ std.error(Run10Samp$time)
   If a sample has at least 50 independent observations, and the data is not extremely skewed, the distribution of the sampling mean closely approximates the normal distribution (Diaz et al., 2011, 151)) \\[0.5cm]
   So what? This lets our confidence interval be more {\bf{precise}}. 
   \[
-    CI = \mathrm{point\:estmiate} \pm 1.96 * SE
+    CI = \mathrm{point\:estimate} \pm 1.96 * SE
   \]
 }
 
@@ -493,7 +493,7 @@ conf.int()
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Visually Confirm Normally Distributied Time Data}
+  \frametitle{Visually Confirm Normally Distributed Time Data}
 <<QQPlotTime, tidy=FALSE, fig.height=4>>=
 # Create Quantile-Quantile Plots
 qqnorm(Run10Samp$time); qqline(Run10Samp$time)
@@ -501,7 +501,7 @@ qqnorm(Run10Samp$time); qqline(Run10Samp$time)
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Visually Confirm Normally Distributied Age Data}
+  \frametitle{Visually Confirm Normally Distributed Age Data}
 <<QQPlotAge, tidy=FALSE, fig.height=4>>=
 # Create Quantile-Quantile Plots
 qqnorm(Run10Samp$age); qqline(Run10Samp$age)
