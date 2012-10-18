@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  8 OCT 2012 19:42
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  18 OCT 2012 10:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1103,10 +1103,10 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 [6
 
-] <ConfInt.png, id=57, 586.19pt x 434.62375pt>
+] <ConfInt.png, id=58, 586.19pt x 434.62375pt>
 File: ConfInt.png Graphic file (type png)
  <use ConfInt.png>
-Package pdftex.def Info: ConfInt.png used on input line 155.
+Package pdftex.def Info: ConfInt.png used on input line 157.
 (pdftex.def)             Requested size: 234.47185pt x 173.8464pt.
 
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
@@ -1132,11 +1132,11 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `Seminar7.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 164.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 164.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 166.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 166.
  (./Seminar7.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 164.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 164.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 166.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 166.
 Package rerunfilecheck Info: File `Seminar7.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1144,12 +1144,12 @@ Package rerunfilecheck Info: File `Seminar7.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 164.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 166.
  ) 
 Here is how much of TeX's memory you used:
  18033 strings out of 493633
  343102 string characters out of 3143377
- 413197 words of memory out of 3000000
+ 413213 words of memory out of 3000000
  20886 multiletter control sequences out of 15000+200000
  7284 words of font info for 27 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
@@ -1161,7 +1161,7 @@ usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></us
 r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></u
 sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></us
 r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Seminar7.pdf (8 pages, 90433 bytes).
+Output written on Seminar7.pdf (8 pages, 92847 bytes).
 PDF statistics:
  100 PDF objects out of 1000 (max. 8388607)
  76 compressed objects within 1 object stream

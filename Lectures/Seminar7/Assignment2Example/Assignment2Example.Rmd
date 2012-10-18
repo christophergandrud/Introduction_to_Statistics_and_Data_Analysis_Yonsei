@@ -1,0 +1,53 @@
+# Assignment 2
+## Christopher Gandrud
+### 19 October 2012
+
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+# Load libraries
+library(WDI)
+library(ggplot2)
+
+# Download data
+Data <- WDI(indicator = c("NY.GDP.PCAP.CD", "SP.URB.TOTL.IN.ZS", "TX.VAL.TECH.CD"), 
+            start = 2009, end = 2009)
+```
+
+## Figure 1: Scatterplot of Tech Exports to GDP
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+ggplot(data = Data, aes(NY.GDP.PCAP.CD, TX.VAL.TECH.CD)) +
+        geom_point() +
+        theme_bw()
+```
+
+## Figure 2: Scatterplot of Tech Exports to GDP (labeled)
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+ggplot(data = Data, aes(NY.GDP.PCAP.CD, TX.VAL.TECH.CD, label = country)) +
+        geom_text(size = 4, angle = 10) +
+        theme_bw()
+```
+
+## Figure 3: Scatterplot of Tech Exports to GDP (Only countries)
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Subset data to include only countries
+library(countrycode)
+Data$imfcode <- countrycode(Data$country, origin = "country.name", destination = "imf")
+Data <- subset(Data, !is.na(imfcode))
+
+ggplot(data = Data, aes(NY.GDP.PCAP.CD, TX.VAL.TECH.CD, label = country)) +
+        geom_text(size = 4, angle = 10) +
+        theme_bw()
+```
+
+## Figure 4: Scatterplot of Tech Exports (log) to GDP (log) (Only countries)
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Subset data to include only countries
+library(countrycode)
+Data$imfcode <- countrycode(Data$country, origin = "country.name", destination = "imf")
+Data <- subset(Data, !is.na(imfcode))
+
+ggplot(data = Data, aes(log(NY.GDP.PCAP.CD), log(TX.VAL.TECH.CD), label = country)) +
+        geom_text(size = 4, angle = 10) +
+        theme_bw()
+```

@@ -72,7 +72,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title Slide %%%%%%%%%%%%%%%%%%%%%%%%%%
-\title[]{Intro to Social Science Data Analysis \\[1cm] Lecture 7: Overview of Statistical Inference}
+\title[]{Intro to Social Science Data Analysis \\[1cm] Seminar 7: Overview of Statistical Inference (I)}
 \author[]{
     \href{mailto:gandrud@yonsei.ac.kr}{Christopher Gandrud}
 }
@@ -85,7 +85,7 @@
 
 
 \begin{frame}[fragile]
-  \frametitle{Download Data from OpenIntro}
+  \frametitle{Download Ames, Iowa Real Estate Data from OpenIntro}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
@@ -99,6 +99,7 @@
 \end{kframe}
 \end{knitrout}
 
+This data set contains every residential home sale in Ames, Iowa, USA between 2006 to 2010.
 \end{frame}
 
 \begin{frame}[fragile]
@@ -141,7 +142,8 @@ amesSamp <- ames[\hlfunctioncall{sample}(1:\hlfunctioncall{nrow}(ames), 100,
 
 \frame{
   \frametitle{Inferential Statistics}
-{\Large{Using only the sample means, what do you {\bf{estimate the population means}} are?}}
+{\Large{Using only the sample means, what do you {\bf{estimate the population means}} are? \\[1cm]
+  Did you make a correct inference?}}
 }
 
 \frame{

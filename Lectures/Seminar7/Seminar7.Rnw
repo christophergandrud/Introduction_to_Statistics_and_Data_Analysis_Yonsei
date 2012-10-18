@@ -32,7 +32,7 @@
 
 
 \begin{frame}[fragile]
-  \frametitle{Download Data from OpenIntro}
+  \frametitle{Download Ames, Iowa Real Estate Data from OpenIntro}
 <<Download, tidy=FALSE>>=
 # Download data
 download.file("http://bit.ly/PO9XsF", 
@@ -41,6 +41,7 @@ download.file("http://bit.ly/PO9XsF",
 # Load Data
 load("ames.RData")
 @
+This data set contains every residential home sale in Ames, Iowa, USA between 2006 to 2010.
 \end{frame}
 
 \begin{frame}[fragile]
@@ -70,7 +71,8 @@ nrow(amesSamp)
 
 \frame{
   \frametitle{Inferential Statistics}
-{\Large{Using only the sample means, what do you {\bf{estimate the population means}} are?}}
+{\Large{Using only the sample means, what do you {\bf{estimate the population means}} are? \\[1cm]
+  Did you make a correct inference?}}
 }
 
 \frame{
