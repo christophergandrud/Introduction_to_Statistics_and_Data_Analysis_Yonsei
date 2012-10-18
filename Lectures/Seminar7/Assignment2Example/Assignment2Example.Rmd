@@ -8,22 +8,26 @@
 # Load libraries
 library(WDI)
 library(ggplot2)
+library(reshape)
 
 # Download data
-Data <- WDI(indicator = c("NY.GDP.PCAP.CD", "SP.URB.TOTL.IN.ZS", "TX.VAL.TECH.CD"), 
+Data <- WDI(indicator = c("NY.GDP.PCAP.CD", "TX.VAL.TECH.CD"), 
             start = 2009, end = 2009)
+
+# Rename variables
+Data <- rename(Data, c(NY.GDP.PCAP.CD = "GDPperCapita", TX.VAL.TECH.CD = "TotalTechExports"))
 ```
 
 ## Figure 1: Scatterplot of Tech Exports to GDP
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
-ggplot(data = Data, aes(NY.GDP.PCAP.CD, TX.VAL.TECH.CD)) +
+ggplot(data = Data, aes(GDPperCapita, TotalTechExports)) +
         geom_point() +
         theme_bw()
 ```
 
 ## Figure 2: Scatterplot of Tech Exports to GDP (labeled)
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
-ggplot(data = Data, aes(NY.GDP.PCAP.CD, TX.VAL.TECH.CD, label = country)) +
+ggplot(data = Data, aes(GDPperCapita, TotalTechExports, label = country)) +
         geom_text(size = 4, angle = 10) +
         theme_bw()
 ```
@@ -35,7 +39,7 @@ library(countrycode)
 Data$imfcode <- countrycode(Data$country, origin = "country.name", destination = "imf")
 Data <- subset(Data, !is.na(imfcode))
 
-ggplot(data = Data, aes(NY.GDP.PCAP.CD, TX.VAL.TECH.CD, label = country)) +
+ggplot(data = Data, aes(GDPperCapita, TotalTechExports, label = country)) +
         geom_text(size = 4, angle = 10) +
         theme_bw()
 ```
@@ -47,7 +51,7 @@ library(countrycode)
 Data$imfcode <- countrycode(Data$country, origin = "country.name", destination = "imf")
 Data <- subset(Data, !is.na(imfcode))
 
-ggplot(data = Data, aes(log(NY.GDP.PCAP.CD), log(TX.VAL.TECH.CD), label = country)) +
+ggplot(data = Data, aes(log(GDPperCapita), log(TotalTechExports), label = country)) +
         geom_text(size = 4, angle = 10) +
         theme_bw()
 ```
