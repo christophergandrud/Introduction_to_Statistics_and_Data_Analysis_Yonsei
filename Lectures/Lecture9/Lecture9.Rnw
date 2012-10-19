@@ -35,11 +35,47 @@
 \section[Outline]{}
 \frame{\tableofcontents}
 
-%%%%%%%%%%% Assignment 3
-\section{Assignment 3}
+%%%%%%%%%%% Assignments
+\section{Assignments}
+\frame{
+  \frametitle{General Feedback}
+{\Large{Assignment 2 General Feedback}} \\[0.5cm]
+  \begin{itemize}
+    \item {\bf{Always}} describe your data source.
+    \item What do the numbers mean? Remember the units.
+    \item What year(s) is the data from?
+  \end{itemize}
+}
+
 \frame{
 	\frametitle{Assignment 3}
+  {\Large{Assignment 3}} \\[0.5cm]
+  {\bf{Due:}} Friday 16 November \\[0.5cm]
+  Have a data set with three variables of the following type:
+  \begin{itemize}
+    \item 1 numeric variable,
+    \item 1 dummy variable,
+    \item 1 multinomial variable.
+  \end{itemize}
+  There should be more than 50 observations per variable \& variable category.
+}
 
+\frame{
+  \frametitle{Assignment 3}
+  {\Large{Find the answers to these questions.}} \\[0.5cm]
+Numeric Continuous Variable
+  \begin{itemize}
+    \item What do you predict the population mean of this variable is? 
+    \item Create two groups of this variable based on the dummy variable. Are the population means of these two groups likely to be different?
+  \end{itemize}
+Dummy Variable
+  \begin{itemize}
+    \item What are the likely population proportions of the two values of this variable?
+  \end{itemize}
+Multinomial Variable
+  \begin{itemize}
+    \item What are the likely population proportions of the values of this variable?
+  \end{itemize}
 }
 
 %%%%%%%%%%% Recap

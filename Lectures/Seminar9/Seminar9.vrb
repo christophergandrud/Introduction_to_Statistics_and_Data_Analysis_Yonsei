@@ -1,27 +1,20 @@
-\frametitle {Take a random sample}
+\frametitle {Download Data from OpenIntro}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcomment{# Find number of observations}
-\hlfunctioncall{nrow}(ames)
+\hlfunctioncall{library}(openintro)
+\hlfunctioncall{data}(satGPA)
 \end{alltt}
+\end{kframe}
+\end{knitrout}
 
 
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'ames' not found}}\begin{alltt}
-
-\hlcomment{# Take a random sample of 100 observations}
-amesSamp <- ames[\hlfunctioncall{sample}(1:\hlfunctioncall{nrow}(ames), 100,
-                          replace=FALSE),]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# To see a variable descriptions type:}
+?satGPA
 \end{alltt}
-
-
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'ames' not found}}\begin{alltt}
-
-\hlcomment{# Find number of observations in sample}
-\hlfunctioncall{nrow}(amesSamp)
-\end{alltt}
-
-
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'amesSamp' not found}}\end{kframe}
+\end{kframe}
 \end{knitrout}
 

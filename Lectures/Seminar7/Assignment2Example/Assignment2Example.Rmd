@@ -36,7 +36,8 @@ ggplot(data = Data, aes(GDPperCapita, TotalTechExports, label = country)) +
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # Subset data to include only countries
 library(countrycode)
-Data$imfcode <- countrycode(Data$country, origin = "country.name", destination = "imf")
+Data$imfcode <- countrycode(Data$country, 
+                            origin = "country.name", destination = "imf")
 Data <- subset(Data, !is.na(imfcode))
 
 ggplot(data = Data, aes(GDPperCapita, TotalTechExports, label = country)) +

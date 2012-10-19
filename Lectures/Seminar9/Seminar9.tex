@@ -88,50 +88,20 @@
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcomment{# Download data}
-\hlfunctioncall{download.file}(\hlstring{"http://bit.ly/PO9XsF"}, 
-              destfile = \hlstring{"ames.RData"})
+\hlfunctioncall{library}(openintro)
+\hlfunctioncall{data}(satGPA)
 \end{alltt}
-
-
-{\ttfamily\noindent\textcolor{warningcolor}{\#\# Warning: downloaded length 19027 != reported length 146692}}\begin{alltt}
-
-\hlcomment{# Load Data}
-\hlfunctioncall{load}(\hlstring{"ames.RData"})
-\end{alltt}
-
-
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: error reading from connection}}\end{kframe}
+\end{kframe}
 \end{knitrout}
 
-\end{frame}
 
-\begin{frame}[fragile]
-  \frametitle{Take a random sample}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcomment{# Find number of observations}
-\hlfunctioncall{nrow}(ames)
+\hlcomment{# To see a variable descriptions type:}
+?satGPA
 \end{alltt}
-
-
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'ames' not found}}\begin{alltt}
-
-\hlcomment{# Take a random sample of 100 observations}
-amesSamp <- ames[\hlfunctioncall{sample}(1:\hlfunctioncall{nrow}(ames), 100,
-                          replace=FALSE),]
-\end{alltt}
-
-
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'ames' not found}}\begin{alltt}
-
-\hlcomment{# Find number of observations in sample}
-\hlfunctioncall{nrow}(amesSamp)
-\end{alltt}
-
-
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'amesSamp' not found}}\end{kframe}
+\end{kframe}
 \end{knitrout}
 
 \end{frame}
@@ -148,7 +118,7 @@ amesSamp <- ames[\hlfunctioncall{sample}(1:\hlfunctioncall{nrow}(ames), 100,
 
 \frame{
   \frametitle{Hypothesis Tests}
-  Test these hypotheses p-values using the 95\% and 99\% significance levels.
+  Test these hypotheses using p-values at the 95\% and 99\% significance levels.
 }
 
 \frame{
@@ -158,13 +128,13 @@ amesSamp <- ames[\hlfunctioncall{sample}(1:\hlfunctioncall{nrow}(ames), 100,
 
 \frame{
   \frametitle{Subset}
-  Subset the one of your variables by the variable \texttt{Central.Air}.\\[0.5cm]
-  It has the values \texttt{Y} and \texttt{N}.
+  Subset one of your variables by the variable \texttt{sex}.\\[0.5cm]
+  It has the values \texttt{1} and \texttt{2}.
 }
 
 \frame{
   \frametitle{Subset}
-  Is there a significant difference in the mean value of the variable for houses with air conditioning and without air conditioning?
+  Is there a significant difference in the mean value of the variable for \texttt{SATV} and \texttt{SATM} in the two groups of \texttt{sex}?
 }
 
 

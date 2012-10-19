@@ -89,5 +89,5 @@ ggplot(ConfInterval, aes(x = Sample,
         geom_pointrange(size = 3) +
         geom_hline(aes(yintercept = PopMean), linetype = "dashed",
                    colour = "blue") +
-        ggtitle("Compare Confidence Intervals for the Sample Mean of Pace")
+        ggtitle("Compare Confidence Intervals for the Sample Mean of Pace\n") +
         theme_bw(base_size = 15)
