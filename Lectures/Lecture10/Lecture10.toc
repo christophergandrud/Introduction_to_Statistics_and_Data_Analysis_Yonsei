@@ -1,0 +1,6 @@
+\beamer@endinputifotherversion {3.10pt}
+\beamer@sectionintoc {2}{Assignment 3}{3}{0}{1}
+\beamer@sectionintoc {3}{Recap}{10}{0}{2}
+\beamer@sectionintoc {4}{Inferring the Distribution of Population Proportions: the $\chi ^2$ test statistic}{13}{0}{3}
+\beamer@sectionintoc {5}{$\chi ^{2}$ Test of Independence}{37}{0}{4}
+\beamer@sectionintoc {6}{Introduction to Simple Linear Regression}{48}{0}{5}
