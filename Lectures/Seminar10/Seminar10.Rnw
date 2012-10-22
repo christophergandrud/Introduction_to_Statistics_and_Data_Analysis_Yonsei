@@ -33,10 +33,51 @@
 \section[Outline]{}
 \frame{\tableofcontents}
 
+\begin{frame}[fragile]
+  \frametitle{Data}
+  Load UK Smoking Data from the {\emph{openintro}} package:
+<<LoadData, message=FALSE>>=
+# Load package
+library(openintro)
+
+# Load Data
+data(smoking)
+@
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Frequency Table}
+  Create a One-way Contingency Table for Smoking Status
+<<FreqTable, message=FALSE>>=
+# Load package
+library(MASS)
+
+# Create Table
+SmokingTable <- table(smoking$smoke)
+@
+\end{frame}
+
+\frame{
+  \frametitle{Question}
+  If 27\% of South Korean's smoke, are the rates of smoking different in the UK than in South Korea?
+}
+
+\frame{
+  \frametitle{Independence}
+  Determine if UK smokers are different than non-smokers in terms of their:
+  \begin{itemize}
+    \item highest educational qualification,
+    \item nationality,
+    \item gross income,
+    \item ethnicity.
+  \end{itemize}
+}
+
 
 \frame{
 	\frametitle{Two-way Relationships}
-  Using graphical methods, how would you describe the relationship between FILL IN
+  Download data on 4 variables from the World Bank. \\[0.5cm]
+  Graphically describe the relationships between these variables, including using linear regression lines.
 
 }
 
