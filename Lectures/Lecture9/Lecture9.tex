@@ -119,15 +119,11 @@
 Numeric Continuous Variable
   \begin{itemize}
     \item What do you predict the population mean of this variable is? 
-    \item Create two groups of this variable based on the dummy variable. Are the population means of these two groups likely to be different?
+    \item Create two groups of this variable based on the dummy variable. Are the population means of these two groups likely to be different? (extra points if you can show this graphically)
   \end{itemize}
-Dummy Variable
+Categorical Variables
   \begin{itemize}
-    \item What are the likely population proportions of the two values of this variable?
-  \end{itemize}
-Multinomial Variable
-  \begin{itemize}
-    \item What are the likely population proportions of the values of this variable?
+    \item Do the two groups of the dummy variable have values on the multinomial variable that are independent of one another?
   \end{itemize}
 }
 
@@ -180,7 +176,7 @@ Multinomial Variable
 
 
 
-  The mean finishing time in the sample is 93.9 minutes with a standard deviation of 15.6}}
+  The mean finishing time in the sample is 94.1 minutes with a standard deviation of 15.3}}
 \end{frame}
 
 \frame{
@@ -403,7 +399,7 @@ Multinomial Variable
   \frametitle{What is the p-value}
 {\LARGE{p-value}} \\[0.5cm]
   The probability of seeing data at least as favourable to the alternative hypothesis as our current data, {\emph{if the null hypothesis is true}}. \\[0.5cm]
-  In our previous {\bf{example}}, we would want to know the probability of seeing a mean of at least 94.5 if the true population mean is actually 93.29 (the population mean for 2006).
+  In our previous {\bf{example}}, we would want to know the probability of seeing a mean of at least 94.1 if the true population mean is actually 93.29 (the population mean for 2006).
 \end{frame}
 
 \begin{frame}[fragile]
@@ -416,12 +412,12 @@ Multinomial Variable
 \begin{frame}[fragile]
   \frametitle{Example}
 {\LARGE{Example}} \\[0.5cm]
-  In our previous {\bf{example}}, we would want to know the probability of seeing a mean of at least 94.5 if the true population mean is actually 93.29 (the population mean for 2006). \\[0.5cm]
+  In our previous {\bf{example}}, we would want to know the probability of seeing a mean of at least 94.1 if the true population mean is actually 93.29 (the population mean for 2006). \\[0.5cm]
 \end{frame}
 
 \begin{frame}[fragile,plain]
 {\LARGE{1st: Test Statistic}} \\[0.5cm]
-  We first calculated the $\mathrm{Z}$ score {\bf{test statistic}} of the sample mean $\bar{x} = 94.5$
+  We first calculated the $\mathrm{Z}$ score {\bf{test statistic}} of the sample mean $\bar{x} = 94.1$
 \[
   \mathrm{Z} = \frac{\bar{x} - \mathrm{null\:value}}{SE_{\bar{x}}}
 \]\\[0.25cm]
@@ -439,7 +435,7 @@ Z <- (\hlfunctioncall{mean}(Run10Samp$time) - 93.29)/
 Z
 \end{alltt}
 \begin{verbatim}
-## [1] 0.5559
+## [1] 0.7171
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -456,7 +452,7 @@ Z
 
 \begin{frame}[fragile]
 {\LARGE{2nd: Find p-values}}
-  To find the p-value for the 0.6 use \texttt{pnorm}.
+  To find the p-value for the $\mathrm{Z}$ Score 0.72 use \texttt{pnorm}.
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
@@ -464,12 +460,12 @@ P1 <- 1 - \hlfunctioncall{pnorm}(Z)
 P1
 \end{alltt}
 \begin{verbatim}
-## [1] 0.2891
+## [1] 0.2367
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
 
-So, if the null hypothesis was true we would have a 0.2891 probability of observing a mean of at least 0.6 larger than the 2006 mean. \\[0.25cm]
+So, if the null hypothesis was true we would have a 0.2367 probability of observing a mean of at least 0.7 larger than the 2006 mean. \\[0.25cm]
 This is bigger than the 0.05 significance level. So, we fail to reject the null hypothesis that $\mu_{{x}_{09}} > \mu_{{x}_{06}}$.
 \end{frame}
 
@@ -485,7 +481,7 @@ P2 <- 2 * (1 - \hlfunctioncall{pnorm}(Z))
 P2
 \end{alltt}
 \begin{verbatim}
-## [1] 0.5782
+## [1] 0.4733
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -521,8 +517,8 @@ In other words, we have evidence that there is no difference in the mean finishi
   \begin{tabular}{c | c c c}
   & $\bar{x}$ & $s$ & $n$ \\
   \hline\hline
-  Female & 98.9 & 14.2 & 105 \\
-  Male & 88.3 & 15.3 & 95 \\
+  Female & 98.7 & 14 & 110 \\
+  Male & 88.5 & 15 & 90 \\
   \hline
   
   \end{tabular}
@@ -572,7 +568,7 @@ In other words, we have evidence that there is no difference in the mean finishi
   The {\bf{difference in mean}} times between Men and Women is:
   \begin{center}
     $\mu_{m} - \mu_{w}$ \\[0.25cm]
-    88.3 - 98.9 = -10.6
+    88.5 - 98.7 = -10.2
   \end{center}
 \end{frame}
 
@@ -586,12 +582,12 @@ In other words, we have evidence that there is no difference in the mean finishi
 
 \begin{frame}[fragile]
   \frametitle{Approximate the Standard Error.}
-  Because in our sample each gender has {\bf{more than 50 observations}} that are {\bf{independent}}, and the is {\bf{normally distributed}} we can use the {\bf{sample standard deviations}} to approximate the standard error of the difference of two means:
+  Because in our sample each gender has {\bf{more than 50 observations}} that are {\bf{independent}}, and are {\bf{normally distributed}} we can use the {\bf{sample standard deviations}} to approximate the standard error of the difference of two means:
 \[
-  SE_{\bar{x}_{m} - \bar{x}_{w}} = \frac{\sigma_{m}}{\sqrt{n_{m}}} + \frac{\sigma_{w}}{\sqrt{n_{w}}} \approx \frac{s_{m}}{\sqrt{n_{m}}} + \frac{s_{w}}{\sqrt{n_{w}}} = \frac{15.3}{\sqrt{95}}} + \frac{14.2}{\sqrt{105}}
+  SE_{\bar{x}_{m} - \bar{x}_{w}} = \frac{\sigma_{m}}{\sqrt{n_{m}}} + \frac{\sigma_{w}}{\sqrt{n_{w}}} \approx \frac{s_{m}}{\sqrt{n_{m}}} + \frac{s_{w}}{\sqrt{n_{w}}} = \frac{15}{\sqrt{90}}} + \frac{14}{\sqrt{110}}
 \]\\[0.5cm]
 \[
-SE_{\bar{x}_{m} - \bar{x}_{w}} = 2.9565
+SE_{\bar{x}_{m} - \bar{x}_{w}} = 2.9207
 \]
 \end{frame}
 
@@ -657,13 +653,13 @@ Upper <- MeanDiff + 1.96 * SEDiff
 Lower
 \end{alltt}
 \begin{verbatim}
-## [1] -16.4
+## [1] -15.93
 \end{verbatim}
 \begin{alltt}
 Upper
 \end{alltt}
 \begin{verbatim}
-## [1] -4.81
+## [1] -4.477
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
