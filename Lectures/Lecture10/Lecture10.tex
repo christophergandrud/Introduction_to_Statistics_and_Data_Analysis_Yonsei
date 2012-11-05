@@ -169,7 +169,7 @@ Categorical Variables
     \hline
     \end{tabular}
   \end{table}
-  Find the {\bf{sample proportions}} for each racial group. \\[0.5cm]
+  With a partner find the {\bf{sample proportions}} for each racial group. \\[0.5cm]
   Example from Diaz et al. Ch. 5.
 }
 
@@ -267,6 +267,8 @@ Categorical Variables
  \[
  Z_{white} = \frac{205 - 198}{\sqrt{198}} = 0.5
  \]
+ 
+ {\bf{Note:}} in this case the standard error is the square root of the expected count under the null hypothesis.
 \end{frame}
 
 \begin{frame}[fragile]
@@ -285,7 +287,7 @@ Categorical Variables
 
 \frame{
   \frametitle{$\chi^{2}$ (1)}
-  Our hypotheses were about how whether {\bf{all}} of the sample proportions were different from the population proportions. \\[0.5cm]
+  Our hypotheses were about whether {\bf{all}} of the sample proportions were different from the population proportions. \\[0.5cm]
   How can we combine these four test statistics together?
 }
 
@@ -304,10 +306,10 @@ Categorical Variables
 
 \frame{
   \frametitle{$\chi^{2}$ Distribution}
-  We can't assume that the $\chi_{2}$ statistic follows a normal or $t$ distribution if the null hypothesis is true. \\[0.5cm]
+  We {\bf{can't}} assume that the $\chi^{2}$ statistic follows a normal or $t$ distribution if the null hypothesis is true. \\[0.5cm]
   Instead, we use a {\bf{$\chi^{2}$ distribution}}. \\[0.5cm]
-  It's only parameter is the {\bf{degrees of freedom}} ($df$). \\[0.25cm]
-  If $k$ is the number of categories then  
+  It's only parameter is {\bf{degrees of freedom}} ($df$). \\[0.25cm]
+  If $k$ is the {\bf{number of categories}} then  
   \[
   df = k - 1
   \] 
@@ -393,7 +395,7 @@ At the 95\% significance level we fail to reject the null hypothesis that the ju
     \hline
     & & Preschool & No Preschool  & Total \\
     \hline\hline
-    University Enrollment & Enrolled & 37 & 7 & 44\\
+    University Enrolment & Enrolled & 37 & 7 & 44\\
     &Not Enrolled & 16 & 44 & 60 \\
     \hline
     Total & & 53 & 51 & 104 \\
@@ -405,16 +407,16 @@ At the 95\% significance level we fail to reject the null hypothesis that the ju
 \frame{
   \frametitle{Hypothesis Testing}
 {\LARGE{Null Hypothesis:}} \\[0.5cm]
-  $H_{0}:$ There is no difference in university enrollement at age 21 between disadvantaged children who attended preschool and those who didn't. (dependent) \\[0.5cm]
+  $H_{0}:$ There is no difference in university enrolment at age 21 between disadvantaged children who attended preschool and those who didn't. (dependent) \\[0.5cm]
   
 {\LARGE{Alternative Hypothesis:}} \\[0.5cm]
-  $H_{A}:$ There is a difference in university enrollement at age 21 between disadvantaged children who attended preschool and those who didn't. (independent)
+  $H_{A}:$ There is a difference in university enrolment at age 21 between disadvantaged children who attended preschool and those who didn't. (independent)
 }
 
 \frame{
   \frametitle{Test Statistic (1)}
   First find the expected counts if the null hypothesis was true. \\[0.5cm]
-  We observe that 44 of the 104 people attend unversity. This is a proportion of:
+  We observe that 44 of the 104 people attend university. This is a proportion of:
   \[
   \frac{44}{104} = 0.423
   \] \\[0.5cm]
@@ -426,7 +428,7 @@ At the 95\% significance level we fail to reject the null hypothesis that the ju
 
 \frame{
   \frametitle{General Frequency Count Equation}
-  The general formula for finding {\bf{expected count}} for a row $i$ in column $j$ is:
+  The general formula for finding the {\bf{expected count}} for a row $i$ in column $j$ is:
   \[
   \mathrm{Expected\:Count_{i, j}} = \frac{(\mathrm{row}\:i\:\mathrm{total}) * (\mathrm{column}\:j\:\mathrm{total})}{n}
   \]
@@ -441,7 +443,7 @@ At the 95\% significance level we fail to reject the null hypothesis that the ju
     \hline
     & & Pres. & & No Pres. & & Total \\
     \hline\hline
-    University Enrollment & Enrolled & 37 & (22.42) & 7 & (21.57) & 44\\
+    University Enrolment & Enrolled & 37 & (22.42) & 7 & (21.57) & 44\\
     &Not Enrolled & 16 & (30.58) & 44 & (29.43) & 60 \\
     \hline
     Total & & 53 & & 51 & & 104 \\
@@ -449,7 +451,7 @@ At the 95\% significance level we fail to reject the null hypothesis that the ju
     \end{tabular}
   \end{table}
 }}
-  Note: Expected countes in parentheses.
+  Note: Expected counts in parentheses.
 }
 
 \frame{
@@ -491,7 +493,7 @@ At the 95\% significance level we fail to reject the null hypothesis that the ju
 \end{knitrout}
 
 
-At the 95\% significance level we reject the null hypothesis that there is no difference in university enrollment at age 21 between the people who attended preschool and those who didn't.
+At the 95\% significance level we reject the null hypothesis that there is no difference in university enrolment at age 21 between the people who attended preschool and those who didn't.
 \end{frame}
 
 \begin{frame}[fragile]
@@ -521,15 +523,19 @@ Data <- \hlfunctioncall{data.frame}(Preschool, NoPreschool)
 
 \end{frame}
 
+\frame{
+  See also: \url{http://www.r-tutor.com/elementary-statistics/goodness-fit/chi-squared-test-independence}.
+}
+
 %%%%%%%%% Introduction to Simple Linear Regression
 \section{Introduction to Simple Linear Regression}
 \frame{
   \frametitle{Inference so far\ldots}
   So far we have used tools of statistical inference to determine
   \begin{itemize}
-    \item<1->determine likely population parameters from a sample, especially the mean \& proportions, 
-    \item<1-> determine if groups are independent.
-  \end{itemize}
+    \item<1-> likely population parameters from a sample, especially the mean \& proportions, 
+    \item<1-> if groups are independent.
+  \end{itemize}\\[0.5cm]
   What if we want to use the value of one variable to predict the value of another variable?\\ Or at least describe the relationship between variables in more detail than ``they are independent or not"?
 }
 
@@ -604,8 +610,8 @@ Data <- \hlfunctioncall{data.frame}(Preschool, NoPreschool)
 }
 
 \frame{
-  \frametitle{Intreting $\beta$}
-{\LARGE{Interpretting $\beta$:}} \\[0.5cm]
+  \frametitle{Interpreting $\beta$}
+{\LARGE{Interpreting $\beta$:}} \\[0.5cm]
   For every one unit increase in $x$  ($ + \Delta x $) we expect $\beta$ unit increase in $y$. \\[0.5cm]
   In our example, for every 1 point increase in High School GPA we expect a 1 unit increase in University GPA.
 }
@@ -722,8 +728,8 @@ Data <- \hlfunctioncall{data.frame}(Preschool, NoPreschool)
 }
 
 \frame{
-  \frametitle{Infact\ldots}
-  Infact, if you find a perfectly linear or almost perfectly linear relationship in social science research, you probably have a {\bf{problem}}. \\[0.5cm]
+  \frametitle{In fact\ldots}
+  In fact, if you find a perfectly linear or almost perfectly linear relationship in social science research, you probably have a {\bf{problem}}. \\[0.5cm]
   You are probably have two variables that are measuring the same thing or almost the {\bf{same thing}}.
 }
 

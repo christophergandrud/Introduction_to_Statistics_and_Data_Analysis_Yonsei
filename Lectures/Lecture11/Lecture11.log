@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  5 NOV 2012 11:20
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  5 NOV 2012 12:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Lecture10.tex
-(./Lecture10.tex
+**Lecture11.tex
+(./Lecture11.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
 rman-x-2009-06-19, ngerman-x-2009-06-19, afrikaans, ancientgreek, ibycus, arabi
@@ -878,8 +878,8 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count165
 \@thisrulewidth=\dimen209
 )
-(./Lecture10.aux)
-\openout1 = `Lecture10.aux'.
+(./Lecture11.aux)
+\openout1 = `Lecture11.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
@@ -979,9 +979,9 @@ LaTeX Info: Redefining \ref on input line 82.
 LaTeX Info: Redefining \pageref on input line 82.
 LaTeX Info: Redefining \nameref on input line 82.
 
-(./Lecture10.out) (./Lecture10.out)
+(./Lecture11.out) (./Lecture11.out)
 \@outlinefile=\write5
-\openout5 = `Lecture10.out'.
+\openout5 = `Lecture11.out'.
 
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/beamer/translator/dicts/translato
@@ -1008,7 +1008,7 @@ Dictionary: translator-numbers-dictionary, Language: English
 r-theorem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-(./Lecture10.nav)
+(./Lecture11.nav)
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 (Font)              size <5> substituted on input line 82.
@@ -1058,15 +1058,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [1
 
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./Lecture10.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 4.
- (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 4.
- (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-))
+(./Lecture11.toc)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1074,6 +1066,15 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [2
 
 ]
+LaTeX Font Info:    Try loading font information for U+msa on input line 102.
+ (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 102.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1116,6 +1117,18 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [8
 
 ]
+! Undefined control sequence.
+<recently read> \framtitle 
+                           
+l.158 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1123,13 +1136,30 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [9
 
 ]
+</git_repositories/Introduction_to_Statistics_and_Data_Analysis_Yonsei/Lectures
+/Lecture10/ExampleSLR.png, id=110, 624.3325pt x 199.74625pt>
+File: /git_repositories/Introduction_to_Statistics_and_Data_Analysis_Yonsei/Lec
+tures/Lecture10/ExampleSLR.png Graphic file (type png)
+
+<use /git_repositories/Introduction_to_Statistics_and_Data_Analysis_Yonsei/Lect
+ures/Lecture10/ExampleSLR.png>
+Package pdftex.def Info: /git_repositories/Introduction_to_Statistics_and_Data_
+Analysis_Yonsei/Lectures/Lecture10/ExampleSLR.png used on input line 166.
+(pdftex.def)             Requested size: 312.16548pt x 99.87288pt.
+
+Overfull \hbox (4.87561pt too wide) in paragraph at lines 166--166
+ [] 
+ []
+
+
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
 [10
 
-]
+ </git_repositories/Introduction_to_Statistics_and_Data_Analysis_Yonsei/Lecture
+s/Lecture10/ExampleSLR.png (PNG copy)>]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1137,59 +1167,16 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [11
 
 ]
+</git_repositories/Introduction_to_Statistics_and_Data_Analysis_Yonsei/Lectures
+/Lecture10/NonLinear.png, id=125, 500.87125pt x 219.82124pt>
+File: /git_repositories/Introduction_to_Statistics_and_Data_Analysis_Yonsei/Lec
+tures/Lecture10/NonLinear.png Graphic file (type png)
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 140.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\chi' on input line 140.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 140.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 140.
-
-LaTeX Font Info:    Calculating math sizes for size <4> on input line 145.
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 145.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <2.79999> not available
-(Font)              size <5> substituted on input line 145.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <2> not available
-(Font)              size <5> substituted on input line 145.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4> not available
-(Font)              size <5> substituted on input line 145.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <2.79999> not available
-(Font)              size <5> substituted on input line 145.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <2> not available
-(Font)              size <5> substituted on input line 145.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 145.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <2.79999> not available
-(Font)              size <5> substituted on input line 145.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <2> not available
-(Font)              size <5> substituted on input line 145.
-
+<use /git_repositories/Introduction_to_Statistics_and_Data_Analysis_Yonsei/Lect
+ures/Lecture10/NonLinear.png>
+Package pdftex.def Info: /git_repositories/Introduction_to_Statistics_and_Data_
+Analysis_Yonsei/Lectures/Lecture10/NonLinear.png used on input line 179.
+(pdftex.def)             Requested size: 250.435pt x 109.91034pt.
 
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
@@ -1197,7 +1184,14 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 [12
 
-]
+ </git_repositories/Introduction_to_Statistics_and_Data_Analysis_Yonsei/Lecture
+s/Lecture10/NonLinear.png (PNG copy)>]
+\openout4 = `Lecture11.vrb'.
+
+ (./Lecture11.vrb
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 6.
+)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1205,23 +1199,42 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [13
 
 ]
+\openout4 = `Lecture11.vrb'.
+
+ (./Lecture11.vrb <figure/DescribeGPA.pdf, id=142, 505.89pt x 289.08pt>
+File: figure/DescribeGPA.pdf Graphic file (type pdf)
+
+<use figure/DescribeGPA.pdf>
+Package pdftex.def Info: figure/DescribeGPA.pdf used on input line 11.
+(pdftex.def)             Requested size: 307.28987pt x 175.59749pt.
+)
+Overfull \vbox (0.51994pt too high) detected at line 227
+ []
+
+
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
 [14
 
-]
+ <./figure/DescribeGPA.pdf>]
+\openout4 = `Lecture11.vrb'.
+
+ (./Lecture11.vrb
+<figure/SATFYGPA.pdf, id=156, 505.89pt x 289.08pt>
+File: figure/SATFYGPA.pdf Graphic file (type pdf)
+ <use figure/SATFYGPA.pdf>
+Package pdftex.def Info: figure/SATFYGPA.pdf used on input line 6.
+(pdftex.def)             Requested size: 307.28987pt x 175.59749pt.
+)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
 [15
 
-]
-\openout4 = `Lecture10.vrb'.
-
- (./Lecture10.vrb)
+ <./figure/SATFYGPA.pdf>]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1236,9 +1249,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [17
 
 ]
-\openout4 = `Lecture10.vrb'.
-
- (./Lecture10.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1246,6 +1256,9 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [18
 
 ]
+\openout4 = `Lecture11.vrb'.
+
+ (./Lecture11.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1260,6 +1273,15 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [20
 
 ]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.292 }
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1267,36 +1289,53 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [21
 
 ]
-\openout4 = `Lecture10.vrb'.
+\openout4 = `Lecture11.vrb'.
 
- (./Lecture10.vrb)
+ (./Lecture11.vrb
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 19.
+
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/ts1cmtt.fd
+File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+Overfull \hbox (43.38008pt too wide) in paragraph at lines 19--19
+[]\OT1/cmtt/m/n/10.95 ## alternative hypothesis: true correlation is not equal 
+to 0[] 
+ []
+
+)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
 [22
 
-]
+] <LinearCor.png, id=227, 661.47125pt x 406.51875pt>
+File: LinearCor.png Graphic file (type png)
+ <use LinearCor.png>
+Package pdftex.def Info: LinearCor.png used on input line 325.
+(pdftex.def)             Requested size: 297.65932pt x 182.93173pt.
+
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
 [23
 
-]
-\openout4 = `Lecture10.vrb'.
+ <./LinearCor.png (PNG copy)>]
+<NonLinearCor.png, id=235, 667.49374pt x 223.83624pt>
+File: NonLinearCor.png Graphic file (type png)
+ <use NonLinearCor.png>
+Package pdftex.def Info: NonLinearCor.png used on input line 335.
+(pdftex.def)             Requested size: 300.36942pt x 100.72537pt.
 
- (./Lecture10.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
 [24
 
-]
-\openout4 = `Lecture10.vrb'.
-
- (./Lecture10.vrb)
+ <./NonLinearCor.png (PNG copy)>]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1304,9 +1343,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [25
 
 ]
-\openout4 = `Lecture10.vrb'.
-
- (./Lecture10.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1321,62 +1357,67 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [27
 
 ]
+\openout4 = `Lecture11.vrb'.
+
+ (./Lecture11.vrb <figure/BestFit.pdf, id=266, 505.89pt x 289.08pt>
+File: figure/BestFit.pdf Graphic file (type pdf)
+
+<use figure/BestFit.pdf>
+Package pdftex.def Info: figure/BestFit.pdf used on input line 6.
+(pdftex.def)             Requested size: 307.28987pt x 175.59749pt.
+)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
 [28
 
-]
+ <./figure/BestFit.pdf>]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
 [29
 
-] <Chi2.png, id=289, 620.3175pt x 317.185pt>
-File: Chi2.png Graphic file (type png)
- <use Chi2.png>
-Package pdftex.def Info: Chi2.png used on input line 325.
-(pdftex.def)             Requested size: 310.15799pt x 158.5921pt.
-
-Overfull \hbox (2.86812pt too wide) in paragraph at lines 325--325
- [] 
- []
-
-
+]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
 [30
 
- <./Chi2.png (PNG copy)>]
+]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
 [31
 
-] <Chi2specific.png, id=307, 375.4025pt x 165.61874pt>
-File: Chi2specific.png Graphic file (type png)
+]
+\openout4 = `Lecture11.vrb'.
 
-<use Chi2specific.png>
-Package pdftex.def Info: Chi2specific.png used on input line 346.
-(pdftex.def)             Requested size: 225.24323pt x 99.37201pt.
+ (./Lecture11.vrb <figure/Res1.pdf, id=302, 505.89pt x 289.08pt>
+File: figure/Res1.pdf Graphic file (type pdf)
 
+<use figure/Res1.pdf>
+Package pdftex.def Info: figure/Res1.pdf used on input line 6.
+(pdftex.def)             Requested size: 307.28987pt x 175.59749pt.
+)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
 [32
 
- <./Chi2specific.png (PNG copy)>]
-\openout4 = `Lecture10.vrb'.
+ <./figure/Res1.pdf>]
+\openout4 = `Lecture11.vrb'.
 
- (./Lecture10.vrb
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 7.
+ (./Lecture11.vrb
+<figure/Res2.pdf, id=315, 505.89pt x 289.08pt>
+File: figure/Res2.pdf Graphic file (type pdf)
+ <use figure/Res2.pdf>
+Package pdftex.def Info: figure/Res2.pdf used on input line 6.
+(pdftex.def)             Requested size: 307.28987pt x 175.59749pt.
 )
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
@@ -1384,7 +1425,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 [33
 
-]
+ <./figure/Res2.pdf>]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1399,23 +1440,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [35
 
 ]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 377.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\chi' on input line 377.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 377.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 377.
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1430,11 +1454,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [37
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 405--405
-[]\OT1/cmss/m/n/10.95 University
- []
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1449,417 +1468,10 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [39
 
 ]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[40
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[41
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 455--455
-[]\OT1/cmss/m/n/8 University
- []
-
-
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[42
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[43
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[44
-
-]
-\openout4 = `Lecture10.vrb'.
-
- (./Lecture10.vrb)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[45
-
-]
-\openout4 = `Lecture10.vrb'.
-
- (./Lecture10.vrb
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 21.
-
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/base/ts1cmtt.fd
-File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-))
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[46
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[47
-
-]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.540 }
-       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[48
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[49
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[50
-
-]
-\openout4 = `Lecture10.vrb'.
-
- (./Lecture10.vrb <figure/PerfectLinear.pdf, id=452, 216.81pt x 216.81pt>
-File: figure/PerfectLinear.pdf Graphic file (type pdf)
-
-<use figure/PerfectLinear.pdf>
-Package pdftex.def Info: figure/PerfectLinear.pdf used on input line 5.
-(pdftex.def)             Requested size: 216.80946pt x 216.81938pt.
-)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[51
-
- <./figure/PerfectLinear.pdf>]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[52
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[53
-
-]
-\openout4 = `Lecture10.vrb'.
-
- (./Lecture10.vrb
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 \\[
-       0.5cm]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-<figure/PerfectLinearExplain.pdf, id=482, 216.81pt x 216.81pt>
-File: figure/PerfectLinearExplain.pdf Graphic file (type pdf)
-
-<use figure/PerfectLinearExplain.pdf>
-Package pdftex.def Info: figure/PerfectLinearExplain.pdf used on input line 5.
-(pdftex.def)             Requested size: 216.80946pt x 216.81938pt.
-)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[54
-
- <./figure/PerfectLinearExplain.pdf>]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[55
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[56
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[57
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[58
-
-]
-\openout4 = `Lecture10.vrb'.
-
- (./Lecture10.vrb
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 \\[
-       0.5cm]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-<figure/PerfectLinearExplain2.pdf, id=530, 216.81pt x 216.81pt>
-File: figure/PerfectLinearExplain2.pdf Graphic file (type pdf)
-
-<use figure/PerfectLinearExplain2.pdf>
-Package pdftex.def Info: figure/PerfectLinearExplain2.pdf used on input line 5.
-
-(pdftex.def)             Requested size: 216.80946pt x 216.81938pt.
-)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[59
-
- <./figure/PerfectLinearExplain2.pdf>]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[60
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[61
-
-]
-\openout4 = `Lecture10.vrb'.
-
- (./Lecture10.vrb
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 \\[
-       0.5cm]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-<figure/PerfectLinearExplain4.pdf, id=563, 216.81pt x 216.81pt>
-File: figure/PerfectLinearExplain4.pdf Graphic file (type pdf)
-
-<use figure/PerfectLinearExplain4.pdf>
-Package pdftex.def Info: figure/PerfectLinearExplain4.pdf used on input line 5.
-
-(pdftex.def)             Requested size: 216.80946pt x 216.81938pt.
-)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[62
-
- <./figure/PerfectLinearExplain4.pdf>]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[63
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[64
-
-]
-\openout4 = `Lecture10.vrb'.
-
- (./Lecture10.vrb
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 \\[
-       0.5cm]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-<figure/PerfectLinearExplain5.pdf, id=595, 216.81pt x 216.81pt>
-File: figure/PerfectLinearExplain5.pdf Graphic file (type pdf)
-
-<use figure/PerfectLinearExplain5.pdf>
-Package pdftex.def Info: figure/PerfectLinearExplain5.pdf used on input line 5.
-
-(pdftex.def)             Requested size: 216.80946pt x 216.81938pt.
-)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[65
-
- <./figure/PerfectLinearExplain5.pdf>]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[66
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[67
-
-] <ExampleSLR.png, id=628, 624.3325pt x 199.74625pt>
-File: ExampleSLR.png Graphic file (type png)
- <use ExampleSLR.png>
-Package pdftex.def Info: ExampleSLR.png used on input line 720.
-(pdftex.def)             Requested size: 312.16548pt x 99.87288pt.
-
-Overfull \hbox (4.87561pt too wide) in paragraph at lines 720--720
- [] 
- []
-
-
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[68
-
- <./ExampleSLR.png (PNG copy)>]
-<NonLinear.png, id=637, 500.87125pt x 219.82124pt>
-File: NonLinear.png Graphic file (type png)
- <use NonLinear.png>
-Package pdftex.def Info: NonLinear.png used on input line 728.
-(pdftex.def)             Requested size: 250.435pt x 109.91034pt.
-
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[69
-
- <./NonLinear.png (PNG copy)>]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[70
-
-]
-\openout4 = `Lecture10.vrb'.
-
- (./Lecture10.vrb <figure/GDP1.pdf, id=652, 505.89pt x 289.08pt>
-File: figure/GDP1.pdf Graphic file (type pdf)
-
-<use figure/GDP1.pdf>
-Package pdftex.def Info: figure/GDP1.pdf used on input line 4.
-(pdftex.def)             Requested size: 307.28987pt x 175.59749pt.
-)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[71
-
- <./figure/GDP1.pdf>]
-\openout4 = `Lecture10.vrb'.
-
- (./Lecture10.vrb
-<figure/GDP2.pdf, id=668, 505.89pt x 289.08pt>
-File: figure/GDP2.pdf Graphic file (type pdf)
- <use figure/GDP2.pdf>
-Package pdftex.def Info: figure/GDP2.pdf used on input line 4.
-(pdftex.def)             Requested size: 307.28987pt x 175.59749pt.
-)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[72
-
- <./figure/GDP2.pdf>]
-Missing character: There is no ‚ in font cmss10!
-Missing character: There is no Ä in font cmss10!
-Missing character: There is no ù in font cmss10!
-Missing character: There is no ‚ in font cmss10!
-Missing character: There is no Ä in font cmss10!
-Missing character: There is no ì in font cmss10!
-
 ! Misplaced alignment tab character &.
 <inserted text> ...ing R. Chichester: John Wiley &
                                                    Sons. Ltd. \\[0.25cm] Dia...
-l.769 \end{frame}
+l.464 \end{frame}
                  
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1873,65 +1485,63 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[73
+[40
 
 ]
 \tf@nav=\write6
-\openout6 = `Lecture10.nav'.
+\openout6 = `Lecture11.nav'.
 
 \tf@toc=\write7
-\openout7 = `Lecture10.toc'.
+\openout7 = `Lecture11.toc'.
 
 \tf@snm=\write8
-\openout8 = `Lecture10.snm'.
+\openout8 = `Lecture11.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 772.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 772.
- (./Lecture10.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 772.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 772.
-Package rerunfilecheck Info: File `Lecture10.out' has not changed.
-(rerunfilecheck)             Checksum: E1A250CBB1BDE8C5EF0FB97BB02A8162;328.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 467.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 467.
+ (./Lecture11.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 467.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 467.
+Package rerunfilecheck Info: File `Lecture11.out' has not changed.
+(rerunfilecheck)             Checksum: F53600B6FC5BA1FD18266E4C4568B8D0;247.
 
 
 LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 3.0pt have occurred.
+(Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 772.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 467.
  ) 
 Here is how much of TeX's memory you used:
- 18629 strings out of 493633
- 352801 string characters out of 3143377
- 415260 words of memory out of 3000000
- 21277 multiletter control sequences out of 15000+200000
- 19101 words of font info for 74 fonts, out of 3000000 for 9000
+ 18432 strings out of 493633
+ 350925 string characters out of 3143377
+ 413173 words of memory out of 3000000
+ 21164 multiletter control sequences out of 15000+200000
+ 16567 words of font info for 63 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 49i,17n,60p,448b,589s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 49i,16n,60p,448b,589s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
 /usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
-usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></us
-r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
-l/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/t
-exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
-ive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texli
-ve/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texliv
-e/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive
-/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2
-011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/201
-1/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/20
-11/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/20
-11/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
-1/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2011
-/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/
-2011/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on Lecture10.pdf (73 pages, 439347 bytes).
+usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
+cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
+/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/
+texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/t
+exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/te
+xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texl
+ive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texliv
+e/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texli
+ve/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texli
+ve/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive
+/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/tex
+live/2011/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on Lecture11.pdf (40 pages, 1061159 bytes).
 PDF statistics:
- 794 PDF objects out of 1000 (max. 8388607)
- 668 compressed objects within 7 object streams
- 153 named destinations out of 1000 (max. 500000)
- 134 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 459 PDF objects out of 1000 (max. 8388607)
+ 375 compressed objects within 4 object streams
+ 86 named destinations out of 1000 (max. 500000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 

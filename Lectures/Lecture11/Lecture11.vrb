@@ -1,0 +1,12 @@
+\frametitle {Residuals}
+  The red point is at (124, 3.44). Given that \texttt{SATSum} is 124, it is expected to be at 2.94. So, it's residual is $3.44 - 2.94 = 0.5$.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=\maxwidth]{figure/Res2}
+
+}
+
+
+\end{knitrout}
+

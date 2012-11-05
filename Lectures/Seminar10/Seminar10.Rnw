@@ -30,9 +30,6 @@
 
 \frame{\titlepage}
 
-\section[Outline]{}
-\frame{\tableofcontents}
-
 \begin{frame}[fragile]
   \frametitle{Data}
   Load UK Smoking Data from the {\emph{openintro}} package:
@@ -59,7 +56,7 @@ SmokingTable <- table(smoking$smoke)
 
 \frame{
   \frametitle{Question}
-  If 27\% of South Korean's smoke, are the rates of smoking different in the UK than in South Korea?
+  If 27\% of South Korean's smoke, are the proportions of smokers and non-smokers different in the UK than in South Korea?
 }
 
 \frame{

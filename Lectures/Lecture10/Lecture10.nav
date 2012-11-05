@@ -96,11 +96,11 @@
 \headcommand {\beamer@framepages {45}{45}}
 \headcommand {\slideentry {5}{0}{41}{46/46}{}{0}}
 \headcommand {\beamer@framepages {46}{46}}
-\headcommand {\sectionentry {6}{Introduction to Simple Linear Regression}{47}{Introduction to Simple Linear Regression}{0}}
-\headcommand {\beamer@sectionpages {36}{46}}
-\headcommand {\beamer@subsectionpages {36}{46}}
-\headcommand {\slideentry {6}{0}{42}{47/47}{}{0}}
+\headcommand {\slideentry {5}{0}{42}{47/47}{}{0}}
 \headcommand {\beamer@framepages {47}{47}}
+\headcommand {\sectionentry {6}{Introduction to Simple Linear Regression}{48}{Introduction to Simple Linear Regression}{0}}
+\headcommand {\beamer@sectionpages {36}{47}}
+\headcommand {\beamer@subsectionpages {36}{47}}
 \headcommand {\slideentry {6}{0}{43}{48/48}{}{0}}
 \headcommand {\beamer@framepages {48}{48}}
 \headcommand {\slideentry {6}{0}{44}{49/49}{}{0}}
@@ -151,8 +151,10 @@
 \headcommand {\beamer@framepages {71}{71}}
 \headcommand {\slideentry {6}{0}{67}{72/72}{}{0}}
 \headcommand {\beamer@framepages {72}{72}}
-\headcommand {\beamer@partpages {1}{72}}
-\headcommand {\beamer@subsectionpages {47}{72}}
-\headcommand {\beamer@sectionpages {47}{72}}
-\headcommand {\beamer@documentpages {72}}
-\headcommand {\def \inserttotalframenumber {67}}
+\headcommand {\slideentry {6}{0}{68}{73/73}{}{0}}
+\headcommand {\beamer@framepages {73}{73}}
+\headcommand {\beamer@partpages {1}{73}}
+\headcommand {\beamer@subsectionpages {48}{73}}
+\headcommand {\beamer@sectionpages {48}{73}}
+\headcommand {\beamer@documentpages {73}}
+\headcommand {\def \inserttotalframenumber {68}}

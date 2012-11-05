@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.10pt}
+\beamer@sectionintoc {2}{Recap}{3}{0}{1}
+\beamer@sectionintoc {3}{Correlation}{9}{0}{2}
+\beamer@sectionintoc {4}{Best Fit Lines \& Least Squares Regression}{25}{0}{3}
+\beamer@sectionintoc {5}{Some Special Issues in Simple Linear Regression}{34}{0}{4}
