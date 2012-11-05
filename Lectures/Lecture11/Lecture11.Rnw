@@ -12,6 +12,8 @@
 \usepackage{tikz}
 \usepackage{booktabs}
 
+\DeclareMathOperator*{\argmin}{arg\,min}
+
 <<ParentGlobalOpts, echo=FALSE>>=
   options(width=50)
   opts_chunk$set(fig.align='center')
@@ -19,7 +21,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title Slide %%%%%%%%%%%%%%%%%%%%%%%%%%
-\title[]{Intro to Social Science Data Analysis \\[1cm] Week 11: Simple Linear Regression}
+\title[]{Intro to Social Science Data Analysis \\[1cm] Week 11 Lecture: Simple Linear Regression}
 \author[]{
     \href{mailto:gandrud@yonsei.ac.kr}{Christopher Gandrud}
 }
@@ -97,6 +99,14 @@
   What about no relationship?
 }
 
+\frame{
+  \frametitle{Quick Quiz 6}
+  Describe the variables in the simple linear regression equation.
+  \[
+  y = \alpha + \beta x
+  \]
+}
+
 %%%%%%%%%%%% Correlation
 \section{Correlation}
 \frame{
@@ -153,7 +163,7 @@ ggpairs(satGPASlim, upper = "blank")
 
 \begin{frame}[fragile]
   \frametitle{First Year GPA}
-  Universities want to know how well student's total SAT scores (\texttt{SATSum}) relate to their academic performance in the first year of university (\texttt{FYGPA}.
+  Universities want to know how well student's total SAT scores (\texttt{SATSum}) relate to their academic performance in the first year of university (\texttt{FYGPA}).
 <<SATFYGPA, echo=FALSE, warning=FALSE, fig.height=4>>=
 # Load library
 library(ggplot2)
@@ -323,17 +333,252 @@ ggplot(data = satGPASlim, aes(SATSum, FYGPA, color = HighPoint)) +
 @
 \end{frame}
 
+\frame{
+  \frametitle{Aim}
+  We want to find the line that gets us the smallest {\bf{sum of squared residuals}} (SSR) where the SSR is:
+  \[
+    SSR = e^{2}_{1} + e^{2}_{2} + \ldots + e^{2}_{n}
+  \]
+}
+
+\frame{
+  \frametitle{Um\ldots}
+  \begin{center}
+{\LARGE{So where do the expected values ($\hat{y}$) come from?}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{$\hat{\beta}$}
+  Remember the simple linear regression equation:
+  \[
+  y = \alpha + \beta x
+  \]
+  We want to find the $\hat{\beta}$ that {\bf{minimizes}} the SSR. \\[0.5cm]
+  Formally:
+  \[
+  \hat{\beta} = \argmin\limits_{b\in\mathbb{R}p}\mathrm{SSR}
+  \]
+  This is called {\bf{ordinary least squares simple linear regression.}}
+}
+
+\frame{
+  \frametitle{How?}
+  \begin{center}
+    {\LARGE{How do we find the  $\hat{\beta}$ that {\bf{minimizes}} the SSR?}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{By Hand}
+  One way to estimate the correlation coefficient parameter $\beta$ for $x$ is with the following equation:
+  \[
+  \hat{\beta} = \frac{s_{y}}{s_{x}}R
+  \]
+}
+
+\begin{frame}[fragile]
+  \frametitle{Calculate $\hat{\beta}$}
+<<CalcBeta>>=
+# Find standard errors
+SDy <- sd(satGPA$FYGPA)
+SDx <- sd(satGPA$SATSum)
+
+# Find correlation
+CorXY <- cor(satGPA$SATSum, satGPA$FYGPA)
+
+# Estiamte correlation coefficient
+BetaHat <- (SDy/SDx) * CorXY
+
+BetaHat
+@
+\end{frame}
+
+\frame{
+  \frametitle{Finding the intercept.}
+  \begin{center}
+{\LARGE{How can we find the intercept?}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Finding the intercept ($\hat{\alpha}$).}
+  You might remember from maths that we can find the whole equation for a line if we know:
+  \begin{itemize}
+    \item<1-> a point on the line.
+    \item<1-> the slope.
+\end{itemize}\\[0.5cm]
+  We know the slope and we know that the point at the mean of $x$ and $y$ ($\bar{x},\bar{y}$) will be on the line so we can use the equation for the {\bf{point-slope}} form of a line:
+  \[
+  y - \bar{y} = \hat{b}(x - \bar{x})
+  \]
+}
+
+\frame{
+  \frametitle{Finding the intercept ($\hat{\alpha}$).}
+  If $\bar{y} = 2.468$, $\bar{x} = 103.329$, and $\hat{\beta} = 0.02387$, then:
+  \[
+  y - \bar{y} = \hat{\beta}(x - \bar{x})
+  \]
+  \[
+  y - 2.468 = 0.02387(x - 103.329)
+  \]
+  \[
+  y - 2.468 = 0.02387x - 2.466463
+  \]
+  \[
+  y = 0.2387x + 0.001537
+  \]
+  \[
+  \widehat{FYGPA} = 0.001537 + 0.2387SATSum
+  \]
+}
+
+
+\frame{
+  \frametitle{This class}
+  \begin{center}
+    {\Large{In this class we will let the computer find the $\hat{\beta}$ and $\hat{\alpha}$.}}
+  \end{center}
+}
+
+\begin{frame}[fragile]
+  \frametitle{Linear Model}
+  In R you can use the \texttt{lm} (linear model) command. For example,
+<<LM1>>=
+M1 <- lm(FYGPA ~ SATSum, data = satGPA)
+
+M1
+@
+\end{frame}
+
+\frame{
+  \frametitle{The Regression Equation}
+  So again, our estimated regression equation is:
+  \[
+  \widehat{FYGPA} = 0.00193 + 0.02387SATSum
+  \]
+}
+
+\frame{
+  \frametitle{Assumptions}
+{\LARGE{Linear Regression Assumptions:}} \\[0.5cm]
+  \begin{itemize}
+    \item The data follow a {\bf{linear trend}},
+    \item Nearly {\bf{normally distributed residuals}},
+    \item There is {\bf{constant variability}}.
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{Example Assumption Violations}
+  Which assumptions do these data violate?
+  \begin{center}
+    \includegraphics[scale=0.5]{AssumptionViolation.png}
+  \end{center}
+{\tiny{Source: Diaz et al. (2011, 285)}}
+}
+
+\begin{frame}[fragile,plain]
+  {\small{To determine if the residuals in the model \texttt{M1} are normally distributed:}}
+<<NormallyDistributed, fig.height=4>>=
+# Find standardized residuals
+M1.residuals <- rstandard(M1)
+# Create Quantile-Quantile Plot
+qqnorm(M1.residuals); qqline(M1.residuals)
+@
+\end{frame}
+
+%%%%%%%%% Hypothesis testing with OLS
+\section{Hypothesis Testing}
+\frame{
+  \frametitle{Hypothesis Testing}
+  {\Large{Remember that $\hat{\beta}$ is a {\bf{point estimate}} of the {\bf{population parameter}} $\beta$.\\[0.5cm]
+  How can we make {\bf{inferences}} about $\beta$ from $\hat{\beta}$?}}\\[1.5cm]
+  Note: some people use $b$ to refer to $\hat{\beta}$.
+}
+
+\frame{
+  \frametitle{Hypotheses}
+  \begin{center}
+{\LARGE{What would our null and alternative hypotheses be?}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Hypotheses}
+  For our example, with a positive slope of 0.2387:\\[1cm]
+{\large{$H_{0}$: $\beta = 0$ \\[0.5cm]
+$H_{a}$: \beta > 0$}} 
+}
+
+\frame{
+  \frametitle{P-values for $\hat{\beta}$}
+  We usually assume that the sampling distribution of $\hat{\beta}$ follows a $t$ distribution. \\[0.25cm]
+  Remember the equation for the $t\:test$ statistic:
+  \[
+  T = \frac{\mathrm{point\:estimate - null\:value}}{\mathrm{SE}}\\
+  \]
+  $\mathrm{with}\: n - 2\: \mathrm{degrees\:of\:freedom}$.\\[0.5cm]
+  The procedure is the same as before to find the p-value.
+}
+
+\begin{frame}[fragile,plain]
+<<M1Summary>>=
+# Summarize M1 model output
+summary(M1)
+@
+\end{frame}
+
+\frame{
+  \frametitle{Inference \& p-values}
+  So, we find evidence against the null hypothesis that the slope of the line summarizing the relationship between first year university grades and SAT total scores is 0 in the population. \\[0.5cm]
+  Note: the p-vale given by \texttt{summary} is based on a {\bf{two-sided}} hypothesis. If we have a one sided hypothesis we can {\bf{halve}} the p-value. \\[0.5cm]
+  In our example this would be impractical, since the p-value is already so small.
+  
+}
+
 %%%%%%%%% Special Issues
 \section{Some Special Issues in Simple Linear Regression}
-\frame{
-  \frametitle{Outliers}
-}
 
 \frame{
   \frametitle{Dummy Variables}
   So far we have only looked at creating simple linear regression models with {\bf{continuous numeric}} dependent and independent variables. \\[0.5cm]
-  What if we have a continuous dependent variable and a dichotomous independent variable?
+  What if we have a {\bf{continuous dependent}} variable and a {\bf{dichotomous (dummy) independent}} variable?
 }
+
+\begin{frame}[fragile]
+  \frametitle{Dichotomous Independent Variables}
+  For example:
+<<SexDichot1, echo=FALSE, fig.height=4>>=
+# Recode Sex
+satGPA$sex[satGPA$sex == 2] <- 0
+satGPA$sex[satGPA$sex == 1] <- 1
+
+ggplot(satGPA, aes(sex, FYGPA)) +
+        geom_point() +
+        scale_x_continuous(breaks = c(0, 1)) +
+        theme_bw(base_size = 15)
+@
+{\tiny{Note, I recoded the values of the original variable.}}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Dichotomous Independent Variables}
+  $\beta$ is pretty similar. It is still the slope of the line for a one unit change in $x$. The only difference is that the variable only goes between 0 and 1.
+<<SexDichot2, echo=FALSE, fig.height=4>>=
+# Recode Sex
+satGPA$sex[satGPA$sex == 2] <- 0
+satGPA$sex[satGPA$sex == 1] <- 1
+
+ggplot(satGPA, aes(sex, FYGPA)) +
+        geom_point() +
+        geom_smooth(method = "lm", se = FALSE) +
+        scale_x_continuous(breaks = c(0, 1)) +
+        theme_bw(base_size = 15)
+@
+{\tiny{Note, I recoded the values of the original variable.}}
+\end{frame}
 
 \frame{
   \frametitle{Categorical Dependent}
@@ -343,18 +588,80 @@ ggplot(data = satGPASlim, aes(SATSum, FYGPA, color = HighPoint)) +
 }
 
 \frame{
-  \frametitle{Caution: Non-Linear Relationships}
-  It is always a good idea to check for {\bf{non-linear relationships}}.
+  \frametitle{Extrapolation}
+{\Large{Be careful about {\bf{extrapolating}} beyond your data. \\[0.5cm]
+  We don't know how the data beyond what we observe will behave.}}
+}
+
+\begin{frame}[fragile]
+  \frametitle{Extrapolation}
+  On the 37th day of the year it was 10 degrees.
+<<Extrap1, echo=FALSE, fig.height=4>>=
+Day <- 37
+Temp <- 10
+Data <- data.frame(Day, Temp)
+
+ggplot(Data, aes(Day, Temp)) +
+        geom_point(size = 7) +
+        scale_x_continuous(limits = c(1, 365), 
+                           breaks = c(1, 37, 100, 200, 300, 365), 
+                           labels = c(1, 37, 100, 200, 300, 365)) +
+        scale_y_continuous(limits = c(-5, 30)) +
+        theme_bw(base_size = 15)
+@
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Extrapolation}
+  On the 70th day of the year it was 20 degrees.
+<<Extrap2, echo=FALSE, fig.height=4>>=
+Day <- c(37, 70)
+Temp <- c(10, 20)
+Data <- data.frame(Day, Temp)
+
+ggplot(Data, aes(Day, Temp)) +
+        geom_point(size = 7) +
+        scale_x_continuous(limits = c(1, 365), 
+                           breaks = c(1, 37, 70, 100, 200, 300, 365), 
+                           labels = c(1, 37, 70, 100, 200, 300, 365)) +
+        scale_y_continuous(limits = c(-5, 30)) +
+        theme_bw(base_size = 15)
+@
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Extrapolation}
+  So on the last day of the year it will be about 100 degrees?.
+<<Extrap3, echo=FALSE, fig.height=4>>=
+Day <- c(37, 70, 365)
+Temp <- c(10, 20, 100)
+Data <- data.frame(Day, Temp)
+
+ggplot(Data, aes(Day, Temp)) +
+        geom_point(size = 7) +
+        geom_smooth(method = "lm", se = FALSE) +
+        scale_x_continuous(limits = c(1, 365), 
+                           breaks = c(1, 37, 70, 100, 200, 300, 365), 
+                           labels = c(1, 37, 70, 100, 200, 300, 365)) +
+        scale_y_continuous(limits = c(-5,105)) +
+        theme_bw(base_size = 15)
+@
+\end{frame}
+
+\frame{
+  \frametitle{Outliers}
+  Be careful about outliers.
+  \begin{center}
+    \includegraphics[scale=0.3]{Outliers.png}
+  \end{center}\\[0.2cm]
+{\tiny{Source: Diaz et al. (2011, 290)}}
 }
 
 \frame{
-  One way to address non-linear relationships is to {\bf{transform}} the data using, for example: \\[0.5cm]
-  \begin{itemize}
-    \item logs
-    \item squares, cubes.
-  \end{itemize}
+  \frametitle{Removing Outliers}
+{\Large{Only remove outliers if you have a {\bf{good reason}} to. \\[0.5cm]
+        Try to find out {\bf{substantively}} why they are outliers.}}
 }
-
 
 
 

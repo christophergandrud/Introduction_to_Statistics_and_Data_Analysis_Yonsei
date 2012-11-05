@@ -1,0 +1,93 @@
+\documentclass{beamer}
+\usetheme{Stats}
+\setbeamercovered{transparent}
+\usepackage{color}
+\usepackage{hyperref}
+  \hypersetup{
+  	colorlinks=true
+		linkcolor=black
+		}
+\usepackage{url}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{booktabs}
+
+<<ParentGlobalOpts, echo=FALSE>>=
+  options(width=50)
+  opts_chunk$set(fig.align='center')
+@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title Slide %%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[]{Intro to Social Science Data Analysis \\[1cm] Week 11 Seminar: Simple Linear Regression}
+\author[]{
+    \href{mailto:gandrud@yonsei.ac.kr}{Christopher Gandrud}
+}
+\date{\today}
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+\frame{
+  \frametitle{Interpretation}
+  With a partner, 
+  \begin{itemize}
+      \item<1-> describe the relationship between the number of calories a food item has and its carbohydrates,
+      \item<1-> roughly estimate how many carbohydrates an item with 300 calories would have,
+      \item<1-> what are the independent and dependent variables?
+  \end{itemize}
+  \begin{center}
+    \includegraphics[scale=0.5]{CalCarb.png}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Outliers}
+  This graph plots states in the United States. \\
+  The outlier on the bottom right is Washington, DC. \\
+  What should we do with the outlier?
+  \begin{center}
+    \includegraphics[scale=0.5]{Outlier.png}
+  \end{center}
+}
+
+\frame{
+	\frametitle{Inference from Intercepts}
+  What does the point estimate of $\alpha$ mean?\\[0.5cm]
+  How interested are we in making inferences from $\hat{\alpha}$?
+}
+
+
+\begin{frame}[fragile]
+  \frametitle{Load Data}
+  Load data on 3143 US counties from the {\emph{openintro}} package.
+<<LoadData, message=FALSE>>=
+# Load library
+library(openintro)
+
+# Load Data
+data(county)
+
+# Show variable names
+names(county)
+@
+\end{frame}
+
+\frame{
+  \frametitle{Practice}
+  Pick two continuous variables. Explore the relationship between the variables, including:
+  \begin{itemize}
+  \item their correlation,
+  \item the direction of the relationship, 
+  \item the strength of the relationship,
+  \item predict three values of one variable based on the value of the other,
+  \item statistical inferences from a linear regression equation.
+\end{itemize}
+  Could the two variables be causally related? Why/why not?
+
+}
+
+
+\end{document}
