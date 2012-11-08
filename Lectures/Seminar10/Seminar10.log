@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  5 NOV 2012 08:48
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  8 NOV 2012 08:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1058,10 +1058,35 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [1
 
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<math.png, id=24, 451.6875pt x 158.5925pt>
+File: math.png Graphic file (type png)
+ <use math.png>
+Package pdftex.def Info: math.png used on input line 93.
+(pdftex.def)             Requested size: 316.17908pt x 111.01396pt.
+
+Overfull \hbox (8.8892pt too wide) in paragraph at lines 93--93
+ [] 
+ []
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 93.
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 93.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[2
+
+ <./math.png>]
 \openout4 = `Seminar10.vrb'.
 
-
-(./Seminar10.vrb
+ (./Seminar10.vrb
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 7.
 )
@@ -1069,7 +1094,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[2
+[3
 
 ]
 \openout4 = `Seminar10.vrb'.
@@ -1079,25 +1104,9 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[3
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
 [4
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 134.
- (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 134.
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1133,6 +1142,13 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [9
 
 ]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[10
+
+]
 \tf@nav=\write6
 \openout6 = `Seminar10.nav'.
 
@@ -1142,11 +1158,11 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `Seminar10.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 146.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 146.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 155.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 155.
  (./Seminar10.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 146.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 146.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 155.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 155.
 Package rerunfilecheck Info: File `Seminar10.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1154,14 +1170,14 @@ Package rerunfilecheck Info: File `Seminar10.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 146.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 155.
  ) 
 Here is how much of TeX's memory you used:
- 18102 strings out of 493633
- 344634 string characters out of 3143377
+ 18122 strings out of 493633
+ 344987 string characters out of 3143377
  411255 words of memory out of 3000000
- 20935 multiletter control sequences out of 15000+200000
- 11216 words of font info for 42 fonts, out of 3000000 for 9000
+ 20951 multiletter control sequences out of 15000+200000
+ 11384 words of font info for 43 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  49i,16n,53p,448b,429s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
@@ -1170,12 +1186,12 @@ Here is how much of TeX's memory you used:
 sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></
 usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></
 usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></u
-sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
->
-Output written on Seminar10.pdf (9 pages, 79245 bytes).
+sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr
+/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on Seminar10.pdf (10 pages, 105831 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
- 19 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 118 PDF objects out of 1000 (max. 8388607)
+ 91 compressed objects within 1 object stream
+ 21 named destinations out of 1000 (max. 500000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -30,6 +30,15 @@
 
 \frame{\titlepage}
 
+\frame{
+  \frametitle{A Win for R}
+  \begin{center}
+    \includegraphics[scale=0.70]{math.png}
+  \end{center}
+{\tiny{Source: \url{http://xkcd.com/1131/}}}
+
+}
+
 \begin{frame}[fragile]
   \frametitle{Data}
   Load UK Smoking Data from the {\emph{openintro}} package:
