@@ -1,22 +1,16 @@
-\frametitle {Showing the Coefficient Estimates}
-\begin{knitrout}
+\begin {knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcomment{# Show coefficient point estimates}
-M1
+\hlcomment{# Plot middle 95% of the simulations}
+\hlfunctioncall{plot}(ZSim, ylab = \hlstring{"Expected Price"},
+     main = \hlstring{"Effect of Wheels on MK EBay Auctions"})
 \end{alltt}
-\begin{verbatim}
-##
-## Call:
-## lm(formula = totalPr ~ duration + cond + wheels, data = marioKart)
-##
-## Coefficients:
-## (Intercept)     duration     condused
-##      35.735        0.680       -0.695
-##      wheels
-##      10.455
-\end{verbatim}
 \end{kframe}
+
+{\centering \includegraphics[width=\maxwidth]{figure/Zelig3}
+
+}
+
+
 \end{knitrout}
 
-What is the estiatmed linear regression equation?

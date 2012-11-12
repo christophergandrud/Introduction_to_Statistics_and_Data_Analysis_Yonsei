@@ -1,0 +1,89 @@
+\documentclass{beamer}
+\usetheme{Stats}
+\setbeamercovered{transparent}
+\usepackage{color}
+\usepackage{hyperref}
+  \hypersetup{
+  	colorlinks=true
+		linkcolor=black
+		}
+\usepackage{url}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{booktabs}
+
+<<ParentGlobalOpts, echo=FALSE>>=
+  options(width=50)
+  opts_chunk$set(fig.align='center')
+@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title Slide %%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[]{Intro to Social Science Data Analysis \\[1cm] Week 12 Seminar: Multivariate Linear Regression \& Presenting Regression Results}
+\author[]{
+    \href{mailto:gandrud@yonsei.ac.kr}{Christopher Gandrud}
+}
+\date{\today}
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+
+%%%%%%%%%% Assignment 4
+\section{Assignment 4}
+\frame{
+  \frametitle{Assignment 4}
+  Due: Friday 30 November \\[0.5cm]
+  {\Large{Research Design}} \\[0.25cm]
+  With your partner plan your research by answering the following questions:
+  \begin{enumerate}
+    \item What difference or anomaly do you want to explain?
+    \item What is your best guess explanation? Draw your best guess in a diagram.
+    \item Can you test your hypothesis using data? If so, what data do you need to collect and what tests could you use?
+    \item What rival explanations are their?
+    \item How could you use data to test whether your best guess or the rival explanations are better? Write this as an \textbf{equation} if possible.
+    \item What other factors may influence the relationship you observe?
+  \end{enumerate}
+{\tiny{Questionnaire from: modified from Cheryl Schonhardt-Bailey}}
+}
+
+\begin{frame}[fragile]
+	\frametitle{Load Data}
+<<LoadData, message=FALSE>>=
+# Load openintro package
+library(openintro)
+
+# Load Data
+data(census)
+
+# Show variable names
+names(census)
+@
+\end{frame}
+
+\frame{
+  \frametitle{Model}
+  With a partner, hypothesize what the likely associations between the variables:
+  \begin{itemize}
+    \item \texttt{age},
+    \item \texttt{sex},
+    \item \texttt{raceGeneral},
+    \item \texttt{maritalStatus},
+    \item \texttt{totalPersonalIncome}
+  \end{itemize}
+  on \texttt{totalFamilyIncome}.
+}
+
+\frame{
+  \frametitle{Predict the Effect}
+  Create a parsimoneous, but comprehensive linear regression model to predict the total family income of a white, 32 year old women, with an personal income of \$25,000.  \\[0.5cm]
+  Write the linear regression equation and make the prediction.
+}
+
+\frame{
+  \frametitle{Simulations}
+  Simulate expected total family incomes, with associated uncertainty, for a range of individual incomes.
+}
+\end{document}

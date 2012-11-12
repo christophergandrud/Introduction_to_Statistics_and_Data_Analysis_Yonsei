@@ -351,21 +351,496 @@ What is the estiatmed linear regression equation?
   \frametitle{Question Linear Regression Equation}
   \[
   \begin{split}
-  \widehat{\tt{totalPr}} = & \left 35.74 + 0.68(\tt{duration}) \right. \\
-                          & \left + -0.695(\tt{condused}) + 10.46(\tt{wheels}) \right)
+  \widehat{\tt{totalPr}} = & \left 35.74 + 0.68(\tt{duration}) + \right. \\
+                          & \left -0.695(\tt{condused}) + 10.46(\tt{wheels}) \right)
   \end{split}
   \]
   What do you estimated will be the total selling price for a Mario Kart auction that was 5 days long, was in new condition, and included 2 wheels?
 }
 
 \frame{
-  \frametitle{Linear Regression Equation}
+  \frametitle{Linear Regression Equation Estimated $Y$}
   \[
   60.06 = 35.74 + 0.68(5) + -0.695(0) + 10.46(2)
   \]
 }
 
+\frame{
+  \frametitle{Single Variable Interpretation}
+  We can interpret the effect of \texttt{duration} like this:
+  \begin{quote}
+    Controlling for the condition of the game and the number of wheels included, each day a Mario Kart EBay auction continues I expect that the total selling price will increase by 0.68.
+  \end{quote}
+   \hline \vspace{0.5cm}
+For the dummy variable \texttt{condused} we have the following interpretation:
+\begin{quote}
+    Controlling for the duration of the auction and the number of wheels sold, I expect used Mario Kart games to sell for 0.695 less than new games in EBay auctions.
+ \end{quote}
+}
 
+\frame{
+  \frametitle{Remember the Units}
+  \begin{center}
+{\Large{Remember that the coefficients are in terms of the variables' units. \\[0.5cm]
+  A large coefficient does not neccessarily mean a big effect.}}
+  \end{center}
+}
+
+%%% Multinomial variables
+\begin{frame}[fragile]
+  \frametitle{Multinomial Variables in Multiple Linear Regression}
+  \begin{center}
+  What if an independent variable has more than two category?
+  \end{center}
+  For example,  the shipping method variable \texttt{shipSp} has the following categories:
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlfunctioncall{summary}(marioKart$shipSp)
+\end{alltt}
+\begin{verbatim}
+## firstClass      media      other     parcel 
+##         22         14          3         16 
+##   priority   standard    ups3Day  upsGround 
+##         23         33          1         31
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Linear Model with Multinomial Independent Variables}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Estimate model}
+M2 <- \hlfunctioncall{lm}(totalPr ~ shipSp, data = marioKart)
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+{\footnotesize{
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Show results}
+M2
+\end{alltt}
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = totalPr ~ shipSp, data = marioKart)
+## 
+## Coefficients:
+##     (Intercept)      shipSpmedia  
+##           42.53             8.50  
+##     shipSpother     shipSpparcel  
+##            4.46            26.84  
+##  shipSppriority   shipSpstandard  
+##            1.45             4.03  
+##   shipSpups3Day  shipSpupsGround  
+##            4.47            10.27
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+}}
+\end{frame}
+
+\frame{
+  \frametitle{The Linear Regression Equation with a Multinomial Independent Variable}
+  \[
+  \begin{split}
+  \widehat{totalPr} = & \left 42.35 + 8.5(\tt{Media}) + 4.46(\tt{Other}) + \right. \\
+                      & \left 26.84(\tt{Parcel}) + 1.45(\tt{Priority}) + \right. \\
+                      & \left 4.03(\tt{Standard}) + 4.47(\tt{ups3Day}) + \right.\\
+                      & \left 10.27(\tt{upsGround}) \right
+  \end{split}
+  \]
+  Note that \texttt{firstclass} is missing. \\[0.5cm]
+  It is the \textbf{reference category}. 
+}
+
+\frame{
+  \frametitle{Interpreting Multinomial Variable Regression Coefficients}
+  The coefficients compare the predicted effect of the category to the reference category. \\[0.5cm]
+  For example, the coefficient for \texttt{Parcel} post is 26.84. This means that:
+  \begin{quotation}
+    We estimate that Mario Kart games that are shipped by parcel post will sell for 26.84 more than those sold with first class shipping.
+  \end{quotation}\\[0.5cm]
+  Question, in this example, what is the predicted selling price of a game sold with first class shipping?
+}
+
+\begin{frame}[fragile]
+  \frametitle{Warning}
+  There are at least two issues you should look out for with multinomial variables in linear regression:
+  \begin{itemize}
+    \item Is the comparison with the reference category substatively interesting? If not \textbf{change the reference category} with the \texttt{relevel} command.
+    \item There may be too many categories with too few observations per category to estimate meaningful results. If this is the case, \textbf{combine some of the categories in a substantively meaningful way}.
+  \end{itemize}
+\end{frame}
+
+%%% Hypothesis testing
+\section{Hypothesis Testing with Multiple Linear Regression}
+\frame{
+  \frametitle{Hypothesis Testing with Multiple Linear Regression}
+  We follow the same steps as before to test the null hypothesis that:
+  \[
+  \beta_{p} = 0,\:\mathrm{when\;the\;other\;variables\;are\;included}
+  \]
+  With the alternative hypothesis that:
+  \[
+  \beta_{p} \neq 0,\:\mathrm{when\;the\;other\;variables\;are\;included}
+  \]
+}
+
+\frame{
+  \frametitle{Hypothesis Testing with Multiple Linear Regression}
+{\LARGE{First:}} \\[0.5cm]
+  calculated the test statistic ($t\:test$). \\[0.5cm]
+{\LARGE{Second:}} \\[0.5cm]
+  find the p-value or confidence interval for the significance level we are interested in.
+}
+
+\begin{frame}[fragile]
+  \frametitle{P-values \& Summary Table}
+  Luckily, R will quicly do this for us with the \texttt{summary} command:
+{\tiny{
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlfunctioncall{summary}(M1)
+\end{alltt}
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = totalPr ~ duration + cond + wheels, data = marioKart)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -17.25  -6.26  -2.73   0.51 265.80 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(>|t|)
+## (Intercept)   35.735      5.889    6.07  1.2e-08
+## duration       0.680      0.912    0.75  0.45724
+## condused      -0.695      5.036   -0.14  0.89051
+## wheels        10.455      2.697    3.88  0.00016
+##                
+## (Intercept) ***
+## duration       
+## condused       
+## wheels      ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## Residual standard error: 24.5 on 139 degrees of freedom
+## Multiple R-squared: 0.113,	Adjusted R-squared: 0.0935 
+## F-statistic: 5.88 on 3 and 139 DF,  p-value: 0.000825
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+}}
+\end{frame}
+
+\begin{frame}[fragile,plain]
+
+\begin{table}[!ht]
+\caption{Linear Regression for Mario Kart Total Selling Price}
+\label{} 
+\begin{tabular}{ l D{.}{.}{2} } 
+\hline 
+  & \multicolumn{ 1 }{ c }{ Model 1 } \\ \hline
+ %            & Model 1     \\ 
+(Intercept)  & 35.73 ^{***}\\ 
+             & (5.89)      \\ 
+duration     & 0.68        \\ 
+             & (0.91)      \\ 
+condused     & -0.69       \\ 
+             & (5.04)      \\ 
+wheels       & 10.45 ^{***}\\ 
+             & (2.70)       \\
+ $N$          & 143         \\ 
+$R^2$        & 0.11        \\ 
+adj. $R^2$   & 0.09        \\ 
+Resid. sd    & 24.46        \\ \hline
+ \multicolumn{2}{l}{\footnotesize{Standard errors in parentheses}}\\
+\multicolumn{2}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}} 
+\end{tabular} 
+ \end{table}
+
+
+
+\end{frame}
+
+%%% Confidence Intervals
+\frame{
+  \frametitle{Confidence Intervals for Multiple Linear Regression Coefficients}
+  Estimating confidence intervals for multiple linear regression coefficients is similar to what we have done before:
+  \[
+  \beta_{i} \pm t^{*}_{df}SE_{\beta_{i}}
+  \]
+  where $t^{*}_{df}$ is the $t\: test$ statistic with $df = n - p - 1$.
+}
+
+\begin{frame}[fragile]
+  \frametitle{Confidence Intervals in R for Objects of Class \texttt{lm}}
+  To calculate the confidence intervals for regression coefficients in R use the \texttt{confint} command.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Find confidence intervals}
+CI <- \hlfunctioncall{confint}(M1)
+CI
+\end{alltt}
+\begin{verbatim}
+##               2.5 % 97.5 %
+## (Intercept)  24.091 47.379
+## duration     -1.124  2.484
+## condused    -10.652  9.263
+## wheels        5.122 15.788
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Graphically}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=\maxwidth]{figure/ConfIntGraph} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+%%%%% Model Assumptions
+\section{Model Assumptions}
+\frame{
+  \frametitle{Multiple Linear Regression Model Assumptions}
+  {\Large{Multiple Linear Regression Model Assumptions}}
+  \begin{itemize}
+    \item Nearly normally distributed residuals,
+    \item Nearly constant residual variability,
+    \item Residuals are independent,
+    \item Each variable is linearly associated with the outcome
+  \end{itemize}
+}
+
+%%% Model Selection (R2)
+\section{Model Selection}
+\frame{
+  \frametitle{Model Selection with the Adjusted R Squared}
+  \begin{center}
+{\Large{How do we decide which variables to include in our multiple linear regression model?}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Omitted Variable Bias}
+  We generally want to include all of the variables that have an important effect on the outcome. \\[0.5cm]
+  Not including them creates \textbf{omitted variable bias}: i.e. our results are biased because we have omitted important variables.
+}
+
+\frame{
+  \frametitle{However\ldots}
+  We don't want to just include every varibale we can think of into one model.
+  \begin{itemize}
+    \item \textbf{Occam's Razor: aim for parsimony (the simplest model possible).}
+    \item The more variables you add, the {\bf{fewer degrees of freedom}} you will have to work with.
+    \item You may include \textbf{highly correlated variables}, which can produce very biased estimates.
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{The Adjusted $R^{2}$}
+  We can use the \textbf{adjusted $R^{2}$} ($R^{2}_{adj}$)to determine if the addition of a variable to a linear regression model \textbf{reduces the errors} we make when predicting the outcome. 
+  \[
+  R^{2}_{adj} = \frac{Var(e_{i})/n - p - 1}{Var(y_{i})/(n - 1)}
+  \]
+  It is similar to the non-adjusted $R^{2}$ we learned about last week, but \textbf{only gets bigger if the addition of a variable reduces the errors} we make predicting the outcome.
+}
+
+\begin{frame}[fragile,plain]
+
+\begin{table}[!ht]
+\caption{Linear Regressions for Mario Kart Total Selling Price}
+\label{} 
+\begin{tabular}{ l D{.}{.}{2}D{.}{.}{2}D{.}{.}{2} } 
+\hline 
+  & \multicolumn{ 1 }{ c }{ Model 1 } & \multicolumn{ 1 }{ c }{ Model 2 } & \multicolumn{ 1 }{ c }{ Model 3 } \\ \hline
+ %            & Model 1      & Model 2      & Model 3     \\ 
+(Intercept)  & 38.41 ^{***} & 35.38 ^{***} & 35.73 ^{***}\\ 
+             & (3.43)       & (5.27)       & (5.89)      \\ 
+wheels       & 10.01 ^{***} & 10.58 ^{***} & 10.45 ^{***}\\ 
+             & (2.41)       & (2.53)       & (2.70)      \\ 
+duration     &              & 0.63         & 0.68        \\ 
+             &              & (0.83)       & (0.91)      \\ 
+condused     &              &              & -0.69       \\ 
+             &              &              & (5.04)       \\
+ $N$          & 143          & 143          & 143         \\ 
+$R^2$        & 0.11         & 0.11         & 0.11        \\ 
+adj. $R^2$   & 0.10         & 0.10         & 0.09        \\ 
+Resid. sd    & 24.34        & 24.37        & 24.46        \\ \hline
+ \multicolumn{4}{l}{\footnotesize{Standard errors in parentheses}}\\
+\multicolumn{4}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}} 
+\end{tabular} 
+ \end{table}
+
+
+
+\end{frame}
+
+\frame{
+  \frametitle{Model Selction as Art}
+  Model selection is something of an art, but it is useful to follow these \textbf{rules of thumb}:
+  \begin{itemize}
+    \item Drop highly insignificant variables, especially if they don't add to the adjusted $R^{2}$
+    \item \textbf{Show a number of step-wise models} that could convince the reader that you have found the most {\bf{parsimonous}} model.
+    \item Include results from \textbf{theoretically important} variables,
+    \item \textbf{Avoid including highly correlated} variables in the same model,
+    \item Don't show estimates from models that \textbf{violate linear regression assumptions},
+  \end{itemize}
+}
+
+%%% Simulating expected values
+\section{Simulating Expected Values}
+\begin{frame}[fragile,plain]
+  Though popular, tables like these are \textbf{not an effective way to communicate your findings}. \\[0.2cm]
+  \begin{center}
+
+ 
+\begin{tabular}{ l D{.}{.}{2}D{.}{.}{2}D{.}{.}{2} } 
+\hline 
+  & \multicolumn{ 1 }{ c }{ Model 1 } & \multicolumn{ 1 }{ c }{ Model 2 } & \multicolumn{ 1 }{ c }{ Model 3 } \\ \hline
+ %            & Model 1      & Model 2      & Model 3     \\ 
+(Intercept)  & 38.41 ^{***} & 35.38 ^{***} & 35.73 ^{***}\\ 
+             & (3.43)       & (5.27)       & (5.89)      \\ 
+wheels       & 10.01 ^{***} & 10.58 ^{***} & 10.45 ^{***}\\ 
+             & (2.41)       & (2.53)       & (2.70)      \\ 
+duration     &              & 0.63         & 0.68        \\ 
+             &              & (0.83)       & (0.91)      \\ 
+condused     &              &              & -0.69       \\ 
+             &              &              & (5.04)       \\
+ $N$          & 143          & 143          & 143         \\ 
+$R^2$        & 0.11         & 0.11         & 0.11        \\ 
+adj. $R^2$   & 0.10         & 0.10         & 0.09        \\ 
+Resid. sd    & 24.34        & 24.37        & 24.46        \\ \hline
+ \multicolumn{4}{l}{\footnotesize{Standard errors in parentheses}}\\
+\multicolumn{4}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}} 
+\end{tabular} 
+
+
+
+  \end{center}
+\end{frame}
+
+
+\frame{
+  \frametitle{Simulating Expected Values}
+  Instead, King et al (2000) argue that we should find a way to \textbf{present results}, including our \textbf{estimation uncertainty} in relatively \textbf{simple language}.\\[0.5cm]
+  They suggest that we simulated probable outcomes from our estimated models. \\[0.5cm]
+  They (and others) created the \texttt{Zelig} package to help us simulate and graph expexted outcomes.
+}
+
+\frame{
+  \frametitle{\texttt{Zelig} Simulation Steps}
+{\Large{\texttt{Zelig} Simulation Steps:}} \\[0.5cm]
+  \begin{enumerate}
+    \item Estimate model,
+    \item Set fitted values,
+    \item Simulate expected outcomes,
+    \item Graph the simulated values.
+  \end{enumerate}
+}
+
+\begin{frame}[fragile]
+  \frametitle{\texttt{Zelig} Example}
+  Simulated expected Total Mario Kart auction price with various numbers of included steering wheels.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Load Zelig}
+\hlfunctioncall{library}(Zelig)
+
+\hlcomment{# Estimate model of total auction price with}
+\hlcomment{# wheels and duration as independent variables}
+ZOut <- \hlfunctioncall{zelig}(totalPr ~ wheels + duration,
+              data = marioKart, model = \hlstring{"normal"},
+              cite = FALSE)
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Find valid range of wheels values}
+\hlfunctioncall{range}(marioKart$wheels)
+\end{alltt}
+\begin{verbatim}
+## [1] 0 4
+\end{verbatim}
+\begin{alltt}
+\hlcomment{# Set fitted values for wheels}
+\hlcomment{# Note: duration set at its mean}
+WValues <- 1:4
+XOut <- \hlfunctioncall{setx}(ZOut, wheels = WValues)
+
+\hlcomment{# Simulate expected prices}
+ZSim <- \hlfunctioncall{sim}(ZOut, x = XOut)
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Plot middle 95% of the simulations}
+\hlfunctioncall{plot}(ZSim, ylab = \hlstring{"Expected Price"}, 
+     main = \hlstring{"Effect of Wheels on MK EBay Auctions"})
+\end{alltt}
+\end{kframe}
+
+{\centering \includegraphics[width=\maxwidth]{figure/Zelig3} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+\frame{
+  \frametitle{Question}
+  \begin{center}
+{\Large{Why is the predicted range of prices wider when there are 4 steering wheels?}}
+  \end{center}
+}
+
+\frame{
+  \frametitle{With (a lot) more work simulation graphs can look better}
+  \begin{center}
+    \includegraphics[scale=0.65]{/git_repositories/GreenBook/Paper/figure/ExpectValueParty.pdf}
+  \end{center}
+}
+%%% References
 \begin{frame}[allowframebreaks]
   \frametitle{References}
   Crawley, Michael J. 2005. Statistics: An Introduction Using R. Chichester: John Wiley & Sons. Ltd. \\[0.25cm]

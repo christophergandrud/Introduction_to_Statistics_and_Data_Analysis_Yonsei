@@ -1,0 +1,153 @@
+\documentclass{beamer}\usepackage{graphicx, color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\definecolor{fgcolor}{rgb}{0.2, 0.2, 0.2}
+\newcommand{\hlnumber}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlfunctioncall}[1]{\textcolor[rgb]{0.501960784313725,0,0.329411764705882}{\textbf{#1}}}%
+\newcommand{\hlstring}[1]{\textcolor[rgb]{0.6,0.6,1}{#1}}%
+\newcommand{\hlkeyword}[1]{\textcolor[rgb]{0,0,0}{\textbf{#1}}}%
+\newcommand{\hlargument}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
+\newcommand{\hlcomment}[1]{\textcolor[rgb]{0.180392156862745,0.6,0.341176470588235}{#1}}%
+\newcommand{\hlroxygencomment}[1]{\textcolor[rgb]{0.43921568627451,0.47843137254902,0.701960784313725}{#1}}%
+\newcommand{\hlformalargs}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
+\newcommand{\hleqformalargs}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
+\newcommand{\hlassignement}[1]{\textcolor[rgb]{0,0,0}{\textbf{#1}}}%
+\newcommand{\hlpackage}[1]{\textcolor[rgb]{0.588235294117647,0.709803921568627,0.145098039215686}{#1}}%
+\newcommand{\hlslot}[1]{\textit{#1}}%
+\newcommand{\hlsymbol}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlprompt}[1]{\textcolor[rgb]{0.2,0.2,0.2}{#1}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usetheme{Stats}
+\setbeamercovered{transparent}
+\usepackage{color}
+\usepackage{hyperref}
+  \hypersetup{
+  	colorlinks=true
+		linkcolor=black
+		}
+\usepackage{url}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{booktabs}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title Slide %%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[]{Intro to Social Science Data Analysis \\[1cm] Week 12 Seminar: Multivariate Linear Regression \& Presenting Regression Results}
+\author[]{
+    \href{mailto:gandrud@yonsei.ac.kr}{Christopher Gandrud}
+}
+\date{\today}
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+
+%%%%%%%%%% Assignment 4
+\section{Assignment 4}
+\frame{
+  \frametitle{Assignment 4}
+  Due: Friday 30 November \\[0.5cm]
+  {\Large{Research Design}} \\[0.25cm]
+  With your partner plan your research by answering the following questions:
+  \begin{enumerate}
+    \item What difference or anomaly do you want to explain?
+    \item What is your best guess explanation? Draw your best guess in a diagram.
+    \item Can you test your hypothesis using data? If so, what data do you need to collect and what tests could you use?
+    \item What rival explanations are their?
+    \item How could you use data to test whether your best guess or the rival explanations are better? Write this as an \textbf{equation} if possible.
+    \item What other factors may influence the relationship you observe?
+  \end{enumerate}
+{\tiny{Questionnaire from: modified from Cheryl Schonhardt-Bailey}}
+}
+
+\begin{frame}[fragile]
+	\frametitle{Load Data}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Load openintro package}
+\hlfunctioncall{library}(openintro)
+
+\hlcomment{# Load Data}
+\hlfunctioncall{data}(census)
+
+\hlcomment{# Show variable names}
+\hlfunctioncall{names}(census)
+\end{alltt}
+\begin{verbatim}
+## [1] "censusYear"          "stateFIPScode"      
+## [3] "totalFamilyIncome"   "age"                
+## [5] "sex"                 "raceGeneral"        
+## [7] "maritalStatus"       "totalPersonalIncome"
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\frame{
+  \frametitle{Model}
+  With a partner, hypothesize what the likely associations between the variables:
+  \begin{itemize}
+    \item \texttt{age},
+    \item \texttt{sex},
+    \item \texttt{raceGeneral},
+    \item \texttt{maritalStatus},
+    \item \texttt{totalPersonalIncome}
+  \end{itemize}
+  on \texttt{totalFamilyIncome}.
+}
+
+\frame{
+  \frametitle{Predict the Effect}
+  Create a parsimoneous, but comprehensive linear regression model to predict the total family income of a white, 32 year old women, with an personal income of \$25,000.  \\[0.5cm]
+  Write the linear regression equation and make the prediction.
+}
+
+\frame{
+  \frametitle{Simulations}
+  Simulate expected total family incomes, with associated uncertainty, for a range of individual incomes.
+}
+\end{document}
