@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  12 NOV 2012 17:32
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  12 NOV 2012 17:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1240,7 +1240,7 @@ sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr
 r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr
 /local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><
 /usr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb>
-Output written on Seminar12.pdf (15 pages, 96396 bytes).
+Output written on Seminar12.pdf (15 pages, 96395 bytes).
 PDF statistics:
  170 PDF objects out of 1000 (max. 8388607)
  138 compressed objects within 2 object streams

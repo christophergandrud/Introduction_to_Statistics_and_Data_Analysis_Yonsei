@@ -187,7 +187,7 @@
 
 \frame{
   \frametitle{The Multiple Linear Regression Model}
-  An estiamted multiple linear regression model for predictors $x_{1} \ldots x_{p}$:
+  An estimated multiple linear regression model for predictors $x_{1} \ldots x_{p}$:
   \[
   \hat{y} = \alpha + \beta_{1}x_{1} + \beta_{2}x_{2} + \ldots + \beta_{p}x_{p} 
   \]
@@ -230,7 +230,7 @@ ggpairs(VariablesofInterest, upper = "blank")
 \frame{
   \frametitle{Sum of Squared Residuals}
   Estimating the coefficients and making inferences about them is similar to simple linear regression. \\[0.5cm]
-  For example, to find the sum of the squared residals:
+  For example, to find the sum of the squared residuals:
   \[
   SSR = \sum^{n}_{i=1} = e^{2}_{i} = \sum^{n}_{i=1} = (y_{i} + \hat{y}_{i})^{2} 
   \]
@@ -252,7 +252,7 @@ M1 <- lm(totalPr ~ duration + cond +
 # Show coefficient point estimates
 M1
 @
-What is the estiatmed linear regression equation?
+What is the estimated linear regression equation?
 \end{frame}
 
 \frame{
@@ -297,7 +297,7 @@ For the dummy variable \texttt{condused} we have the following interpretation:
   \frametitle{Remember the Units}
   \begin{center}
 {\Large{Remember that the coefficients are in terms of the variables' units. \\[0.5cm]
-  A large coefficient does not neccessarily mean a big effect.}}
+  A large coefficient does not necessarily mean a big effect.}}
   \end{center}
 }
 
@@ -358,7 +358,7 @@ M2
   \frametitle{Warning}
   There are at least two issues you should look out for with multinomial variables in linear regression:
   \begin{itemize}
-    \item Is the comparison with the reference category substatively interesting? If not \textbf{change the reference category} with the \texttt{relevel} command.
+    \item Is the comparison with the reference category substantively interesting? If not \textbf{change the reference category} with the \texttt{relevel} command.
     \item There may be too many categories with too few observations per category to estimate meaningful results. If this is the case, \textbf{combine some of the categories in a substantively meaningful way}.
   \end{itemize}
 \end{frame}
@@ -387,7 +387,7 @@ M2
 
 \begin{frame}[fragile]
   \frametitle{P-values \& Summary Table}
-  Luckily, R will quicly do this for us with the \texttt{summary} command:
+  Luckily, R will quickly do this for us with the \texttt{summary} command:
 {\tiny{
 <<RoughSummary>>=
 summary(M1)
@@ -473,7 +473,7 @@ ggplot(CIGraph, aes(x = vars, ymin = Lower, ymax = Upper)) +
 
 \frame{
   \frametitle{However\ldots}
-  We don't want to just include every varibale we can think of into one model.
+  We don't want to just include every variable we can think of into one model.
   \begin{itemize}
     \item \textbf{Occam's Razor: aim for parsimony (the simplest model possible).}
     \item The more variables you add, the {\bf{fewer degrees of freedom}} you will have to work with.
@@ -501,11 +501,11 @@ apsrtable(M1, M2, M3, stars = "default", caption = "Linear Regressions for Mario
 \end{frame}
 
 \frame{
-  \frametitle{Model Selction as Art}
+  \frametitle{Model Section as Art}
   Model selection is something of an art, but it is useful to follow these \textbf{rules of thumb}:
   \begin{itemize}
     \item Drop highly insignificant variables, especially if they don't add to the adjusted $R^{2}$
-    \item \textbf{Show a number of step-wise models} that could convince the reader that you have found the most {\bf{parsimonous}} model.
+    \item \textbf{Show a number of step-wise models} that could convince the reader that you have found the most {\bf{parsimonious}} model.
     \item Include results from \textbf{theoretically important} variables,
     \item \textbf{Avoid including highly correlated} variables in the same model,
     \item Don't show estimates from models that \textbf{violate linear regression assumptions},
@@ -532,7 +532,7 @@ apsrtable(M1, M2, M3, stars = "default", Sweave = TRUE)
   \frametitle{Simulating Expected Values}
   Instead, King et al (2000) argue that we should find a way to \textbf{present results}, including our \textbf{estimation uncertainty} in relatively \textbf{simple language}.\\[0.5cm]
   They suggest that we simulated probable outcomes from our estimated models. \\[0.5cm]
-  They (and others) created the \texttt{Zelig} package to help us simulate and graph expexted outcomes.
+  They (and others) created the \texttt{Zelig} package to help us simulate and graph expected outcomes.
 }
 
 \frame{

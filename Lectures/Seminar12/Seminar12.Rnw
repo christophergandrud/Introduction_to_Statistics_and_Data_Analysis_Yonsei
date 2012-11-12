@@ -78,7 +78,7 @@ names(census)
 
 \frame{
   \frametitle{Predict the Effect}
-  Create a parsimoneous, but comprehensive linear regression model to predict the total family income of a white, 32 year old women, with an personal income of \$25,000.  \\[0.5cm]
+  Create a parsimonious, but comprehensive linear regression model to predict the total family income of a white, 32 year old women, with an personal income of \$25,000.  \\[0.5cm]
   Write the linear regression equation and make the prediction.
 }
 
