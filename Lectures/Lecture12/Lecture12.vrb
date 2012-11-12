@@ -1,0 +1,22 @@
+\frametitle {Showing the Coefficient Estimates}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcomment{# Show coefficient point estimates}
+M1
+\end{alltt}
+\begin{verbatim}
+##
+## Call:
+## lm(formula = totalPr ~ duration + cond + wheels, data = marioKart)
+##
+## Coefficients:
+## (Intercept)     duration     condused
+##      35.735        0.680       -0.695
+##      wheels
+##      10.455
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+What is the estiatmed linear regression equation?

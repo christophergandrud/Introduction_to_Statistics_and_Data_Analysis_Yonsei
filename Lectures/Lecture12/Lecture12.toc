@@ -1,0 +1,4 @@
+\beamer@endinputifotherversion {3.10pt}
+\beamer@sectionintoc {2}{Assignment 4}{3}{0}{1}
+\beamer@sectionintoc {3}{Recap}{9}{0}{2}
+\beamer@sectionintoc {4}{Multiple Linear Regression}{16}{0}{3}

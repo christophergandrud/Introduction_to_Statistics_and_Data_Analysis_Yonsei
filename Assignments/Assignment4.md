@@ -18,7 +18,7 @@ With your partner plan your research by answering the following questions:
 
 4. What rival explanations are their? 
 
-5. How could you use data to test whether your best guess or the rival explanations are better?
+5. How could you use data to test whether your best guess or the rival explanations are better? Write this as an **equation** if possible.
 
 6. What other factors may influence the relationship you observe?
 

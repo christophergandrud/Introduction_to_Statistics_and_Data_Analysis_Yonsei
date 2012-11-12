@@ -6,11 +6,11 @@
 \headcommand {\beamer@subsectionpages {1}{1}}
 \headcommand {\slideentry {1}{0}{2}{2/2}{}{0}}
 \headcommand {\beamer@framepages {2}{2}}
-\headcommand {\sectionentry {2}{Recap}{3}{Recap}{0}}
-\headcommand {\beamer@sectionpages {2}{2}}
-\headcommand {\beamer@subsectionpages {2}{2}}
-\headcommand {\slideentry {2}{0}{3}{3/3}{}{0}}
+\headcommand {\slideentry {1}{0}{3}{3/3}{}{0}}
 \headcommand {\beamer@framepages {3}{3}}
+\headcommand {\sectionentry {2}{Recap}{4}{Recap}{0}}
+\headcommand {\beamer@sectionpages {2}{3}}
+\headcommand {\beamer@subsectionpages {2}{3}}
 \headcommand {\slideentry {2}{0}{4}{4/4}{}{0}}
 \headcommand {\beamer@framepages {4}{4}}
 \headcommand {\slideentry {2}{0}{5}{5/5}{}{0}}
@@ -23,11 +23,11 @@
 \headcommand {\beamer@framepages {8}{8}}
 \headcommand {\slideentry {2}{0}{9}{9/9}{}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\sectionentry {3}{Correlation}{10}{Correlation}{0}}
-\headcommand {\beamer@sectionpages {3}{9}}
-\headcommand {\beamer@subsectionpages {3}{9}}
-\headcommand {\slideentry {3}{0}{10}{10/10}{}{0}}
+\headcommand {\slideentry {2}{0}{10}{10/10}{}{0}}
 \headcommand {\beamer@framepages {10}{10}}
+\headcommand {\sectionentry {3}{Correlation}{11}{Correlation}{0}}
+\headcommand {\beamer@sectionpages {4}{10}}
+\headcommand {\beamer@subsectionpages {4}{10}}
 \headcommand {\slideentry {3}{0}{11}{11/11}{}{0}}
 \headcommand {\beamer@framepages {11}{11}}
 \headcommand {\slideentry {3}{0}{12}{12/12}{}{0}}
@@ -59,8 +59,8 @@
 \headcommand {\slideentry {3}{0}{25}{25/25}{}{0}}
 \headcommand {\beamer@framepages {25}{25}}
 \headcommand {\sectionentry {4}{Best Fit Lines \& Least Squares Regression}{26}{Best Fit Lines \& Least Squares Regression}{0}}
-\headcommand {\beamer@sectionpages {10}{25}}
-\headcommand {\beamer@subsectionpages {10}{25}}
+\headcommand {\beamer@sectionpages {11}{25}}
+\headcommand {\beamer@subsectionpages {11}{25}}
 \headcommand {\slideentry {4}{0}{26}{26/27}{}{0}}
 \headcommand {\beamer@framepages {26}{27}}
 \headcommand {\slideentry {4}{0}{27}{28/28}{}{0}}

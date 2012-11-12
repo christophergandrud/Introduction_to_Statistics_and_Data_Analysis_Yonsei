@@ -1,6 +1,6 @@
 \beamer@endinputifotherversion {3.10pt}
-\beamer@sectionintoc {2}{Recap}{3}{0}{1}
-\beamer@sectionintoc {3}{Correlation}{10}{0}{2}
+\beamer@sectionintoc {2}{Recap}{4}{0}{1}
+\beamer@sectionintoc {3}{Correlation}{11}{0}{2}
 \beamer@sectionintoc {4}{Best Fit Lines \& Least Squares Regression}{26}{0}{3}
 \beamer@sectionintoc {5}{Hypothesis Testing}{52}{0}{4}
 \beamer@sectionintoc {6}{Some Special Issues in Simple Linear Regression}{58}{0}{5}
