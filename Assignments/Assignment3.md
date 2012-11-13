@@ -30,4 +30,8 @@ Find the answers to the following questions:
 
 
 ---
-## Always remember: we don't really care about point estimates we care about ranges of likely values.
+## Always remember: 
+
+- make your answers reproducible
+
+- show a range of likely values when possible.	
