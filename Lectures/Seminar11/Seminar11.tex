@@ -112,6 +112,16 @@
   How interested are we in making inferences from $\hat{\alpha}$?
 }
 
+\frame{
+  \frametitle{Interpreting Dummy Variables}
+  The variable \texttt{Elect} is a dummy variable equalling 1 when a country has an elected legislature and 0 when it does not. \\[0.5cm]
+  Predict its \texttt{GDPperCapita} in thousands of US dollars for countries with and without elected legislatures using the following simple linear regression equation:
+  \[
+  \tt{GDPperCapita} = 12 + 14(\tt{Elect})
+  \]\\[0.5cm]
+  Note: this is not based on real data.
+}
+
 
 \begin{frame}[fragile]
   \frametitle{Load Data}
@@ -147,11 +157,10 @@
   \item their correlation,
   \item the direction of the relationship, 
   \item the strength of the relationship,
-  \item predict three values of one variable based on the value of the other,
+  \item predict three values of one variable based on three values of the other,
   \item statistical inferences from a linear regression equation.
-\end{itemize}
+\end{itemize} \\[0.5cm]
   Could the two variables be causally related? Why/why not?
-
 }
 
 

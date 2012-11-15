@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  5 NOV 2012 18:46
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  15 NOV 2012 10:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1101,6 +1101,13 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [4
 
 ]
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[5
+
+]
 \openout4 = `Seminar11.vrb'.
 
  (./Seminar11.vrb
@@ -1111,16 +1118,23 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[5
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
 [6
 
 ]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.164 }
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1128,6 +1142,20 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [7
 
 ]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.164 }
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1135,6 +1163,20 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [8
 
 ]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.164 }
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1142,11 +1184,46 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [9
 
 ]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.164 }
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
 [10
+
+]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.164 }
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[11
 
 ]
 \tf@nav=\write6
@@ -1158,11 +1235,11 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `Seminar11.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 158.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 158.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 167.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 167.
  (./Seminar11.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 158.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 158.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 167.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 167.
 Package rerunfilecheck Info: File `Seminar11.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1170,14 +1247,14 @@ Package rerunfilecheck Info: File `Seminar11.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 158.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 167.
  ) 
 Here is how much of TeX's memory you used:
- 18127 strings out of 493633
- 345101 string characters out of 3143377
+ 18140 strings out of 493633
+ 345338 string characters out of 3143377
  413192 words of memory out of 3000000
- 20957 multiletter control sequences out of 15000+200000
- 12464 words of font info for 47 fonts, out of 3000000 for 9000
+ 20967 multiletter control sequences out of 15000+200000
+ 12968 words of font info for 50 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  49i,16n,53p,448b,429s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
@@ -1189,10 +1266,10 @@ local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr
 /local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr
 /local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/
 local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Seminar11.pdf (10 pages, 136017 bytes).
+Output written on Seminar11.pdf (11 pages, 138760 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
- 21 named destinations out of 1000 (max. 500000)
+ 128 PDF objects out of 1000 (max. 8388607)
+ 98 compressed objects within 1 object stream
+ 23 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
