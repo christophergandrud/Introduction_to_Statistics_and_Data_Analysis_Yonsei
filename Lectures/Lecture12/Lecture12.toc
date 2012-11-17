@@ -1,8 +1,9 @@
 \beamer@endinputifotherversion {3.10pt}
-\beamer@sectionintoc {2}{Assignment 4}{3}{0}{1}
-\beamer@sectionintoc {3}{Recap}{9}{0}{2}
-\beamer@sectionintoc {4}{Multiple Linear Regression}{16}{0}{3}
-\beamer@sectionintoc {5}{Hypothesis Testing with Multiple Linear Regression}{48}{0}{4}
-\beamer@sectionintoc {6}{Model Assumptions}{55}{0}{5}
-\beamer@sectionintoc {7}{Model Selection}{59}{0}{6}
-\beamer@sectionintoc {8}{Simulating Expected Values}{71}{0}{7}
+\beamer@sectionintoc {2}{Assignment 3}{3}{0}{1}
+\beamer@sectionintoc {3}{Assignment 4}{10}{0}{2}
+\beamer@sectionintoc {4}{Recap}{16}{0}{3}
+\beamer@sectionintoc {5}{Multiple Linear Regression}{23}{0}{4}
+\beamer@sectionintoc {6}{Hypothesis Testing with Multiple Linear Regression}{55}{0}{5}
+\beamer@sectionintoc {7}{Model Assumptions}{62}{0}{6}
+\beamer@sectionintoc {8}{Model Selection}{66}{0}{7}
+\beamer@sectionintoc {9}{Simulating Expected Values}{78}{0}{8}

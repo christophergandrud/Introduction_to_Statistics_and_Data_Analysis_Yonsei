@@ -33,6 +33,23 @@
 \section[Outline]{}
 \frame{\tableofcontents}
 
+%%%%%%%%%% Assignment 3
+\section{Assignment 3}
+\frame{
+  \frametitle{Assignment 3}
+  \begin{itemize}
+    \item There was an extremely \textbf{bimodal} distribution to the Assignment 3 scores.
+    \item We should care about \textbf{learning} rather than \textbf{grades}.
+    \item So, if you received below an 80\% I want to work with you to make sure you actual \textbf{learn} the material.
+    \item By Friday come to my office with:
+    \begin{itemize}
+      \item a description of what steps you need to take to complete each question,
+      \item identification of where in the lecture slides you can find the code to complete these steps.
+    \end{itemize}
+    \item Then redo the assignment by next Tuesday (27 November) and you can receive \textbf{up to an 85\% on the assignment}.
+  \end{itemize}
+}
+
 %%%%%%%%%% Assignment 4
 \section{Assignment 4}
 \frame{
