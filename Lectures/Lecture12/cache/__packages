@@ -2,6 +2,10 @@ GGally
 reshape
 plyr
 ggplot2
+Zelig
+boot
+MASS
+apsrtable
 openintro
 knitr
 stats

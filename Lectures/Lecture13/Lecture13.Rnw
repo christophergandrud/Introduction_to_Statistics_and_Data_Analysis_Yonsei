@@ -33,47 +33,107 @@
 \section[Outline]{}
 \frame{\tableofcontents}
 
+%%%%%%% Recap
+\frame{
+  \frametitle{Quick Quiz 1}
+  What are the three \texbf{three} minimum criterion for establishing a \textbf{causal relationship}?
+}
+
+\frame{
+  \frametitle{Quick Quiz 2}
+  Why do we often need to use tools for \textbf{statistical control}?\\[0.5cm]
+  What is the main tool we learned last week for statistical control?
+}
+
+\frame{
+  \frametitle{Quick Quiz 3}
+  What is a reference category?
+}
+
+\frame{
+  \frametitle{Quick Quiz 4}
+  Why do King et al. (2000) recommend simulating expected outcomes and graphing the results?
+}
+
+%%%%%%%%% Research Project: Goals
 \section{Research Project: Goals}
 \frame{
   \frametitle{Pair Research Project: Goals}
 {\LARGE{\textbf{Goals:}}} \\[0.5cm]
-  With a partner, answer a social science research question primarily using the data analysis tools covered in this course. \\[0.5cm]
+  With a partner, answer a \textbf{social science research question} primarily using the \textbf{data analysis tools} covered in this course. \\[0.5cm]
   Present your results in both a:
   \begin{itemize}
-    \item short paper,
-    \item short presentation.
-  \end{itemize}
+    \item<1-> \textbf{short paper} (max 1,000 words),
+    \item<1-> \textbf{short presentation} (max 15 minutes).
+  \end{itemize} \\[0.5cm]
+  As always, it must be \textbf{reproducible}.
 }
 
 \frame{
   \frametitle{Schedule}
   We are dedicating \textbf{all} of the class time for the rest of the course to the research project. \\[0.5cm]
-  
+  Schedule:
+  \begin{itemize}
+    \item<2-> Week 13: Research question, design, \& data download,
+    \item<3-> Week 14: Statistical Analysis \& Results Visualization,
+    \item<4-> Week 15: Write up.
+    \item<5-> Week 16: Presentations.
+  \end{itemize}
 }
 
 \frame{
 	\frametitle{Pair Research Project}
-  {\LARGE{\textbf{Due:}}}
+  {\LARGE{\textbf{Due:}}} \\[0.5cm]
   \begin{itemize}
     \item Paper: 18 December
     \item Presentation: 19 or 20 December
   \end{itemize}
 }
 
+%%%%%%%%%% Paper Structure
 \section{Paper Structure}
 \frame{
   \frametitle{Paper Structure}
+  Your paper should have the following structure: \\[0.5cm]
+  \begin{itemize}
+    \item \textbf{Introduction}: Research Question, Thesis Statement, Paper Outline.
+    \item \textbf{Literature Review}: Brief discussion of previous research on this topic (including possible alternative explanations).
+    \item \textbf{Data \& Methods}: Describe the data you collected (sources, variable meaning) \& the methods that you use to test your hypothesis.
+    \item \textbf{Results}: Show and discuss you results.
+    \item \textbf{Conclusion:} Wrap up \& discuss your research \textbf{limitations}.
+  \end{itemize}
 }
 
 \frame{
   \frametitle{Presenation Structure}
-{\LARGE{Note;}} \\[0.5cm]
+{\LARGE{Note:}} \\[0.5cm]
   Your presentation's structure will mostly be the same as your paper's.
 }
 
+%%%%%%%%%%%%% Research Question \& Research Design
 \section{Research Question \& Research Design}
 \frame{
   \frametitle{Research Question \& Research Design}
+{\LARGE{This week:}} \\[0.5cm]
+  You will develop your research question and the research design you will use to try to answer it. \\[0.5cm]
+  This is \textbf{Assignment 4}.
+}
+
+\section{Assignment 4}
+\frame{
+  \frametitle{Assignment 4}
+  Due: Friday 30 November \\[0.5cm]
+  {\Large{Research Design}} \\[0.25cm]
+  With your partner plan your research by answering the following questions:
+  \begin{enumerate}
+    \item What \textbf{difference} do you want to explain?
+    \item What is your \texbf{best guess} explanation (i.e. thesis statement)?
+    \item Can you \texbf{test your hypothesis using data}? If so, what data do you need to collect and what tests could you use?
+    \item What \textbf{rival explanations} are their?
+    \item What \textbf{other factors} may influence the relationship you observe?
+    \item How could you use data to test whether your best guess or the rival explanations are better? Write this as an \textbf{equation}.
+  \end{enumerate}
+{\tiny{Questionnaire from: modified from Cheryl Schonhardt-Bailey}}
 }
 
 \end{document}

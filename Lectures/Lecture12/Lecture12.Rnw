@@ -38,15 +38,21 @@
 \frame{
   \frametitle{Assignment 3}
   \begin{itemize}
-    \item There was an extremely \textbf{bimodal} distribution to the Assignment 3 scores.
+    \item The Assignment 3 grades were extremely \textbf{bimodalally} distributed.
     \item We should care about \textbf{learning} rather than \textbf{grades}.
-    \item So, if you received below an 80\% I want to work with you to make sure you actual \textbf{learn} the material.
-    \item By Friday come to my office with:
+    \item So, if you received \textbf{below an 80\%} I want to \bf{work with you} to make sure you actual \textbf{learn} the material.
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{Assignment 3}
+  \begin{itemize}
+    \item \textbf{By Friday} come to my office with:
     \begin{itemize}
-      \item a description of what steps you need to take to complete each question,
-      \item identification of where in the lecture slides you can find the code to complete these steps.
+      \item a \textbf{description} of what \textbf{steps} you need to take to complete each question,
+      \item \textbf{identification} of where in the \textbf{lecture slides} you can find the code to complete these steps.
     \end{itemize}
-    \item Then redo the assignment by next Tuesday (27 November) and you can receive \textbf{up to an 85\% on the assignment}.
+    \item Then \textbf{redo} the assignment by next Tuesday (27 November) and you can receive \textbf{up to an 85\% on the assignment}.
   \end{itemize}
 }
 
@@ -58,12 +64,12 @@
   {\Large{Research Design}} \\[0.25cm]
   With your partner plan your research by answering the following questions:
   \begin{enumerate}
-    \item What difference or anomaly do you want to explain?
-    \item What is your best guess explanation? Draw your best guess in a diagram.
-    \item Can you test your hypothesis using data? If so, what data do you need to collect and what tests could you use?
-    \item What rival explanations are their?
-    \item How could you use data to test whether your best guess or the rival explanations are better? Write this as an \textbf{equation} if possible.
-    \item What other factors may influence the relationship you observe?
+    \item What \textbf{difference} do you want to explain?
+    \item What is your \texbf{best guess} explanation (i.e. thesis statement)?
+    \item Can you \texbf{test your hypothesis using data}? If so, what data do you need to collect and what tests could you use?
+    \item What \textbf{rival explanations} are their?
+    \item What \textbf{other factors} may influence the relationship you observe?
+    \item How could you use data to test whether your best guess or the rival explanations are better? Write this as an \textbf{equation}.
   \end{enumerate}
 {\tiny{Questionnaire from: modified from Cheryl Schonhardt-Bailey}}
 }
@@ -74,16 +80,16 @@
 	\frametitle{Quick Quiz 1}
 {\Large{Interpret the following correlations ($R$):}} \\[0.5cm]
   \begin{itemize}
-    \item $R = 0.91$
-    \item $R = 0.02$
-    \item $R = -0.3$
+    \item<1-> $R = 0.91$
+    \item<1-> $R = 0.02$
+    \item<1-> $R = -0.3$
   \end{itemize}
 }
 
 \frame{
   \frametitle{Quick Quiz 2}
   What is a residual?\\[0.5cm]
-  Discuss at least \textbf{two} things that residuals are used for in simple linear regression?
+  Why do we need to care about residuals in linear regression?
 }
 
 \frame{
@@ -119,7 +125,7 @@
 
 \frame{
   \frametitle{Minimal criteria for making a causal argument}
-  To make a \textbf{probabilistic causal argument}, i.e. ``$X$ caused $Y$" we need to meet \emph{at least} three criteria:
+  To make a \textbf{probabilistic causal argument}, i.e. ``$X$ caused $Y$" we need to meet \emph{at least} three criteria: \\[0.5cm]
   \begin{itemize}
     \item $X$ is \textbf{statistically associated} with $Y$,
     \item $X$ happens before $Y$ (i.e. \textbf{time order}),
@@ -137,7 +143,7 @@
 \frame{
   \frametitle{Simple Linear Regression \& Causality}
 {\Large{Simple Linear Regression is a tool we can use to establish the statistical association between $X$ and $Y$. \\[0.5cm]
-  How can we determine how much if at all, the value of $Y$ is actually explained by the value of $X$ and not some other alternative factor(s)?}}
+  How can we determine how much if at all, the value of $Y$ is actually explained by the value of $X$ and not some other factor(s)?}}
 }
 
 \frame{
@@ -150,7 +156,7 @@
 
 \frame{
   \frametitle{Spurious Example}
-  Clearly, the \emph{size of the fire} caused both the amount of fire damage and the number of fire trucks that responded. \\[0.5cm]
+  Clearly, the \emph{size of the fire} caused \textbf{both} the amount of fire damage and the number of fire trucks that responded. \\[0.5cm]
   There is a \textbf{spurious relationship} between number of fire trucks and fire damage.
 }
 
@@ -175,8 +181,8 @@
 
 \frame{
   \frametitle{Controlling for $Z$}
-  If we were able to run an experiment where we \textbf{randomized} the units who are given `treatment' $X$ and those that are not (the `control' group). \\[0.5cm]
-  On average the units will have the same values of $Z$. \\[0.5cm]
+  If we were able to run an experiment where we \textbf{randomized} the units who are given `treatment' $X$ and those that are not (the `control' group), \\[0.5cm]
+  \textbf{on average} the units will have the same values of $Z$. \\[0.5cm]
   We can say that we are \bf{controlling for} $Z$. \\[0.5cm]
   If, after randomization, the association between $X$ and $Y$ still exists, then we have found evidence to rule out alternative explanations.
 }
@@ -197,7 +203,8 @@
 
 \frame{
   \frametitle{Multi-causality}
-  Also, in the social sciences something \emph{rarely has one cause}. \\[0.5cm]
+{\LARGE{Multi-causality:}}\\[0.5cm]
+  In the social sciences something \emph{rarely has one cause}. \\[0.5cm]
   Instead, phenomenon usually have multiple causes; each making a contribution to the probable value of an outcome. \\[0.5cm]
   Multiple linear regression is a statistical tool that we can use to help identify the \textbf{individual} contribution of some factor to an outcome, \textbf{controlling for} other factors.
 }
@@ -227,7 +234,7 @@ names(marioKart)
 \frame{
   \frametitle{Example Multiple Linear Regression Model}
   Imagine we are interested in what explains the EBay selling price of the game Mario Kart (\texttt{totalPr})? \\[0.5cm]
-  We want to see if the duration of the auction in days (\texttt{duration}), whether the game was in used condition (\texttt{condused}), and the number of wheels included in the auction (\texttt{wheels}) impacted the selling price.
+  We want to see if the duration of the auction in days (\texttt{duration}), whether the game was in used (\texttt{condused}), and the number of wheels included in the auction (\texttt{wheels}) impacted the selling price.
 }
 
 \begin{frame}[fragile]
@@ -249,7 +256,7 @@ ggpairs(VariablesofInterest, upper = "blank")
   Estimating the coefficients and making inferences about them is similar to simple linear regression. \\[0.5cm]
   For example, to find the sum of the squared residuals:
   \[
-  SSR = \sum^{n}_{i=1} = e^{2}_{i} = \sum^{n}_{i=1} = (y_{i} + \hat{y}_{i})^{2} 
+  SSR = \sum^{n}_{i=1} e^{2}_{i} = \sum^{n}_{i=1} (y_{i} + \hat{y}_{i})^{2} 
   \]
 }
 
@@ -258,35 +265,38 @@ ggpairs(VariablesofInterest, upper = "blank")
   Estimating the $\beta$s by hand in multiple linear regression is very difficult, but it is relatively easy if you let R do the hard work with the \texttt{lm} command:
 <<SimpleEst, tidy=FALSE>>=
 # Estimated multivariate linear regression model
-M1 <- lm(totalPr ~ duration + cond + 
-           wheels, data = marioKart)
+M1 <- lm(totalPr ~ duration + cond + wheels, 
+         data = marioKart)
 @
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Showing the Coefficient Estimates}
+{\scriptsize{
 <<CoefEstimates>>=
 # Show coefficient point estimates
 M1
 @
+}}
 What is the estimated linear regression equation?
 \end{frame}
 
 \frame{
   \frametitle{Linear Regression Equation}
+{\small{
   \[
-  \widehat{\tt{totalPr}} = 35.74 + 0.68\tt{duration} + -0.695\tt{condused} + 10.46\tt{wheels}
+  \widehat{\tt{totalPr}} = 35.74 + 0.68(\tt{duration}) + -0.695(\tt{condused}) + 10.46(\tt{wheels})
   \]
+}}
 }
 
 \frame{
   \frametitle{Question Linear Regression Equation}
+{\small{
   \[
-  \begin{split}
-  \widehat{\tt{totalPr}} = & \left 35.74 + 0.68(\tt{duration}) + \right. \\
-                          & \left -0.695(\tt{condused}) + 10.46(\tt{wheels}) \right)
-  \end{split}
+  \widehat{\tt{totalPr}} = 35.74 + 0.68(\tt{duration}) + -0.695(\tt{condused}) + 10.46(\tt{wheels})
   \]
+}} \\[0.5cm]
   What do you estimated will be the total selling price for a Mario Kart auction that was 5 days long, was in new condition, and included 2 wheels?
 }
 
@@ -336,6 +346,12 @@ summary(marioKart$shipSp)
 # Estimate model
 M2 <- lm(totalPr ~ shipSp, data = marioKart)
 @
+
+{\scriptsize{
+<<MultiShow>>=
+M2
+@
+}}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -363,7 +379,7 @@ M2
 
 \frame{
   \frametitle{Interpreting Multinomial Variable Regression Coefficients}
-  The coefficients compare the predicted effect of the category to the reference category. \\[0.5cm]
+  The coefficients \textbf{compare} the predicted effect of the category to the \textbf{reference category}. \\[0.5cm]
   For example, the coefficient for \texttt{Parcel} post is 26.84. This means that:
   \begin{quotation}
     We estimate that Mario Kart games that are shipped by parcel post will sell for 26.84 more than those sold with first class shipping.
@@ -373,7 +389,7 @@ M2
 
 \begin{frame}[fragile]
   \frametitle{Warning}
-  There are at least two issues you should look out for with multinomial variables in linear regression:
+  There are at least two issues you should look out for with multinomial variables in linear regression: \\[0.5cm]
   \begin{itemize}
     \item Is the comparison with the reference category substantively interesting? If not \textbf{change the reference category} with the \texttt{relevel} command.
     \item There may be too many categories with too few observations per category to estimate meaningful results. If this is the case, \textbf{combine some of the categories in a substantively meaningful way}.
@@ -382,6 +398,13 @@ M2
 
 %%% Hypothesis testing
 \section{Hypothesis Testing with Multiple Linear Regression}
+\frame{
+  \frametitle{Hypothesis Testing and Multiple Linear Regression}
+  \begin{center}
+{\LARGE{Hypothesis Testing and Multiple Linear Regression}}
+  \end{center}
+}
+
 \frame{
   \frametitle{Hypothesis Testing with Multiple Linear Regression}
   We follow the same steps as before to test the null hypothesis that:
@@ -396,6 +419,7 @@ M2
 
 \frame{
   \frametitle{Hypothesis Testing with Multiple Linear Regression}
+  Once we have our hypotheses: \\[0.5cm]
 {\LARGE{First:}} \\[0.5cm]
   calculated the test statistic ($t\:test$). \\[0.5cm]
 {\LARGE{Second:}} \\[0.5cm]
@@ -442,7 +466,7 @@ CI
 
 \begin{frame}[fragile]
   \frametitle{Graphically}
-<<ConfIntGraph, echo=FALSE, message=FALSE, fig.height=4>>=
+<<ConfIntGraph, echo=FALSE, message=FALSE, fig.height=4, cache=TRUE>>=
 library(reshape)
 library(ggplot2)
 
@@ -463,13 +487,13 @@ ggplot(CIGraph, aes(x = vars, ymin = Lower, ymax = Upper)) +
 %%%%% Model Assumptions
 \section{Model Assumptions}
 \frame{
-  \frametitle{Multiple Linear Regression Model Assumptions}
-  {\Large{Multiple Linear Regression Model Assumptions}}
+  \frametitle{Multiple Linear Regression Model Assumptions} 
+  {\Large{Multiple Linear Regression Model Assumptions}} \\[0.5cm]
   \begin{itemize}
-    \item Nearly normally distributed residuals,
-    \item Nearly constant residual variability,
-    \item Residuals are independent,
-    \item Each variable is linearly associated with the outcome
+    \item Nearly \textbf{normally distributed residuals},
+    \item Nearly \textbf{constant residual variability},
+    \item Residuals are \textbf{independent},
+    \item Each variable is \textbf{linearly} associated with the outcome
   \end{itemize}
 }
 
@@ -490,9 +514,9 @@ ggplot(CIGraph, aes(x = vars, ymin = Lower, ymax = Upper)) +
 
 \frame{
   \frametitle{However\ldots}
-  We don't want to just include every variable we can think of into one model.
+  We don't want to just include every variable we can think of into one model. \\[0.5cm]
   \begin{itemize}
-    \item \textbf{Occam's Razor: aim for parsimony (the simplest model possible).}
+    \item \textbf{Occam's Razor}: aim for parsimony (the simplest model possible).
     \item The more variables you add, the {\bf{fewer degrees of freedom}} you will have to work with.
     \item You may include \textbf{highly correlated variables}, which can produce very biased estimates.
   \end{itemize}
@@ -500,7 +524,7 @@ ggplot(CIGraph, aes(x = vars, ymin = Lower, ymax = Upper)) +
 
 \frame{
   \frametitle{The Adjusted $R^{2}$}
-  We can use the \textbf{adjusted $R^{2}$} ($R^{2}_{adj}$)to determine if the addition of a variable to a linear regression model \textbf{reduces the errors} we make when predicting the outcome. 
+  We can use the \textbf{adjusted $R^{2}$} ($R^{2}_{adj}$) to determine if the addition of a variable to a linear regression model \textbf{reduces the errors} we make when predicting the outcome. 
   \[
   R^{2}_{adj} = \frac{Var(e_{i})/n - p - 1}{Var(y_{i})/(n - 1)}
   \]
@@ -519,9 +543,9 @@ apsrtable(M1, M2, M3, stars = "default", caption = "Linear Regressions for Mario
 
 \frame{
   \frametitle{Model Section as Art}
-  Model selection is something of an art, but it is useful to follow these \textbf{rules of thumb}:
+  Model selection is something of an art, but it is useful to follow these \textbf{rules of thumb}: \\[0.5cm]
   \begin{itemize}
-    \item Drop highly insignificant variables, especially if they don't add to the adjusted $R^{2}$
+    \item \textbf{Drop highly insignificant variables}, especially if they don't add to the adjusted $R^{2}$
     \item \textbf{Show a number of step-wise models} that could convince the reader that you have found the most {\bf{parsimonious}} model.
     \item Include results from \textbf{theoretically important} variables,
     \item \textbf{Avoid including highly correlated} variables in the same model,
@@ -547,8 +571,17 @@ apsrtable(M1, M2, M3, stars = "default", Sweave = TRUE)
 
 \frame{
   \frametitle{Simulating Expected Values}
-  Instead, King et al (2000) argue that we should find a way to \textbf{present results}, including our \textbf{estimation uncertainty} in relatively \textbf{simple language}.\\[0.5cm]
-  They suggest that we simulated probable outcomes from our estimated models. \\[0.5cm]
+  Instead, King et al (2000) argue that we should find a way to \\[0.5cm]
+  \begin{itemize} 
+    \item \textbf{present results}, 
+    \item including our \textbf{estimation uncertainty} 
+    \item in relatively \textbf{simple language}.
+    \end{itemize}
+}
+
+\frame{
+  \frametitle{Their Suggestion}
+  They suggest that we simulate probable outcomes from our estimated models. \\[0.5cm]
   They (and others) created the \texttt{Zelig} package to help us simulate and graph expected outcomes.
 }
 
@@ -593,7 +626,7 @@ ZSim <- sim(ZOut, x = XOut)
 \end{frame}
 
 \begin{frame}[fragile]
-<<Zelig3, tidy=FALSE, fig.height=4>>=
+<<Zelig3, tidy=FALSE, fig.height=4, cache=TRUE>>=
 # Plot middle 95% of the simulations
 plot(ZSim, ylab = "Expected Price", 
      main = "Effect of Wheels on MK EBay Auctions")

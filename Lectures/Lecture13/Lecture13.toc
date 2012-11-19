@@ -1,3 +1,5 @@
 \beamer@endinputifotherversion {3.10pt}
-\beamer@sectionintoc {2}{Research Project: Goals}{3}{0}{1}
-\beamer@sectionintoc {3}{Research Question \& Research Design}{7}{0}{2}
+\beamer@sectionintoc {2}{Research Project: Goals}{7}{0}{1}
+\beamer@sectionintoc {3}{Paper Structure}{15}{0}{2}
+\beamer@sectionintoc {4}{Research Question \& Research Design}{21}{0}{3}
+\beamer@sectionintoc {5}{Assignment 4}{22}{0}{4}
