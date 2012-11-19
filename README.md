@@ -210,9 +210,7 @@ How can we most effectively present the results from our regression analyses usi
 ## Part IV: Applied Data Analysis: Pair Research Projects
 In the final part of the course class time is dedicated to applying what we have learned so far to actually gather, analyse, and present data.
 
-### Week 12: Research Question Design and Data Download
-
-### Week 13: Data Clean Up and Exploratory Analysis
+### Week 13: Research Question Design and Data Download
 
 ### Week 14: Statistical Analysis and Visualize Results
 
