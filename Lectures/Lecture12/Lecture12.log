@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  19 NOV 2012 10:30
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  20 NOV 2012 09:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1129,29 +1129,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [9
 
 ]
-! Undefined control sequence.
-\beamer@doifinframe ... \item What is your \texbf 
-                                                  {best guess} explanation (...
-l.128 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\beamer@doifinframe ...ent)? \item Can you \texbf 
-                                                  {test your hypothesis usin...
-l.128 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1159,29 +1136,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [10
 
 ]
-! Undefined control sequence.
-\beamer@doifinframe ... \item What is your \texbf 
-                                                  {best guess} explanation (...
-l.128 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\beamer@doifinframe ...ent)? \item Can you \texbf 
-                                                  {test your hypothesis usin...
-l.128 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1189,29 +1143,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [11
 
 ]
-! Undefined control sequence.
-\beamer@doifinframe ... \item What is your \texbf 
-                                                  {best guess} explanation (...
-l.128 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\beamer@doifinframe ...ent)? \item Can you \texbf 
-                                                  {test your hypothesis usin...
-l.128 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1219,29 +1150,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [12
 
 ]
-! Undefined control sequence.
-\beamer@doifinframe ... \item What is your \texbf 
-                                                  {best guess} explanation (...
-l.128 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\beamer@doifinframe ...ent)? \item Can you \texbf 
-                                                  {test your hypothesis usin...
-l.128 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1249,29 +1157,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [13
 
 ]
-! Undefined control sequence.
-\beamer@doifinframe ... \item What is your \texbf 
-                                                  {best guess} explanation (...
-l.128 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\beamer@doifinframe ...ent)? \item Can you \texbf 
-                                                  {test your hypothesis usin...
-l.128 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1279,29 +1164,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [14
 
 ]
-! Undefined control sequence.
-\beamer@doifinframe ... \item What is your \texbf 
-                                                  {best guess} explanation (...
-l.128 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\beamer@doifinframe ...ent)? \item Can you \texbf 
-                                                  {test your hypothesis usin...
-l.128 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1762,11 +1624,6 @@ braces don't get unbalanced. Otherwise just proceed.
 Acceptable delimiters are characters whose \delcode is
 nonnegative, or you can use `\delimiter <delimiter code>'.
 
-
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
 [50
 
 ]
@@ -1981,7 +1838,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 ]
 \openout4 = `Lecture12.vrb'.
 
- (./Lecture12.vrb <figure/ConfIntGraph.pdf, id=514, 505.89pt x 289.08pt>
+ (./Lecture12.vrb <figure/ConfIntGraph.pdf, id=511, 505.89pt x 289.08pt>
 File: figure/ConfIntGraph.pdf Graphic file (type pdf)
 
 <use figure/ConfIntGraph.pdf>
@@ -2937,7 +2794,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 ]
 \openout4 = `Lecture12.vrb'.
 
- (./Lecture12.vrb <figure/Zelig3.pdf, id=717, 505.89pt x 289.08pt>
+ (./Lecture12.vrb <figure/Zelig3.pdf, id=714, 505.89pt x 289.08pt>
 File: figure/Zelig3.pdf Graphic file (type pdf)
 
 <use figure/Zelig3.pdf>
@@ -2958,7 +2815,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [89
 
 ]
-</git_repositories/GreenBook/Paper/figure/ExpectValueParty.pdf, id=738, 433.62p
+</git_repositories/GreenBook/Paper/figure/ExpectValueParty.pdf, id=735, 433.62p
 t x 289.08pt>
 File: /git_repositories/GreenBook/Paper/figure/ExpectValueParty.pdf Graphic fil
 e (type pdf)
@@ -2975,18 +2832,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [90
 
  </git_repositories/GreenBook/Paper/figure/ExpectValueParty.pdf>]
-! Misplaced alignment tab character &.
-<inserted text> ...ing R. Chichester: John Wiley &
-                                                   Sons. Ltd. \\[0.25cm] Dia...
-l.920 \end{frame}
-                 
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
 Missing character: There is no â in font cmss10!
 Missing character: There is no € in font cmss10!
 Missing character: There is no œ in font cmss10!
@@ -3031,10 +2876,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 922.
  ) 
 Here is how much of TeX's memory you used:
- 18739 strings out of 493633
- 354741 string characters out of 3143377
+ 18737 strings out of 493633
+ 354729 string characters out of 3143377
  419396 words of memory out of 3000000
- 21351 multiletter control sequences out of 15000+200000
+ 21350 multiletter control sequences out of 15000+200000
  20700 words of font info for 82 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  49i,17n,60p,448b,589s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3065,10 +2910,10 @@ dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2011/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2011
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/
 2011/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on Lecture12.pdf (91 pages, 859453 bytes).
+Output written on Lecture12.pdf (91 pages, 852641 bytes).
 PDF statistics:
- 890 PDF objects out of 1000 (max. 8388607)
- 749 compressed objects within 8 object streams
- 189 named destinations out of 1000 (max. 500000)
+ 887 PDF objects out of 1000 (max. 8388607)
+ 746 compressed objects within 8 object streams
+ 188 named destinations out of 1000 (max. 500000)
  123 words of extra memory for PDF output out of 10000 (max. 10000000)
 

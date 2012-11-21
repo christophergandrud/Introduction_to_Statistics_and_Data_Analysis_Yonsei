@@ -40,7 +40,7 @@
   \begin{itemize}
     \item The Assignment 3 grades were extremely \textbf{bimodalally} distributed.
     \item We should care about \textbf{learning} rather than \textbf{grades}.
-    \item So, if you received \textbf{below an 80\%} I want to \bf{work with you} to make sure you actual \textbf{learn} the material.
+    \item So, if you received \textbf{below an 80\%} I want to \bf{work with you} to make sure you actually \textbf{learn} the material.
   \end{itemize}
 }
 
@@ -65,8 +65,8 @@
   With your partner plan your research by answering the following questions:
   \begin{enumerate}
     \item What \textbf{difference} do you want to explain?
-    \item What is your \texbf{best guess} explanation (i.e. thesis statement)?
-    \item Can you \texbf{test your hypothesis using data}? If so, what data do you need to collect and what tests could you use?
+    \item What is your \textbf{best guess} explanation (i.e. thesis statement)?
+    \item Can you \textbf{test your hypothesis using data}? If so, what data do you need to collect and what tests could you use?
     \item What \textbf{rival explanations} are their?
     \item What \textbf{other factors} may influence the relationship you observe?
     \item How could you use data to test whether your best guess or the rival explanations are better? Write this as an \textbf{equation}.
@@ -354,7 +354,7 @@ M2
 }}
 \end{frame}
 
-\begin{frame}[fragile]
+\begin{frame}[fragile,plain]
 {\footnotesize{
 <<MultiResults>>=
 # Show results
@@ -649,7 +649,7 @@ plot(ZSim, ylab = "Expected Price",
 %%% References
 \begin{frame}[allowframebreaks]
   \frametitle{References}
-  Crawley, Michael J. 2005. Statistics: An Introduction Using R. Chichester: John Wiley & Sons. Ltd. \\[0.25cm]
+  Crawley, Michael J. 2005. Statistics: An Introduction Using R. Chichester: John Wiley \& Sons. Ltd. \\[0.25cm]
   Diaz, David M., Christopher D. Barr, and Mine \c{C}etinkaya-Rundel. 2011. OpenIntro 
   Statistics. 1st ed. \url{http://www.openintro.org/stat/downloads.php}. \\[0.25cm] 
   King, Gary, Michael Tomz, and Jason Wittenberg. 2000. “Making the Most of Statistical Analyses: Improving Interpretation and Presentation.” American Journal of Political Science 44(2): 347–361.

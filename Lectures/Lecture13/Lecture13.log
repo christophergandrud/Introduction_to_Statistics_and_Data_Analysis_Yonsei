@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  19 NOV 2012 10:38
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  20 NOV 2012 09:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1234,29 +1234,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [21
 
 ]
-! Undefined control sequence.
-\beamer@doifinframe ... \item What is your \texbf 
-                                                  {best guess} explanation (...
-l.190 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\beamer@doifinframe ...ent)? \item Can you \texbf 
-                                                  {test your hypothesis usin...
-l.190 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1264,29 +1241,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [22
 
 ]
-! Undefined control sequence.
-\beamer@doifinframe ... \item What is your \texbf 
-                                                  {best guess} explanation (...
-l.190 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\beamer@doifinframe ...ent)? \item Can you \texbf 
-                                                  {test your hypothesis usin...
-l.190 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1294,29 +1248,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [23
 
 ]
-! Undefined control sequence.
-\beamer@doifinframe ... \item What is your \texbf 
-                                                  {best guess} explanation (...
-l.190 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\beamer@doifinframe ...ent)? \item Can you \texbf 
-                                                  {test your hypothesis usin...
-l.190 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1324,29 +1255,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [24
 
 ]
-! Undefined control sequence.
-\beamer@doifinframe ... \item What is your \texbf 
-                                                  {best guess} explanation (...
-l.190 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\beamer@doifinframe ...ent)? \item Can you \texbf 
-                                                  {test your hypothesis usin...
-l.190 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1354,29 +1262,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [25
 
 ]
-! Undefined control sequence.
-\beamer@doifinframe ... \item What is your \texbf 
-                                                  {best guess} explanation (...
-l.190 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\beamer@doifinframe ...ent)? \item Can you \texbf 
-                                                  {test your hypothesis usin...
-l.190 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1384,29 +1269,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [26
 
 ]
-! Undefined control sequence.
-\beamer@doifinframe ... \item What is your \texbf 
-                                                  {best guess} explanation (...
-l.190 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\beamer@doifinframe ...ent)? \item Can you \texbf 
-                                                  {test your hypothesis usin...
-l.190 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1453,7 +1315,7 @@ sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr
 /local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></us
 r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
 
-Output written on Lecture13.pdf (27 pages, 105538 bytes).
+Output written on Lecture13.pdf (27 pages, 105565 bytes).
 PDF statistics:
  277 PDF objects out of 1000 (max. 8388607)
  232 compressed objects within 3 object streams
