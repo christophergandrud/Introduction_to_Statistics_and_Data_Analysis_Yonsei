@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  12 NOV 2012 17:35
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  22 NOV 2012 10:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1058,10 +1058,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [1
 
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \vbox (6.19124pt too high) detected at line 103
- []
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1069,10 +1065,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [2
 
 ]
-Overfull \vbox (6.19124pt too high) detected at line 103
- []
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1080,10 +1072,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [3
 
 ]
-Overfull \vbox (6.19124pt too high) detected at line 103
- []
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1091,10 +1079,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [4
 
 ]
-Overfull \vbox (6.19124pt too high) detected at line 103
- []
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1102,26 +1086,11 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [5
 
 ]
-Overfull \vbox (6.19124pt too high) detected at line 103
- []
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
 [6
-
-]
-Overfull \vbox (6.19124pt too high) detected at line 103
- []
-
-
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[7
 
 ]
 \openout4 = `Seminar12.vrb'.
@@ -1134,18 +1103,25 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
-[8
+[7
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 141.
+LaTeX Font Info:    Try loading font information for U+msa on input line 139.
  (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 141.
+LaTeX Font Info:    Try loading font information for U+msb on input line 139.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
+Overfull \hbox (3.63992pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[8
+
+]
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1181,25 +1157,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [13
 
 ]
-LaTeX Font Info:    Try loading font information for TS1+cmss on input line 147
-.
- (/usr/local/texlive/2011/texmf-dist/tex/latex/base/ts1cmss.fd
-File: ts1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[14
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[15
-
-]
 \tf@nav=\write6
 \openout6 = `Seminar12.nav'.
 
@@ -1209,11 +1166,11 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `Seminar12.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 153.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 153.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 151.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 151.
  (./Seminar12.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 153.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 153.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 151.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 151.
 Package rerunfilecheck Info: File `Seminar12.out' has not changed.
 (rerunfilecheck)             Checksum: 24B1B815A964CB512296A0128A1D0B1C;47.
 
@@ -1221,29 +1178,28 @@ Package rerunfilecheck Info: File `Seminar12.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 153.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 151.
  ) 
 Here is how much of TeX's memory you used:
- 18143 strings out of 493633
- 345634 string characters out of 3143377
- 414316 words of memory out of 3000000
- 20962 multiletter control sequences out of 15000+200000
- 11205 words of font info for 42 fonts, out of 3000000 for 9000
+ 18122 strings out of 493633
+ 344966 string characters out of 3143377
+ 413316 words of memory out of 3000000
+ 20949 multiletter control sequences out of 15000+200000
+ 10860 words of font info for 41 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  49i,16n,53p,448b,429s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb>
-</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><
-/usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></u
-sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr
-/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></us
-r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr
-/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><
-/usr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb>
-Output written on Seminar12.pdf (15 pages, 96395 bytes).
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
+></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb>
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></
+usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></us
+r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></u
+sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></us
+r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+
+Output written on Seminar12.pdf (13 pages, 92388 bytes).
 PDF statistics:
- 170 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
- 32 named destinations out of 1000 (max. 500000)
+ 150 PDF objects out of 1000 (max. 8388607)
+ 121 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -39,12 +39,11 @@
   {\Large{Research Design}} \\[0.25cm]
   With your partner plan your research by answering the following questions:
   \begin{enumerate}
-    \item What difference or anomaly do you want to explain?
-    \item What is your best guess explanation? Draw your best guess in a diagram.
-    \item Can you test your hypothesis using data? If so, what data do you need to collect and what tests could you use?
-    \item What rival explanations are their?
-    \item How could you use data to test whether your best guess or the rival explanations are better? Write this as an \textbf{equation} if possible.
-    \item What other factors may influence the relationship you observe?
+    \item What \textbf{difference} do you want to explain?
+    \item What is your \textbf{best guess} explanation (i.e. thesis statement)?
+    \item Can you \textbf{test your hypothesis using data}? If so, what data do you need to collect and what tests could you use?
+    \item What \textbf{rival explanations} are their?
+    \item How could you use data to test whether your best guess or the rival explanations are better? Write this as an \textbf{equation}.
   \end{enumerate}
 {\tiny{Questionnaire from: modified from Cheryl Schonhardt-Bailey}}
 }
@@ -71,19 +70,18 @@ names(census)
     \item \texttt{sex},
     \item \texttt{raceGeneral},
     \item \texttt{maritalStatus},
-    \item \texttt{totalPersonalIncome}
   \end{itemize}
-  on \texttt{totalFamilyIncome}.
+  with \texttt{totalPersonalIncome}.
 }
 
 \frame{
   \frametitle{Predict the Effect}
-  Create a parsimonious, but comprehensive linear regression model to predict the total family income of a white, 32 year old women, with an personal income of \$25,000.  \\[0.5cm]
+  Using all of the variables in the data set create a parsimonious, but comprehensive linear regression model to find a \textbf{point estimate} of the total presonal income of a white widowed women who is 32 years old.  \\[0.5cm]
   Write the linear regression equation and make the prediction.
 }
 
 \frame{
   \frametitle{Simulations}
-  Simulate expected total family incomes, with associated uncertainty, for a range of individual incomes.
+  Simulate expected total family incomes, with associated uncertainty, for a range of ages.
 }
 \end{document}
