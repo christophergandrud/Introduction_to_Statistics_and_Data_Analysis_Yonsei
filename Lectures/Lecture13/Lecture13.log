@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  27 NOV 2012 09:34
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  27 NOV 2012 14:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1066,18 +1066,6 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [2
 
 ]
-! Undefined control sequence.
-\beamer@doifinframe ... What are the three \texbf 
-                                                  {three} minimum criterion ...
-l.93 }
-      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1334,10 +1322,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 238.
  ) 
 Here is how much of TeX's memory you used:
- 18253 strings out of 493633
- 347213 string characters out of 3143377
+ 18252 strings out of 493633
+ 347208 string characters out of 3143377
  413200 words of memory out of 3000000
- 21038 multiletter control sequences out of 15000+200000
+ 21037 multiletter control sequences out of 15000+200000
  11460 words of font info for 43 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  49i,16n,60p,448b,589s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1349,7 +1337,7 @@ sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr
 /local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></us
 r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr
 /local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Lecture13.pdf (28 pages, 124531 bytes).
+Output written on Lecture13.pdf (28 pages, 124548 bytes).
 PDF statistics:
  295 PDF objects out of 1000 (max. 8388607)
  246 compressed objects within 3 object streams

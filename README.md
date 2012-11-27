@@ -1,7 +1,7 @@
 # INT3042: Introduction to Social Science Data Analysis
 ## Yonsei University, Wonju
 ### Fall 2012 
-### Version: 19 November 2012
+### Version: 27 November 2012
 
 ___________________________________________________________
 
@@ -69,7 +69,7 @@ I also assign a few chapters from (and recommend for **R** reference):
 
 > Crawley, Michael J. 2005. *Statistics: An Introduction Using R*. Chichester: John Wiley & Sons. Ltd. 
 
-> Matloff, Norman. 2011. *The Art of R Programming: A Tour of Statistical Design Software*. San Francisco: No Starch Press.  
+> Matloff, Norman. 2011. *The Art of R Programming: A Tour of Statistical Design Software*. San Francisco: No Starch Press.
 
 For more reference on using **R** you might find these resources useful:
 
@@ -212,7 +212,7 @@ In the final part of the course class time is dedicated to applying what we have
 
 ### Week 13: Research Question Design and Data Download
 
-### Week 14: Statistical Analysis and Visualize Results
+### Week 14: Statistical Analysis and Visualisation of Results
 
 ### Week 15: Write Up Results and Prepare Presentations
 
