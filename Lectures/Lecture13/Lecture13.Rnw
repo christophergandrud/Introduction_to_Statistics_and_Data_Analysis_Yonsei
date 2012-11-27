@@ -55,6 +55,35 @@
   Why do King et al. (2000) recommend simulating expected outcomes and graphing the results?
 }
 
+\begin{frame}[fragile]
+  \frametitle{Simulating Expected Values for Categorical Variables}
+<<SimSetUp, message=FALSE, error=FALSE, warning=FALSE, tidy=FALSE>>=
+library(openintro)
+library(Zelig)
+
+data(hsb2)
+
+M1 <- zelig(read ~ as.factor(gender) 
+            + write, model = "normal", 
+            data = hsb2, cite = FALSE)
+
+Values <- c("male", "female")
+
+XOut <- setx(M1, gender = Values)
+
+ZSim <- sim(M1, XOut)
+@
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Plot Expected Values}
+<<PlotExpected, messages=FALSE, fig.height=4>>=
+plot(ZSim)
+@  
+\end{frame}
+
+
+
 %%%%%%%%% Research Project: Goals
 \section{Research Project: Goals}
 \frame{
@@ -118,6 +147,8 @@
   You will develop your research question and the research design you will use to try to answer it. \\[0.5cm]
   This is \textbf{Assignment 4}.
 }
+
+\begin
 
 \section{Assignment 4}
 \frame{

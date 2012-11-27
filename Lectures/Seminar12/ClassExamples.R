@@ -16,13 +16,28 @@ M4 <- lm(totalPersonalIncome ~ raceGeneral, data = census)
 #### Recode raceGeneral ####
 census$raceCombined[census$raceGeneral == "Chinese"] <- "Asian"
 census$raceCombined[census$raceGeneral == "Japanese"] <- "Asian"
-census$raceCombined[census$raceGeneral == "Other Asian or Pacific Islander"] <- "Asian"
+census$raceCombined[census$raceGeneral == 
+                      "Other Asian or Pacific Islander"] <- "Asian"
 census$raceCombined[census$raceGeneral == "White"] <- "White"
 census$raceCombined[census$raceGeneral == "Black"] <- "Black"
 census$raceCombined[census$raceGeneral == "Other"] <- "Other"
 census$raceCombined[census$raceGeneral == "Two major races"] <- "Other"
-
+census$raceCombined[census$raceGeneral == 
+                      "American Indian or Alaska Native"] <- "Other"
 census$raceCombined <- as.factor(census$raceCombined)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 M5 <- lm(totalPersonalIncome ~ raceCombined, data = census)
 

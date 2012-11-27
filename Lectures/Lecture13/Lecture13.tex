@@ -108,6 +108,51 @@
   Why do King et al. (2000) recommend simulating expected outcomes and graphing the results?
 }
 
+\begin{frame}[fragile]
+  \frametitle{Simulating Expected Values for Categorical Variables}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlfunctioncall{library}(openintro)
+\hlfunctioncall{library}(Zelig)
+
+\hlfunctioncall{data}(hsb2)
+
+M1 <- \hlfunctioncall{zelig}(read ~ \hlfunctioncall{as.factor}(gender) 
+            + write, model = \hlstring{"normal"}, 
+            data = hsb2, cite = FALSE)
+
+Values <- \hlfunctioncall{c}(\hlstring{"male"}, \hlstring{"female"})
+
+XOut <- \hlfunctioncall{setx}(M1, gender = Values)
+
+ZSim <- \hlfunctioncall{sim}(M1, XOut)
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Plot Expected Values}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlfunctioncall{plot}(ZSim)
+\end{alltt}
+\end{kframe}
+
+{\centering \includegraphics[width=\maxwidth]{figure/PlotExpected} 
+
+}
+
+
+\end{knitrout}
+
+\end{frame}
+
+
+
 %%%%%%%%% Research Project: Goals
 \section{Research Project: Goals}
 \frame{
@@ -171,6 +216,8 @@
   You will develop your research question and the research design you will use to try to answer it. \\[0.5cm]
   This is \textbf{Assignment 4}.
 }
+
+\begin
 
 \section{Assignment 4}
 \frame{
