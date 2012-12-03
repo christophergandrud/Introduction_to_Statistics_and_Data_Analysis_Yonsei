@@ -1,0 +1,23 @@
+\frametitle {For Example}
+  Time-series Cross Sectional Data
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+##                 country GDPperCapita
+## 7  United Arab Emirates      38959.8
+## 8           Afghanistan        425.1
+## 9   Antigua and Barbuda      13829.8
+## 10              Albania       3795.7
+## 11              Armenia       2803.3
+## 12               Angola       4068.5
+##    InfantMortality region               income
+## 7              6.3     ME High income: nonOECD
+## 8             76.2     SA           Low income
+## 9              7.2     LA  Upper middle income
+## 10            14.1    EUR  Upper middle income
+## 11            17.2    EUR  Lower middle income
+## 12           100.1    SSA  Lower middle income
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+

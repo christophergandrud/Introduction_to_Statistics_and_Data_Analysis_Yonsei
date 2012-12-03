@@ -33,6 +33,7 @@
 \section[Outline]{}
 \frame{\tableofcontents}
 
+%%%%%%%%%%%% Schedule
 \section{Schedule}
 \frame{
   \frametitle{Schedule}
@@ -46,6 +47,8 @@
   \end{itemize}
 }
 
+%%%%%%%%%% Goals
+\section{This Week's Goals}
 \frame{
 	\frametitle{Today's Goals}
 	{\LARGE{Today's Goals:}} \\[0.5cm]
@@ -55,6 +58,48 @@
 	\end{enumerate}
 }
 
+\frame{
+  \frametitle{Thursday's Goals}
+{\LARGE{Thursday's Goals:}} \\[0.5cm]
+	\begin{enumerate}
+		\item Begin to put together your inferential statistics..
+		\item Descriptive statistics.
+	\end{enumerate}  
+}
+
+%%%%%%%%%%%% Robust
+\section{Robust Standard Errors for Dependent Data}
+\frame{
+  \frametitle{Dependent Data}
+{\LARGE{Remember:}} \\[0.5cm]
+  One of the assumptions of linear regression is that the observations are independent of one another. \\[0.5cm]
+  Many of you are using data from many countries across many years. \\[0.5cm]
+  This is called \textbf{time-series cross-sectional data.}
+}
+
+\begin{frame}[fragile]
+  \frametitle{For Example}
+  Time-series Cross Sectional Data
+<<LoadData, echo=FALSE, warning=FALSE, message=FALSE>>=
+# Load package
+library(devtools)
+
+# Gather data using source code at:
+# http://bit.ly/OTWEGS
+# Data is stored in a data frame: MortalityGDP
+source_url("http://bit.ly/OTWEGS")
+
+# Display first data
+head(MortalityGDP)
+@
+\end{frame}
+
+%%%%%%%%%% xtable
+\section{Results tables with xtable}
+\frame{
+  \frametitle{Results Tables}
+  Hand typing results tables is really irritating.
+}
 
 
 \end{document}
