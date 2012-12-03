@@ -74,7 +74,8 @@
 {\LARGE{Remember:}} \\[0.5cm]
   One of the assumptions of linear regression is that the observations are independent of one another. \\[0.5cm]
   Many of you are using data from many countries across many years. \\[0.5cm]
-  This is called \textbf{time-series cross-sectional data.}
+  This is called \textbf{time-series cross-sectional data.} \\[0.5cm]
+  This type of data often has \textbf{biased standard errors}.
 }
 
 \begin{frame}[fragile]
@@ -105,8 +106,7 @@ library(Zelig, lib.loc = "/Library/Frameworks/R.framework/Versions/2.14/Resource
 M1 <- zelig(InfantMort ~ GDPperCapita, 
             model = "normal",
             data = MortalityGDP,
-            robust = TRUE, 
-            order.by = ~c("country", "year"),
+            robust = TRUE,
             cite = FALSE)
 @
 \end{frame}
@@ -132,7 +132,9 @@ library(apsrtable)
 \section{Results tables with xtable}
 \frame{
   \frametitle{Results Tables}
-  Hand typing results tables is really irritating.
+  Hand typing results tables is really irritating. \\[0.5cm]
+  You can use the \emph{xtable} package to automate table creation. \\[0.5cm]
+  See: \url{}.
 }
 
 

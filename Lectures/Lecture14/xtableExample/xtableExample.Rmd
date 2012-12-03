@@ -18,4 +18,23 @@ library(devtools)
 source_url("http://bit.ly/SFf2qz")
 ```
 
-Now estimate two models with 
+Now estimate a model with `lm`.
+
+```{r Model, message=FALSE, warning=FALSE}
+# Estimate constricted model
+M1 <- lm(InfantMort ~ GDPperCapita, 
+            data = MortalityGDP)
+```
+
+Finally create the table.
+```{r Table, results='asis'}
+# Load xtable
+library(xtable)
+
+# Create and print table
+print(xtable(M1), type = "html")
+```
+
+---
+
+**Note:** This won't work with Zelig estimated models using robust standard errors. You can get around this problem, but it takes some work. See me if you are interested.
