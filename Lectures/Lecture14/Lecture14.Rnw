@@ -91,7 +91,7 @@ library(devtools)
 source_url("http://bit.ly/SFf2qz")
 
 # Display first data
-head(MortalityGDP)
+head(MortalityGDP[, c("country", "year", "GDPperCapita", "InfantMort")])
 @
 \end{frame}
 
@@ -120,21 +120,13 @@ M1 <- zelig(InfantMort ~ GDPperCapita,
   There is much more to learn on this topic, which we won't cover in this class.
 }
 
-\begin{frame}[fragile]
-<<RobustTable, echo=FALSE>>= 
-# Load library
-library(apsrtable)
-
-@
-\end{frame}
-
 %%%%%%%%%% xtable
 \section{Results tables with xtable}
 \frame{
   \frametitle{Results Tables}
   Hand typing results tables is really irritating. \\[0.5cm]
   You can use the \emph{xtable} package to automate table creation. \\[0.5cm]
-  See: \url{}.
+  See: \url{http://bit.ly/TFxDS4}.
 }
 
 

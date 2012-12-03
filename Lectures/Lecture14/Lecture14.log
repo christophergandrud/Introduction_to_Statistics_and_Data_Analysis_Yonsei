@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  3 DEC 2012 12:16
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  3 DEC 2012 14:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1175,21 +1175,11 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [15
 
 ]
-\openout4 = `Lecture14.vrb'.
-
- (./Lecture14.vrb)
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [][] 
  []
 
 [16
-
-]
-Overfull \hbox (3.63992pt too wide) has occurred while \output is active
-[][] 
- []
-
-[17
 
 ]
 \tf@nav=\write6
@@ -1201,11 +1191,11 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `Lecture14.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 202.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 202.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 192.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
  (./Lecture14.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 202.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 202.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 192.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 192.
 Package rerunfilecheck Info: File `Lecture14.out' has not changed.
 (rerunfilecheck)             Checksum: F1DA513B80FD3459E7018A5811E964CF;232.
 
@@ -1213,13 +1203,13 @@ Package rerunfilecheck Info: File `Lecture14.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 202.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
  ) 
 Here is how much of TeX's memory you used:
- 18232 strings out of 493633
- 347156 string characters out of 3143377
- 416248 words of memory out of 3000000
- 21039 multiletter control sequences out of 15000+200000
+ 18226 strings out of 493633
+ 347093 string characters out of 3143377
+ 413248 words of memory out of 3000000
+ 21037 multiletter control sequences out of 15000+200000
  12770 words of font info for 48 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  49i,16n,60p,448b,589s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1232,10 +1222,10 @@ sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></u
 sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></us
 r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
 
-Output written on Lecture14.pdf (17 pages, 107784 bytes).
+Output written on Lecture14.pdf (16 pages, 107921 bytes).
 PDF statistics:
- 206 PDF objects out of 1000 (max. 8388607)
- 171 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
+ 200 PDF objects out of 1000 (max. 8388607)
+ 166 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
  71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

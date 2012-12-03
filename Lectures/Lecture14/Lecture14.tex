@@ -127,7 +127,8 @@
 {\LARGE{Remember:}} \\[0.5cm]
   One of the assumptions of linear regression is that the observations are independent of one another. \\[0.5cm]
   Many of you are using data from many countries across many years. \\[0.5cm]
-  This is called \textbf{time-series cross-sectional data.}
+  This is called \textbf{time-series cross-sectional data.} \\[0.5cm]
+  This type of data often has \textbf{biased standard errors}.
 }
 
 \begin{frame}[fragile]
@@ -143,13 +144,6 @@
 ## 32 Afghanistan 2005        227.9       84.3
 ## 37     Albania 2002       1440.0       20.9
 ## 38     Albania 2003       1819.4       19.8
-##    FYouthUnemp
-## 29          NA
-## 30          NA
-## 31          NA
-## 32          NA
-## 37          NA
-## 38          NA
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -168,8 +162,7 @@
 M1 <- \hlfunctioncall{zelig}(InfantMort ~ GDPperCapita, 
             model = \hlstring{"normal"},
             data = MortalityGDP,
-            robust = TRUE, 
-            order.by = ~\hlfunctioncall{c}(\hlstring{"country"}, \hlstring{"year"}),
+            robust = TRUE,
             cite = FALSE)
 \end{alltt}
 \end{kframe}
@@ -186,16 +179,13 @@ M1 <- \hlfunctioncall{zelig}(InfantMort ~ GDPperCapita,
   There is much more to learn on this topic, which we won't cover in this class.
 }
 
-\begin{frame}[fragile]
-
-
-\end{frame}
-
 %%%%%%%%%% xtable
 \section{Results tables with xtable}
 \frame{
   \frametitle{Results Tables}
-  Hand typing results tables is really irritating.
+  Hand typing results tables is really irritating. \\[0.5cm]
+  You can use the \emph{xtable} package to automate table creation. \\[0.5cm]
+  See: \url{http://bit.ly/TFxDS4}.
 }
 
 
