@@ -29,7 +29,7 @@ MortalityGDP <- rename(MortalityGDP, c(NY.GDP.PCAP.CD = "GDPperCapita"))
 MortalityGDP <- rename(MortalityGDP, c(SL.UEM.1524.FE.ZS = "FYouthUnemp"))
 
 # Keep country GDPperCapita and InfantMortality variables
-MortalityGDP <- MortalityGDP[, c("country", "year", "GDPperCapita", "InfantMortality", "FYouthUnemp")]
+MortalityGDP <- MortalityGDP[, c("country", "year", "GDPperCapita", "InfantMort", "FYouthUnemp")]
 
 # Reorder the data
 MortalityGDP <- MortalityGDP[order(MortalityGDP$country, MortalityGDP$year),]

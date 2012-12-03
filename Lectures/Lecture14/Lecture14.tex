@@ -135,14 +135,23 @@
   {\LARGE{Example Time-series Cross Sectional Data}}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{verbatim}
-##        country year GDPperCapita InfantMortality
-## 29 Afghanistan 2002        158.0            90.5
-## 30 Afghanistan 2003        168.7            88.4
-## 31 Afghanistan 2004        196.2            86.4
-## 32 Afghanistan 2005        227.9            84.3
-## 37     Albania 2002       1440.0            20.9
-## 38     Albania 2003       1819.4            19.8
+
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: undefined columns selected}}\begin{verbatim}
+##    iso2c              country year GDPperCapita
+## 25    AE United Arab Emirates 2002      33740.9
+## 26    AE United Arab Emirates 2003      36562.1
+## 27    AE United Arab Emirates 2004      40410.8
+## 28    AE United Arab Emirates 2005      44384.7
+## 29    AF          Afghanistan 2002        158.0
+## 30    AF          Afghanistan 2003        168.7
+##    InfantMort FYouthUnemp IMFCode
+## 25        9.4          NA     466
+## 26        8.9          NA     466
+## 27        8.4          NA     466
+## 28        8.0        12.9     466
+## 29       90.5          NA     512
+## 30       88.4          NA     512
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -165,7 +174,9 @@ M1 <- \hlfunctioncall{zelig}(InfantMortality ~ GDPperCapita,
             order.by = ~\hlfunctioncall{c}(\hlstring{"country"}, \hlstring{"year"}),
             cite = FALSE)
 \end{alltt}
-\end{kframe}
+
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'InfantMortality' not found}}\end{kframe}
 \end{knitrout}
 
 \end{frame}

@@ -18,4 +18,4 @@ library(devtools)
 source_url("http://bit.ly/SFf2qz")
 ```
 
-Now run two 
+Now estimate two models with 

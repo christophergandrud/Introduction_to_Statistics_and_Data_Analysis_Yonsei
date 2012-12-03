@@ -102,7 +102,7 @@ head(MortalityGDP)
 library(Zelig, lib.loc = "/Library/Frameworks/R.framework/Versions/2.14/Resources/library/")
 @
 <<RobustErrors, tidy=FALSE>>=
-M1 <- zelig(InfantMortality ~ GDPperCapita, 
+M1 <- zelig(InfantMort ~ GDPperCapita, 
             model = "normal",
             data = MortalityGDP,
             robust = TRUE, 
