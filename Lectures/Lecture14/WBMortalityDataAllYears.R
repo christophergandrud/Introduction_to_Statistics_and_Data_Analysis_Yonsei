@@ -14,7 +14,7 @@ library(countrycode)
 library(reshape)
 
 # Download data
-MortalityGDP <- WDI(indicator = c("NY.GDP.PCAP.CD", "SP.DYN.IMRT.IN"))
+MortalityGDP <- WDI(indicator = c("NY.GDP.PCAP.CD", "SP.DYN.IMRT.IN", "SL.UEM.1524.FE.ZS"))
 
 
 #### Clean downloaded data ####
@@ -24,11 +24,12 @@ MortalityGDP$IMFCode <- countrycode(MortalityGDP$country, origin = "country.name
 MortalityGDP <- subset(MortalityGDP, !is.na(IMFCode))
 
 # Rename the main variables
-MortalityGDP <- rename(MortalityGDP, c(SP.DYN.IMRT.IN = "InfantMortality"))
+MortalityGDP <- rename(MortalityGDP, c(SP.DYN.IMRT.IN = "InfantMort"))
 MortalityGDP <- rename(MortalityGDP, c(NY.GDP.PCAP.CD = "GDPperCapita"))
+MortalityGDP <- rename(MortalityGDP, c(SL.UEM.1524.FE.ZS = "FYouthUnemp"))
 
 # Keep country GDPperCapita and InfantMortality variables
-MortalityGDP <- MortalityGDP[, c("country", "year", "GDPperCapita", "InfantMortality")]
+MortalityGDP <- MortalityGDP[, c("country", "year", "GDPperCapita", "InfantMortality", "FYouthUnemp")]
 
 # Reorder the data
 MortalityGDP <- MortalityGDP[order(MortalityGDP$country, MortalityGDP$year),]

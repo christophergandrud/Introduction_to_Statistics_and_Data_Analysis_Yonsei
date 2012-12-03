@@ -132,27 +132,55 @@
 
 \begin{frame}[fragile]
   \frametitle{For Example}
-  Time-series Cross Sectional Data
+  {\LARGE{Example Time-series Cross Sectional Data}}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{verbatim}
-##                 country GDPperCapita
-## 7  United Arab Emirates      38959.8
-## 8           Afghanistan        425.1
-## 9   Antigua and Barbuda      13829.8
-## 10              Albania       3795.7
-## 11              Armenia       2803.3
-## 12               Angola       4068.5
-##    InfantMortality region               income
-## 7              6.3     ME High income: nonOECD
-## 8             76.2     SA           Low income
-## 9              7.2     LA  Upper middle income
-## 10            14.1    EUR  Upper middle income
-## 11            17.2    EUR  Lower middle income
-## 12           100.1    SSA  Lower middle income
+##        country year GDPperCapita InfantMortality
+## 29 Afghanistan 2002        158.0            90.5
+## 30 Afghanistan 2003        168.7            88.4
+## 31 Afghanistan 2004        196.2            86.4
+## 32 Afghanistan 2005        227.9            84.3
+## 37     Albania 2002       1440.0            20.9
+## 38     Albania 2003       1819.4            19.8
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{One Solution}
+  A common way of handling data like this is to use \textbf{robust standard errors}. \\[0.5cm]
+  They are easy to implement with \emph{Zelig}
+
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+M1 <- \hlfunctioncall{zelig}(InfantMortality ~ GDPperCapita, 
+            model = \hlstring{"normal"},
+            data = MortalityGDP,
+            robust = TRUE, 
+            order.by = ~\hlfunctioncall{c}(\hlstring{"country"}, \hlstring{"year"}),
+            cite = FALSE)
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\frame{
+  \frametitle{Robust Standard Error Note}
+{\LARGE{Note:}} \\[0.5cm]
+  It's (usually) a good thing if the robust and regular standard errors are basically the same. \\[0.5cm]
+  This indicates you are not violating the model assumption. \\[0.5cm]
+  For a much more advanced discussion see: \url{http://gking.harvard.edu/files/robust.pdf} \\[0.5cm]
+  There is much more to learn on this topic, which we won't cover in this class.
+}
+
+\begin{frame}[fragile]
+
 
 \end{frame}
 

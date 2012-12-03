@@ -25,13 +25,19 @@
 \headcommand {\beamer@framepages {12}{12}}
 \headcommand {\slideentry {4}{0}{7}{13/13}{}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\sectionentry {5}{Results tables with xtable}{14}{Results tables with xtable}{0}}
-\headcommand {\beamer@sectionpages {12}{13}}
-\headcommand {\beamer@subsectionpages {12}{13}}
-\headcommand {\slideentry {5}{0}{8}{14/14}{}{0}}
+\headcommand {\slideentry {4}{0}{8}{14/14}{}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\beamer@partpages {1}{14}}
-\headcommand {\beamer@subsectionpages {14}{14}}
-\headcommand {\beamer@sectionpages {14}{14}}
-\headcommand {\beamer@documentpages {14}}
-\headcommand {\def \inserttotalframenumber {8}}
+\headcommand {\slideentry {4}{0}{9}{15/15}{}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\slideentry {4}{0}{10}{16/16}{}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\sectionentry {5}{Results tables with xtable}{17}{Results tables with xtable}{0}}
+\headcommand {\beamer@sectionpages {12}{16}}
+\headcommand {\beamer@subsectionpages {12}{16}}
+\headcommand {\slideentry {5}{0}{11}{17/17}{}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\beamer@partpages {1}{17}}
+\headcommand {\beamer@subsectionpages {17}{17}}
+\headcommand {\beamer@sectionpages {17}{17}}
+\headcommand {\beamer@documentpages {17}}
+\headcommand {\def \inserttotalframenumber {11}}

@@ -1,0 +1,21 @@
+# xtable Package Example
+## Yonsei Social Science Data Analysis
+### Christopher Gandrud
+
+---
+
+This is a short demostration of how to automatically create tables in R Markdown with the `xtable` package.
+
+For this example, we'll first load World Bank GDP per Capita and Infant Mortality data.
+
+```{r LoadData, warning=FALSE, message=FALSE}
+# Load package
+library(devtools)
+
+# Gather data using source code at:
+# http://bit.ly/OTWEGS
+# Data is stored in a data frame: MortalityGDP
+source_url("http://bit.ly/SFf2qz")
+```
+
+Now run two 
