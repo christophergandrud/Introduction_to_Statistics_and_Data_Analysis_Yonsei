@@ -16,26 +16,26 @@
 \headcommand {\beamer@subsectionpages {3}{7}}
 \headcommand {\slideentry {3}{0}{4}{8/9}{}{0}}
 \headcommand {\beamer@framepages {8}{9}}
-\headcommand {\slideentry {3}{0}{5}{10/11}{}{0}}
-\headcommand {\beamer@framepages {10}{11}}
-\headcommand {\sectionentry {4}{Robust Standard Errors for Dependent Data}{12}{Robust Standard Errors for Dependent Data}{0}}
-\headcommand {\beamer@sectionpages {8}{11}}
-\headcommand {\beamer@subsectionpages {8}{11}}
-\headcommand {\slideentry {4}{0}{6}{12/12}{}{0}}
+\headcommand {\slideentry {3}{0}{5}{10/10}{}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\sectionentry {4}{Robust Standard Errors for Dependent Data}{11}{Robust Standard Errors for Dependent Data}{0}}
+\headcommand {\beamer@sectionpages {8}{10}}
+\headcommand {\beamer@subsectionpages {8}{10}}
+\headcommand {\slideentry {4}{0}{6}{11/11}{}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\slideentry {4}{0}{7}{12/12}{}{0}}
 \headcommand {\beamer@framepages {12}{12}}
-\headcommand {\slideentry {4}{0}{7}{13/13}{}{0}}
+\headcommand {\slideentry {4}{0}{8}{13/13}{}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\slideentry {4}{0}{8}{14/14}{}{0}}
+\headcommand {\slideentry {4}{0}{9}{14/14}{}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\slideentry {4}{0}{9}{15/15}{}{0}}
+\headcommand {\sectionentry {5}{Results tables with xtable}{15}{Results tables with xtable}{0}}
+\headcommand {\beamer@sectionpages {11}{14}}
+\headcommand {\beamer@subsectionpages {11}{14}}
+\headcommand {\slideentry {5}{0}{10}{15/15}{}{0}}
 \headcommand {\beamer@framepages {15}{15}}
-\headcommand {\sectionentry {5}{Results tables with xtable}{16}{Results tables with xtable}{0}}
-\headcommand {\beamer@sectionpages {12}{15}}
-\headcommand {\beamer@subsectionpages {12}{15}}
-\headcommand {\slideentry {5}{0}{10}{16/16}{}{0}}
-\headcommand {\beamer@framepages {16}{16}}
-\headcommand {\beamer@partpages {1}{16}}
-\headcommand {\beamer@subsectionpages {16}{16}}
-\headcommand {\beamer@sectionpages {16}{16}}
-\headcommand {\beamer@documentpages {16}}
+\headcommand {\beamer@partpages {1}{15}}
+\headcommand {\beamer@subsectionpages {15}{15}}
+\headcommand {\beamer@sectionpages {15}{15}}
+\headcommand {\beamer@documentpages {15}}
 \headcommand {\def \inserttotalframenumber {10}}
