@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Introduction to Social Science Stats</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Introduction to Social Science Stats">
+  <meta name="author" content="Christopher Gandrud">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+    <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+    <!-- END LOGO SLIDE -->
+    
+
+    <!-- TITLE SLIDE -->
+    <!-- Should I move this to a Local Layout File? -->
+    <slide class="title-slide segue nobackground">
+      <hgroup class="auto-fadein">
+        <h1>Introduction to Social Science Stats</h1>
+        <h2>Week 15 Introduction to Slidify</h2>
+        <p>Christopher Gandrud<br/>Yonsei University</p>
+      </hgroup>
+          </slide>
+
+    <!-- SLIDES -->
+      <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Outline</h2>
+  </hgroup>
+  <article>
+    <p><br /></p>
+
+<p>This Weeks Goal&#39;s</p>
+
+<p>Slidify HTML Slideshows</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>This week&#39;s goals</h2>
+  </hgroup>
+  <article>
+    <p><br /></p>
+
+<p>Finish analysis</p>
+
+<p>Write up results (paper + presentation)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>The Presentation</h2>
+  </hgroup>
+  <article>
+    <p><br /></p>
+
+<p>Next Tuesday (18 December 2012) from 17:00 to 18:15 you will present your research.</p>
+
+<p>The presentations should be about 10 minutes long. </p>
+
+<p>The structure should be similar to the structure in your data. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Make it Interesting</h2>
+  </hgroup>
+  <article>
+    <p><br />
+<br />
+<br />
+<br />
+<br /></p>
+
+<p><center></p>
+
+<h3>Make the presentation interesting by focusing on visualizations.</h3>
+
+<p></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Reproducible Presentations</h2>
+  </hgroup>
+  <article>
+    <p><br />
+<br /></p>
+
+<p>You can create a reproducible presentation in R.</p>
+
+<p>To do this use Ramnath Vaidyanathan&#39;s <a href="http://ramnathv.github.com/slidify/">Slidify</a> package. </p>
+
+<p>Slidify lets you write in R Markdown and create HTML presentations.</p>
+
+<p>You can host the presentations from Dropbox.</p>
+
+<p>This allows you to include interactive visualizations in your presentation. Especially visualizations made with the GoogleVis package.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article>
+    <iframe src = "http://dl.dropbox.com/u/12581470/Graphs/leg.violence.map.html"></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article>
+    <iframe src="http://dl.dropbox.com/u/12581470/Graphs/external.debt.html"></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Slidify Set Up (1)</h2>
+  </hgroup>
+  <article>
+    <p>First download Slidify:</p>
+
+<pre><code class="r"># Load devtools
+library(devtools)
+
+# Install Slidify and ancillary libraries
+install_github(&quot;slidify&quot;, &quot;ramnathv&quot;)
+install_github(&quot;slidifyLibraries&quot;, &quot;ramnathv&quot;)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Slidify Set Up (2)</h2>
+  </hgroup>
+  <article>
+    <p>Change your working directory to where you want to save the presentation:</p>
+
+<pre><code class="r">setwd(&quot;DIRECTORY&quot;)
+</code></pre>
+
+<p>Then create a new slideshow with the <code>author</code> command:</p>
+
+<pre><code class="r">author(&quot;NewSlideShow&quot;)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Slidify Set Up (3)</h2>
+  </hgroup>
+  <article>
+    <p>Open the file called <code>index.Rmd</code> and change the heading.</p>
+
+<p><img src="SlidifyHead.png" alt=""></p>
+
+<p>The <code>index.html</code> file that Slidify creates from <code>index.Rmd</code> will be your final slideshow.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Slidify Basics</h2>
+  </hgroup>
+  <article>
+    <p>Slidify <code>.Rmd</code> files work almost exactly the same as the regular <code>.Rmd</code> files you are use to.</p>
+
+<p>For example, to create a basic plot with <code>cars</code> data:</p>
+
+<pre><code class="erlang"><span class="pp">
+
+```r
+plot(cars)
+```
+
+</span></code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Example Basic Plot</h2>
+  </hgroup>
+  <article>
+    <p><img src="figure/unnamed-chunk-5.png" alt="plot of chunk unnamed-chunk-5"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Creating Slides</h2>
+  </hgroup>
+  <article>
+    <p><br /></p>
+
+<p>In Slidify R Markdown you create new slides with three dashes <code>---</code>. </p>
+
+<p>You create Slide titles with two hashes <code>##</code>.</p>
+
+<p><img src="SlideDelimit.png" alt=""></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Compiling Slidify</h2>
+  </hgroup>
+  <article>
+    <p><br /></p>
+
+<p>To compile Slidify R Markdown documents (turn them into HTML slideshows) can use the <code>slidify</code> command on your <code>index.Rmd</code> file:</p>
+
+<pre><code class="r">slidify(&quot;index.Rmd&quot;)
+</code></pre>
+
+<p>Make sure that <code>index.Rmd</code> is in your working directory.</p>
+
+<p>In <a href="http://www.rstudio.com/ide/">RStudio</a> you can click the <code>knit HTML</code> button. </p>
+
+<p>The RStudio preview doesn&#39;t really work that well, but opening the <code>index.html</code> file in your web browser works perfectly.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Publish</h2>
+  </hgroup>
+  <article>
+    <p><br /></p>
+
+<p>You can publish your slideshow in a number of ways. Dropbox is one easy option. </p>
+
+<p>To publish your slideshow from your Dropbox <code>Public</code> folder like this:</p>
+
+<pre><code class="r">publish(&quot;NewSlideShow&quot;, host = &quot;dropbox&quot;)
+</code></pre>
+
+<p>Then <code>copy the publc link</code> to the <code>index.html</code> file. </p>
+
+<p>You can use the link to access the slideshow from any computer connected to the internet.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+
+  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+<!-- Grab CDN jQuery, fall back to local if offline -->
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+<script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery-1.7.min.js"><\/script>')</script>
+<!-- Load Javascripts for Widgets -->
+<!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> -->
+<script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+</html>
