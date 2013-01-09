@@ -1,6 +1,0 @@
-\beamer@endinputifotherversion {3.10pt}
-\beamer@sectionintoc {2}{Recap}{3}{0}{1}
-\beamer@sectionintoc {3}{What is reproducible research?}{14}{0}{2}
-\beamer@sectionintoc {4}{Why do reproducible research?}{20}{0}{3}
-\beamer@sectionintoc {5}{Doing reproducible research: markup languages}{38}{0}{4}
-\beamer@sectionintoc {6}{Doing reproducible research: knitr}{49}{0}{5}

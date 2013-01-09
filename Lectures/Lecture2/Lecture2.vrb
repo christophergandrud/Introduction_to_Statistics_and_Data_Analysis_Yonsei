@@ -1,5 +1,0 @@
-\frametitle {Merging 2}
-  The \texttt{merge} command matches each observation.\\[0.5cm]
-  You tell it what the {\bf{observation ID variable}} is with the \texttt{by} argument.\\[0.25cm]
-  For example \texttt{by = "Countries"} \\[0.5cm]
-  We'll see more of this next week.

@@ -1,6 +1,0 @@
-\beamer@endinputifotherversion {3.10pt}
-\beamer@sectionintoc {2}{Review}{3}{0}{1}
-\beamer@sectionintoc {3}{Why do we care about data?}{13}{0}{2}
-\beamer@sectionintoc {4}{General Types of Data}{23}{0}{3}
-\beamer@sectionintoc {5}{Data Frames in R}{30}{0}{4}
-\beamer@sectionintoc {6}{First Assignment}{54}{0}{5}

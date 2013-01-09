@@ -1,0 +1,13 @@
+# Ignore the following files in Git Version Tracking #
+######################################################
+
+*concordance.tex
+*.log
+*.nav
+*.snm
+*.gz
+*.toc
+*.vrb
+*.Rhistory
+*.DS_Store
+cache/*

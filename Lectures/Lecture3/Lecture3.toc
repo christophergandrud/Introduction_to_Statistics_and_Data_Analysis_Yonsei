@@ -1,8 +1,0 @@
-\beamer@endinputifotherversion {3.10pt}
-\beamer@sectionintoc {2}{Recap}{3}{0}{1}
-\beamer@sectionintoc {3}{Reminder: First Assignment}{9}{0}{2}
-\beamer@sectionintoc {4}{Data Gathering Principles}{14}{0}{3}
-\beamer@sectionintoc {5}{Response \& Explanatory Variables}{24}{0}{4}
-\beamer@sectionintoc {6}{Importing Data Into R}{30}{0}{5}
-\beamer@sectionintoc {7}{Merging \& ID Variables}{62}{0}{6}
-\beamer@sectionintoc {8}{Saving Data}{69}{0}{7}

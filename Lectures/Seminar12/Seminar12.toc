@@ -1,2 +1,0 @@
-\beamer@endinputifotherversion {3.10pt}
-\beamer@sectionintoc {1}{Assignment 4}{2}{0}{1}

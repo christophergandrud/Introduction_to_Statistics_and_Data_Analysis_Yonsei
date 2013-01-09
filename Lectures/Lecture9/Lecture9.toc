@@ -1,7 +1,0 @@
-\beamer@endinputifotherversion {3.10pt}
-\beamer@sectionintoc {2}{Assignments}{3}{0}{1}
-\beamer@sectionintoc {3}{Recap}{12}{0}{2}
-\beamer@sectionintoc {4}{Hypothesis Testing: Overview}{20}{0}{3}
-\beamer@sectionintoc {5}{$\mathrm {Z}$ Scores and $t$ Distributions}{33}{0}{4}
-\beamer@sectionintoc {6}{p-values}{46}{0}{5}
-\beamer@sectionintoc {7}{Comparing Two (Independent) Means}{54}{0}{6}
