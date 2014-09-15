@@ -77,7 +77,7 @@ For more reference on using **R** you might find these resources useful:
 
 - *Generally cutting-edge posts on how to use R:* R-Bloggers. [http://www.r-bloggers.com/](http://www.r-bloggers.com/)
 
-- *Interesting blog on how someone at the New York TImes creates graphs:* [http://chartsnthings.tumblr.com/](http://chartsnthings.tumblr.com/)
+- *Interesting blog on how someone at the New York Times creates graphs:* [http://chartsnthings.tumblr.com/](http://chartsnthings.tumblr.com/)
 
 **Assessment:**
 
