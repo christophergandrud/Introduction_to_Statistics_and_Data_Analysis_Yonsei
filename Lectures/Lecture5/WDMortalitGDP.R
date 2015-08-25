@@ -1,7 +1,7 @@
 ##################
 # Gather World Bank Data on Mortality Rate & GDP per capita for 2009
 # Christopher Gandrud
-# Updated 2 October 2012
+# Updated 25 August 2015
 ##################
 
 #### Data to gather ####
@@ -11,39 +11,43 @@
 # Load package
 library(WDI)
 library(countrycode)
-library(reshape)
+library(dplyr)
 
 # Download data
-MortalityGDP <- WDI(indicator = c("NY.GDP.PCAP.CD", "SP.DYN.IMRT.IN"), start = 2009, end = 2009, extra = TRUE)
+MortalityGDP <- WDI(indicator = c("NY.GDP.PCAP.CD", "SP.DYN.IMRT.IN"), 
+                    start = 2009, end = 2009, extra = TRUE)
 
 
 #### Clean downloaded data ####
 # Keep only countries
-MortalityGDP$IMFCode <- countrycode(MortalityGDP$country, origin = "country.name", destination = "imf")
+MortalityGDP$IMFCode <- countrycode(MortalityGDP$country, 
+                                origin = "country.name", destination = "imf")
 
 MortalityGDP <- subset(MortalityGDP, !is.na(IMFCode))
 
 # Rename the main variables
-MortalityGDP <- rename(MortalityGDP, c(SP.DYN.IMRT.IN = "InfantMortality"))
-MortalityGDP <- rename(MortalityGDP, c(NY.GDP.PCAP.CD = "GDPperCapita"))
+MortalityGDP <- dplyr::rename(MortalityGDP, InfantMortality = SP.DYN.IMRT.IN)
+MortalityGDP <- dplyr::rename(MortalityGDP, GDPperCapita = NY.GDP.PCAP.CD)
 
 # Keep country GDPperCapita and InfantMortality variables
-MortalityGDP <- MortalityGDP[, c("country", "GDPperCapita", "InfantMortality", "region", "income")]
+MortalityGDP <- MortalityGDP[, c("country", "GDPperCapita", "InfantMortality", 
+                                 "region", "income")]
 
 # Recode region
-MortalityGDP$region <- factor(MortalityGDP$region, labels = c("None", "EAP", "EUR", "LA", "ME", "NA", "SA", "SSA"))
+MortalityGDP$region <- factor(MortalityGDP$region, 
+                              labels = c("None", "EAP", "EUR", "LA", "ME", "NA", 
+                                         "SA", "SSA"))
 
 # Reorder income factor levels
 library(gdata)
 
 MortalityGDP$income <- reorder(MortalityGDP$income, new.order = c(
-                                              "Aggregates", "High income: OECD", 
-                                              "High income: nonOECD", "Upper middle income", 
-                                              "Lower middle income", "Low income", 
-                                              "Not classified"))
+    "Aggregates", "High income: OECD", 
+    "High income: nonOECD", "Upper middle income", 
+    "Lower middle income", "Low income", 
+    "Not classified"))
 
 # Remove EU
 MortalityGDP <- subset(MortalityGDP, region != "None")
 
 MortalityGDP$region <- factor(MortalityGDP$region)
-
