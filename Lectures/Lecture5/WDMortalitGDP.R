@@ -21,7 +21,7 @@ MortalityGDP <- WDI(indicator = c("NY.GDP.PCAP.CD", "SP.DYN.IMRT.IN"),
 #### Clean downloaded data ####
 # Keep only countries
 MortalityGDP$IMFCode <- countrycode(MortalityGDP$country, 
-                                origin = "country.name", destination = "imf")
+                                    origin = "country.name", destination = "imf")
 
 MortalityGDP <- subset(MortalityGDP, !is.na(IMFCode))
 
@@ -35,8 +35,8 @@ MortalityGDP <- MortalityGDP[, c("country", "GDPperCapita", "InfantMortality",
 
 # Recode region
 MortalityGDP$region <- factor(MortalityGDP$region, 
-                              labels = c("None", "EAP", "EUR", "LA", "ME", "NA", 
-                                         "SA", "SSA"))
+                              labels = c("MENA", "S. Asia", "LAC", "EUR", "SSA",
+                                         "EA", "NA"))
 
 # Reorder income factor levels
 library(gdata)
